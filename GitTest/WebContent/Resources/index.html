@@ -1,3 +1,4 @@
+
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -332,6 +333,10 @@
             </section><!-- End of service Section -->
 
 
+
+
+			<!-- 차트 시각화 (진주)  -->
+
             <section id="portfolio" class="portfolio sections">
                 <div class="container-fluid">
                     <div class="row">
@@ -348,7 +353,7 @@
                             <div class="work_menu text-center">
                                 <div id="filters" class="toolbar mb2 mt2">
                                     <button class="btn-md fil-cat filter active" data-filter="all">ALL</button>/
-                                    <button class="btn-md fil-cat filter" data-rel="web" data-filter=".web">WEB DESIGN</button>/
+                                    <button class="btn-md fil-cat filter" data-rel="temp" data-filter=".temp">온도</button>/
                                     <button class="btn-md fil-cat filter" data-rel="design" data-filter=".design">PRINT DESIGN</button>/
                                     <button class="btn-md fil-cat filter" data-rel="flyers" data-filter=".flyers">ANIMATION</button>/
                                     <button class="btn-md fil-cat filter" data-rel="bcards" data-filter=".bcards">ART</button>/
@@ -360,16 +365,22 @@
 
                             <div style="clear:both;"></div>     
                             <div id="portfoliowork"> 
-                                <div class="single_portfolio tile scale-anm web grid-item-width2 video" >
-                                    <img src="assets/images/pf1.jpg" alt="" />
+
+								<!-- 온도 파트  -->
+                                <div class="single_portfolio tile scale-anm temp grid-item-width2 video" style="margin-left: 500px; display: inline-block;">
+                                <iframe src="assets/chart_module/Temperature.html" style="display: inline-block; width: 900px; height: 500px;"></iframe>
+                                    <!-- <img src="assets/images/pf1.jpg" alt="" />
                                     <a href="assets/images/pf1.jpg" class="portfolio-img">
                                         <div class="grid_item_overlay">
                                             <div class="separator4"></div>
                                             <h3>T-SHIRT DESIGN</h3>
                                             <p>art / t-shirt</p>
                                         </div>
-                                    </a>
+                                    </a> -->
                                 </div>
+                                <!--  온도 끝    -->
+                                
+                                
                                 <div class="single_portfolio tile scale-anm bcards photo" >
                                     <img src="assets/images/pf2.jpg" alt="" />
                                     <a href="assets/images/pf2.jpg" class="portfolio-img">
@@ -380,7 +391,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="single_portfolio tile scale-anm web video">
+                                <div class="single_portfolio tile scale-anm video video">
                                     <img src="assets/images/pf3.jpg" alt="" />
                                     <a href="assets/images/pf3.jpg" class="portfolio-img">
                                         <div class="grid_item_overlay">
@@ -390,7 +401,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="single_portfolio tile scale-anm web photo" >
+                                <div class="single_portfolio tile scale-anm video photo" >
                                     <img src="assets/images/pf4.jpg" alt="" />
                                     <a href="assets/images/pf4.jpg" class="portfolio-img">
                                         <div class="grid_item_overlay">
@@ -450,6 +461,7 @@
                     </div>
                 </div><!-- End off container --> 
             </section> <!-- End off Work Section -->            
+            <!-- 차트 파트 끝!!  -->
 
 
 
@@ -965,7 +977,9 @@
 
 
                                                     <div class="row">
-                                                        <div class="col-sm-12">
+                                                        <div class=
+
+>
                                                             <div class="form-group">
                                                                 <input type="email" class="form-control" name="email" placeholder="Email" required="">
                                                             </div>
