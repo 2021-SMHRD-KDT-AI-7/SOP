@@ -22,7 +22,7 @@ public class WriterCampaignServiceCon extends HttpServlet {
 		
 		String cam_file1 = null;
 		
-		String saveDirectory = request.getServletContext().getRealPath("file");
+		String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/image";
 		
 		System.out.println(saveDirectory);
 		

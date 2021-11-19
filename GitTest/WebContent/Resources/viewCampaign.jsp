@@ -123,7 +123,7 @@
 													</tr>
 													<tr>
 														<td colspan="2"><%=dto.getCam_content() %> 
-														<img src="../file/<%=dto.getCam_file1()%>"></td>
+														<img src="./image/<%=dto.getCam_file1()%>"></td>
 													</tr>
 													<tr>
 														<td colspan="2"><a href="campaign.jsp"><button>뒤로가기</button></a>
