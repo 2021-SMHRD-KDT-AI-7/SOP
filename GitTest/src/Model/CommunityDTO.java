@@ -1,4 +1,4 @@
-package DTO;
+package Model;
 
 import java.util.Date;
 
@@ -14,6 +14,13 @@ public class CommunityDTO {
 	private Date reg_date;
 	private int article_cnt;
 	
+	public CommunityDTO(String article_title, String article_content, String mb_id, String article_file1) {
+		super();
+		this.article_title = article_title;
+		this.article_content = article_content;
+		this.mb_id = mb_id;
+		this.article_file1 = article_file1;
+	}
 	public CommunityDTO(int article_seq, String article_title, String article_content, String mb_id,
 			String article_file1, String article_file2, String article_file3, Date reg_date, int article_cnt) {
 		

@@ -1,3 +1,5 @@
+<%@page import="Model.CommunityDTO"%>
+<%@page import="Model.CommunityDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!doctype html>
@@ -103,23 +105,41 @@
                                     <div class="main_home_slider text-center">
                                         <div class="single_home_slider">
                                             <div class="main_home wow fadeInUp" data-wow-duration="700ms">
+                                               	<%
+			int num= Integer.parseInt(request.getParameter("num"));
+			CommunityDAO dao=new CommunityDAO();
+			CommunityDTO dto=dao.viewOneBoard(num);
+			
+			%>	
+			<div id = "board">
+				<table id="list">
+					<tr>
+						<td>제목</td>
+						<td><%=dto.getArticle_title() %></td>
+					</tr>
+					<tr>
+						<td>작성자</td>
+						<td><%=dto.getMb_id() %></td>
+					</tr>
+					<tr>					
+						<td colspan="2"> <a href="file/<%= dto.getArticle_file1() %>" download> 다운로드 </a> </td>
+					</tr>
+					<tr>
+						<td colspan="2">내용</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+						<%=dto.getArticle_content() %>
+						<img src="file/<%=dto.getArticle_file1()%>">	
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><a href="boardMain.jsp"><button>뒤로가기</button></a></td>
+					</tr>
+				</table>
+			</div>
 
-
-											<div id="board">
-												<table id="list">
-													<tr>
-														<td>번호</td>
-														<td>제목</td>
-														<td>작성자</td>
-														<td>시간</td>
-													</tr>
-
-												</table>
-
-												<a href="main.jsp"><button id="writer">홈으로 가기</button></a>
-												<a href="writerBoard.jsp"><button id="writer">작성하러가기</button></a>
-											</div>
-										</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -198,4 +218,3 @@
 
     </body>
 </html>
-    

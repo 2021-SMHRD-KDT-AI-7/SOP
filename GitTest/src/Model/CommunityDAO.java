@@ -1,4 +1,4 @@
-package DAO;
+package Model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Date;
 
-import DTO.CommunityDTO;
+import Model.CommunityDTO;
 
 public class CommunityDAO {
 	PreparedStatement psmt=null;
@@ -103,25 +103,29 @@ public class CommunityDAO {
 		 }
 		 
 		 //게시글 세부내용을 보여주는 메소드
-		 public CommunityDTO viewOneBoard(String num) {
+		 public CommunityDTO viewOneBoard(int article_seq) {
 			 getConn();
 			 
 			 try {
-				 String sql="select * from t_community where num=?";
+				 String sql="select * from t_community where article_seq=?";
 				 
 				 psmt=conn.prepareStatement(sql);
-				 psmt.setString(1,num);
+				 psmt.setInt(1,article_seq);
 				 rs=psmt.executeQuery();
 				 
 				 if(rs.next()) {
-				int num2= rs.getInt("num");
-				String title= rs.getString("title");
-				String writer= rs.getString("writer");
-				String fileName= rs.getString("fileName");
-				String content= rs.getString("content");
-				String b_date= rs.getString("b_date");
+					 	int article_seq1=rs.getInt("article_seq");
+						String article_title= rs.getString("article_title");
+						String article_content= rs.getString("article_content");
+						String mb_id= rs.getString("mb_id");
+						String article_file1= rs.getString("article_file1");
+						String article_file2= rs.getString("article_file2");
+						String article_file3= rs.getString("article_file3");
+						Date reg_date= rs.getDate("reg_date");
+						int article_cnt=rs.getInt("article_cnt");
+						
 				
-			  dto=new CommunityDTO();
+				dto= new CommunityDTO(article_seq1,article_title,article_content,mb_id,article_file1,article_file2,article_file3,reg_date,article_cnt);
 				 }
 			 }catch(Exception e){
 					e.printStackTrace();
