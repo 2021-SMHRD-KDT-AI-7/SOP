@@ -1,7 +1,7 @@
 package Model;
 
 public class CampaignDTO {
-	
+
 	private int cam_seq;
 	private String cam_title;
 	private String cam_content;
@@ -11,7 +11,7 @@ public class CampaignDTO {
 	private String cam_file2;
 	private String cam_start;
 	private String cam_finish;
-	
+
 	public CampaignDTO(int cam_seq, String cam_title, String cam_content, String reg_date, String mb_id,
 			String cam_file1, String cam_file2, String cam_start, String cam_finish) {
 		this.cam_seq = cam_seq;
@@ -24,7 +24,40 @@ public class CampaignDTO {
 		this.cam_start = cam_start;
 		this.cam_finish = cam_finish;
 	}
-
+	
+	
+	public CampaignDTO(int cam_seq, String cam_title, String cam_content, String reg_date, String mb_id,
+			String cam_file1, String cam_start, String cam_finish) {
+		this.cam_seq = cam_seq;
+		this.cam_title = cam_title;
+		this.cam_content = cam_content;
+		this.reg_date = reg_date;
+		this.mb_id = mb_id;
+		this.cam_file1 = cam_file1;
+		this.cam_start = cam_start;
+		this.cam_finish = cam_finish;
+	}
+	
+	public CampaignDTO(int cam_seq, String cam_title, String mb_id, String cam_start,
+			String cam_finish) {
+		this.cam_seq = cam_seq;
+		this.cam_title = cam_title;
+		this.mb_id = mb_id;
+		this.cam_start = cam_start;
+		this.cam_finish = cam_finish;
+	}
+	
+	public CampaignDTO(String cam_title, String cam_content, String mb_id, String cam_file1, String cam_start,
+			String cam_finish) {
+		this.cam_title = cam_title;
+		this.cam_content = cam_content;
+		this.mb_id = mb_id;
+		this.cam_file1 = cam_file1;
+		this.cam_start = cam_start;
+		this.cam_finish = cam_finish;
+	}
+	
+	
 	public int getCam_seq() {
 		return cam_seq;
 	}
@@ -82,7 +115,8 @@ public class CampaignDTO {
 	}
 
 	public String getCam_start() {
-		return cam_start;
+		String[] start = cam_start.split(" ");
+		return start[0];
 	}
 
 	public void setCam_start(String cam_start) {
@@ -90,15 +124,12 @@ public class CampaignDTO {
 	}
 
 	public String getCam_finish() {
-		return cam_finish;
+		String[] finish = cam_finish.split(" ");
+		return finish[0];
 	}
 
 	public void setCam_finish(String cam_finish) {
 		this.cam_finish = cam_finish;
 	}
-	
-	
-	
-	
 
 }

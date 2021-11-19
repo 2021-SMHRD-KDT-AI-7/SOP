@@ -1,46 +1,54 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
-<!DOCTYPE html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>campaign_write</title>
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<%@page import="Model.CampaignDTO"%>
+<%@page import="Model.CampaignDAO"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>campaign</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 
-<link rel="stylesheet" href="assets/css/iconfont.css">
-<link rel="stylesheet" href="assets/css/slick/slick.css">
-<link rel="stylesheet" href="assets/css/slick/slick-theme.css">
-<link rel="stylesheet" href="assets/css/stylesheet.css">
-<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-<link rel="stylesheet" href="assets/css/jquery.fancybox.css">
-<link rel="stylesheet" href="assets/css/bootstrap.css">
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/magnific-popup.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="assets/css/iconfont.css">
+        <link rel="stylesheet" href="assets/css/slick/slick.css">
+        <link rel="stylesheet" href="assets/css/slick/slick-theme.css">
+        <link rel="stylesheet" href="assets/css/stylesheet.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assetsBoard/css/main.css" />
+		<link rel="stylesheet" href="assetsBoard/css/board.css" />
+        <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
 
 
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="assets/css/plugins.css" />
 
-<!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="assets/css/style.css">
 
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="assets/css/responsive.css" />
 
-<!--For Plugins external css-->
-<link rel="stylesheet" href="assets/css/plugins.css" />
-
-<!--Theme custom css -->
-<link rel="stylesheet" href="assets/css/style.css">
-
-<!--Theme Responsive css-->
-<link rel="stylesheet" href="assets/css/responsive.css" />
-
-<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-</head>
+        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
+	<%
+		String cam_seq = request.getParameter("cam_seq");
+
+		CampaignDAO dao = new CampaignDAO();
+		CampaignDTO dto = dao.viewOneBoard(cam_seq);
+	%>
 
 	<div class='preloader'>
 		<div class='loaded'>&nbsp;</div>
@@ -89,6 +97,7 @@
 
 
 
+
 		<!--home Section -->
 		<section id="home" class="home">
 			<div class="overlay">
@@ -99,50 +108,29 @@
 								<div class="main_home_slider text-center">
 									<div class="single_home_slider">
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
-											<div></div>
-											<div class="container">
-												<h2>∞‘Ω√∆« ±€æ≤±‚</h2>
-												<form action="../WriterCampaignServiceCon" method="post" enctype = "multipart/form-data">
-													<div class="form-group">
-														<label for="title">¡¶∏Ò</label>
-														<!-- placeholder º”º∫ ¿‘∑¬«— µ•¿Ã≈Õ∞° æ¯¥¬ ∞ÊøÏ πË∞Ê¿∏∑Œ ≥™≈∏≥≠¥Ÿ.Ω«¡¶¿˚¿∏∑Œ ¿‘∑¬¿ª 100¿⁄±Ó¡ˆ∑Œ ¡ˆ¡§ -->
-														<!-- required º”º∫¿ª º≥¡§«œ∏È « ºˆ¿‘∑¬ ªÁ«◊¿Ãµ»¥Ÿ. -->
-														<!-- pattern º”º∫¿ª ¿ÃøÎ«— ¡§±‘«•«ˆΩƒ¿∏∑Œ µ•¿Ã≈Õ¿« ¿Ø»øº∫ ∞ÀªÁ∏¶ «“ ºˆ ¿÷¥Ÿ. -->
-														<input type="text" class="form-control" id="cam_title"
-															placeholder="¡¶∏Ò ¿‘∑¬" name="cam_title" maxlength="100"
-															required="required">
-													</div>
-													<div class="form-group">
-														<label for="title">¿€º∫¿⁄</label>
-														<input type="text" class="form-control" id="mb_id"
-															placeholder="¿€º∫¿⁄ ¿‘∑¬" name="mb_id" maxlength="100"
-															required="required">
-													</div>
-													<div class="form-group">
-														<label for="content">≥ªøÎ</label>
-														<!--  ø©∑Ø¡Ÿ¿« µ•¿Ã≈Õ∏¶ ¿‘∑¬«œ∞Ì «œ∞Ì¿⁄ «“∂ß textarea ≈¬±◊∏¶ ªÁøÎ«—¥Ÿ. -->
-														<!--  textarea æ»ø° ¿÷¥¬ ∏µÁ ±€¿⁄¥¬ ±◊¥Î∑Œ ≥™≈∏≥≠¥Ÿ. ∞¯πÈπÆ¿⁄, tag, enter -->
-														<textarea class="form-control" rows="20" id="cam_content"
-															name="cam_content" placeholder="≥ªøÎ ¿€º∫" wrap="off"></textarea>
-													</div>
-													<div class="form-group">
-														<label for="writer">ƒ∑∆‰¿Œ Ω√¿€¿œ¿⁄</label> <input type="date"
-															id="cam_start" name="cam_start">
-													</div>
-													<div class="form-group">
-														<label for="writer">ƒ∑∆‰¿Œ ¡æ∑·¿œ¿⁄</label> <input type="date"
-															id="cam_finish" name="cam_finish">
-													</div>
-													<div class="form-group">
-														<label for="writer">∆ƒ¿œµÓ∑œ</label>
-														<input name = "cam_file1" type="file" style="float: right;">														
-													</div>
-													<button type="submit" class="btn btn-default">µÓ∑œ</button>
-													<button type="reset" class="btn btn-default">√ ±‚»≠</button>
-												</form>
-											</div>
-
-
+											 <div id="board">
+												<table id="list">
+													<tr>
+														<td>Ï†úÎ™©</td>
+														<td><%=dto.getCam_title() %></td>
+													</tr>
+													<tr>
+														<td>ÏûëÏÑ±Ïûê</td>
+														<td><%=dto.getMb_id() %></td>
+													</tr>
+													<tr>
+														<td colspan="2">ÎÇ¥Ïö©</td>
+													</tr>
+													<tr>
+														<td colspan="2"><%=dto.getCam_content() %> 
+														<img src="../file/<%=dto.getCam_file1()%>"></td>
+													</tr>
+													<tr>
+														<td colspan="2"><a href="campaign.jsp"><button>Îí§Î°úÍ∞ÄÍ∏∞</button></a>
+																		<a href="UpdateCampaignServiceCon"><button>ÏàòÏ†ïÌïòÍ∏∞</button></a></td>
+													</tr>
+												</table>
+											</div> 
 
 										</div>
 									</div>

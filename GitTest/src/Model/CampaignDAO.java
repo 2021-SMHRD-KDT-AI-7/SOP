@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class CampaignDAO {
 	
@@ -44,22 +46,108 @@ public class CampaignDAO {
 	}
 	
 	
-//	public int upload(CampaignDTO dto) {
+	public int upload(CampaignDTO dto) {
+		getConn();
+		try {
+			String sql = "INSERT INTO t_campaign (cam_title, cam_content, reg_date, mb_id, cam_file1, cam_start, cam_finish) VALUES (?, ?, sysdate, ?, ?, ?, ?)";
+			
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setString(1, dto.getCam_title());
+			psmt.setString(2, dto.getCam_content());
+			psmt.setString(3, dto.getMb_id());
+			psmt.setString(4, dto.getCam_file1());
+			psmt.setString(5, dto.getCam_start());
+			psmt.setString(6, dto.getCam_finish());
+			
+			cnt = psmt.executeUpdate();			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			dbClose();
+		}
+		return cnt;
+	}
+	
+	public ArrayList<CampaignDTO> viewBoard() {
+		ArrayList<CampaignDTO> c_list = new ArrayList<CampaignDTO>();
+		getConn();
+		
+		try {
+			String sql = "select * from t_campaign order by reg_date desc";
+			
+			psmt = conn.prepareStatement(sql);
+			
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				int cam_seq = rs.getInt("cam_seq");
+				String cam_title = rs.getString("cam_title");
+				String mb_id = rs.getString("mb_id");
+				String cam_start = rs.getString("cam_start");
+				String cam_finish = rs.getString("cam_finish");
+				
+				dto = new CampaignDTO(cam_seq, cam_title, mb_id, cam_start, cam_finish);
+				
+				c_list.add(dto);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			dbClose();
+		}
+		return c_list;
+	}
+	
+	public CampaignDTO viewOneBoard(String num) {
+		getConn();
+		
+		try {
+			String sql = "select * from t_campaign where cam_seq = ?";
+			
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, num);
+			
+			rs = psmt.executeQuery();
+			
+			if(rs.next()) {
+				int num2 = rs.getInt("cam_seq");
+				String cam_title = rs.getString("cam_title");
+				String mb_id = rs.getString("mb_id");
+				String cam_file1 = rs.getString("cam_file1");
+				String cam_content = rs.getString("cam_content");
+				String reg_date = rs.getString("reg_date");
+				String cam_start = rs.getString("cam_start");
+				String cam_finish = rs.getString("cam_finish");
+				
+				dto = new CampaignDTO(num2, cam_title, cam_content, reg_date, mb_id, cam_file1, cam_start, cam_finish);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			dbClose();
+		}
+		return dto;
+	}
+	
+//	public int deleteOne(String num) {
 //		getConn();
+//		
+//		
 //		try {
-//			String sql = "insert into web_board values(num_board.nextval, ?, ?, ?, ?, sysdate)";
+//			String sql = "delete from t_campaign where cam_seq = ?";
 //			
 //			psmt = conn.prepareStatement(sql);
 //			
-//			psmt.setString(1, dto.getTitle());
-//			psmt.setString(2, dto.getWriter());
-//			psmt.setString(3, dto.getFileName());
-//			psmt.setString(4, dto.getContent());
+//			psmt.setString(1, num);
 //			
-//			cnt = psmt.executeUpdate();			
+//			cnt = psmt.executeUpdate();
 //			
-//			
-//		} catch (Exception e) {
+//		} catch (SQLException e) {
 //			e.printStackTrace();
 //		} finally {
 //			dbClose();
