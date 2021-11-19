@@ -15,6 +15,7 @@ public class CommunityDAO {
 	ResultSet rs=null;
 	int cnt=0;
 	CommunityDTO dto=null;
+	
 	//DB연결 메소드
 	public void getConn() {
 		try {

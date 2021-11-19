@@ -20,6 +20,7 @@ public class CommunityDTO {
 		this.article_content = article_content;
 		this.mb_id = mb_id;
 		this.article_file1 = article_file1;
+		this.article_cnt=article_cnt;
 	}
 	public CommunityDTO(int article_seq, String article_title, String article_content, String mb_id,
 			String article_file1, String article_file2, String article_file3, Date reg_date, int article_cnt) {

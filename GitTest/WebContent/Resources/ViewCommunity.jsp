@@ -3,6 +3,8 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> 
+<%@page import="Model.CommunityDTO"%>
+<%@page import="Model.CommunityDAO"%>
 <%@page import="Model.CampaignDTO"%>
 <%@page import="Model.CampaignDAO"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
@@ -44,10 +46,10 @@
     </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
    <%
-      String cam_seq = request.getParameter("cam_seq");
+      int article_seq = Integer.parseInt(request.getParameter("article_seq"));
 
-      CampaignDAO dao = new CampaignDAO();
-      CampaignDTO dto = dao.viewOneBoard(cam_seq);
+      CommunityDAO dao = new CommunityDAO();
+      CommunityDTO dto = dao.viewOneBoard(article_seq);
    %>
 
    <div class='preloader'>
@@ -112,7 +114,7 @@
                                     <table id="list">
                                        <tr>
                                           <td>제목</td>
-                                          <td><%=dto.getCam_title() %></td>
+                                          <td><%=dto.getArticle_title() %></td>
                                        </tr>
                                        <tr>
                                           <td>작성자</td>
@@ -122,8 +124,8 @@
                                           <td colspan="2">내용</td>
                                        </tr>
                                        <tr>
-                                          <td colspan="2"><%=dto.getCam_content() %> 
-                                          <img src="./image/<%=dto.getCam_file1()%>"></td>
+                                          <td colspan="2"><%=dto.getArticle_content() %> 
+                                          <img src="./image/<%=dto.getArticle_file1()%>"></td>
                                        </tr>
                                        <tr>
                                           <td colspan="2"><a href="campaign.jsp"><button>뒤로가기</button></a>

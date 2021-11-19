@@ -1,3 +1,5 @@
+<%@page import="Model.CommunityDTO"%>
+<%@page import="Model.CommunityDAO"%>
 <%@page import="Model.CampaignDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.CampaignDAO"%>
@@ -41,8 +43,8 @@
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
 	<%
-		CampaignDAO dao = new CampaignDAO();
-	ArrayList<CampaignDTO> c_list = dao.viewBoard();
+		CommunityDAO dao = new CommunityDAO();
+	ArrayList<CommunityDTO>c_list = dao.viewBoard();
 	%>
 
 	<div class='preloader'>
@@ -108,8 +110,8 @@
 														<td>번호</td>
 														<td>제목</td>
 														<td>작성자</td>
-														<td>캠페인 시작시간</td>
-														<td>캠페인 종료시간</td>
+														<td>작성일</td>
+														<td>조회</td>
 														
 													</tr>
 													<%
@@ -118,12 +120,12 @@
 													<tr>
 														<td><%=i + 1%></td>
 														<td><a
-															href="viewCampaign.jsp?cam_seq=<%=c_list.get(i).getCam_seq() %>">
-																<%=c_list.get(i).getCam_title() %>
+															href="viewCommunity.jsp?article_seq=<%=c_list.get(i).getArticle_seq() %>">
+																<%=c_list.get(i).getArticle_title() %>
 														</a></td>
 														<td><%=c_list.get(i).getMb_id() %></td>
-														<td><%=c_list.get(i).getCam_start() %></td>
-														<td><%=c_list.get(i).getCam_finish() %></td>
+														<td><%=c_list.get(i).getReg_date() %></td>
+														<td><%=c_list.get(i).getArticle_cnt() %></td>
 													</tr>
 													<%
 														}
@@ -132,7 +134,7 @@
 												</table>
 
 												<a href="index.html"><button id="writer">홈으로가기</button></a>
-												<a href="campaign_write.jsp"><button id="writer">작성하러가기</button></a>
+												<a href="CommunityWrite.jsp"><button id="writer">작성하러가기</button></a>
 											</div>
 										</div>
 									</div>
@@ -183,15 +185,6 @@
 			</div>
 		</section>
 		<!-- End off footer Section-->
-
-
-
-
-
-
-
-
-
 
 
 	</div>
