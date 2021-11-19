@@ -11,6 +11,15 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>campaign</title>
+<style>
+aside{
+float:left;
+}
+table#list{
+margin:600px;
+}
+
+</style>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -104,7 +113,49 @@
 								<div class="main_home_slider text-center">
 									<div class="single_home_slider">
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
+											
 											<div id="board">
+											<fieldset>
+											<aside>
+														<legend><p class='c_1_1'>location</p></legend>
+														
+														<p class="c_2">
+															<a class='c_2_f' href="#">서울특별시</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">인천광역시</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">대전광역시</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">대구광역시</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">울산광역시</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">부산광역시</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">광주광역시</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">세종특별자치시</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">경기도</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">강원도</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">충청북도</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">충청남도</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">경상북도</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">경상남도</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">전라북도</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">전라남도</a>
+														<p class="c_2">
+															<a class='c_2_f' href="#">제주도</a>
+											
+													</fieldset>
+													</aside>
 												<table id="list">
 													<tr>
 														<td>번호</td>
