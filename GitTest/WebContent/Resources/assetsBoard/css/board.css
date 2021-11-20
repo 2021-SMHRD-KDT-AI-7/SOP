@@ -14,3 +14,17 @@
 	a{
 		text-decoration: none !important;
 	}
+	
+	#board2{
+	width:650px;
+	margin: 250px;
+	text-align:center;
+	margin-top: -100px !important;
+	}
+	
+	div#c_up {
+		position: absolute !important;
+		margin-top: -160px !important;
+	}
+	
+	
