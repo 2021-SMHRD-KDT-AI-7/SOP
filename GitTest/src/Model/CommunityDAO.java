@@ -74,7 +74,7 @@ public class CommunityDAO {
 			 getConn();
 			 
 			 try {
-				 String sql="select*from t_communitty order by reg_date desc";
+				 String sql="select*from t_community order by reg_date desc";
 				 
 				 psmt=conn.prepareStatement(sql);
 				 rs=psmt.executeQuery();

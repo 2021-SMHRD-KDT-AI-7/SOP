@@ -77,8 +77,8 @@ p.c_2 {
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
-										<a class="navbar-brand" href="#home"> <img
-											src="assets/images/logo.png" />
+										<a class="navbar-brand" href="#home"> 
+										<img src="assets/images/logo.png" />
 										</a>
 
 									</div>
