@@ -130,7 +130,7 @@
                                        </tr>
                                        <tr>
                                           <td colspan="2"><a href="Community.jsp"><button>뒤로가기</button></a>
-                                                      <a href="UpdateCampaignServiceCon"><button>수정하기</button></a></td>
+                                                      <a href="#"><button>수정하기</button></a></td>
                                        </tr>
                                     </table>
                                  </div> 
