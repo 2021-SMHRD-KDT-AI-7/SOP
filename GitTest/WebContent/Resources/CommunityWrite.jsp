@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>campaign_write</title>
+<title>Community_write</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -108,7 +108,7 @@
                                  <div></div>
                                  <div class="container">
                                     <h2>게시판 글쓰기</h2>
-                                    <form action="write.jsp" method="post">
+                                    <form action="WriterCommunityServiceCon" method="post" enctype = "multipart/form-data">
                                        <div class="form-group">
                                           <label for="location">지역</label>
                                           <!-- placeholder 속성 입력한 데이터가 없는 경우 배경으로 나타난다.실제적으로 입력을 100자까지로 지정 -->

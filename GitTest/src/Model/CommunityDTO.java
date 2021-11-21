@@ -14,8 +14,8 @@ public class CommunityDTO {
 	private Date reg_date;
 	private int article_cnt;
 	
-	public CommunityDTO(String article_title, String article_content, String mb_id, String article_file1) {
-		super();
+	public CommunityDTO(String article_title, String article_content, String mb_id, String article_file1, int article_cnt) {
+		
 		this.article_title = article_title;
 		this.article_content = article_content;
 		this.mb_id = mb_id;

@@ -20,10 +20,11 @@ public class WriterCommunityServiceCon extends HttpServlet {
 	private static final String String = null;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("[WriterCommunityServiceCon]");
 		
 		request.setCharacterEncoding("euc-kr");
 		
-		String fileName = null;
+		String article_file1 = null;
 		
 		String saveDirectory = request.getServletContext().getRealPath("file");
 		
@@ -33,25 +34,24 @@ public class WriterCommunityServiceCon extends HttpServlet {
 		
 		MultipartRequest multi = new MultipartRequest(request, saveDirectory, maxSize, encoding, new DefaultFileRenamePolicy());
 		
-		String title = multi.getParameter("title");
-		String content = multi.getParameter("content");
-		String writer = multi.getParameter("writer");
+		String article_title = multi.getParameter("article_title");
+		String article_content = multi.getParameter("article_content");
+		String mb_id = multi.getParameter("mb_id");
+		int article_cnt=Integer.parseInt(multi.getParameter("article_cnt"));
 		
 		
-		if(multi.getFilesystemName("file1") != null) {
-			fileName = URLEncoder.encode(multi.getFilesystemName("file1"), "euc-kr");
+		if(multi.getFilesystemName("article_file1") != null) {
+			article_file1 = URLEncoder.encode(multi.getFilesystemName("article_file1"), "euc-kr");
 		} else {
-			fileName="null";
+			article_file1="null";
 		}
 		
+		System.out.println("article_title : " + article_title);
+		System.out.println("article_content : " + article_content);
+		System.out.println("mb_id : " + mb_id);
+		System.out.println("article_file : " + article_file1);
 		
-		
-		System.out.println("title : " + title);
-		System.out.println("writer : " + writer);
-		System.out.println("content : " + content);
-		System.out.println("fileName : " + fileName);
-		
-		CommunityDTO dto=new CommunityDTO(title, writer, content, fileName);
+		CommunityDTO dto=new CommunityDTO(article_title, article_content, mb_id, article_file1, article_cnt);
 		CommunityDAO dao=new CommunityDAO();
 		int cnt=dao.upload(dto);
 		
@@ -60,7 +60,7 @@ public class WriterCommunityServiceCon extends HttpServlet {
 		}else {
 			System.out.println("파일업로드 실패");
 		}
-		response.sendRedirect("#");//게시판 메인으로 보내기
+		response.sendRedirect("Community.jsp");//게시판 메인으로 보내기
 		
 	}
 	
