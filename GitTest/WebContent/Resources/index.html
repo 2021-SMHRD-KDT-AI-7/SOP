@@ -69,13 +69,12 @@
                                             <ul class="nav navbar-nav navbar-right">
                                                 <li><a href="#home">HOME</a></li>
                                                 <li><a href="#history">ABOUT US</a></li>
-                                                <li><a href="#portfolio">PORTFOLIO</a></li>
+                                                <li><a href="#portfolio">차트</a></li>
                                                 <li><a href="#pricing">캠페인</a></li>
                                                 <li><a href="#team">커뮤니티</a></li>
                                                 <li><a href="#blog">BLOG</a></li>
                                                 <li><a href="#contact">CONTACT</a></li>
                                             </ul>
-
 
                                         </div>
 
@@ -355,13 +354,13 @@
                             </div>
                             <div class="work_menu text-center">
                                 <div id="filters" class="toolbar mb2 mt2">
-                                    <button class="btn-md fil-cat filter active" data-filter="all">ALL</button>/
+                                    <!-- <button class="btn-md fil-cat filter active" data-filter="all">ALL</button>/ -->
                                     <button class="btn-md fil-cat filter" data-rel="temp" data-filter=".temp">온도</button>/
-                                    <button class="btn-md fil-cat filter" data-rel="design" data-filter=".design">PRINT DESIGN</button>/
-                                    <button class="btn-md fil-cat filter" data-rel="flyers" data-filter=".flyers">ANIMATION</button>/
-                                    <button class="btn-md fil-cat filter" data-rel="bcards" data-filter=".bcards">ART</button>/
-                                    <button class="btn-md fil-cat filter" data-rel="photo" data-filter=".photo">PHOTOGRAPHY</button>/
-                                    <button class="btn-md fil-cat filter" data-rel="video" data-filter=".video">VIDEO</button>
+                                    <button class="btn-md fil-cat filter" data-rel="tropical" data-filter=".tropical">열대야</button>/
+                                    <button class="btn-md fil-cat filter" data-rel="season" data-filter=".season">계절일수</button>/
+                                    <button class="btn-md fil-cat filter" data-rel="gas" data-filter=".gas">온실가스</button>/
+                                    <button class="btn-md fil-cat filter" data-rel="ozone" data-filter=".ozone">오존층</button>/
+                                    <button class="btn-md fil-cat filter" data-rel="sea" data-filter=".sea">해수면 시뮬레이터</button>
                                 </div> 
 
                             </div>
@@ -383,80 +382,70 @@
                                 </div>
                                 <!--  온도 끝    -->
                                 
-                                
-                                <div class="single_portfolio tile scale-anm bcards photo" >
-                                    <img src="assets/images/pf2.jpg" alt="" />
+                                <!-- 열대야 시작 -->
+                                <div class="single_portfolio tile scale-anm tropical photo" style="margin-left: 500px; display: inline-block;">
+                                <iframe src="assets/chart_module/Tropical.html" style="display: inline-block; width: 900px; height: 500px;"></iframe>
+                                    <!-- <img src="assets/images/pf2.jpg" alt="" />
                                     <a href="assets/images/pf2.jpg" class="portfolio-img">
                                         <div class="grid_item_overlay">
                                             <div class="separator4"></div>
                                             <h3>T-SHIRT DESIGN</h3>
                                             <p>art / t-shirt</p>
                                         </div>
-                                    </a>
+                                    </a> -->
                                 </div>
-                                <div class="single_portfolio tile scale-anm video video">
-                                    <img src="assets/images/pf3.jpg" alt="" />
+                                <!-- 열대야 끝 -->
+                                
+                                <!-- 계절일수(season) 시작 -->
+                                <div class="single_portfolio tile scale-anm season video" style="margin-left: 500px; display: inline-block;">
+                                <iframe src="assets/chart_module/SeasonSeoul.html" style="display: inline-block; width: 900px; height: 500px;"></iframe>
+                                    <!-- <img src="assets/images/pf3.jpg" alt="" />
                                     <a href="assets/images/pf3.jpg" class="portfolio-img">
                                         <div class="grid_item_overlay">
                                             <div class="separator4"></div>
                                             <h3>T-SHIRT DESIGN</h3>
                                             <p>art / t-shirt</p>
                                         </div>
-                                    </a>
+                                    </a> -->
                                 </div>
-                                <div class="single_portfolio tile scale-anm video photo" >
-                                    <img src="assets/images/pf4.jpg" alt="" />
+                                <!-- 계절일수 끝 -->
+                                
+                                <!-- 온실가스 시작 -->
+                                <div class="single_portfolio tile scale-anm gas photo" style="margin-left: 500px; display: inline-block;">
+                                <iframe src="assets/chart_module/greenhouseGAS.html" style="display: inline-block; width: 900px; height: 500px;"></iframe>
+                                    <!-- <img src="assets/images/pf4.jpg" alt="" />
                                     <a href="assets/images/pf4.jpg" class="portfolio-img">
                                         <div class="grid_item_overlay">
                                             <div class="separator4"></div>
                                             <h3>T-SHIRT DESIGN</h3>
                                             <p>art / t-shirt</p>
                                         </div>
-                                    </a>
+                                    </a> -->
                                 </div>
-                                <div class="single_portfolio tile scale-anm bcards design" >
-                                    <img src="assets/images/pf5.jpg" alt="" />  
+                                <!-- 온실가스 끝 -->
+                                
+								<!-- 오존층 나사 영상 시작 -->
+                                <div class="single_portfolio tile scale-anm ozone" style="margin-left: 500px; display: inline-block;">
+                                    <video src="assets/video/ozone_Nasa.mp4" controls style="display: inline-block; width: 900px; height: 500px;"></video>
+                                </div>
+                                <!-- 오존층 나사 끝 -->
+                                
+                                <!-- 해수면 상승 시뮬레이터 시작 -->
+                                <div class="single_portfolio tile scale-anm sea" style="margin-left: 420px; display: inline-block;">
+                                <iframe src="assets/chart_module/Sea.html" style="display: inline-block; width: 1100px; height: 800px;"></iframe>
+                                    <!-- <img src="assets/images/pf5.jpg" alt="" />  
                                     <a href="assets/images/pf5.jpg" class="portfolio-img">
                                         <div class="grid_item_overlay">
                                             <div class="separator4"></div>
                                             <h3>T-SHIRT DESIGN</h3>
                                             <p>art / t-shirt</p>
                                         </div>
-                                    </a>
+                                    </a> -->
                                 </div>
-
-                                <div class="single_portfolio tile scale-anm flyers video design">
-                                    <img src="assets/images/pf6.jpg" alt="" />
-                                    <a href="assets/images/pf6.jpg" class="portfolio-img">
-                                        <div class="grid_item_overlay">
-                                            <div class="separator4"></div>
-                                            <h3>T-SHIRT DESIGN</h3>
-                                            <p>art / t-shirt</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="single_portfolio tile scale-anm photo flyers">
-                                    <img src="assets/images/pf7.jpg" alt="" />
-                                    <a href="assets/images/pf7.jpg" class="portfolio-img">
-                                        <div class="grid_item_overlay">
-                                            <div class="separator4"></div>
-                                            <h3>T-SHIRT DESIGN</h3>
-                                            <p>art / t-shirt</p>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="single_portfolio tile scale-anm bcards video" >
-                                    <img src="assets/images/pf8.jpg" alt="" />
-                                    <a href="assets/images/pf8.jpg" class="portfolio-img">
-                                        <div class="grid_item_overlay">
-                                            <div class="separator4"></div>
-                                            <h3>T-SHIRT DESIGN</h3>
-                                            <p>art / t-shirt</p>
-                                        </div>
-                                    </a>
-                                </div>
-
+                                <!-- 해수면 상승 시뮬레이터 끝 -->
+								
+                                
+                                
                             </div>
 
                             <div style="clear:both;"></div>  

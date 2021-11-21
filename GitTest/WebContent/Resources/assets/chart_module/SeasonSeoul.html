@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("Season.css");
+    </style>
+</head>
+<body>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+</figure>
+
+
+
+
+<!-- <div style="width: 100%; height: 450px; overflow: hidden;" data-highcharts-chart="2" aria-hidden="false" role="region" aria-label="Chart. Highcharts interactive chart."><div id="highcharts-screen-reader-region-before-2" aria-label="Chart screen reader information." role="region" aria-hidden="false" style="position: relative;"><div aria-hidden="false" style="position: absolute; width: 1px; height: 1px; overflow: hidden; white-space: nowrap; clip: rect(1px, 1px, 1px, 1px); margin-top: -3px; opacity: 0.01;"><h5>Chart</h5><div>Bar chart with 5 data series.</div><div><button id="hc-linkto-highcharts-data-table-2" tabindex="-1" aria-expanded="false">View as data table, Chart</button></div><div>The chart has 1 X axis displaying categories. </div><div>The chart has 1 Y axis displaying values. Range: 0 to 400.</div></div></div><div aria-hidden="false" aria-live="assertive" style="position: absolute; width: 1px; height: 1px; overflow: hidden; white-space: nowrap; clip: rect(1px, 1px, 1px, 1px); margin-top: -3px; opacity: 0.01;"> -->
+
+<script> 
+    
+    Highcharts.setOptions({
+        colors: ['#0F76BB', '#E1C200', '#6CBD45', '#F6A8C6'],
+        plotOptions: {
+            column: {
+                colorByPoint: true
+            }
+        }
+
+    });
+    
+    Highcharts.chart('container', {
+
+    // colors : ['#F6A8C6', '#E1C200', '#E1C200', '#0F76BB', '#F6A8C6'] 
+
+    chart: {
+        type: 'bar'
+    },
+
+    title: {
+        text: '계절길이(4월기준), 서울_10년'
+    },
+    
+    subtitle: {
+        text: 'Source: <a href="http://www.climate.go.kr/home/CCS/contents_new/34_1_Agrcinfo.php">기상청 기후정보포털</a>'
+    },
+
+    xAxis: {
+        categories: ['1911~1920년', '1921~1930년', '1931~1940년', '1941~1950년', '1951~1960년','1961~1970년',
+        '1971~1980년','1981~1990년','1991~2000년','2001~2010년','2011~2020년']
+    },
+
+    yAxis: {
+        min: 0,
+        title: {
+            text: ''
+        }
+    },
+    legend: {
+        reversed: true
+    },
+    plotOptions: {
+        series: {
+            stacking: 'normal'
+        }
+    },
+    series: [
+     {
+        name: '겨울',
+        data: [132, 127, 122, 120, 114, 123, 119, 111, 104, 102, 109]
+    }, {
+        name: '가을',
+        data: [66, 62, 68, 66, 66, 64, 61, 63, 62, 66, 55]
+    }, {
+        name: '여름',
+        data: [94, 101, 96, 101, 101, 103, 106, 112, 113, 121, 128]
+    }, {
+        name: '봄',
+        data: [73, 75, 79, 78, 84, 75, 79, 79, 86, 76, 73]
+    }
+]
+    });
+
+
+
+
+
+
+</script>
+</div>
+
+
+
+</body>
+</html>
