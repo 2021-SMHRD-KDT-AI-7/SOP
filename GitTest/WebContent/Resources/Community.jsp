@@ -44,17 +44,15 @@
 
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 <style>
-	p.c_2 {
-		font-size : 8px;
-	}
-	
-	
+p.c_2 {
+	font-size: 8px;
+}
 </style>
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
-<%
-		CommunityDAO dao = new CommunityDAO();
-	ArrayList<CommunityDTO>c_list = dao.viewBoard();
+	<%
+	CommunityDAO dao = new CommunityDAO();
+	ArrayList<CommunityDTO> b_list = dao.viewBoard();
 	%>
 	<div class='preloader'>
 		<div class='loaded'>&nbsp;</div>
@@ -90,8 +88,7 @@
 
 
 									<div class="collapse navbar-collapse"
-										id="bs-example-navbar-collapse-1">
-									</div>
+										id="bs-example-navbar-collapse-1"></div>
 
 								</div>
 							</nav>
@@ -116,115 +113,114 @@
 									<div class="single_home_slider">
 
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
-											
-												
-													<div id='c_up' style="width : 200px; float: left;">
-													<form>
+
+
+											<div id='c_up' style="width: 200px; float: left;">
+												<form>
 													<fieldset>
-														<legend><p class='c_1_1'>location</p></legend>
-														
+														<legend>
+															<p class='c_1_1'>location</p>
+														</legend>
+
 														<p class="c_2">
-															<a class='c_2_f' href="#">서울특별시</a><br>
-															<a class='c_2_f' href="#">인천광역시</a><br>
-															<a class='c_2_f' href="#">대전광역시</a><br>
-															<a class='c_2_f' href="#">대구광역시</a><br>
-															<a class='c_2_f' href="#">울산광역시</a><br>
-															<a class='c_2_f' href="#">부산광역시</a><br>
-															<a class='c_2_f' href="#">광주광역시</a><br>
-															<a class='c_2_f' href="#">세종특별자치시</a><br>
-															<a class='c_2_f' href="#">경기도</a><br>
-															<a class='c_2_f' href="#">강원도</a><br>
-															<a class='c_2_f' href="#">충청북도</a><br>
-															<a class='c_2_f' href="#">충청남도</a><br>
-															<a class='c_2_f' href="#">경상북도</a><br>
-															<a class='c_2_f' href="#">경상남도</a><br>
-															<a class='c_2_f' href="#">전라북도</a><br>
-															<a class='c_2_f' href="#">전라남도</a><br>
-															<a class='c_2_f' href="#">제주도</a>
+															<a class='c_2_f' href="#">서울특별시</a><br> <a
+																class='c_2_f' href="#">인천광역시</a><br> <a
+																class='c_2_f' href="#">대전광역시</a><br> <a
+																class='c_2_f' href="#">대구광역시</a><br> <a
+																class='c_2_f' href="#">울산광역시</a><br> <a
+																class='c_2_f' href="#">부산광역시</a><br> <a
+																class='c_2_f' href="#">광주광역시</a><br> <a
+																class='c_2_f' href="#">세종특별자치시</a><br> <a
+																class='c_2_f' href="#">경기도</a><br> <a
+															    class='c_2_f' href="#">강원도</a><br> <a 
+																class='c_2_f' href="#">충청북도</a><br><a
+																class='c_2_f' href="#">충청남도</a><br> <a
+																class='c_2_f' href="#">경상북도</a><br> <a
+																class='c_2_f' href="#">경상남도</a><br> <a
+																class='c_2_f' href="#">전라북도</a><br> <a
+																class='c_2_f' href="#">전라남도</a><br> <a
+																class='c_2_f' href="#">제주도</a>
 														</p>
-											
+
 													</fieldset>
-													</form>
-													</div>
-												<div id="board2">
-                                                    <table id="list">
-                                                       <tr>
-                                                          <td>번호</td>
-                                                          <td>제목</td>
-                                                          <td>작성자</td>
-                                                          <td>작성일자</td>
-                                                          <td>조회수</td>
-                                                       </tr>
-                                                       <%
-														for (int i = 0; i < c_list.size(); i++) {
-													%>
+												</form>
+											</div>
+											<div id="board2">
+												<table id="list">
+													<tr>
+														<td>번호</td>
+														<td>제목</td>
+														<td>작성자</td>
+														<td>작성일자</td>
+														<td>조회수</td>
+													</tr>
+													
+													<% for (int i = 0; i < b_list.size(); i++) {%>
 													<tr>
 														<td><%=i + 1%></td>
-														<td><a
-															href="viewCommunity.jsp?article_seq=<%=c_list.get(i).getArticle_seq() %>">
-																<%=c_list.get(i).getArticle_title() %>
+														<td><a href="ViewCommunity.jsp?article_seq=<%=b_list.get(i).getArticle_seq() %>"><%=b_list.get(i).getArticle_title() %>
 														</a></td>
-														<td><%=c_list.get(i).getMb_id() %></td>
-														<td><%=c_list.get(i).getReg_date() %></td>
-														<td><%=c_list.get(i).getArticle_cnt() %></td>
+														<td><%=b_list.get(i).getMb_id() %></td>
+														<td><%=b_list.get(i).getReg_date()%></td>
+														<td>조회수는 나중에 만들기</td>
 													</tr>
 													<%
 														}
 													%>
-                                                    </table>
-                					                <a href="index.html"><button id="writer">홈으로가기</button></a>
-                                                    <a href="CommunityWrite.jsp"><button id="writer">작성하러가기</button></a>
-                                                 </div>
-												
+												</table>
+												<a href="index.html"><button id="writer">홈으로가기</button></a>
+												<a href="CommunityWrite.jsp"><button id="writer">작성하러가기</button></a>
 											</div>
+
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="scrooldown">
-						<a href="#feature"><i class="fa fa-arrow-down"></i></a>
-					</div>
+				</div>
+				<div class="scrooldown">
+					<a href="#feature"><i class="fa fa-arrow-down"></i></a>
 				</div>
 			</div>
-		</section>
-		<!--End of home section -->
+	</div>
+	</section>
+	<!--End of home section -->
 
-		<!--Footer section-->
-		<section class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="main_footer">
-							<div class="row">
-								<div class="col-sm-6 col-xs-12">
-									<div class="flowus">
-										<a href=""><i class="fa fa-facebook"></i></a> <a href=""><i
-											class="fa fa-twitter"></i></a> <a href=""><i
-											class="fa fa-google-plus"></i></a> <a href=""><i
-											class="fa fa-instagram"></i></a> <a href=""><i
-											class="fa fa-youtube"></i></a> <a href=""><i
-											class="fa fa-dribbble"></i></a>
-									</div>
+	<!--Footer section-->
+	<section class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="main_footer">
+						<div class="row">
+							<div class="col-sm-6 col-xs-12">
+								<div class="flowus">
+									<a href=""><i class="fa fa-facebook"></i></a> <a href=""><i
+										class="fa fa-twitter"></i></a> <a href=""><i
+										class="fa fa-google-plus"></i></a> <a href=""><i
+										class="fa fa-instagram"></i></a> <a href=""><i
+										class="fa fa-youtube"></i></a> <a href=""><i
+										class="fa fa-dribbble"></i></a>
 								</div>
+							</div>
 
-								<div class="col-sm-6 col-xs-12">
-									<div class="copyright_text">
-										<p class=" wow fadeInRight" data-wow-duration="1s">
-											Made with <i class="fa fa-heart"></i> by <a
-												href="http://bootstrapthemes.co">Bootstrap Themes</a>2016.
-											All Rights Reserved
-										</p>
-									</div>
+							<div class="col-sm-6 col-xs-12">
+								<div class="copyright_text">
+									<p class=" wow fadeInRight" data-wow-duration="1s">
+										Made with <i class="fa fa-heart"></i> by <a
+											href="http://bootstrapthemes.co">Bootstrap Themes</a>2016.
+										All Rights Reserved
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		<!-- End off footer Section-->
+		</div>
+	</section>
+	<!-- End off footer Section-->
 
 	</div>
 

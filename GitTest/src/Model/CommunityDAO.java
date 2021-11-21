@@ -48,7 +48,7 @@ public class CommunityDAO {
 		 public int upload(CommunityDTO dto) {
 			 getConn();
 			 try {
-				 String sql="insert into t_community values(article_seq.nextval,?,?,?,?,?,?,sysdate,?)";
+				 String sql="insert into t_community (article_title,article_content,mb_id,article_file1,reg_date)values(?,?,?,?,sysdate)";
 				 
 				 psmt=conn.prepareStatement(sql);
 				 
@@ -56,9 +56,7 @@ public class CommunityDAO {
 				 psmt.setString(2,dto.getArticle_content());
 				 psmt.setString(3,dto.getMb_id());
 				 psmt.setString(4,dto.getArticle_file1());
-				 psmt.setString(5,dto.getArticle_file2());
-				 psmt.setString(6,dto.getArticle_file3());
-				 psmt.setInt(7,dto.getArticle_cnt());
+				 
 				
 				 cnt=psmt.executeUpdate();
 				 
@@ -84,15 +82,11 @@ public class CommunityDAO {
 				 while(rs.next()) {
 					 int article_seq=rs.getInt("article_seq");
 					String article_title= rs.getString("article_title");
-					String article_content= rs.getString("article_content");
 					String mb_id= rs.getString("mb_id");
-					String article_file1= rs.getString("article_file1");
-					String article_file2= rs.getString("article_file2");
-					String article_file3= rs.getString("article_file3");
 					Date reg_date= rs.getDate("reg_date");
-					int article_cnt=rs.getInt("article_cnt");
 					
-					dto= new CommunityDTO(article_seq,article_title,article_content,mb_id,article_file1,article_file2,article_file3,reg_date,article_cnt);
+				
+					dto= new CommunityDTO(article_seq, article_title, mb_id, reg_date);
 					b_list.add(dto);
 				 }
 				 

@@ -37,7 +37,7 @@ public class WriterCommunityServiceCon extends HttpServlet {
 		String article_title = multi.getParameter("article_title");
 		String article_content = multi.getParameter("article_content");
 		String mb_id = multi.getParameter("mb_id");
-		int article_cnt=Integer.parseInt(multi.getParameter("article_cnt"));
+		
 		
 		
 		if(multi.getFilesystemName("article_file1") != null) {
@@ -45,13 +45,13 @@ public class WriterCommunityServiceCon extends HttpServlet {
 		} else {
 			article_file1="null";
 		}
-		
+	
 		System.out.println("article_title : " + article_title);
 		System.out.println("article_content : " + article_content);
 		System.out.println("mb_id : " + mb_id);
-		System.out.println("article_file : " + article_file1);
+		System.out.println("article_file1 : " + article_file1);
 		
-		CommunityDTO dto=new CommunityDTO(article_title, article_content, mb_id, article_file1, article_cnt);
+		CommunityDTO dto=new CommunityDTO(article_title, article_content, mb_id, article_file1);
 		CommunityDAO dao=new CommunityDAO();
 		int cnt=dao.upload(dto);
 		
@@ -60,7 +60,7 @@ public class WriterCommunityServiceCon extends HttpServlet {
 		}else {
 			System.out.println("파일업로드 실패");
 		}
-		response.sendRedirect("Community.jsp");//게시판 메인으로 보내기
+		response.sendRedirect("./Resources/Community.jsp");//게시판 메인으로 보내기
 		
 	}
 	

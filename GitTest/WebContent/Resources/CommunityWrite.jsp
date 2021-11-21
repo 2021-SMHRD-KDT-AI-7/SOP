@@ -108,13 +108,13 @@
                                  <div></div>
                                  <div class="container">
                                     <h2>게시판 글쓰기</h2>
-                                    <form action="WriterCommunityServiceCon" method="post" enctype = "multipart/form-data">
+                                    <form action="../WriterCommunityServiceCon" method="post" enctype = "multipart/form-data">
                                        <div class="form-group">
                                           <label for="location">지역</label>
                                           <!-- placeholder 속성 입력한 데이터가 없는 경우 배경으로 나타난다.실제적으로 입력을 100자까지로 지정 -->
                                           <!-- required 속성을 설정하면 필수입력 사항이된다. -->
                                           <!-- pattern 속성을 이용한 정규표현식으로 데이터의 유효성 검사를 할 수 있다. -->
-														<select name="location">
+														<select id="location">
 															<option value="1">서울특별시</option>
 															<option value="2">인천광역시</option>
 															<option value="3">대전광역시</option>
@@ -140,7 +140,7 @@
                                           <!-- required 속성을 설정하면 필수입력 사항이된다. -->
                                           <!-- pattern 속성을 이용한 정규표현식으로 데이터의 유효성 검사를 할 수 있다. -->
                                           <input type="text" class="form-control" id="title"
-                                             placeholder="제목 입력(4-100)" name="title" maxlength="100"
+                                             placeholder="제목 입력(4-100)" name="article_title" maxlength="100"
                                              required="required" pattern=".{4,100}">
                                        </div>
                                        <div class="form-group">
@@ -148,18 +148,18 @@
                                           <!--  여러줄의 데이터를 입력하고 하고자 할때 textarea 태그를 사용한다. -->
                                           <!--  textarea 안에 있는 모든 글자는 그대로 나타난다. 공백문자, tag, enter -->
                                           <textarea class="form-control" rows="20" id="content"
-                                             name="content" placeholder="내용 작성" wrap="off"></textarea>
+                                             name="article_content" placeholder="내용 작성" wrap="off"></textarea>
                                        </div>
                                        <div class="form-group">
                                           <label for="writer">작성자</label> <input type="text"
                                              class="form-control" id="writer"
-                                             placeholder="작성자(2자-10자)" name="writer">
+                                             placeholder="작성자(2자-10자)" name="mb_id">
                                        </div>
                                        <div class="form-group">
                                           <label for="writer">파일등록</label>
-                                          <input name = "fileName1" type="file" style="float: right;">
-                                          <input name = "fileName2" type="file" style="float: right;">                                          
-                                          <input name = "fileName3" type="file" style="float: right;">                                          
+                                          <input name = "article_file1" type="file" style="float: right;">
+                                          <input name = "article_file2" type="file" style="float: right;">                                          
+                                          <input name = "article_file3" type="file" style="float: right;">                                          
                                        </div>
                                        <button type="submit" class="btn btn-default">등록</button>
                                     </form>
