@@ -3,6 +3,8 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> 
+<%@page import="Model.CommunityDTO"%>
+<%@page import="Model.CommunityDAO"%>
 <%@page import="Model.CampaignDTO"%>
 <%@page import="Model.CampaignDAO"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
@@ -11,7 +13,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>campaign</title>
+        <title>Community</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -44,10 +46,10 @@
     </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
    <%
-      String cam_seq = request.getParameter("cam_seq");
+      int article_seq = Integer.parseInt(request.getParameter("article_seq"));
 
-      CampaignDAO dao = new CampaignDAO();
-      CampaignDTO dto = dao.viewOneBoard(cam_seq);
+      CommunityDAO dao = new CommunityDAO();
+      CommunityDTO dto = dao.viewOneBoard(article_seq);
    %>
 
    <div class='preloader'>
@@ -57,6 +59,7 @@
       <header id="main_menu" class="header navbar-fixed-top">
          <div class="main_menu_bg">
             <div class="container">
+            
                <div class="row">
                   <div class="nave_menu">
                      <nav class="navbar navbar-default">
@@ -112,7 +115,7 @@
                                     <table id="list">
                                        <tr>
                                           <td>제목</td>
-                                          <td><%=dto.getCam_title() %></td>
+                                          <td><%=dto.getArticle_title() %></td>
                                        </tr>
                                        <tr>
                                           <td>작성자</td>
@@ -122,12 +125,12 @@
                                           <td colspan="2">내용</td>
                                        </tr>
                                        <tr>
-                                          <td colspan="2"><%=dto.getCam_content() %> 
-                                          <img src="./image/<%=dto.getCam_file1()%>"></td>
+                                          <td colspan="2"><%=dto.getArticle_content() %> 
+                                          <img src="./image/<%=dto.getArticle_file1()%>"></td>
                                        </tr>
                                        <tr>
-                                          <td colspan="2"><a href="campaign.jsp"><button>뒤로가기</button></a>
-                                                      <a href="UpdateCampaignServiceCon"><button>수정하기</button></a></td>
+                                          <td colspan="2"><a href="Community.jsp"><button>뒤로가기</button></a>
+                                                      <a href="#"><button>수정하기</button></a></td>
                                        </tr>
                                     </table>
                                  </div> 
