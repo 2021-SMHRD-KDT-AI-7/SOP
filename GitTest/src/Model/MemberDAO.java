@@ -13,6 +13,7 @@ public class MemberDAO {
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
 	String name = null;
+	MemberDTO dto = null;
 
 	// 연결 getConn 메소드
 	public void getConn() {
@@ -81,29 +82,33 @@ public class MemberDAO {
 	}
 
 	// 로그인 login 메소드
-//	public String login(String id, String pw) {
-//
-//		try {
-//			getConn();
-//			
-//			String sql = "select name from member2 where id =? and pw =?";
-//
-//			psmt = conn.prepareStatement(sql);
-//
-//			psmt.setString(1, id);
-//			psmt.setString(2, pw);
-//
-//			rs = psmt.executeQuery();
-//
-//			if (rs.next()) {
-//				name = rs.getNString("name");
-//			}
-//
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		} finally {
-//			DBclose();
-//		}
-//		return name;
-//	}
+	public MemberDTO login(String get_id, String get_pwd) {
+
+		try {
+			getConn();
+			
+			String sql = "select * from t_member where mb_id =? and mb_pwd =?";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, get_id);
+			psmt.setString(2, get_pwd);
+
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				String mb_id = rs.getString("mb_id");
+				String mb_pwd = rs.getString("mb_pwd");
+				String mb_nickname = rs.getNString("mb_nickname");
+				
+				dto = new MemberDTO(mb_id, mb_pwd, mb_nickname);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+		return dto;
+	}
 }

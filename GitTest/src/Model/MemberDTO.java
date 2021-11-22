@@ -36,6 +36,17 @@ public class MemberDTO {
 		this.mb_joindate = mb_joindate;
 		this.admin_yn = admin_yn;
 	}
+	
+	
+
+
+	public MemberDTO(String mb_id, String mb_pwd, String mb_nickname) {
+		this.mb_id = mb_id;
+		this.mb_pwd = mb_pwd;
+		this.mb_nickname = mb_nickname;
+	}
+
+
 
 
 	public String getMb_id() {
