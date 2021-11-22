@@ -31,8 +31,10 @@ jobs:
       run: |
         git config --local user.email "your@email"
         git config --local user.name "Auto_Scraping_Name" # 커밋에 포함될 이름
-        git add GitTest/news.json
+        git add news.json
         git commit -m "Auto - Update data with Scraping" # 커밋 메세지
+    - name: Remote
+        git remote add origin https://github.com/2021-SMHRD-KDT-AI-7/SOP/tree/master/GitTest
     - name: Push
       uses: ad-m/github-push-action@master
       with:
