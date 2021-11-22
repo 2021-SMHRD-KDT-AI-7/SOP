@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <!-- <p class="highcharts-description">
+        Basic line chart showing trends in a dataset. This chart includes the
+        <code>series-label</code> module, which adds a label to each line for
+        enhanced readability.
+    </p> -->
+
+
+<script>
+
+// var color3 = "RGBA(19,133,53,0.7)";//편차
+
+// //추세율 추가
+// function addTrendLine(inJSON, term){
+//             var xsum = 0;
+//             var ysum = 0;
+//             var count = 0;
+//             var xary = new Array();
+//             var yary = new Array();
+//             var ylen = 0;
+//             $.each(inJSON, function(index, item){
+//                 if(item[1] != null){
+//                     ysum += parseFloat(item[1]);
+//                     yary[count] = parseFloat(item[1]).toFixed(1);
+//                     ylen++;
+//                 }else{
+//                     yary[count] = item[1];
+//                 }
+//                 xsum = xsum + (count+1);
+//                 xary[count] = Number(count+1);
+//                 count++;
+//             });
+            
+//             console.log(xary);
+//             console.log(yary);
+//             var mo = 0;  //분자
+//             var de = 0;  //분모 
+//             var xavg = xsum/xary.length;
+//             var yavg = (ysum/ylen).toFixed(1);
+//             for(var idx = 0; idx < yary.length; idx++){
+//                 if(yary[idx] != null){
+//                    mo += Number(((xary[idx] - xavg) * (yary[idx] - yavg)));
+//                    de += (Math.pow(xary[idx] - xavg, 2));
+//                 }
+//             }
+//             var b1 = mo/de;
+//             var b0 = yavg - b1*xavg;
+//             var first = b0 + b1*xary[0];
+//             var last = b0 + b1*xary[xary.length-1];
+    
+//             var end = last - first;
+//             parent.Trend_value = end;
+//             firstVal = first;
+//             lastVal = last;
+            
+//             var data2 = new Array();
+//             data2[0] = [inJSON[0][0], firstVal];
+//             data2[1] = [inJSON[inJSON.length-1][0], lastVal];
+            
+            
+//             var oneYearVal = end/(yary.length);
+//             oneYearVal = oneYearVal/term;
+//             var Trend_value =(b1 * 10).toFixed(2); 
+//             parent.Trend_value = Trend_value;        
+//             var sign = "+";
+//             if(Trend_value<0) sign = "";
+    
+//             if(!isNaN(Trend_value)){
+//                 var trend_title = "경향성: "+sign+Trend_value+data_unit+"/10년";
+//                 //$(".trend_title", parent.document).show();
+//                 //$(".trend_title", parent.document).html(trend_title);
+//                 $('#trend_title').css('background-color','RGB(19,133,53)');
+//                 $("#trend_title").html(trend_title);
+//                 $(".trend_title").show();
+                
+//                 //추세율 그래프에 추가
+//                 chart.addSeries({
+//                     name: '추세선',
+//                     data : data2,
+//                     color: color3,
+//                     dashStyle: 'longdash',
+//                     enableMouseTracking: false,
+//                     marker: {
+//                         symbol: 'diamond'
+//                     }
+//                 });
+//             }else{
+//                 parent.Trend_value = "";
+//                 //$(".trend_title", parent.document).hide();
+//                 $(".trend_title").hide();
+//             }        
+//         }
+       
+
+
+Highcharts.chart('container', {
+
+colors: ['#ff7f00'],
+
+credits: {enabled: false},
+
+title: {
+    text: '일교차 1991~2020년(연별) 변화경향'
+},
+
+subtitle: {
+    text: 'Source: <a href="http://www.climate.go.kr/home/CCS/contents_new/34_1_Agrcinfo.php">기상청 기후정보포털</a>'
+},
+
+yAxis: {
+    title: {
+        text: '℃'
+    }
+},
+
+xAxis: {
+    accessibility: {
+        rangeDescription: 'Range: 1991 to 2020'
+    }
+},
+
+legend: {
+    layout: 'vertical',
+    align: 'right',
+    verticalAlign: 'middle'
+},
+
+plotOptions: {
+    series: {
+        label: {
+            connectorAllowed: false
+        },
+        pointStart: 1991
+    }
+},
+
+series: [{
+    name : ['일교차'],
+    data : [8.6, 8.6, 8.4, 9, 8.9, 8.8, 9, 8.1, 8.3, 8.4, 8.5, 8.2, 7.8, 8.5, 8.3, 7.9, 7.6, 7.8, 7.9, 7.9, 7.8, 7.9, 8.1, 8.1, 8.3, 8.1, 8.5, 8.3, 8.3, 7.9]
+}], 
+
+responsive: {
+    rules: [{
+        condition: {
+            maxWidth: 500
+        },
+        chartOptions: {
+            legend: {
+                layout: 'horizontal',
+                align: 'center',
+                verticalAlign: 'bottom'
+            }
+        }
+    }]
+}
+
+});
+
+</script>    
+</figure>
+
+
+
+</body>
+</html>

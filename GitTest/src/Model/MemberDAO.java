@@ -57,10 +57,15 @@ public class MemberDAO {
 			// DB와 이클립스 연결 통로 class 불러오기
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
+<<<<<<< HEAD
 			// 카드키
 			String db_ur1 ="jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
 			String db_id ="campus_c_c_1111";
 			String db_pw ="smhrd3";
+=======
+			// sql문 작성(변하는 값을 넣어 줄때는 ? 를 사용한다)
+			String sql = "insert into t_member values(?,?,?,?,?,?,0,?,?,?,0,0,sysdate,'N')";
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 
 			// 카드키 사용해서 연결하기
 			conn = DriverManager.getConnection(db_url, db_id, db_pw);

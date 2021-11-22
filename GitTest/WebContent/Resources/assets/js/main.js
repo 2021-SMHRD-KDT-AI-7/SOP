@@ -134,7 +134,10 @@ jQuery(document).ready(function ($) {
         animation: {
             animateResizeContainer: false,
             effects: 'fade scale'
-        }
+        },
+	   load: {
+	       filter: '.temp'
+	   }
 
     });
 
