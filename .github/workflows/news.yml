@@ -36,7 +36,7 @@ jobs:
     - name: Remote
       run: |
        git remote remove origin
-       git remote add origin https://github.com/2021-SMHRD-KDT-AI-7/SOP/tree/master/GitTest/WebContent
+       git remote add origin https://github.com/2021-SMHRD-KDT-AI-7/SOP/tree/master/GitTest
     - name: Push
       uses: ad-m/github-push-action@master
       with:
