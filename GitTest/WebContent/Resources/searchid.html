@@ -7,32 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .tr {
-            height: 35px;
-            background-color: white;
-        }
-
-        .td {
-            text-align: right;
-        }
-
-        #head {
-            background-color: white;
-            height: 50px;
-            text-align: left;
-        }
+         div{
+    border: 5px solid green;
+    margin: 5px;
+    padding: 5px;      
+              }
     </style>
 </head>
 
 <body>
     <form>
-
+        <link rel="stylesheet" href="searchid.css">
         
 
-        <details>
-            <summary>
-                <td align="right"> <input type="radio" name="phone" value="number">회원정보에 등록한 휴대전화로 인증<br>
-            </summary>
+       
+           <div>
+                <h3>회원정보에 등록한 휴대전화로 인증</h3>
+
             <p>회원정보에 등록한 휴대전화 번호와 입력한 번호가 같아야 인증번호를 받을 수 있다
                 <br>
                 <tr class="tr">
@@ -40,13 +31,10 @@
                     <td><input type="text" name="name"></td>
                 </tr>
                 <br>
-              
                 <tr class="tr">
                     <td class="td"> 생년월일</td>
                        <input type="text" name="mb_birthday" placeholder="생년월일" value="생년 월 일">
-                       <td colspan="2" align="middle"><input type="submit" value="인증 받기"></td>
                </tr>
-              
                <br>
                 <tr class="tr">
                     <td class="td"> 휴대전화</td>
@@ -67,7 +55,7 @@
 
             </p>
 
-        </details>		
+     		
     </div>
 
     </form>
