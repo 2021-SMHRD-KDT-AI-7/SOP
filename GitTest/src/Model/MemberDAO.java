@@ -4,106 +4,173 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class MemberDAO {
-
-	int cnt = 0;
-	Connection conn = null;
+	
+	ResultSet rs= null;
 	PreparedStatement psmt = null;
-	ResultSet rs = null;
-	String name = null;
+	Connection conn = null;
+	MemberDTO dto = null;
+	int cnt = 0;
 
-	// 연결 getConn 메소드
+	// DB 연결 메소드
 	public void getConn() {
-
 		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			String db_url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
-			String db_id = "campus_c_c_1111";
-			String db_pw = "smhrd3";
-			
-			// DB에 연결, 연결이 되면 Connection객체로 변환
-			conn = DriverManager.getConnection(db_url, db_id, db_pw);
-		} catch (Exception e) {
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+
+		
+		String db_ur1 ="jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+		String db_id ="campus_c_c_1111";
+		String db_pw ="smhrd3";
+
+		
+		conn = DriverManager.getConnection(db_url, db_id, db_pw);
+		}catch (Exception e) {
 			e.printStackTrace();
 		}
-
-	}		
+	}
 	
-	// DBclose메소드
-	public void DBclose() {
+	// DB 종료 메소드
+	public void dbClose() {
 		try {
-			// DB문 닫기(열랬을 때만 닫아주기) - 역순으로 닫아주기
+
+			if (rs != null)
+				rs.close();
 			if (psmt != null)
 				psmt.close();
 			if (conn != null)
 				conn.close();
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
 	
-	// 회원가입 join 메소드
-	public int join(String mb_id, String mb_pwd, String mb_name, String mb_nickname, String mb_birthdate, String mb_addr, String mb_email, String mb_phone, String mb_gender) {
-		
+	// 회원가입 메소드
+	public int join(String eamil, String pw, String tel, String address) {
+		// 1. ojdbc.jar 파일 import 하기
+		// 2. 동적 로딩 방식
 		getConn();
-
+		int cnt = 0;
 		try {
+			// DB와 이클립스 연결 통로 class 불러오기
+			Class.forName("oracle.jdbc.driver.OracleDriver");
 
-			// sql문 작성(변하는 값을 넣어 줄때는 ? 를 사용한다)
-			String sql = "insert into member2 values(?,?,?,?,?,?,0,?,?,?,?,0,0,0,0)";
+			// 카드키
+			String db_ur1 ="jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+			String db_id ="campus_c_c_1111";
+			String db_pw ="smhrd3";
 
+			// 카드키 사용해서 연결하기
+			conn = DriverManager.getConnection(db_url, db_id, db_pw);
+
+			// sql문 작성
+			String sql = "insert into web_member values(?,?,?,?)";
+
+			// DB에 전달
 			psmt = conn.prepareStatement(sql);
 
-			psmt.setString(1,mb_id);
-			psmt.setString(2,mb_pwd);
-			psmt.setString(3,mb_name);
-			psmt.setString(4,mb_nickname);
-			psmt.setString(5,mb_birthdate);
-			psmt.setString(6,mb_addr);
-			psmt.setString(7,mb_email);
-			psmt.setString(8,mb_phone);
-			psmt.setString(9,mb_gender);
+			// ?에 값 넣어주기
+			psmt.setString(1, eamil);
+			psmt.setString(2, pw);
+			psmt.setString(3, tel);
+			psmt.setString(4, address);
 
-			// SQL 실행
-			// executeUpdate : 수행결과로 int 타입의 값을 반환, select문을 제외한 다른 구문을 수행할때 사용하는 함수
+			// 실행
 			cnt = psmt.executeUpdate();
 
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {// 무조건 실행
-			DBclose();
+		} finally {
+			dbClose();
 		}
-
 		return cnt;
+
 	}
 
-	// 로그인 login 메소드
-//	public String login(String id, String pw) {
-//
+	// 로그인 메소드
+	public MemberDTO login(String get_email, String get_pw) {
+
+
+		
+	
+		try {
+
+			getConn();
+
+			String sql = "select*from web_member where email =? and pw =?";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, get_email);
+			psmt.setString(2, get_pw);
+
+			rs = psmt.executeQuery();
+			
+			if (rs.next()) {
+				String email = rs.getString("email");
+				String pw = rs.getString("pw");
+				String tel = rs.getString("tel");
+				String address = rs.getString("address");
+
+				dto = new MemberDTO(email, pw, tel, address);
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			dbClose();
+		}
+		return dto;
+	}
+
+
+	// 회원정보수정 메소드
+//	public int update(MemberDTO info) {
+//		getConn();
+//		
 //		try {
-//			getConn();
-//			
-//			String sql = "select name from member2 where id =? and pw =?";
-//
-//			psmt = conn.prepareStatement(sql);
-//
-//			psmt.setString(1, id);
-//			psmt.setString(2, pw);
-//
-//			rs = psmt.executeQuery();
-//
-//			if (rs.next()) {
-//				name = rs.getNString("name");
-//			}
-//
-//		} catch (Exception e) {
+//		String sql = "update web_member set pw =?,tel=?,address=? where email =?";
+//		
+//		psmt = conn.prepareStatement(sql);
+//		psmt.setNString(1,info.getPw());
+//		psmt.setNString(2,info.getTel());
+//		psmt.setNString(3,info.getAddress());
+//		psmt.setNString(4,info.getEmail());
+//		
+//		cnt = psmt.executeUpdate();
+//		}catch (Exception e) {
 //			e.printStackTrace();
-//		} finally {
-//			DBclose();
-//		}
-//		return name;
+//		}finally {
+//			dbClose();
+//		}return cnt;
+//	}
+	
+	// 회원정보관리 메소드
+//	public ArrayList<MemberDTO> select() {
+//		ArrayList<MemberDTO> list = new ArrayList<MemberDTO>();
+//		getConn();
+//		try {
+//			String sql = "select*from web_member";
+//			
+//			psmt = conn.prepareStatement(sql);
+//			rs =psmt.executeQuery();
+//			
+//			while(rs.next()) {
+//				String email = rs.getString("email");
+//				String tel = rs.getString("tel");
+//				String address = rs.getString("address");
+//				
+//				dto = new MemberDTO(email, tel, address); //회원정보를 dto로 묶어주기
+//				list.add(dto); // 한 사람의 정보를  list에 추가
+//			}
+//			
+//		}catch (Exception e) {
+//			e.printStackTrace();
+//		}finally {
+//			dbClose();
+//		}return list;
 //	}
 }
