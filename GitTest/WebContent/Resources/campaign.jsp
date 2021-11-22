@@ -1,3 +1,4 @@
+<%@page import="Model.MemberDTO"%>
 <%@page import="Model.CampaignDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.CampaignDAO"%>
@@ -43,6 +44,7 @@
 	<%
 		CampaignDAO dao = new CampaignDAO();
 	ArrayList<CampaignDTO> c_list = dao.viewBoard();
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
 	%>
 
 	<div class='preloader'>
@@ -76,8 +78,7 @@
 
 
 									<div class="collapse navbar-collapse"
-										id="bs-example-navbar-collapse-1">
-									</div>
+										id="bs-example-navbar-collapse-1"></div>
 
 								</div>
 							</nav>
@@ -104,13 +105,13 @@
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
 											<div id="board">
 												<table id="list">
+												<%if(info.getMb_id().equals("admin")){ %>
 													<tr>
 														<td>번호</td>
 														<td>제목</td>
 														<td>작성자</td>
 														<td>캠페인 시작시간</td>
 														<td>캠페인 종료시간</td>
-														
 													</tr>
 													<%
 														for (int i = 0; i < c_list.size(); i++) {
@@ -118,16 +119,18 @@
 													<tr>
 														<td><%=i + 1%></td>
 														<td><a
-															href="viewCampaign.jsp?cam_seq=<%=c_list.get(i).getCam_seq() %>">
-																<%=c_list.get(i).getCam_title() %>
+															href="viewCampaign.jsp?cam_seq=<%=c_list.get(i).getCam_seq()%>">
+																<%=c_list.get(i).getCam_title()%>
 														</a></td>
-														<td><%=c_list.get(i).getMb_id() %></td>
-														<td><%=c_list.get(i).getCam_start() %></td>
-														<td><%=c_list.get(i).getCam_finish() %></td>
+														<td><%=c_list.get(i).getMb_id()%></td>
+														<td><%=c_list.get(i).getCam_start()%></td>
+														<td><%=c_list.get(i).getCam_finish()%></td>
 													</tr>
 													<%
 														}
+												}
 													%>
+													
 
 												</table>
 
@@ -138,7 +141,7 @@
 									</div>
 								</div>
 							</div>
-							
+
 						</div>
 					</div>
 					<div class="scrooldown">

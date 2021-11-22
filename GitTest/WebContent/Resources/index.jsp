@@ -83,14 +83,20 @@
 
 										<ul class="nav navbar-nav navbar-right">
 											<li><a href="#home">HOME</a></li>
+											<%if(info == null){ %>
 											<li><a href="join.jsp">회원가입</a></li>
+											<%} %>
+											<%if(info == null){ %>
+											<li><a href="#contact">로그인</a></li>
+											<%}else{ %>
+											<li><a href="#contact">로그아웃</a></li>
+											<%} %>
 											<li><a href="#portfolio">PORTFOLIO</a></li>
 											<li><a href="#history">ABOUT US</a></li>
 											<li><a href="#portfolio">차트</a></li>
 											<li><a href="#pricing">캠페인</a></li>
 											<li><a href="#team">블로그</a></li>
 											<li><a href="#blog">커뮤니티</a></li>
-											<li><a href="#contact">로그인</a></li>
 										</ul>
 
 									</div>
@@ -202,13 +208,13 @@
 											<div class="row">
 												<div class="col-sm-12">
 													<div class="form-group">
-														<input type="email" class="form-control" name="id"
+														<input type="text" class="form-control" name="id"
 															placeholder="아이디를 입력하세요" required>
 													</div>
 												</div>
 												<div class="col-sm-12">
 													<div class="form-group">
-														<input type="text" class="form-control" name="pw"
+														<input type="password" class="form-control" name="pw"
 															placeholder="비밀번호를 입력하세요" required="">
 													</div>
 												</div>
