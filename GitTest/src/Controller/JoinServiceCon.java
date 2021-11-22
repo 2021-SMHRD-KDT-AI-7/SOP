@@ -39,6 +39,7 @@ public class JoinServiceCon extends HttpServlet {
 			mb_gender="F";
 		}
 		String mb_birthdate = mb_year + mb_month + mb_day;
+
 		System.out.println(mb_birthdate);
 		
 		System.out.println("mb_id: " +mb_id);
@@ -52,7 +53,7 @@ public class JoinServiceCon extends HttpServlet {
 		System.out.println("mb_email: " +mb_email);
 		System.out.println("mb_phone: " +mb_phone);
 		System.out.println("mb_gender: " +mb_gender);
-		
+
 		MemberDAO dao = new MemberDAO();
 		int cnt = dao.join(mb_id, mb_pwd, mb_name, mb_nickname, mb_birthdate, mb_addr, mb_email, mb_phone, mb_gender);
 				

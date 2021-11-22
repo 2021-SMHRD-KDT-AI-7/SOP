@@ -146,7 +146,7 @@ public class CommunityDAO {
 			}
 			
 			//게시판정보수정 메소드
-			public int update(CommunityDTO change) {
+			public int update(CommunityDTO change){
 				getConn();
 				
 				
