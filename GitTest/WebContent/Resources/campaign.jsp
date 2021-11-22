@@ -110,6 +110,7 @@
 														<td>작성자</td>
 														<td>캠페인 시작시간</td>
 														<td>캠페인 종료시간</td>
+														
 													</tr>
 													<%
 														for (int i = 0; i < c_list.size(); i++) {

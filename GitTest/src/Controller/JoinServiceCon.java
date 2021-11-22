@@ -38,8 +38,8 @@ public class JoinServiceCon extends HttpServlet {
 		} else if (mb_gender.equals("F")) {
 			mb_gender="F";
 		}
-		String mb_birth = mb_year + mb_month + mb_day;
-		System.out.println(mb_birth);
+		String mb_birthdate = mb_year + mb_month + mb_day;
+		System.out.println(mb_birthdate);
 		
 		System.out.println("mb_id: " +mb_id);
 		System.out.println("mb_pwd: " +mb_pwd);
@@ -53,27 +53,19 @@ public class JoinServiceCon extends HttpServlet {
 		System.out.println("mb_phone: " +mb_phone);
 		System.out.println("mb_gender: " +mb_gender);
 		
-//		MemberDAO dao = new MemberDAO();
-//		int cnt = dao.join(mb_id, mb_pwd, mb_name, mb_nickname, mb_birthdate, mb_addr, mb_email, mb_phone, mb_gender);
-//				
-//
-//		String path = null;
-//		
-//		if (cnt > 0) {
-//			System.out.println("회원가입 성공");
-//			request.setAttribute("mb_id", mb_id);
-//			path = "index.html";
-//
-//		} else {
-//			System.out.println("회원가입 실패");
-//			path = "index.html";
-//		}
-//		
-//		RequestDispatcher rd = request.getRequestDispatcher("index.html");
-//		rd.forward(request, response);
-//	
-//		
+		MemberDAO dao = new MemberDAO();
+		int cnt = dao.join(mb_id, mb_pwd, mb_name, mb_nickname, mb_birthdate, mb_addr, mb_email, mb_phone, mb_gender);
+				
+
+		String path = null;
 		
+		if (cnt > 0) {
+			System.out.println("회원가입 성공");
+			response.sendRedirect("./Resources/index.html");
+		} else {
+			System.out.println("회원가입 실패");
+			response.sendRedirect("./Resources/index.html");
+		}
 		
 	}
 
