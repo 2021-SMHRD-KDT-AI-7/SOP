@@ -392,7 +392,7 @@
 	<!--End of history -->
 
 
-	<!-- service Section -->
+	<!-- 单老府 固记 (柳林) 矫累 -->
 	<section id="service" class="service">
 		<div class="container-fluid">
 			<div class="row">
@@ -401,7 +401,7 @@
 
 						<div class="single_service single_service_text text-right">
 							<div class="head_title">
-								<h2>OUR SERVICES</h2>
+								<h2>DAILY MISSION</h2>
 							</div>
 
 							<div class="row">
@@ -449,7 +449,7 @@
 								</div>
 								<!-- End of col-sm-12 -->
 
-								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+								 <div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
 									<div class="row">
 
 										<div
@@ -464,7 +464,7 @@
 										<div class="col-sm-1 col-xs-1">
 											<figure class="single_service_icon">
 												<i class="fa fa-heart"></i>
-											</figure>
+											</figure> 
 											<!-- End of figure -->
 										</div>
 									</div>
@@ -491,7 +491,7 @@
 		</div>
 		<!-- End of Container-fluid -->
 	</section>
-	<!-- End of service Section -->
+	<!-- 单老府 固记 场! (柳林) -->
 
 
 
