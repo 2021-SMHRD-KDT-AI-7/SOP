@@ -1,8 +1,8 @@
 name: Run Scraper - Update data # 워크플로우 이름 지정
 
-on:
-  schedule:
-    - cron:  '*/5 * * * *' # 주기적으로 실행하기 위한 스케줄링 - cron 설정
+on: [push]
+ # schedule:
+ #   - cron:  '*/5 * * * *' # 주기적으로 실행하기 위한 스케줄링 - cron 설정
 
 jobs:
   build:
@@ -19,7 +19,11 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip freeze > requirements.txt
+    - name: Install python package # 파이썬 관련 패키지를 설치
+      run: |        
+        pip install beautifulsoup4
+        pip install requests
     - name: Run Scraper with python
       run: |
         python "Scraper.py"
@@ -29,6 +33,10 @@ jobs:
         git config --local user.name "Auto_Scraping_Name" # 커밋에 포함될 이름
         git add news.json
         git commit -m "Auto - Update data with Scraping" # 커밋 메세지
+    - name: Remote
+      run: |
+       git remote remove origin
+       git remote add origin https://github.com/2021-SMHRD-KDT-AI-7/SOP/tree/master/GitTest
     - name: Push
       uses: ad-m/github-push-action@master
       with:
