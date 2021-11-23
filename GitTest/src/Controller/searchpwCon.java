@@ -36,7 +36,7 @@ public class searchpwCon extends HttpServlet {
 		System.out.println("mb_birthdate : " + birthdate);
 		System.out.println("mb_phone : " +phone );
 		
-		response.sendRedirect("./Resources/index.jsp");
+		response.sendRedirect("./Resources/index.html");
 		
 	}
 

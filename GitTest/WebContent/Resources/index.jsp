@@ -89,7 +89,7 @@
 											<%if(info == null){ %>
 											<li><a href="#contact">로그인</a></li>
 											<%}else{ %>
-											<li><a href="#contact">로그아웃</a></li>
+											<li><a href="../LogoutCon">로그아웃</a></li>
 											<%} %>
 											<li><a href="#portfolio">PORTFOLIO</a></li>
 											<li><a href="#history">ABOUT US</a></li>
@@ -760,7 +760,7 @@
 					<div class="head_title text-center">
 						<h2>환경보호 캠페인!</h2>
 						<div class="subtitle">
-							<a href="campaign.jsp"> 캠페인 참여하기 </a>
+							<a href="campaign.jsp" class="btn btn-lg"> 캠페인 참여하기 </a>
 						</div>
 						<div class="separator"></div>
 					</div>
