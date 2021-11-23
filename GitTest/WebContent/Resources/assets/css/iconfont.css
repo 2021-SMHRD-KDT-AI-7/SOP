@@ -9,13 +9,27 @@
 
 *********************************************************************/
 
-@font-face {
+/* @font-face {
     font-family: 'bootstrapThemesCo-icon';
     src:    url('../fonts/bootstrapThemesCo-icon.eot?dcpptv');
     src:    url('../fonts/bootstrapThemesCo-icon.eot?dcpptv#iefix') format('embedded-opentype'),
         url('../fonts/bootstrapThemesCo-icon.ttf?dcpptv') format('truetype'),
         url('../fonts/bootstrapThemesCo-icon.woff?dcpptv') format('woff'),
         url('../fonts/bootstrapThemesCo-icon.svg?dcpptv#bootstrapThemesCo-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: 'ONE-Mobile-POP';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ONE-Mobile-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

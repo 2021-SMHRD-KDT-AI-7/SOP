@@ -18,8 +18,9 @@ body {
     margin-right: 0;
     font-weight: 300;
     width:100%;
-    font-family: 'ralewayregular';
+    font-family: 'ONE-Mobile-Regular';
 }
+<!-- ralewayregular -->
 .preloader {
     position: fixed;
     top: 0;
@@ -152,38 +153,40 @@ h5 {
     line-height: 2rem;
 }
 h1 {
-    font-family: 'open_sansbold';
+    font-family: 'ONE-Mobile-POP';
     font-size: 5.143rem;
     line-height: 5.5rem;
     color:#fff;
     letter-spacing: .4rem;
 }
 h2 {
-    font-family: 'source_sans_probold';
+    font-family: 'ONE-Mobile-POP';
     font-size:2.571rem;
     line-height: 3rem;
     text-transform: uppercase;
 
 }
 h3 {
-    font-family: 'source_sans_proregular';
+    font-family: 'ONE-Mobile-POP';
     font-size:1.714rem;
     line-height: 2.5rem; 
     color:#fff;
 }
 h4 {
-    font-family: 'open_sanssemibold';
+    font-family: 'ONE-Mobile-POP';
     font-size: 1.286rem;
     line-height: 2rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
-/*h5 {
+h5 {
+	font-family: 'ONE-Mobile-Regular'
     font-size: 1.125rem;
     margin-bottom: 1rem;
     color:#223d61;
     text-transform: uppercase;
 }
+/*
 h6 {
     font-size: 1rem;
     margin-bottom: .9rem;
@@ -399,7 +402,7 @@ Button
     margin-top: 20px;
     transition: .5s;
     border: 1px solid #e74c3c;
-    font-family: 'open_sansbold';
+    font-family: 'ONE-Mobile-Regular';
     padding: 0.8rem 3rem;
     transition: all 0.6s;
     border-radius: 2px;
@@ -855,7 +858,7 @@ input::-ms-input-placeholder {
 }
 .main_service .single_service.single_service_text .single_service_right_text p{
     color:#999999;
-    font-family: 'source_sans_proregular';
+    font-family: 'ONE-Mobile-Regular';
 }
 /*======================================================================
                     portfolio section css
@@ -881,7 +884,7 @@ button.btn-md {
     background-color: transparent;
     transition: .5s;
     border: 0px solid #e74c3c;
-    font-family: 'montserratregular';
+    font-family: 'ONE-Mobile-Regular';
 }
 button.btn-md:hover {
     background-color: transparent;
@@ -1112,7 +1115,7 @@ button.btn-md:hover {
     line-height:45px;
     height:45px;
     font-size:18px;
-    font-family: 'open_sanssemibold';
+    font-family: 'ONE-Mobile-Regular';
 }
 
 .single_pricing a{
