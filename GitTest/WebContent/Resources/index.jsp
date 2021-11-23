@@ -1,3 +1,4 @@
+<%@page import="Controller.DailyMission"%>
 <%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
@@ -394,6 +395,7 @@
 
 
 	<!-- 单老府 固记 (柳林) 矫累 -->
+	
 	<section id="service" class="service">
 		<div class="container-fluid">
 			<div class="row">
@@ -479,7 +481,7 @@
 					<div class="col-md-6 col-sm-12 no-padding">
 						<figure class="single_service single_service_img">
 							<div class="overlay-img"></div>
-							<img src="assets/images/servicerightimg.jpg" alt="" />
+							<img src="assets/images/servicerightimg.jpg" alt="" /> 
 						</figure>
 						<!-- End of figure -->
 					</div>
