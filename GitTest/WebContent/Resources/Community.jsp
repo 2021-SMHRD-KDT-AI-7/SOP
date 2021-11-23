@@ -153,6 +153,8 @@ p.c_2 {
 														<td>작성자</td>
 														<td>작성일자</td>
 														<td>조회수</td>
+
+														<td>삭제</td>
 													</tr>
 													
 													<% for (int i = 0; i < b_list.size(); i++) {%>
@@ -163,6 +165,7 @@ p.c_2 {
 														<td><%=b_list.get(i).getMb_id() %></td>
 														<td><%=b_list.get(i).getReg_date()%></td>
 														<td>조회수는 나중에 만들기</td>
+														<td><a href="../CommunityDeleteOneServiceCon?article_seq=<%=b_list.get(i).getArticle_seq()%>">삭제</a></td>
 													</tr>
 													<%
 														}
