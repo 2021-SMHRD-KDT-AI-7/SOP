@@ -16,7 +16,7 @@ public class LogoutCon extends HttpServlet {
 		session.removeAttribute("info");
 		
 		System.out.println("로그아웃 성공");
-		response.sendRedirect("./Resources/index.jsp");
+		response.sendRedirect("./Resources/index.html");
 	
 	
 	}

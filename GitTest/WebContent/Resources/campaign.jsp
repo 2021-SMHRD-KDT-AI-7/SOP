@@ -105,7 +105,6 @@
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
 											<div id="board">
 												<table id="list">
-												<%if(info.getMb_id().equals("admin")){ %>
 													<tr>
 														<td>번호</td>
 														<td>제목</td>
@@ -128,7 +127,6 @@
 													</tr>
 													<%
 														}
-												}
 													%>
 													
 
