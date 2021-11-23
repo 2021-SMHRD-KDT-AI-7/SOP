@@ -14,11 +14,6 @@ public class MemberDTO {
 	}
 
 
-	public MemberDTO(String mb_id) {
-		this.mb_id = mb_id;
-	}
-
-
 	private String mb_addr;
 	private String mb_point;
 	private String mb_email;
@@ -59,6 +54,10 @@ public class MemberDTO {
 	}
 
 
+	public MemberDTO(String mb_id) {
+		this.mb_id = mb_id;
+	}
+	
 
 
 

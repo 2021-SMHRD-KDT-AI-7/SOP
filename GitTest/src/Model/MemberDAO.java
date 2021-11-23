@@ -111,6 +111,35 @@ public class MemberDAO {
 		}
 		return dto;
 	}
+	
+	public MemberDTO findID(String get_name, String get_birthdate, String get_phone) {
+		try {
+			getConn();
+			
+			String sql = "select * from t_member where mb_name =? and mb_birthdate =? and mb_phone";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, get_name);
+			psmt.setString(2, get_birthdate);
+			psmt.setString(3, get_phone);
+
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				String mb_id = rs.getString("mb_id");
+				dto = new MemberDTO(mb_id);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBclose();
+		}
+		return dto;
+	}
+	
+	
 
 
 	public MemberDTO searchid(String get_name, String get_birthdate, String get_phone) {
