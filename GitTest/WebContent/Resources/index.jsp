@@ -89,7 +89,7 @@
 											<%if(info == null){ %>
 											<li><a href="#contact">로그인</a></li>
 											<%}else{ %>
-											<li><a href="#contact">로그아웃</a></li>
+											<li><a href="../LogoutCon">로그아웃</a></li>
 											<%} %>
 											<li><a href="#portfolio">PORTFOLIO</a></li>
 											<li><a href="#history">ABOUT US</a></li>
@@ -210,6 +210,7 @@
 													<div class="form-group">
 														<input type="text" class="form-control" name="id"
 															placeholder="아이디를 입력하세요" required>
+															
 													</div>
 												</div>
 												<div class="col-sm-12">
@@ -392,7 +393,7 @@
 	<!--End of history -->
 
 
-	<!-- service Section -->
+	<!-- 데일리 미션 (진주) 시작 -->
 	<section id="service" class="service">
 		<div class="container-fluid">
 			<div class="row">
@@ -401,7 +402,7 @@
 
 						<div class="single_service single_service_text text-right">
 							<div class="head_title">
-								<h2>OUR SERVICES</h2>
+								<h2>DAILY MISSION</h2>
 							</div>
 
 							<div class="row">
@@ -449,7 +450,7 @@
 								</div>
 								<!-- End of col-sm-12 -->
 
-								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+								 <div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
 									<div class="row">
 
 										<div
@@ -464,7 +465,7 @@
 										<div class="col-sm-1 col-xs-1">
 											<figure class="single_service_icon">
 												<i class="fa fa-heart"></i>
-											</figure>
+											</figure> 
 											<!-- End of figure -->
 										</div>
 									</div>
@@ -491,7 +492,7 @@
 		</div>
 		<!-- End of Container-fluid -->
 	</section>
-	<!-- End of service Section -->
+	<!-- 데일리 미션 끝! (진주) -->
 
 
 
@@ -760,7 +761,7 @@
 					<div class="head_title text-center">
 						<h2>환경보호 캠페인!</h2>
 						<div class="subtitle">
-							<a href="campaign.jsp"> 캠페인 참여하기 </a>
+							<a href="campaign.jsp" class="btn btn-lg"> 캠페인 참여하기 </a>
 						</div>
 						<div class="separator"></div>
 					</div>
@@ -1104,7 +1105,7 @@
 								</h2>
 								<h4>30 day free trial. Free plan allows up to 2 projects.
 									Pay if you need more. Cancel anytime. No catches.</h4>
-								<a href="" class="btn btn-lg">start free trial</a>
+								<a href="Community.jsp" class="btn btn-lg">Comminuty Board</a>
 							</div>
 						</div>
 					</div>

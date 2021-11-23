@@ -98,14 +98,14 @@ public class CommunityDAO {
 		 }
 		 
 		 //게시글 세부내용을 보여주는 메소드
-		 public CommunityDTO viewOneBoard(int article_seq) {
+		 public CommunityDTO viewOneBoard(String article_seq) {
 			 getConn();
 			 
 			 try {
 				 String sql="select * from t_community where article_seq=?";
 				 
 				 psmt=conn.prepareStatement(sql);
-				 psmt.setInt(1,article_seq);
+				 psmt.setString(1,article_seq);
 				 rs=psmt.executeQuery();
 				 
 				 if(rs.next()) {
@@ -128,4 +128,42 @@ public class CommunityDAO {
 					dbClose();
 				}return dto;
 		 }
+		 
+			//게시판 개별 삭제 메소드
+			public int deleteOne(String article_seq) {
+				getConn();
+				try {
+					String sql="delete from t_community where article_seq=?";
+					
+					psmt=conn.prepareStatement(sql);
+					psmt.setString(1, article_seq);
+					cnt=psmt.executeUpdate();
+				}catch(Exception e) {
+					e.printStackTrace();
+				}finally {
+					dbClose();
+				}return cnt;
+			}
+			
+			//게시판정보수정 메소드
+			public int update(CommunityDTO change){
+				getConn();
+				
+				
+				try {
+					String sql="update t_community set article_title=?,article_content=?,article_file1=? where mb_id=?";
+					psmt=conn.prepareStatement(sql);
+					
+					psmt.setString(1, change.getArticle_title());
+					psmt.setString(2, change.getArticle_content());
+					psmt.setString(3, change.getArticle_file1());
+					psmt.setString(4, change.getMb_id());
+					
+					cnt=psmt.executeUpdate();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}finally {
+					dbClose();
+				}return cnt;
+			}
 }
