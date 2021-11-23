@@ -222,9 +222,9 @@
 													<div class="form-group">
 														<ul>
 															<fieldset>
-																<a target="_blank" href="searchpw.html"
+																<a target="_blank" href="searchpw.jsp"
 																	class="find_text">비밀번호 찾기 |</a> <a target="_blank"
-																	href="searchid.html" class="find_text">아이디 찾기 |</a> <a
+																	href="searchid.jsp" class="find_text">아이디 찾기 |</a> <a
 																	target="_blank" href="join.jsp" class="find_text">회원가입</a>
 
 															</fieldset>

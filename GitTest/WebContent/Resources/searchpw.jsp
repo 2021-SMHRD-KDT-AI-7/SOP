@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,40 +12,40 @@
     <div id="content" class="non_sign inquiry">
         <link rel="stylesheet" href="searchpw.css">	
                 <div class="content_header">
-                    <h2>비밀번호 찾기</h2>
+                    <h2>��й�ȣ ã��</h2>
                 </div>
-                <p class="content_summary">비밀번호를 찾고자 하는 아이디를 입력해 주세요.</p>
+                <p class="content_summary">��й�ȣ�� ã���� �ϴ� ���̵� �Է��� �ּ���.</p>
                 <div class="section section_find">
                     <div class="box6">
                         <div id="divUserId" class="input_box">	
-                            <label id="lbUserId" for="userId">아이디 입력  </label>			
+                            <label id="lbUserId" for="userId">���̵� �Է�  </label>			
                             <input type="text" id="md_id" name="md_id">
                         </div>
                     </div>
 
 
                     <tr class="tr">
-                        <td class="td"> 생년월일     </td>
-                           <input type="text" name="mb_birthday" placeholder="생년월일" value="생년 월 일">
+                        <td class="td"> �������     </td>
+                           <input type="text" name="mb_birthday" placeholder="�������" >
                    </tr>
 
                    <br>
                     
                    <tr class="tr">
-                        <td class="td"> 휴대전화      </td>
+                        <td class="td"> �޴���ȭ      </td>
     
     
                         <select name="area">
-                            <option name="area" value="대한민국 A">+82</option>
-                            <input type="text" name="phone" placeholder="휴대전화번호" value="휴대전화 번호">
+                            <option name="area" value="���ѹα� A">+82</option>
+                            <input type="text" name="phone" placeholder="�޴���ȭ��ȣ" >
                             <td align="right"></td>
     
-                            <td colspan="2" align="middle"><input type="submit" value="인증 받기"></td>
+                            <td colspan="2" align="middle"><input type="submit" value="���� �ޱ�"></td>
     
                     </tr>
 
                     <div class="find_dsc">
-                        <h3>아이디가 기억나지 않는다면? <a href="searchid.html" onclick>아이디 찾기 바로가기</a></h3>
+                        <h3>���̵� ��ﳪ�� �ʴ´ٸ�? <a href="searchid.html" onclick>���̵� ã�� �ٷΰ���</a></h3>
                     </div>
                 </div>
                  
