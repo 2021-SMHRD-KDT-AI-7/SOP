@@ -7,6 +7,13 @@ public class MemberDTO {
 	private String mb_name;
 	private String mb_nickname;
 	private String mb_birthdate;
+	
+	public MemberDTO (String mb_id,String mb_pwd) {
+		this.mb_id = mb_id;
+		this.mb_pwd = mb_pwd;
+	}
+
+
 	private String mb_addr;
 	private String mb_point;
 	private String mb_email;
@@ -46,6 +53,11 @@ public class MemberDTO {
 		this.mb_nickname = mb_nickname;
 	}
 
+
+	public MemberDTO(String mb_id) {
+		this.mb_id = mb_id;
+	}
+	
 
 
 

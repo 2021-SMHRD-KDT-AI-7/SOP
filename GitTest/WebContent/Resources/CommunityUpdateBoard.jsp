@@ -47,7 +47,7 @@
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
-
+	
 	<%
 	//세션에 담겨있는지 확인
 	MemberDTO info=null;
@@ -63,7 +63,7 @@
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("alert('로그인을 하세요')");
-		//script.println("location.href='login.jsp");
+		script.println("location.href='login,jsp");
 		script.println("</script>");
 	}
 	
@@ -78,9 +78,8 @@
 		script.println("location.href='Community.jsp'");
 		script.println("</script>");
 	}
-	//11월22일
 	//해당 mb_id에 대한 게시글을 가져온 다음 세션을 통하여 작성자 본인이 맞는지 확인한다
-	if(info.getMb_id().equals(dto.getMb_id())){
+	if(!info.getMb_id().equals(dto.getMb_id())){
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("alert('권한이 없습니다')");
@@ -199,15 +198,9 @@
                                           <label for="content">내용</label>
                                           <!--  여러줄의 데이터를 입력하고 하고자 할때 textarea 태그를 사용한다. -->
                                           <!--  textarea 안에 있는 모든 글자는 그대로 나타난다. 공백문자, tag, enter -->
-                                        <!--  <textarea class="form-control" rows="20" id="content"
-                                             name="article_content" placeholder="내용 작성" wrap="off"><%=dto.getArticle_content() %> <img src="./image/<%=dto.getArticle_file1()%>"> </textarea>
-                                     -->  </div>
-                                      
-                                       
-                                   
-														
-														
-														
+                                          <textarea class="form-control" rows="20" id="content"
+                                             name="article_content" placeholder="내용 작성" wrap="off"><%=dto.getArticle_content() %></textarea>
+                                       </div>
                                        <div class="form-group">
                                           <label for="writer">작성자</label> <input type="text"
                                              class="form-control" id="writer"

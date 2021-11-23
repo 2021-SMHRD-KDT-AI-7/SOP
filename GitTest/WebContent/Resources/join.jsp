@@ -32,7 +32,7 @@
 				</span>
 
 				<h3>비밀번호</h3>
-				<span class="signup-input"> <input id="mb_pwd" type="text" name="mb_pwd"></input>
+				<span class="signup-input"> <input id="mb_pwd" type="password" name="mb_pwd"></input>
 					<span class="pw-lock"></span>
 				</span>
 

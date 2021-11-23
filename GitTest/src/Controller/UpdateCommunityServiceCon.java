@@ -46,6 +46,7 @@ public class UpdateCommunityServiceCon extends HttpServlet {
 				String c_article_title = (String)session.getAttribute(article_title);
 				String c_article_content = (String)session.getAttribute(article_content);
 				// String c_article_file1 = (String)session.getAttribute(article_file1);
+				
 				String c_article_file1 = null;
 				
 				if(multi.getFilesystemName("article_file1") != null) {
