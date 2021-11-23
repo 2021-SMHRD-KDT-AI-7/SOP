@@ -1,3 +1,4 @@
+<%@page import="Controller.DailyMission"%>
 <%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
@@ -45,7 +46,7 @@
 
 	<%
 		request.setCharacterEncoding("euc-kr");
-		MemberDTO info = (MemberDTO) session.getAttribute("info");
+	MemberDTO info = (MemberDTO) session.getAttribute("info");
 	%>
 
 	<div class='preloader'>
@@ -70,7 +71,7 @@
 												class="icon-bar"></span>
 										</button>
 										<a class="navbar-brand" href="#home"> <img
-											src="assets/images/logo.png" />
+											 src="sopsop.JPG" />
 										</a>
 									</div>
 
@@ -83,14 +84,24 @@
 
 										<ul class="nav navbar-nav navbar-right">
 											<li><a href="#home">HOME</a></li>
-											<%if(info == null){ %>
+											<%
+												if (info == null) {
+											%>
 											<li><a href="join.jsp">회원가입</a></li>
-											<%} %>
-											<%if(info == null){ %>
+											<%
+												}
+											%>
+											<%
+												if (info == null) {
+											%>
 											<li><a href="#contact">로그인</a></li>
-											<%}else{ %>
+											<%
+												} else {
+											%>
 											<li><a href="../LogoutCon">로그아웃</a></li>
-											<%} %>
+											<%
+												}
+											%>
 											<li><a href="#portfolio">PORTFOLIO</a></li>
 											<li><a href="#history">ABOUT US</a></li>
 											<li><a href="#portfolio">차트</a></li>
@@ -122,14 +133,10 @@
 								<div class="main_home_slider text-center">
 									<div class="single_home_slider">
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
-											<h3>Our Clients Are Our First Priority</h3>
-											<h1>WELCOME TO BINO</h1>
+											<h3>Save Ozon Party</h3>
+											<h1>SOP</h1>
 											<div class="separator"></div>
-											<p>Lorem Ipsum is simply dummy text of the printing and
-												typesetting industry. Lorem Ipsum has been the industry's
-												standard dummy text ever since the 1500s, when an unknown
-												printer took a galley of type and scrambled it to make a
-												type specimen book.</p>
+											<p>Save Ozon Party</p>
 											<div class="home_btn">
 												<a href="" class="btn btn-lg m_t_10">GET STARTED NOW</a> <a
 													href="" class="btn btn-default">LEARN MORE</a>
@@ -137,40 +144,8 @@
 
 										</div>
 									</div>
-									<div class="single_home_slider">
-										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
-											<h3>Our Clients Are Our First Priority</h3>
-											<h1>WELCOME TO BINO</h1>
-											<div class="separator"></div>
-											<p>Lorem Ipsum is simply dummy text of the printing and
-												typesetting industry. Lorem Ipsum has been the industry's
-												standard dummy text ever since the 1500s, when an unknown
-												printer took a galley of type and scrambled it to make a
-												type specimen book.</p>
-											<div class="home_btn">
-												<a href="" class="btn btn-lg m_t_10">GET STARTED NOW</a> <a
-													href="" class="btn btn-default">LEARN MORE</a>
-											</div>
 
-										</div>
-									</div>
-									<div class="single_home_slider">
-										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
-											<h3>Our Clients Are Our First Priority</h3>
-											<h1>WELCOME TO BINO</h1>
-											<div class="separator"></div>
-											<p>Lorem Ipsum is simply dummy text of the printing and
-												typesetting industry. Lorem Ipsum has been the industry's
-												standard dummy text ever since the 1500s, when an unknown
-												printer took a galley of type and scrambled it to make a
-												type specimen book.</p>
-											<div class="home_btn">
-												<a href="" class="btn btn-lg m_t_10">GET STARTED NOW</a> <a
-													href="" class="btn btn-default">LEARN MORE</a>
-											</div>
 
-										</div>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -201,7 +176,7 @@
 							<div class="col-sm-6">
 								<div
 									class="single_contant_left padding-top-90 padding-bottom-90">
-									<form action="../LoginCon" id="formid" method = "post">
+									<form action="../LoginCon" id="formid" method="post">
 										<div
 											class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">
 
@@ -210,7 +185,7 @@
 													<div class="form-group">
 														<input type="text" class="form-control" name="id"
 															placeholder="아이디를 입력하세요" required>
-															
+
 													</div>
 												</div>
 												<div class="col-sm-12">
@@ -223,10 +198,10 @@
 													<div class="form-group">
 														<ul>
 															<fieldset>
-																<a target="_blank" href="searchpw.jsp"
-																	class="find_text">비밀번호 찾기 |</a> <a target="_blank"
-																	href="searchid.jsp" class="find_text">아이디 찾기 |</a> <a
-																	target="_blank" href="join.jsp" class="find_text">회원가입</a>
+																<a target="_blank" href="searchpw.jsp" class="find_text">비밀번호
+																	찾기 |</a> <a target="_blank" href="searchid.jsp"
+																	class="find_text">아이디 찾기 |</a> <a target="_blank"
+																	href="join.jsp" class="find_text">회원가입</a>
 
 															</fieldset>
 
@@ -250,7 +225,7 @@
 							<div class="col-sm-6">
 								<div
 									class="single_contant_left padding-top-90 padding-bottom-90">
-									<form action="../LogoutCon" id="formid" method = "post">
+									<form action="../LogoutCon" id="formid" method="post">
 										<div
 											class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">
 
@@ -259,7 +234,9 @@
 													<div class="form-group">
 														<ul>
 															<fieldset>
-																<p><%= info.getMb_nickname() %> 님 </p>
+																<p><%=info.getMb_nickname()%>
+																	님
+																</p>
 															</fieldset>
 
 														</ul>
@@ -394,6 +371,7 @@
 
 
 	<!-- 데일리 미션 (진주) 시작 -->
+	
 	<section id="service" class="service">
 		<div class="container-fluid">
 			<div class="row">
@@ -412,10 +390,11 @@
 										<div
 											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
 											<article class="single_service_right_text">
-												<h4>WEB DESIGN</h4>
-												<p>Lorem Ipsum is simply dummy text of the printing and
-													typesetting industry. Lorem Ip sum has been the industry's
-													standard dummy text ever.</p>
+												<h4>난방온도 2℃ 낮추기</h4>
+												<p>
+													동절기 적정 실내온도(겨울철 18~20℃)를 고려하여, 보일러 온도 설정시 2℃ 낮추기<br>
+													겨울에는 내복, 수면양말, 무릎담요 같은 보온용품 적극 활용하기
+												</p>
 											</article>
 										</div>
 										<div class="col-sm-1 col-xs-1">
@@ -434,10 +413,11 @@
 										<div
 											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
 											<article class="single_service_right_text">
-												<h4>PRINT DESIGN</h4>
-												<p>Lorem Ipsum is simply dummy text of the printing and
-													typesetting industry. Lorem Ip sum has been the industry's
-													standard dummy text ever.</p>
+												<h4>전기밥솥 보온기능 사용 줄이기</h4>
+												<p>
+													전기밥솥은 취사때만 사용하고 밥을 먹을 만큼만 짓기. 남은 밥은 먹을 만큼씩 나눠 냉동하기<br>
+													1일 평균 보온시간 약0시간(2018년 가구에너지 상설표본조사 결과)
+												</p>
 											</article>
 										</div>
 										<div class="col-sm-1 col-xs-1">
@@ -450,22 +430,22 @@
 								</div>
 								<!-- End of col-sm-12 -->
 
-								 <div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
 									<div class="row">
 
 										<div
 											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1 margin-bottom-20">
-											<article class="single_service_right_text">
+											<!-- <article class="single_service_right_text">
 												<h4>PHOTOGRAPHY</h4>
 												<p>Lorem Ipsum is simply dummy text of the printing and
 													typesetting industry. Lorem Ip sum has been the industry's
 													standard dummy text ever.</p>
-											</article>
+											</article> -->
 										</div>
 										<div class="col-sm-1 col-xs-1">
-											<figure class="single_service_icon">
+											<!-- <figure class="single_service_icon">
 												<i class="fa fa-heart"></i>
-											</figure> 
+											</figure> -->
 											<!-- End of figure -->
 										</div>
 									</div>
@@ -480,7 +460,7 @@
 					<div class="col-md-6 col-sm-12 no-padding">
 						<figure class="single_service single_service_img">
 							<div class="overlay-img"></div>
-							<img src="assets/images/servicerightimg.jpg" alt="" />
+							<img src="assets/images/servicerightimg.jpg" alt="" /> 
 						</figure>
 						<!-- End of figure -->
 					</div>
