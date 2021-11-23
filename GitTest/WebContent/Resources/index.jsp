@@ -412,10 +412,10 @@
 										<div
 											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
 											<article class="single_service_right_text">
-												<h4>WEB DESIGN</h4>
-												<p>Lorem Ipsum is simply dummy text of the printing and
-													typesetting industry. Lorem Ip sum has been the industry's
-													standard dummy text ever.</p>
+												<h4> 난방온도 2℃ 낮추기 </h4>
+												<p>동절기 적정 실내온도(겨울철 18~20℃)를 고려하여, 보일러 온도 설정시 2℃ 낮추기<br>
+												겨울에는 내복, 수면양말, 무릎담요 같은 보온용품 적극 활용하기
+												</p>
 											</article>
 										</div>
 										<div class="col-sm-1 col-xs-1">
@@ -434,10 +434,9 @@
 										<div
 											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
 											<article class="single_service_right_text">
-												<h4>PRINT DESIGN</h4>
-												<p>Lorem Ipsum is simply dummy text of the printing and
-													typesetting industry. Lorem Ip sum has been the industry's
-													standard dummy text ever.</p>
+												<h4>전기밥솥 보온기능 사용 줄이기</h4>
+												<p>전기밥솥은 취사때만 사용하고 밥을 먹을 만큼만 짓기. 남은 밥은 먹을 만큼씩 나눠 냉동하기<br>
+												 	1일 평균 보온시간 약0시간(2018년 가구에너지 상설표본조사 결과)</p>
 											</article>
 										</div>
 										<div class="col-sm-1 col-xs-1">
@@ -455,17 +454,17 @@
 
 										<div
 											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1 margin-bottom-20">
-											<article class="single_service_right_text">
+											<!-- <article class="single_service_right_text">
 												<h4>PHOTOGRAPHY</h4>
 												<p>Lorem Ipsum is simply dummy text of the printing and
 													typesetting industry. Lorem Ip sum has been the industry's
 													standard dummy text ever.</p>
-											</article>
+											</article> -->
 										</div>
 										<div class="col-sm-1 col-xs-1">
-											<figure class="single_service_icon">
+											<!-- <figure class="single_service_icon">
 												<i class="fa fa-heart"></i>
-											</figure> 
+											</figure> --> 
 											<!-- End of figure -->
 										</div>
 									</div>
