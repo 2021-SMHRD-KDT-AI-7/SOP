@@ -12,6 +12,12 @@ public class CommunityDTO {
 	private String article_file2;
 	private String article_file3;
 	
+	public CommunityDTO(String article_title, String article_content, String article_file1) {
+		super();
+		this.article_title = article_title;
+		this.article_content = article_content;
+		this.article_file1 = article_file1;
+	}
 	public CommunityDTO(int article_seq, String article_title, String mb_id, Date reg_date) {
 		
 		this.article_seq = article_seq;

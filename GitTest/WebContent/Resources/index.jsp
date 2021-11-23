@@ -89,7 +89,7 @@
 											<%if(info == null){ %>
 											<li><a href="#contact">로그인</a></li>
 											<%}else{ %>
-											<li><a href="#contact">로그아웃</a></li>
+											<li><a href="../LogoutCon">로그아웃</a></li>
 											<%} %>
 											<li><a href="#portfolio">PORTFOLIO</a></li>
 											<li><a href="#history">ABOUT US</a></li>
@@ -210,6 +210,7 @@
 													<div class="form-group">
 														<input type="text" class="form-control" name="id"
 															placeholder="아이디를 입력하세요" required>
+															
 													</div>
 												</div>
 												<div class="col-sm-12">
@@ -759,7 +760,7 @@
 					<div class="head_title text-center">
 						<h2>환경보호 캠페인!</h2>
 						<div class="subtitle">
-							<a href="campaign.jsp"> 캠페인 참여하기 </a>
+							<a href="campaign.jsp" class="btn btn-lg"> 캠페인 참여하기 </a>
 						</div>
 						<div class="separator"></div>
 					</div>
@@ -1103,7 +1104,7 @@
 								</h2>
 								<h4>30 day free trial. Free plan allows up to 2 projects.
 									Pay if you need more. Cancel anytime. No catches.</h4>
-								<a href="" class="btn btn-lg">start free trial</a>
+								<a href="Community.jsp" class="btn btn-lg">Comminuty Board</a>
 							</div>
 						</div>
 					</div>

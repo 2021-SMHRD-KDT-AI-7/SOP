@@ -1,10 +1,16 @@
+<%@page import="Model.MemberDTO"%>
+<%@page import="Model.CommunityDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Model.CommunityDAO"%>
+<%@page import="Model.MemberDAO"%>
+<%@page import="java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Community_write</title>
+<title>Community_Update</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -41,7 +47,52 @@
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
-
+	
+	<%
+	//세션에 담겨있는지 확인
+	MemberDTO info=null;
+	String article_seq = request.getParameter("article_seq");
+	
+	CommunityDAO dao= new CommunityDAO();
+	CommunityDTO dto =dao.viewOneBoard(article_seq);
+	
+	if(session.getAttribute("info") != null){
+		info=(MemberDTO)session.getAttribute("info");
+	}
+	if(info==null){
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('로그인을 하세요')");
+		script.println("location.href='login,jsp");
+		script.println("</script>");
+	}
+	
+	int mb_id=0;
+	if(request.getParameter("mb_id")!=null){
+		mb_id=Integer.parseInt(request.getParameter("mb_id"));
+	}
+	if(mb_id==0){
+		PrintWriter script=response.getWriter();
+		script.println("<script>");
+		script.println("alret('유효하지 않은 글입니다')");
+		script.println("location.href='Community.jsp'");
+		script.println("</script>");
+	}
+	//해당 mb_id에 대한 게시글을 가져온 다음 세션을 통하여 작성자 본인이 맞는지 확인한다
+	if(!info.getMb_id().equals(dto.getMb_id())){
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('권한이 없습니다')");
+		script.println("location.href='Community.jsp'");
+		script.println("</script>");
+	}
+	
+	
+	%>
+	
+	
+	
+	
    <div class='preloader'>
       <div class='loaded'>&nbsp;</div>
    </div>
@@ -107,8 +158,8 @@
                               <div class="main_home wow fadeInUp" data-wow-duration="700ms">
                                  <div></div>
                                  <div class="container">
-                                    <h2>게시판 글쓰기</h2>
-                                    <form action="../WriterCommunityServiceCon" method="post" enctype = "multipart/form-data">
+                                    <h2>글 수정</h2>
+                                    <form action="../UpdateCommunityServiceCon" method="post" enctype = "multipart/form-data">
                                        <div class="form-group">
                                           <label for="location">지역</label>
                                           <!-- placeholder 속성 입력한 데이터가 없는 경우 배경으로 나타난다.실제적으로 입력을 100자까지로 지정 -->
@@ -141,19 +192,20 @@
                                           <!-- pattern 속성을 이용한 정규표현식으로 데이터의 유효성 검사를 할 수 있다. -->
                                           <input type="text" class="form-control" id="title"
                                              placeholder="제목 입력(4-100)" name="article_title" maxlength="100"
-                                             required="required" pattern=".{4,100}">
+                                             required="required" pattern=".{4,100}" value=<%=dto.getArticle_title() %>>
                                        </div>
                                        <div class="form-group">
                                           <label for="content">내용</label>
                                           <!--  여러줄의 데이터를 입력하고 하고자 할때 textarea 태그를 사용한다. -->
-                                          <!--  textearea 안에 있는 모든 글자는 그대로 나타난다. 공백문자, tag, enter -->
+                                          <!--  textarea 안에 있는 모든 글자는 그대로 나타난다. 공백문자, tag, enter -->
                                           <textarea class="form-control" rows="20" id="content"
-                                             name="article_content" placeholder="내용 작성" wrap="off"></textarea>
+                                             name="article_content" placeholder="내용 작성" wrap="off"><%=dto.getArticle_content() %></textarea>
                                        </div>
                                        <div class="form-group">
                                           <label for="writer">작성자</label> <input type="text"
                                              class="form-control" id="writer"
-                                             placeholder="작성자(2자-10자)" name="mb_id">
+                                             placeholder="작성자(2자-10자)" name="mb_id" value=<%=dto.getMb_id()%>
+                                             >
                                        </div>
                                        <div class="form-group">
                                           <label for="writer">파일등록</label>
@@ -161,7 +213,7 @@
                                           <input name = "article_file2" type="file" style="float: right;">                                          
                                           <input name = "article_file3" type="file" style="float: right;">                                          
                                        </div>
-                                       <button type="submit" class="btn btn-default">등록</button>
+                                       <button type="submit" class="btn btn-default" value="수정하기">수정</button>
                                     </form>
                                  </div>
 

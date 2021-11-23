@@ -13,7 +13,6 @@ public class MemberDAO {
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
 	String name = null;
-	MemberDTO dto = null;
 
 	// 연결 getConn 메소드
 	public void getConn() {
@@ -46,6 +45,9 @@ public class MemberDAO {
 		
 	}
 	
+
+	MemberDTO dto = null;
+
 	// 회원가입 join 메소드
 	public int join(String mb_id, String mb_pwd, String mb_name, String mb_nickname, String mb_birthdate, String mb_addr, String mb_email, String mb_phone, String mb_gender) {
 		

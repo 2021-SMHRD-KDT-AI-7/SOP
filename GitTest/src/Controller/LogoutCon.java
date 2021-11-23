@@ -13,7 +13,7 @@ public class LogoutCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-		session.removeAttribute("info");
+		session.invalidate();
 		
 		System.out.println("로그아웃 성공");
 		response.sendRedirect("./Resources/index.html");
