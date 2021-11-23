@@ -98,14 +98,14 @@ public class CommunityDAO {
 		 }
 		 
 		 //게시글 세부내용을 보여주는 메소드
-		 public CommunityDTO viewOneBoard(int article_seq) {
+		 public CommunityDTO viewOneBoard(String article_seq) {
 			 getConn();
 			 
 			 try {
 				 String sql="select * from t_community where article_seq=?";
 				 
 				 psmt=conn.prepareStatement(sql);
-				 psmt.setInt(1,article_seq);
+				 psmt.setString(1,article_seq);
 				 rs=psmt.executeQuery();
 				 
 				 if(rs.next()) {

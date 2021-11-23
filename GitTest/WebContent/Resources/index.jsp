@@ -204,6 +204,7 @@
 													<div class="form-group">
 														<input type="email" class="form-control" name="id"
 															placeholder="아이디를 입력하세요" required>
+															
 													</div>
 												</div>
 												<div class="col-sm-12">
@@ -1098,7 +1099,7 @@
 								</h2>
 								<h4>30 day free trial. Free plan allows up to 2 projects.
 									Pay if you need more. Cancel anytime. No catches.</h4>
-								<a href="" class="btn btn-lg">start free trial</a>
+								<a href="Community.jsp" class="btn btn-lg">Comminuty Board</a>
 							</div>
 						</div>
 					</div>

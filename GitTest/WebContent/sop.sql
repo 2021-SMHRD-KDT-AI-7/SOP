@@ -5,6 +5,7 @@ insert into T_COMMUNITY values(T_COMMUNITY_seq.NEXTVAL,
 
 						
 select * from user_sequences
+select * from t_member;
 
 select * from T_LOCATION
 

@@ -146,7 +146,7 @@
                                        <div class="form-group">
                                           <label for="content">내용</label>
                                           <!--  여러줄의 데이터를 입력하고 하고자 할때 textarea 태그를 사용한다. -->
-                                          <!--  textarea 안에 있는 모든 글자는 그대로 나타난다. 공백문자, tag, enter -->
+                                          <!--  textearea 안에 있는 모든 글자는 그대로 나타난다. 공백문자, tag, enter -->
                                           <textarea class="form-control" rows="20" id="content"
                                              name="article_content" placeholder="내용 작성" wrap="off"></textarea>
                                        </div>

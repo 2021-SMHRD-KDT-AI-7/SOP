@@ -46,8 +46,7 @@
     </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
    <%
-      int article_seq = Integer.parseInt(request.getParameter("article_seq"));
-
+      String article_seq = request.getParameter("article_seq");
       CommunityDAO dao = new CommunityDAO();
       CommunityDTO dto = dao.viewOneBoard(article_seq);
    %>
@@ -99,8 +98,6 @@
       <!--End of header -->
 
 
-
-
       <!--home Section -->
       <section id="home" class="home">
          <div class="overlay">
@@ -130,7 +127,8 @@
                                        </tr>
                                        <tr>
                                           <td colspan="2"><a href="Community.jsp"><button>뒤로가기</button></a>
-                                                      <a href="#"><button>수정하기</button></a></td>
+                                                      <a href="CommunityUpdateBoard.jsp?article_seq=<%=dto.getArticle_seq()%>"><button>수정하기</button></a></td>
+                                               
                                        </tr>
                                     </table>
                                  </div> 
