@@ -47,6 +47,10 @@ public class MemberDTO {
 	}
 
 
+	public MemberDTO(String mb_id) {
+		this.mb_id = mb_id;
+	}
+	
 
 
 	public String getMb_id() {
