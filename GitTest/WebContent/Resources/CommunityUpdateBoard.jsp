@@ -47,7 +47,7 @@
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
-	
+
 	<%
 	//세션에 담겨있는지 확인
 	MemberDTO info=null;
