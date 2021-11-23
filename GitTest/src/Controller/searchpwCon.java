@@ -40,7 +40,6 @@ public class searchpwCon extends HttpServlet {
 		System.out.println("mb_birthdate : " + birthdate);
 		System.out.println("mb_phone : " +phone );
 		
-		
 		response.setContentType("text/html; charset=UTF-8");
 
 		PrintWriter writer = response.getWriter(); 
@@ -49,8 +48,6 @@ public class searchpwCon extends HttpServlet {
 		writer.println("<script>alert('PW는 '+ '"+info.getMb_pwd()+"' +' 입니다');location.href='"+PageUrl+"';</script>"); 
 		writer.close();
 		
-		//response.sendRedirect("./Resources/index.jsp");
-		response.sendRedirect("./Resources/index.html");
 	}
 
 }
