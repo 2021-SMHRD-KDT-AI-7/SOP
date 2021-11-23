@@ -39,7 +39,6 @@ public class searchpwCon extends HttpServlet {
 		System.out.println("mb_id : " + id);
 		System.out.println("mb_birthdate : " + birthdate);
 		System.out.println("mb_phone : " +phone );
-
 		
 		response.setContentType("text/html; charset=UTF-8");
 
