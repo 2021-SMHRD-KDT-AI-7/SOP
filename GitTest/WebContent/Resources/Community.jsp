@@ -182,10 +182,7 @@ p.c_2 {
 						</div>
 					</div>
 				</div>
-				<div class="scrooldown">
-					<a href="#feature"><i class="fa fa-arrow-down"></i></a>
-				</div>
-			</div>
+				
 	</div>
 	</section>
 	<!--End of home section -->
