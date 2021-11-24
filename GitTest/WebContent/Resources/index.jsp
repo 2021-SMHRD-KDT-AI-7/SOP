@@ -193,7 +193,7 @@
 												</div>
 												<div class="col-sm-11">
 													<div class="form-group">
-														<input type="password" class="form-control" name="pw"
+														<input type="password" class="form-control" name="pwd"
 															placeholder="비밀번호를 입력하세요" required="">
 													</div>
 												</div>

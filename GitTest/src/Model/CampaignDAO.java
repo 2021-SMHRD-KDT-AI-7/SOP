@@ -182,7 +182,9 @@ public class CampaignDAO {
 		}finally {
 			dbClose();
 		}return cnt;
-	} 
+	}
+	
+	public ArrayList<CampaignDTO> 
 
 	
 }

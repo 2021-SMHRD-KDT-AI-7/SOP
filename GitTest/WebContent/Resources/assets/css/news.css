@@ -24,7 +24,7 @@
 @import url('archive.css');
 @import url('subscribe.css');
 
-@import url('banner.css'); /*챗쨈��챗쨀�챗쨈��챘�짢css챘쨀��챗짼쩍*/
+@import url('banner.css');
 
 /* section layout */
 #header {position: relative; width: 970px; margin: 0 auto; text-align: left;  z-index:1000;}

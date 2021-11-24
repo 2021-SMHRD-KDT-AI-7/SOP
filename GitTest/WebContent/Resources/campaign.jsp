@@ -42,8 +42,8 @@
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
 	<%
-	CampaignDAO dao = new CampaignDAO();
-	MemberDTO info = (MemberDTO)session.getAttribute("info");
+		CampaignDAO dao = new CampaignDAO();
+	MemberDTO info = (MemberDTO) session.getAttribute("info");
 	String get_id = info.getMb_id();
 	ArrayList<CampaignDTO> c_list = dao.viewBoard(get_id);
 	%>
@@ -104,7 +104,8 @@
 								<div class="main_home_slider text-center">
 									<div class="single_home_slider">
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
-										<p class = " wow fadeInRight animated"> 관리자 확인 후 게시글이 등록 됩니다. </p>
+											<p class=" wow fadeInRight animated">관리자 확인 후 게시글이 등록
+												됩니다.</p>
 											<div id="board">
 												<table id="list">
 													<tr>
@@ -130,9 +131,24 @@
 													<%
 														}
 													%>
-													
+
 
 												</table>
+												<div>
+														<div class="row">
+															<form method="post" name="search" action="searchCampaign.jsp">
+																<table class="pull-right">
+																	<tr>
+																		<td><input type="text" class="form-control"
+																			placeholder="검색어 입력" name="searchText"
+																			maxlength="100"></td>
+																		<td><button type="submit" class="btn btn-success">검색</button></td>
+																	</tr>
+
+																</table>
+															</form>
+														</div>
+												</div>
 
 												<a href="index.html"><button id="writer">홈으로가기</button></a>
 												<a href="campaign_write.jsp"><button id="writer">작성하러가기</button></a>
