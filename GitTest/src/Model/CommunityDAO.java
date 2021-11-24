@@ -148,18 +148,26 @@ public class CommunityDAO {
 			//게시판정보수정 메소드
 			public int update(CommunityDTO change){
 				getConn();
-				
-				
+
 				try {
-					String sql="update t_community set article_title=?,article_content=?,article_file1=? where mb_id=?";
+					
+					String sql="update t_community set article_title=?,article_content=?,article_file1=? where article_seq=?";
+					
 					psmt=conn.prepareStatement(sql);
 					
 					psmt.setString(1, change.getArticle_title());
 					psmt.setString(2, change.getArticle_content());
 					psmt.setString(3, change.getArticle_file1());
-					psmt.setString(4, change.getMb_id());
+					psmt.setInt(4, change.getArticle_seq());
+					
+					System.out.println(change.getArticle_title());
+					System.out.println(change.getArticle_content());
+					System.out.println(change.getArticle_file1());
+					System.out.println(change.getArticle_seq());
+					
 					
 					cnt=psmt.executeUpdate();
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}finally {
