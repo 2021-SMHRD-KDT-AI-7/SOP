@@ -55,6 +55,7 @@
 	  MemberDTO info=(MemberDTO)session.getAttribute("info"); 
 	   
       String article_seq = request.getParameter("article_seq");
+      String comment_seq = request.getParameter("comment_seq");
       
       CommunityDAO dao = new CommunityDAO();
       CommunityDTO dto = dao.viewOneBoard(article_seq);
@@ -137,6 +138,7 @@
                                        <tr>
                                           <td colspan="2">내용</td>
                                        </tr>
+                                       <!-- 댓글 다는 곳 -->
                                        <tr>
                                           <td colspan="2"><%=dto.getArticle_content() %> 
                                           <img src="./image/<%=dto.getArticle_file1()%>"></td>
@@ -146,16 +148,17 @@
                                        </tr>
                               <tr>
                                  <td colspan="2">
-                                    <ul id="comments" style="list-style:none; padding:0">
                                     <%
                                     	for (int i=0; i<cmt_list.size(); i++){ %>
 											
-											<li><%=cmt_list.get(i).getComment_content()%></li>
-											
+                                    		<tr id="comments-<%=i%>" style="list-style:none; padding:0">
+											<td><%=cmt_list.get(i).getComment_content()%></td>
+											<td></td>
+											</tr>
                                     	<%}
                                     %>
                                        
-                                    </ul>
+                                    
                                  </td>
                               </tr>
                               <tr>
@@ -239,20 +242,22 @@
 
    <script src="assets/js/plugins.js"></script>
    <script src="assets/js/main.js"></script>
-<<<<<<< HEAD
+
    <script src="jquery-3.6.0.min.js"></script>
    <script> 
       //type=text 인 input 태그에 작성한 댓글을 ul(id=comments) 태그에 추가(li태그 사이에)
        var num = 1;
       $('#write_com').on('click',function(){
-    	  alert("!")
+    	  /* alert("!") */
     	  var seq = <%=article_seq%>;
-         var com = $('input[type=text]').val()    //댓글
-         $('#comments').append('<li class="com'+num+'">'+com+'<input type="button" value="댓글삭제" onclick="del('+num+')"></li>');
-         num++;
-        // $('imput[type=text]').val('');
-         alert(com)
-         insert_com(seq, com);
+    	  var number = <%=cmt_list.size()-1%>;
+          var com = $('input[type=text]').val()    //댓글
+          $('#comments-' + number).after('<tr id="comments-'+(number+1)+'" style="list-style:none; padding:0"><td class="com'+num+'">'+com+'</td><td><input type="button" value="댓글삭제" onclick="del('+num+')"></td></tr>');
+          num++;
+          location.reload();
+          // $('imput[type=text]').val('');
+          /* alert(com) */
+          insert_com(seq, com);
          
       }); 
       

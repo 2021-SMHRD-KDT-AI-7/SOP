@@ -74,5 +74,24 @@ public class CommentDAO {
 		}
 		
 		
+		//댓글 개별 삭제 메소드
+		public int deleteOne(String comment_seq) {
+			getConn();
+			try {
+				String sql="delete from t_comment where comment_seq=?";
+				
+				psmt=conn.prepareStatement(sql);
+				
+				psmt.setString(1, comment_seq);
+				
+				cnt=psmt.executeUpdate();
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}finally {
+				dbClose();
+			}return cnt;
+		}
+		
 	
 }
