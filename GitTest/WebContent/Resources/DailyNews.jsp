@@ -1,11 +1,16 @@
+<%@page import="Model.CampaignDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Model.MemberDTO"%>
+<%@page import="Model.CampaignDAO"%>
+<%@page import="javax.sound.midi.MidiDevice.Info"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
-<!-- ì‹¤ì‹œê°„ ê¸°ì‚¬ css ë¶ˆëŸ¬ì˜¤ê¸° -->
+<meta charset="EUC-KR">
+<title>DailyNews</title>
+<!-- ½Ç½Ã°£ ±â»ç css ºÒ·¯¿À±â -->
 <link rel="stylesheet" type="text/css" href="assets/css/news.css">
 <link rel="stylesheet" href="assets/css/iconfont.css">
 <link rel="stylesheet" href="assets/css/slick/slick.css">
@@ -29,10 +34,12 @@
 <link rel="stylesheet" href="assets/css/responsive.css" />
 
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-<style>
-</style>
+
 </head>
 <body>
+<%
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
+	%>
 	<header id="main_menu" class="header navbar-fixed-top">
 		<div class="main_menu_bg">
 			<div class="container">
@@ -50,9 +57,11 @@
 											class="icon-bar"></span> <span class="icon-bar"></span> <span
 											class="icon-bar"></span>
 									</button>
-									<a class="navbar-brand" href="index.html"> <img
-										src="assets/images/sopsop.jpg" />
-									</a>
+									<%if(info != null){ %>
+									<a class="navbar-brand" href="index.jsp"> <img src="assets/images/sopsop.jpg" /></a>
+									<%}else{%>
+									<a class="navbar-brand" href="main.jsp"> <img src="assets/images/sopsop.jpg" /></a>
+									<%} %>
 								</div>
 
 								<!-- Collect the nav links, forms, and other content for toggling -->
@@ -66,8 +75,8 @@
 										<li><a href="#home">HOME</a></li>
 										<li><a href="#history">ABOUT US</a></li>
 										<li><a href="#portfolio">PORTFOLIO</a></li>
-										<li><a href="#pricing">ìº íŽ˜ì¸</a></li>
-										<li><a href="#team">ì»¤ë®¤ë‹ˆí‹°</a></li>
+										<li><a href="#pricing">Ä·ÆäÀÎ</a></li>
+										<li><a href="#team">Ä¿¹Â´ÏÆ¼</a></li>
 										<li><a href="#blog">BLOG</a></li>
 										<li><a href="#contact">CONTACT</a></li>
 									</ul>
@@ -87,7 +96,7 @@
 	<!--End of header -->
 
 	<div class="section-list-area ">
-		<h3 class="blind">í™˜ê²½ ê´€ë ¨ ê¸°ì‚¬</h3>
+		<h3 class="blind">È¯°æ °ü·Ã ±â»ç</h3>
 		<div class="list first">
 
 			<div class="article-area">
@@ -97,14 +106,14 @@
 				</span> <strong class="category"> </strong>
 				<h4 class="article-title">
 					<a target="_blank"
-						href="https://www.hani.co.kr/arti/society/environment/1019808.html">[ë‹¨ë…]
-						â€˜ì‚¬ìš©í›„í•µì—°ë£Œ ì²˜ë¦¬ê¸°ìˆ  ì—°êµ¬ì‚¬ì—…â€™ ì¢…ê²° ì•„ë‹Œ ìž¬ê°œë¡œ ëŒì•„ì„œë‚˜</a>
+						href="https://www.hani.co.kr/arti/society/environment/1019808.html">[´Üµ¶]
+						¡®»ç¿ëÈÄÇÙ¿¬·á Ã³¸®±â¼ú ¿¬±¸»ç¾÷¡¯ Á¾°á ¾Æ´Ñ Àç°³·Î µ¹¾Æ¼­³ª</a>
 				</h4>
 				<p class="article-prologue">
 					<a target="_blank"
-						href="https://www.hani.co.kr/arti/society/environment/1019808.html">ì •ë¶€ê°€
-						8000ì–µì›ì„ íˆ¬ìž…í•˜ê³  ì§€ë‚œí•´ ì¤‘ë‹¨ì‹œí‚¨ ì‚¬ìš©í›„í•µì—°ë£Œ íŒŒì´ë¡œí”„ë¡œì„¸ì‹±ê³¼ ì†Œë“ëƒ‰ê°ê³ ì†ë¡œ(SFR) êµ­ì±… ì—°êµ¬ê°œë°œì‚¬ì—…ì˜
-						ìž¬ê°œ...</a> <br>
+						href="https://www.hani.co.kr/arti/society/environment/1019808.html">Á¤ºÎ°¡
+						8000¾ï¿øÀ» ÅõÀÔÇÏ°í Áö³­ÇØ Áß´Ü½ÃÅ² »ç¿ëÈÄÇÙ¿¬·á ÆÄÀÌ·ÎÇÁ·Î¼¼½Ì°ú ¼Òµã³Ã°¢°í¼Ó·Î(SFR) ±¹Ã¥ ¿¬±¸°³¹ß»ç¾÷ÀÇ
+						Àç°³...</a> <br>
 					<span class="date">2021-11-19 04:59</span>
 				</p>
 			</div>
@@ -115,19 +124,19 @@
 				<span class="article-photo"> <a
 					href="https://www.hani.co.kr/arti/society/environment/1019805.html"><img
 						src="https://flexible.img.hani.co.kr/flexible/normal/212/127/imgdb/child/2021/1118/53_16372080138884_20211118501445.jpg"
-						alt="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"
-						title="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"></a>
+						alt="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"
+						title="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"></a>
 				</span> <strong class="category"> </strong>
 				<h4 class="article-title">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">íŒ¨ë”©
-						ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™</a>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">ÆÐµù
+						ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯</a>
 				</h4>
 				<p class="article-prologue">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ì¼
-						ì¼ìš”ì¼ ì˜¤í›„ë¶€í„° 22ì¼ ì›”ìš”ì¼ ì˜¤ì „ ì‚¬ì´ ì „êµ­ì— ë¹„ê°€ ì˜¨ ë’¤ 22ì¼ ì˜¤í›„ë¶€í„° ê¸°ì˜¨ì´ í¬ê²Œ ë–¨ì–´ì ¸ ì˜¬ ê°€ì„ ë“¤ì–´ ê°€ìž¥
-						ì¶”ìš´ ...</a> <br>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ÀÏ
+						ÀÏ¿äÀÏ ¿ÀÈÄºÎÅÍ 22ÀÏ ¿ù¿äÀÏ ¿ÀÀü »çÀÌ Àü±¹¿¡ ºñ°¡ ¿Â µÚ 22ÀÏ ¿ÀÈÄºÎÅÍ ±â¿ÂÀÌ Å©°Ô ¶³¾îÁ® ¿Ã °¡À» µé¾î °¡Àå
+						Ãß¿î ...</a> <br>
 					<span class="date">2021-11-18 12:11</span>
 				</p>
 			</div>
@@ -138,19 +147,19 @@
 				<span class="article-photo"> <a
 					href="https://www.hani.co.kr/arti/society/environment/1019805.html"><img
 						src="https://flexible.img.hani.co.kr/flexible/normal/212/127/imgdb/child/2021/1118/53_16372080138884_20211118501445.jpg"
-						alt="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"
-						title="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"></a>
+						alt="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"
+						title="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"></a>
 				</span> <strong class="category"> </strong>
 				<h4 class="article-title">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">íŒ¨ë”©
-						ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™</a>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">ÆÐµù
+						ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯</a>
 				</h4>
 				<p class="article-prologue">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ì¼
-						ì¼ìš”ì¼ ì˜¤í›„ë¶€í„° 22ì¼ ì›”ìš”ì¼ ì˜¤ì „ ì‚¬ì´ ì „êµ­ì— ë¹„ê°€ ì˜¨ ë’¤ 22ì¼ ì˜¤í›„ë¶€í„° ê¸°ì˜¨ì´ í¬ê²Œ ë–¨ì–´ì ¸ ì˜¬ ê°€ì„ ë“¤ì–´ ê°€ìž¥
-						ì¶”ìš´ ...</a> <br>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ÀÏ
+						ÀÏ¿äÀÏ ¿ÀÈÄºÎÅÍ 22ÀÏ ¿ù¿äÀÏ ¿ÀÀü »çÀÌ Àü±¹¿¡ ºñ°¡ ¿Â µÚ 22ÀÏ ¿ÀÈÄºÎÅÍ ±â¿ÂÀÌ Å©°Ô ¶³¾îÁ® ¿Ã °¡À» µé¾î °¡Àå
+						Ãß¿î ...</a> <br>
 					<span class="date">2021-11-18 12:11</span>
 				</p>
 			</div>
@@ -161,19 +170,19 @@
 				<span class="article-photo"> <a
 					href="https://www.hani.co.kr/arti/society/environment/1019805.html"><img
 						src="https://flexible.img.hani.co.kr/flexible/normal/212/127/imgdb/child/2021/1118/53_16372080138884_20211118501445.jpg"
-						alt="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"
-						title="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"></a>
+						alt="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"
+						title="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"></a>
 				</span> <strong class="category"> </strong>
 				<h4 class="article-title">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">íŒ¨ë”©
-						ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™</a>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">ÆÐµù
+						ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯</a>
 				</h4>
 				<p class="article-prologue">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ì¼
-						ì¼ìš”ì¼ ì˜¤í›„ë¶€í„° 22ì¼ ì›”ìš”ì¼ ì˜¤ì „ ì‚¬ì´ ì „êµ­ì— ë¹„ê°€ ì˜¨ ë’¤ 22ì¼ ì˜¤í›„ë¶€í„° ê¸°ì˜¨ì´ í¬ê²Œ ë–¨ì–´ì ¸ ì˜¬ ê°€ì„ ë“¤ì–´ ê°€ìž¥
-						ì¶”ìš´ ...</a> <br>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ÀÏ
+						ÀÏ¿äÀÏ ¿ÀÈÄºÎÅÍ 22ÀÏ ¿ù¿äÀÏ ¿ÀÀü »çÀÌ Àü±¹¿¡ ºñ°¡ ¿Â µÚ 22ÀÏ ¿ÀÈÄºÎÅÍ ±â¿ÂÀÌ Å©°Ô ¶³¾îÁ® ¿Ã °¡À» µé¾î °¡Àå
+						Ãß¿î ...</a> <br>
 					<span class="date">2021-11-18 12:11</span>
 				</p>
 			</div>
@@ -184,19 +193,19 @@
 				<span class="article-photo"> <a
 					href="https://www.hani.co.kr/arti/society/environment/1019805.html"><img
 						src="https://flexible.img.hani.co.kr/flexible/normal/212/127/imgdb/child/2021/1118/53_16372080138884_20211118501445.jpg"
-						alt="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"
-						title="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"></a>
+						alt="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"
+						title="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"></a>
 				</span> <strong class="category"> </strong>
 				<h4 class="article-title">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">íŒ¨ë”©
-						ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™</a>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">ÆÐµù
+						ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯</a>
 				</h4>
 				<p class="article-prologue">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ì¼
-						ì¼ìš”ì¼ ì˜¤í›„ë¶€í„° 22ì¼ ì›”ìš”ì¼ ì˜¤ì „ ì‚¬ì´ ì „êµ­ì— ë¹„ê°€ ì˜¨ ë’¤ 22ì¼ ì˜¤í›„ë¶€í„° ê¸°ì˜¨ì´ í¬ê²Œ ë–¨ì–´ì ¸ ì˜¬ ê°€ì„ ë“¤ì–´ ê°€ìž¥
-						ì¶”ìš´ ...</a> <br>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ÀÏ
+						ÀÏ¿äÀÏ ¿ÀÈÄºÎÅÍ 22ÀÏ ¿ù¿äÀÏ ¿ÀÀü »çÀÌ Àü±¹¿¡ ºñ°¡ ¿Â µÚ 22ÀÏ ¿ÀÈÄºÎÅÍ ±â¿ÂÀÌ Å©°Ô ¶³¾îÁ® ¿Ã °¡À» µé¾î °¡Àå
+						Ãß¿î ...</a> <br>
 					<span class="date">2021-11-18 12:11</span>
 				</p>
 			</div>
@@ -207,19 +216,19 @@
 				<span class="article-photo"> <a
 					href="https://www.hani.co.kr/arti/society/environment/1019805.html"><img
 						src="https://flexible.img.hani.co.kr/flexible/normal/212/127/imgdb/child/2021/1118/53_16372080138884_20211118501445.jpg"
-						alt="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"
-						title="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"></a>
+						alt="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"
+						title="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"></a>
 				</span> <strong class="category"> </strong>
 				<h4 class="article-title">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">íŒ¨ë”©
-						ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™</a>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">ÆÐµù
+						ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯</a>
 				</h4>
 				<p class="article-prologue">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ì¼
-						ì¼ìš”ì¼ ì˜¤í›„ë¶€í„° 22ì¼ ì›”ìš”ì¼ ì˜¤ì „ ì‚¬ì´ ì „êµ­ì— ë¹„ê°€ ì˜¨ ë’¤ 22ì¼ ì˜¤í›„ë¶€í„° ê¸°ì˜¨ì´ í¬ê²Œ ë–¨ì–´ì ¸ ì˜¬ ê°€ì„ ë“¤ì–´ ê°€ìž¥
-						ì¶”ìš´ ...</a> <br>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ÀÏ
+						ÀÏ¿äÀÏ ¿ÀÈÄºÎÅÍ 22ÀÏ ¿ù¿äÀÏ ¿ÀÀü »çÀÌ Àü±¹¿¡ ºñ°¡ ¿Â µÚ 22ÀÏ ¿ÀÈÄºÎÅÍ ±â¿ÂÀÌ Å©°Ô ¶³¾îÁ® ¿Ã °¡À» µé¾î °¡Àå
+						Ãß¿î ...</a> <br>
 					<span class="date">2021-11-18 12:11</span>
 				</p>
 			</div>
@@ -230,19 +239,19 @@
 				<span class="article-photo"> <a
 					href="https://www.hani.co.kr/arti/society/environment/1019805.html"><img
 						src="https://flexible.img.hani.co.kr/flexible/normal/212/127/imgdb/child/2021/1118/53_16372080138884_20211118501445.jpg"
-						alt="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"
-						title="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"></a>
+						alt="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"
+						title="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"></a>
 				</span> <strong class="category"> </strong>
 				<h4 class="article-title">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">íŒ¨ë”©
-						ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™</a>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">ÆÐµù
+						ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯</a>
 				</h4>
 				<p class="article-prologue">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ì¼
-						ì¼ìš”ì¼ ì˜¤í›„ë¶€í„° 22ì¼ ì›”ìš”ì¼ ì˜¤ì „ ì‚¬ì´ ì „êµ­ì— ë¹„ê°€ ì˜¨ ë’¤ 22ì¼ ì˜¤í›„ë¶€í„° ê¸°ì˜¨ì´ í¬ê²Œ ë–¨ì–´ì ¸ ì˜¬ ê°€ì„ ë“¤ì–´ ê°€ìž¥
-						ì¶”ìš´ ...</a> <br>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ÀÏ
+						ÀÏ¿äÀÏ ¿ÀÈÄºÎÅÍ 22ÀÏ ¿ù¿äÀÏ ¿ÀÀü »çÀÌ Àü±¹¿¡ ºñ°¡ ¿Â µÚ 22ÀÏ ¿ÀÈÄºÎÅÍ ±â¿ÂÀÌ Å©°Ô ¶³¾îÁ® ¿Ã °¡À» µé¾î °¡Àå
+						Ãß¿î ...</a> <br>
 					<span class="date">2021-11-18 12:11</span>
 				</p>
 			</div>
@@ -253,19 +262,19 @@
 				<span class="article-photo"> <a
 					href="https://www.hani.co.kr/arti/society/environment/1019805.html"><img
 						src="https://flexible.img.hani.co.kr/flexible/normal/212/127/imgdb/child/2021/1118/53_16372080138884_20211118501445.jpg"
-						alt="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"
-						title="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"></a>
+						alt="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"
+						title="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"></a>
 				</span> <strong class="category"> </strong>
 				<h4 class="article-title">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">íŒ¨ë”©
-						ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™</a>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">ÆÐµù
+						ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯</a>
 				</h4>
 				<p class="article-prologue">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ì¼
-						ì¼ìš”ì¼ ì˜¤í›„ë¶€í„° 22ì¼ ì›”ìš”ì¼ ì˜¤ì „ ì‚¬ì´ ì „êµ­ì— ë¹„ê°€ ì˜¨ ë’¤ 22ì¼ ì˜¤í›„ë¶€í„° ê¸°ì˜¨ì´ í¬ê²Œ ë–¨ì–´ì ¸ ì˜¬ ê°€ì„ ë“¤ì–´ ê°€ìž¥
-						ì¶”ìš´ ...</a> <br>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ÀÏ
+						ÀÏ¿äÀÏ ¿ÀÈÄºÎÅÍ 22ÀÏ ¿ù¿äÀÏ ¿ÀÀü »çÀÌ Àü±¹¿¡ ºñ°¡ ¿Â µÚ 22ÀÏ ¿ÀÈÄºÎÅÍ ±â¿ÂÀÌ Å©°Ô ¶³¾îÁ® ¿Ã °¡À» µé¾î °¡Àå
+						Ãß¿î ...</a> <br>
 					<span class="date">2021-11-18 12:11</span>
 				</p>
 			</div>
@@ -276,19 +285,19 @@
 				<span class="article-photo"> <a
 					href="https://www.hani.co.kr/arti/society/environment/1019805.html"><img
 						src="https://flexible.img.hani.co.kr/flexible/normal/212/127/imgdb/child/2021/1118/53_16372080138884_20211118501445.jpg"
-						alt="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"
-						title="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"></a>
+						alt="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"
+						title="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"></a>
 				</span> <strong class="category"> </strong>
 				<h4 class="article-title">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">íŒ¨ë”©
-						ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™</a>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">ÆÐµù
+						ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯</a>
 				</h4>
 				<p class="article-prologue">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ì¼
-						ì¼ìš”ì¼ ì˜¤í›„ë¶€í„° 22ì¼ ì›”ìš”ì¼ ì˜¤ì „ ì‚¬ì´ ì „êµ­ì— ë¹„ê°€ ì˜¨ ë’¤ 22ì¼ ì˜¤í›„ë¶€í„° ê¸°ì˜¨ì´ í¬ê²Œ ë–¨ì–´ì ¸ ì˜¬ ê°€ì„ ë“¤ì–´ ê°€ìž¥
-						ì¶”ìš´ ...</a> <br>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ÀÏ
+						ÀÏ¿äÀÏ ¿ÀÈÄºÎÅÍ 22ÀÏ ¿ù¿äÀÏ ¿ÀÀü »çÀÌ Àü±¹¿¡ ºñ°¡ ¿Â µÚ 22ÀÏ ¿ÀÈÄºÎÅÍ ±â¿ÂÀÌ Å©°Ô ¶³¾îÁ® ¿Ã °¡À» µé¾î °¡Àå
+						Ãß¿î ...</a> <br>
 					<span class="date">2021-11-18 12:11</span>
 				</p>
 			</div>
@@ -299,19 +308,19 @@
 				<span class="article-photo"> <a
 					href="https://www.hani.co.kr/arti/society/environment/1019805.html"><img
 						src="https://flexible.img.hani.co.kr/flexible/normal/212/127/imgdb/child/2021/1118/53_16372080138884_20211118501445.jpg"
-						alt="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"
-						title="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"></a>
+						alt="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"
+						title="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"></a>
 				</span> <strong class="category"> </strong>
 				<h4 class="article-title">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">íŒ¨ë”©
-						ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™</a>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">ÆÐµù
+						ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯</a>
 				</h4>
 				<p class="article-prologue">
 					<a
-						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ì¼
-						ì¼ìš”ì¼ ì˜¤í›„ë¶€í„° 22ì¼ ì›”ìš”ì¼ ì˜¤ì „ ì‚¬ì´ ì „êµ­ì— ë¹„ê°€ ì˜¨ ë’¤ 22ì¼ ì˜¤í›„ë¶€í„° ê¸°ì˜¨ì´ í¬ê²Œ ë–¨ì–´ì ¸ ì˜¬ ê°€ì„ ë“¤ì–´ ê°€ìž¥
-						ì¶”ìš´ ...</a> <br>
+						href="https://www.hani.co.kr/arti/society/environment/1019805.html">21ÀÏ
+						ÀÏ¿äÀÏ ¿ÀÈÄºÎÅÍ 22ÀÏ ¿ù¿äÀÏ ¿ÀÀü »çÀÌ Àü±¹¿¡ ºñ°¡ ¿Â µÚ 22ÀÏ ¿ÀÈÄºÎÅÍ ±â¿ÂÀÌ Å©°Ô ¶³¾îÁ® ¿Ã °¡À» µé¾î °¡Àå
+						Ãß¿î ...</a> <br>
 					<span class="date">2021-11-18 12:11</span>
 				</p>
 			</div>
@@ -322,11 +331,11 @@
 		<div id="search_form">
 
 			<form name="frmsearch" method="post"
-				action="//search.hani.co.kr/Search" title="ê²€ìƒ‰">
-				<input type="text" name="keyword" value="" title="ê²€ìƒ‰ì–´" class="text"><input
+				action="//search.hani.co.kr/Search" title="°Ë»ö">
+				<input type="text" name="keyword" value="" title="°Ë»ö¾î" class="text"><input
 					type="image"
 					src="//img.hani.co.kr/section-image/15/hani/images/icon/icon_top_search.png"
-					class="button" title="ê²€ìƒ‰">
+					class="button" title="°Ë»ö">
 			</form>
 
 		</div>
@@ -345,7 +354,7 @@
 			href="/arti/society/environment/list8.html">8</a> <a
 			href="/arti/society/environment/list9.html">9</a> <a
 			href="/arti/society/environment/list10.html">10</a> <a
-			href="/arti/society/environment/list11.html" class="next">ë‹¤ìŒ</a>
+			href="/arti/society/environment/list11.html" class="next">´ÙÀ½</a>
 	</div>
 
 	<!--Footer section-->
@@ -385,7 +394,7 @@
 
 
 
-	</div>
+	<!-- </div>  -->
 
 	<!-- START SCROLL TO TOP  -->
 
@@ -408,6 +417,7 @@
 
 	<script src="assets/js/plugins.js"></script>
 	<script src="assets/js/main.js"></script>
+
 
 </body>
 </html>
