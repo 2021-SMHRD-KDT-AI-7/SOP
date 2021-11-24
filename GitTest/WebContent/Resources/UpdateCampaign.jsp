@@ -1,15 +1,13 @@
-<%@page import="Model.MemberDTO"%>
 <%@page import="Model.CampaignDTO"%>
-<%@page import="java.util.ArrayList"%>
 <%@page import="Model.CampaignDAO"%>
+<%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
-<html>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>campaign</title>
+<title>campaign_write</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -24,8 +22,13 @@
 <link rel="stylesheet" href="assets/css/bootstrap.css">
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/magnific-popup.css">
-<link rel="stylesheet" href="assetsBoard/css/main.css" />
-<link rel="stylesheet" href="assetsBoard/css/board.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
 <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
 
 
@@ -41,12 +44,15 @@
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
-	<%
+
+<%
+	String cam_seq = request.getParameter("cam_seq");
+
 	CampaignDAO dao = new CampaignDAO();
+	CampaignDTO dto = dao.viewOneBoard(cam_seq);
 	MemberDTO info = (MemberDTO)session.getAttribute("info");
-	String get_id = info.getMb_id();
-	ArrayList<CampaignDTO> c_list = dao.viewBoard(get_id);
-	%>
+%>
+
 
 	<div class='preloader'>
 		<div class='loaded'>&nbsp;</div>
@@ -79,7 +85,8 @@
 
 
 									<div class="collapse navbar-collapse"
-										id="bs-example-navbar-collapse-1"></div>
+										id="bs-example-navbar-collapse-1">
+									</div>
 
 								</div>
 							</nav>
@@ -104,43 +111,50 @@
 								<div class="main_home_slider text-center">
 									<div class="single_home_slider">
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
-											<div id="board">
-												<table id="list">
-													<tr>
-														<td>번호</td>
-														<td>제목</td>
-														<td>작성자</td>
-														<td>캠페인 시작시간</td>
-														<td>캠페인 종료시간</td>
-													</tr>
-													<%
-														for (int i = 0; i < c_list.size(); i++) {
-													%>
-													<tr>
-														<td><%=i + 1%></td>
-														<td><a
-															href="viewCampaign.jsp?cam_seq=<%=c_list.get(i).getCam_seq()%>">
-																<%=c_list.get(i).getCam_title()%>
-														</a></td>
-														<td><%=c_list.get(i).getMb_id()%></td>
-														<td><%=c_list.get(i).getCam_start()%></td>
-														<td><%=c_list.get(i).getCam_finish()%></td>
-													</tr>
-													<%
-														}
-													%>
-													
-
-												</table>
-
-												<a href="index.html"><button id="writer">홈으로가기</button></a>
-												<a href="campaign_write.jsp"><button id="writer">작성하러가기</button></a>
+											<div></div>
+											<div class="container">
+												<h2>게시판 글쓰기</h2>
+												<form action="../UpdateCampaignServiceCon" method="post" enctype = "multipart/form-data">
+													<div class="form-group">
+														<label for="title">제목</label>
+														<!-- placeholder 속성 입력한 데이터가 없는 경우 배경으로 나타난다.실제적으로 입력을 100자까지로 지정 -->
+														<!-- required 속성을 설정하면 필수입력 사항이된다. -->
+														<!-- pattern 속성을 이용한 정규표현식으로 데이터의 유효성 검사를 할 수 있다. -->
+														<input type="text" class="form-control" id="cam_title"
+															placeholder="제목 입력" name="cam_title" maxlength="100"
+															required="required" value=<%= dto.getCam_title() %>>
+														<input type="hidden" class="class" name="cam_seq" id="id" value=<%= dto.getCam_seq() %>>
+													</div>
+													<div class="form-group">
+														<label for="content">내용</label>
+														<!--  여러줄의 데이터를 입력하고 하고자 할때 textarea 태그를 사용한다. -->
+														<!--  textarea 안에 있는 모든 글자는 그대로 나타난다. 공백문자, tag, enter -->
+														<textarea class="form-control" rows="20" id="cam_content"
+															name="cam_content" placeholder="내용 작성" wrap="off" value=<%= dto.getCam_content() %>></textarea>
+													</div>
+													<div class="form-group">
+														<label for="writer">캠페인 시작일자</label> <input type="date"
+															id="cam_start" name="cam_start" value=<%= dto.getCam_start() %>>
+													</div>
+													<div class="form-group">
+														<label for="writer">캠페인 종료일자</label> <input type="date"
+															id="cam_finish" name="cam_finish" value=<%= dto.getCam_finish() %>>
+													</div>
+													<div class="form-group">
+														<label for="writer">파일등록</label>
+														<input name = "cam_file1" type="file" style="float: right;">														
+													</div>
+													<button type="submit" class="btn btn-default">수정하기</button>
+													<button type="reset" class="btn btn-default">초기화</button>
+												</form>
 											</div>
+
+
+
 										</div>
 									</div>
 								</div>
 							</div>
-
 						</div>
 					</div>
 					<div class="scrooldown">

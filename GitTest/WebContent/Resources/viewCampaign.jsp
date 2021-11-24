@@ -51,7 +51,6 @@
 
       	CampaignDAO dao = new CampaignDAO();
       	CampaignDTO dto = dao.viewOneBoard(cam_seq);
-		ArrayList<CampaignDTO> c_list = dao.viewBoard();
 		MemberDTO info = (MemberDTO)session.getAttribute("info");
    %>
 
@@ -131,15 +130,21 @@
 													</tr>
 													<tr>
 														<td colspan="2"><a href="campaign.jsp"><button>뒤로가기</button></a>
+														
 														<%if(info != null ){ %>
-															<%if(info.getMb_id().equals(dto.getMb_id())){ %>
-																<a href="../UpdateCampaignServiceCon"><button>수정하기</button></a></td>
+															<%if(info.getMb_id().equals("admin")){ %>
+																<a href="../AcceptCampaignServiceCon?cam_seq=<%=cam_seq%>"><button>수락하기</button></a></td>
 															<%}else{ %>
-																<a onclick = "alert('권한이 없습니다!');"><button>수정하기</button></a></td>
+																	<%if(info.getMb_id().equals(dto.getMb_id())){ %>
+																		<a href="UpdateCampaign.jsp?cam_seq=<%=dto.getCam_seq()%>"><button>수정하기</button></a></td>
+																	<%}else{ %>
+																		<a onclick = "alert('권한이 없습니다!');"><button>수정하기</button></a></td>
+																	<%} %>
 															<%} %>
 														<%}else{ %>
 																<a onclick = "alert('권한이 없습니다!');"><button>수정하기</button></a></td>
 														<%} %>
+														
 														
 													</tr>
 												</table>

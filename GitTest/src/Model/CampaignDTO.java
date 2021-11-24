@@ -11,6 +11,7 @@ public class CampaignDTO {
 	private String cam_file2;
 	private String cam_start;
 	private String cam_finish;
+	private String cam_accept;
 
 	public CampaignDTO(int cam_seq, String cam_title, String cam_content, String reg_date, String mb_id,
 			String cam_file1, String cam_file2, String cam_start, String cam_finish) {
@@ -25,7 +26,22 @@ public class CampaignDTO {
 		this.cam_finish = cam_finish;
 	}
 	
+	public CampaignDTO(String cam_accept, int cam_seq) {
+		this.cam_accept = cam_accept;
+		this.cam_seq = cam_seq;
+	}
 	
+	
+	public CampaignDTO(int cam_seq, String cam_title, String cam_content, String cam_file1, String cam_start,
+			String cam_finish) {
+		this.cam_seq = cam_seq;
+		this.cam_title = cam_title;
+		this.cam_content = cam_content;
+		this.cam_file1 = cam_file1;
+		this.cam_start = cam_start;
+		this.cam_finish = cam_finish;
+	}
+
 	public CampaignDTO(int cam_seq, String cam_title, String cam_content, String reg_date, String mb_id,
 			String cam_file1, String cam_start, String cam_finish) {
 		this.cam_seq = cam_seq;
@@ -131,5 +147,16 @@ public class CampaignDTO {
 	public void setCam_finish(String cam_finish) {
 		this.cam_finish = cam_finish;
 	}
+
+	public String getCam_accept() {
+		return cam_accept;
+	}
+
+	public void setCam_accept(String cam_accept) {
+		this.cam_accept = cam_accept;
+	}
+	
+	
+	
 
 }

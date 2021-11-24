@@ -16,5 +16,7 @@ ALTER SEQUENCE T_CAMPAIGN_SEQ INCREMENT BY -30;
 alter table t_campaign add cam_start date
 alter table t_campaign add cam_finish date
 
+update t_campaign set cam_accept = 'N'; 
+
 
 
