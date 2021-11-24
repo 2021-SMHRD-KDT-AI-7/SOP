@@ -23,7 +23,7 @@ public class UpdateCampaignServiceCon extends HttpServlet {
 		
 		request.setCharacterEncoding("euc-kr");
 		
-		String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/image";
+		String saveDirectory = "C:/Users/smhrd/git/SOP/GitTest/WebContent/Resources/image";
 		int maxSize = 1024 * 1024 * 10;
 		String encoding = "euc-kr";
 		

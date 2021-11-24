@@ -219,13 +219,13 @@
 	<script src="jquery-3.6.0.min.js"></script>
 	<script> 
 		//type=text 인 input 태그에 작성한 댓글을 ul(id=comments) 태그에 추가(li태그 사이에)
-		var num = 1;
+		 var num = 1;
 		$('#write_com').on('click',function(){
 			var com = $('input[type=text]').val()
 			$('#comments').append('<li class="com'+num+'">'+com+'<input type="button" value="댓글삭제" onclick="del('+num+')"></li>');
 			num++;
 			$('imput[type=text]').val('');
-			
+			/* 
 			$.ajax({
 				type : "post",
 				data : {
@@ -239,14 +239,14 @@
 				error : function(){
 					alert("실패!");
 				}
-			});
+			}); */
 			
 		}); 
 		
 		function del(num){
 			$('.com'+num).remove();
 		}
-		
+		 
 		//댓글등록
 	/* 	function WriteCmt(){
 			var form =document.getElementById("writeCommentForm");
