@@ -22,12 +22,10 @@ public class AcceptCampaignServiceCon extends HttpServlet {
 		
 		CampaignDTO dto = new CampaignDTO(cam_accept, cam_seq);
 		
-		System.out.println("서비스콘 들어옴");
 
 		CampaignDAO dao = new CampaignDAO();
 		int cnt = dao.accept(dto);
 		
-		System.out.println(cnt);
 		
 		if(cnt > 0) {
 			System.out.println("캠페인 수락 성공");
