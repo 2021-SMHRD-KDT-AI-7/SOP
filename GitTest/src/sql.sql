@@ -20,5 +20,7 @@ alter table t_campaign add cam_finish date
 
 update t_campaign set cam_accept = 'N'; 
 
+select * from t_campaign where cam_title like '%ķ%' and cam_accept = 'Y' order by reg_date desc;
+
 
 

@@ -184,7 +184,36 @@ public class CampaignDAO {
 		}return cnt;
 	}
 	
-	public ArrayList<CampaignDTO> 
+	public ArrayList<CampaignDTO> getSearch(String searchText){
+		getConn();
+		ArrayList<CampaignDTO> list = new ArrayList<CampaignDTO>();
+		
+		try {
+			System.out.println(searchText);
+			String sql = "select * from t_campaign where cam_title like ? and cam_accept = 'Y' order by reg_date desc";
+			
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, "%" + searchText + "%");
+			
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				int cam_seq = rs.getInt("cam_seq");
+				String cam_title = rs.getString("cam_title");
+				String mb_id = rs.getString("mb_id");
+				String cam_start = rs.getString("cam_start");
+				String cam_finish = rs.getString("cam_finish");
+
+				dto = new CampaignDTO(cam_seq, cam_title, mb_id, cam_start, cam_finish);
+				list.add(dto);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			dbClose();
+		}
+		return list;
+	}
 
 	
 }

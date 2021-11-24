@@ -1,3 +1,4 @@
+<%@page import="java.io.PrintWriter"%>
 <%@page import="Model.MemberDTO"%>
 <%@page import="Model.CampaignDTO"%>
 <%@page import="java.util.ArrayList"%>
@@ -42,15 +43,20 @@
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
 	<%
-		CampaignDAO dao = new CampaignDAO();
+		request.setCharacterEncoding("euc-kr");
+	CampaignDAO dao = new CampaignDAO();
 	MemberDTO info = (MemberDTO) session.getAttribute("info");
-	String get_id = null;
-	ArrayList<CampaignDTO> c_list = dao.viewBoard(get_id);
-	if(info != null){
-		get_id = info.getMb_id();
-		c_list = dao.viewBoard(get_id);
+	String get_id = info.getMb_id();
+	ArrayList<CampaignDTO> list = dao.getSearch(request.getParameter("searchText"));
+
+
+	if (list.size() == 0) {
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('검색결과가 없습니다')");
+		script.println("history.back()");
+		script.println("</script>");
 	}
-	
 	%>
 
 	<div class='preloader'>
@@ -74,9 +80,21 @@
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
-										<a class="navbar-brand" href="index.html"> <img
+										<%
+											if (info != null) {
+										%>
+										<a class="navbar-brand" href="index.jsp"> <img
 											src="assets/images/sopsop.jpg" />
 										</a>
+										<%
+											} else {
+										%>
+										<a class="navbar-brand" href="main.jsp"> <img
+											src="assets/images/sopsop.jpg" />
+										</a>
+										<%
+											}
+										%>
 									</div>
 
 									<!-- Collect the nav links, forms, and other content for toggling -->
@@ -120,49 +138,53 @@
 														<td>캠페인 시작시간</td>
 														<td>캠페인 종료시간</td>
 													</tr>
-													
-														<%
-															for (int i = 0; i < c_list.size(); i++) {
-														%>
-														<tr>
-															<td><%=i + 1%></td>
-															<td><a
-																href="viewCampaign.jsp?cam_seq=<%=c_list.get(i).getCam_seq()%>">
-																	<%=c_list.get(i).getCam_title()%>
-															</a></td>
-															<td><%=c_list.get(i).getMb_id()%></td>
-															<td><%=c_list.get(i).getCam_start()%></td>
-															<td><%=c_list.get(i).getCam_finish()%></td>
-														</tr>
-														<%
-															}
-														%>
-												
+													<%
+														for (int i = 0; i < list.size(); i++) {
+													%>
+													<tr>
+														<td><%=i + 1%></td>
+														<td><a
+															href="viewCampaign.jsp?cam_seq=<%=list.get(i).getCam_seq()%>">
+																<%=list.get(i).getCam_title()%>
+														</a></td>
+														<td><%=list.get(i).getMb_id()%></td>
+														<td><%=list.get(i).getCam_start()%></td>
+														<td><%=list.get(i).getCam_finish()%></td>
+													</tr>
+													<%
+														}
+													%>
 
 
 												</table>
 												<div>
-														<div class="row">
-															<form method="post" name="search" action="searchCampaign.jsp">
-																<table class="pull-right">
-																	<tr>
-																		<td><input type="text" class="form-control"
-																			placeholder="검색어 입력" name="searchText"
-																			maxlength="100"></td>
-																		<td><button type="submit" class="btn btn-success">검색</button></td>
-																	</tr>
+													<div class="row">
+														<form method="post" name="search"
+															action="searchCampaign.jsp">
+															<table class="pull-right">
+																<tr>
+																	<td><input type="text" class="form-control"
+																		placeholder="검색어 입력" name="searchText" maxlength="100"></td>
+																	<td><button type="submit" class="btn btn-success">검색</button></td>
+																</tr>
 
-																</table>
-															</form>
-														</div>
+															</table>
+														</form>
+													</div>
 												</div>
-
-												<a href="index.html"><button id="writer">홈으로가기</button></a>
-												<%if(info != null){ %>
+												<%
+													if (info != null) {
+												%>
+												<a href="index.jsp"><button id="writer">홈으로가기</button></a>
+												<%
+													} else {
+												%>
+												<a href="main.jsp"><button id="writer">홈으로가기</button></a>
+												<%
+													}
+												%>
+												<a href="campaign.jsp"><button id="writer">뒤로가기</button></a>
 												<a href="campaign_write.jsp"><button id="writer">작성하러가기</button></a>
-												<%}else{ %>
-												<a onclick="alert('로그인을 해주세요');"><button id="writer">작성하러가기</button></a>
-												<%} %>
 											</div>
 										</div>
 									</div>
