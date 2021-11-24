@@ -16,7 +16,7 @@ public class LogoutCon extends HttpServlet {
 		session.invalidate();
 		
 		System.out.println("로그아웃 성공");
-		response.sendRedirect("./Resources/index.html");
+		response.sendRedirect("./Resources/main.jsp");
 	
 	
 	}

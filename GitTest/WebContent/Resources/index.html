@@ -79,7 +79,6 @@
 											<li><a href="#contact">로그인</a></li>
 											<!-- <li><a href="#portfolio">PORTFOLIO</a></li> -->
 											<!-- <li><a href="#history">ABOUT US</a></li> -->
-											<li><a href="../LogoutCon">로그아웃</a></li>
 											<li><a href="#service">데일리미션</a></li>
 											<li><a href="#portfolio">차트</a></li>
 											<li><a href="#study">환경 기사</a></li>
@@ -256,13 +255,62 @@
 					<div class="no-padding">
 
 						<div class="single_service single_service_text text-right">
+<<<<<<< HEAD
 							<div class="head_title" style="margin-right: 500px;">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
+=======
+
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 							<div class="head_title" style="margin-right:500px;">
 								<h2>DAILY MISSION</h2>
 							</div>
 
+<<<<<<< HEAD
 							<div class="row" style="margin-right: 500px;">
 							<div class="row" style="margin-right:500px;">
+=======
+							<div class="row" 
+							style="margin-right:500px;">
+								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+									<div class="row">
+
+										<div
+											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
+											<article class="single_service_right_text">
+												<h4> 난방온도 2℃ 낮추기 </h4>
+												<p>동절기 적정 실내온도(겨울철 18~20℃)를 고려하여, 보일러 온도 설정시 2℃ 낮추기<br>
+												겨울에는 내복, 수면양말, 무릎담요 같은 보온용품 적극 활용하기
+												</p>
+											</article>
+										</div>
+										<div class="col-sm-1 col-xs-1">
+											<figure class="single_service_icon">
+												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
+											</figure>
+											<!-- End of figure -->
+										</div>
+									</div>
+
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
+							<div class="head_title" style="margin-right: 500px;">
+<<<<<<< HEAD
+
+							<div class="head_title" style="margin-right:500px;">
+
+								<h2>DAILY MISSION</h2>
+							</div>
+
+
+							<div class="row" style="margin-right: 500px;">
+
+							<div class="row" style="margin-right:500px;">
+
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
 									<div class="row">
 
@@ -282,70 +330,97 @@
 											<!-- End of figure -->
 										</div>
 									</div>
+=======
+								<div class="head_title" style="margin-right: 500px;">
+									<h2>DAILY MISSION</h2>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 								</div>
-								<!-- End of col-sm-12 -->
 
-								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-									<div class="row">
+								<div class="row" style="margin-right: 500px;">
+									<div class="row" style="margin-right: 500px;">
+										<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+											<div class="row">
 
-										<div
-											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
-											<article class="single_service_right_text">
-												<h4><%=dm_dao.dm_title(day + 1)%></h4>
-												<p><%=dm_dao.dm_value(day + 1)%></p>
-											</article>
+												<div
+													class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
+													<article class="single_service_right_text">
+														<% DailyMissionDAO dm_dao = new DailyMissionDAO(); 
+														int day = dm_dao.getDayOfweek() * 2; %>
+														<h4><%=dm_dao.dm_title(day)%></h4>
+														<p><%=dm_dao.dm_value(day)%></p>
+													</article>
+												</div>
+												<div class="col-sm-1 col-xs-1">
+													<figure class="single_service_icon">
+														<a href="Community.jsp"><i class="fa fa-heart"></i></a>
+													</figure>
+													<!-- End of figure -->
+												</div>
+											</div>
 										</div>
-										<div class="col-sm-1 col-xs-1">
-											<figure class="single_service_icon">
-												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
-											</figure>
-											<!-- End of figure -->
+										<!-- End of col-sm-12 -->
+
+										<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+											<div class="row">
+
+												<div
+													class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
+													<article class="single_service_right_text">
+														<h4><%=dm_dao.dm_title(day + 1)%></h4>
+														<p><%=dm_dao.dm_value(day + 1)%></p>
+													</article>
+												</div>
+												<div class="col-sm-1 col-xs-1">
+													<figure class="single_service_icon">
+														<a href="Community.jsp"><i class="fa fa-heart"></i></a>
+													</figure>
+													<!-- End of figure -->
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>
-								<!-- End of col-sm-12 -->
+										<!-- End of col-sm-12 -->
 
-								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-									<div class="row">
+										<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+											<div class="row">
 
-										<div
-											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1 margin-bottom-20">
-											<!-- <article class="single_service_right_text">
+												<div
+													class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1 margin-bottom-20">
+													<!-- <article class="single_service_right_text">
 												<h4>PHOTOGRAPHY</h4>
 												<p>Lorem Ipsum is simply dummy text of the printing and
 													typesetting industry. Lorem Ip sum has been the industry's
 													standard dummy text ever.</p>
 											</article> -->
-										</div>
-										<div class="col-sm-1 col-xs-1">
-											<!-- <figure class="single_service_icon">
+												</div>
+												<div class="col-sm-1 col-xs-1">
+													<!-- <figure class="single_service_icon">
 												<i class="fa fa-heart"></i>
 											</figure> -->
-											<!-- End of figure -->
+													<!-- End of figure -->
+												</div>
+											</div>
 										</div>
+										<!-- End of col-sm-12 -->
+
 									</div>
 								</div>
-								<!-- End of col-sm-12 -->
-
 							</div>
-						</div>
-					</div>
-					<!-- End of col-sm-6 -->
+							<!-- End of col-sm-6 -->
 
-					<!-- <div class="col-md-6 col-sm-12 no-padding">
+							<!-- <div class="col-md-6 col-sm-12 no-padding">
 						<figure class="single_service single_service_img">
 							<div class="overlay-img"></div>
 							<img src="assets/images/servicerightimg.jpg" alt="" /> 
 						</figure>
 						End of figure
 					</div> -->
-					<!-- End of col-sm-6 -->
+							<!-- End of col-sm-6 -->
 
+						</div>
+					</div>
+					<!-- End of row -->
 				</div>
-			</div>
-			<!-- End of row -->
-		</div>
-		<!-- End of Container-fluid -->
+				<!-- End of Container-fluid -->
 	</section>
 	<!-- 데일리 미션 끝! (진주) -->
 
@@ -519,6 +594,15 @@
 												let. Lorem Ipsum has been the industry Printing and
 												typelorem Ipsum has been the setting let.</p>
 
+                                    <a href="" class="btn btn-lg">read more</a>
+                                 </div>
+                              </div>
+                              <!--  전체 기사 보기로 이동 -->
+                              <a href="news.html" class="btn_article_daily btn-lg" >전체
+                                 기사</a>
+                           </div>
+                        </div>
+                     </div>
 											<a href="" class="btn btn-lg">read more</a>
 										</div>
 									</div>
@@ -548,6 +632,17 @@
 
 
 
+                        <div class="row">
+                           <div class="single_counter border_right">
+                              <div class="col-sm-3 col-xs-12">
+                                 <div class="single_counter_item">
+                                      <i class="f_icon.png"></i> 
+                                   <!--  <img src="assets/images/f_icon.png"> -->  
+                                    <h2 class="statistic-counter">3891</h2>
+                                    <h4 class="">즐겨찾기</h4>
+                                 </div>
+                              </div>
+                           </div>
 	<!-- Pricing Section -->
 	<section id="pricing" class="pricing">
 		<div class="container">

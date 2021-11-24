@@ -31,3 +31,6 @@ insert into T_LOCATION values(17,'¡¶¡÷µµ')
 select * from T_COMMENT
 
 insert into T_COMMENT values (0,34,'wow',sysdate,'jina')
+select * from user_sequences
+
+

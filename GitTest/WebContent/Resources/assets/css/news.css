@@ -24,7 +24,7 @@
 @import url('archive.css');
 @import url('subscribe.css');
 
-@import url('banner.css'); /*ê´‘ê³ ê´€ë ¨cssë³€ê²½*/
+@import url('banner.css'); /*챗쨈��챗쨀�챗쨈��챘�짢css챘쨀��챗짼쩍*/
 
 /* section layout */
 #header {position: relative; width: 970px; margin: 0 auto; text-align: left;  z-index:1000;}
@@ -123,7 +123,7 @@
 .section-top-sumArea li.kisa06 { margin-right:0; }
 
 
-/*ì˜¬ë¦¼í”½ìš© ë¦¬ìŠ¤íŠ¸*/
+/*챙�짭챘짝쩌챠��쩍챙큄짤 챘짝짭챙�짚챠�쨍*/
 #contents-section.special01 { margin-top:0;}
 #contents-section.special01 .section-special-title { background-color:#fff; padding-bottom:30px;}
 #contents-section.special01 .section-top-article .article-title  { padding-top:10px;}
@@ -169,7 +169,7 @@
 #contents-section.special01 .section-top-list li a{font-size: 15px;}
 
 
-/*20170720 - typeì¶”ê°€ - ì• ë‹ˆë©€*/
+/*20170720 - type챙쨋��챗째�� - 챙�◈�챘�믓�챘짤��*/
 #navi-sub { position:relative; width:970px;  margin: 0 auto; text-align: center;  height:43px; border-bottom:1px solid #c3c3c3; z-index: 1001 }
 #navi-sub ul { position:relative; height:43px; margin: 0 auto;  }
 #navi-sub ul:before { display: table;content: " ";}
@@ -193,7 +193,7 @@
 
 
 
-/*20170110 - typeì¶”ê°€- ìœ„ì½”ë…¸ë¯¸*/
+/*20170110 - type챙쨋��챗째��- 챙���챙쩍��챘�┑맡ヂ�쨍*/
 #navi-sub.navi-left { position:relative; width:970px;  margin: 0 auto; text-align: left;  height:43px; border-bottom:1px solid #c3c3c3; z-index: 1001 }
 #navi-sub.navi-left ul { position:relative; height:43px; margin: 0 auto;  }
 #navi-sub.navi-left ul:before { display: table;content: " ";}
@@ -233,7 +233,7 @@
 
 
 
-/* êµ­ì œíŒ ë°•ìŠ¤ */
+/* 챗쨉짯챙��챠�� 챘째�▣��짚 */
  .section-top-box01 { position:relative; overflow:hidden; clear:both; width:643px; margin-bottom:20px; padding-top:40px;}
  .section-top-box01:after { content: "."; display: block; font-size: 0; height: 0; line-height: 0; clear: both;  }
  .section-top-box01 .title { text-align:left; position:relative; font-size:16px; margin-bottom:7px; font-weight:bold;}
@@ -249,7 +249,7 @@
  .section-top-box01 .section-box-kisa .right .list li{text-align:left; font-size: 14px;padding-left: 8px;line-height:2.2em; width:297px; background: url(//img.hani.co.kr/section-image/15/hani/images/icon/icon_dot_2x14.gif) no-repeat 0 50%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; }
  .section-top-box01 .section-box-kisa .right .list li a{font-size: 14px; color:#222; font-weight:bold; }
 
-/*ì±…ê³¼ìƒê°íƒ‘ì˜ì—­*/
+/*챙짹�┚ぢ냈셌���챗째�챠���챙��챙��짯*/
 .section-top-book { position: relative; overflow:hidden; margin-bottom:10px; padding-bottom:10px; border-bottom:1px solid #000000;}
 .section-top-book .book-top { float:left; width:420px;height:252px; position:relative; overflow:hidden;  margin-bottom:20px;}
 .section-top-book .book-top  .article-photo { display:block;width:418px; height:250px;}
@@ -279,7 +279,7 @@
 .section-top-book .box-list2 { float:left;position:relative; overflow:hidden;}
 .section-top-book .section-top-list { padding-top:20px;}
 
-/* ë‰´ìŠ¤ ì •ë ¬ ì˜µì…˜ ì˜ì—­ */
+/* 챘�걔늘��짚 챙��▣ヂ�짭 챙�쨉챙�┡� 챙��챙��짯 */
 .section-sorting-option { padding-bottom: 20px; zoom: 1; }
 .section-sorting-option:after { content: "."; display: block; font-size: 0; height: 0; line-height: 0; clear: both;  }
 .section-sorting-option .title-img { float: left; }
@@ -308,7 +308,7 @@
 
 
 
-/* ë¦¬ìŠ¤íŠ¸ */
+/* 챘짝짭챙�짚챠�쨍 */
 .section-list-area .list{ position:relative; overflow:hidden; padding:20px 0 20px; border-bottom:1px solid #f1f1f1}
 .section-list-area .list.first { padding:0 0 20px;}
 .section-list-area .list .article-area { display:block; overflow:hidden;}
@@ -363,7 +363,7 @@
 .section-list-area .list .photo-fix-bg {background-position:50% 50%; width:100%; height:100%;background-size: cover;}
 
 
-/* ë¦¬ìŠ¤íŠ¸ íŽ˜ì´ì§• */
+/* 챘짝짭챙�짚챠�쨍 챠탐�챙�쨈챙짠�� */
 .paginate { padding:30px 0 30px; text-align:center;} 
 .paginate a{ display: inline-block; position: relative;padding: 4px 8px 4px 8px;border: 1px solid #fff;font-size: 12px; font-weight:bold;font-family: Verdana;color: #666;line-height: normal;text-decoration: none;vertical-align: top;}
 .paginate a:hover {color:#009790;border:1px solid #e9e9e9; }
@@ -372,7 +372,7 @@
 .paginate a.prev{ border:1px solid #e9e9e9; background:url(//img.hani.co.kr/section-image/15/hani/images/icon/icon_aw_left.png) no-repeat left 50%; padding: 5px 8px 5px 15px;font-weight:normal;}
 
 
-/* ì„¹ì…˜ìš°ì¸¡ì˜ì—­ */
+/* 챙��쨔챙�┡�챙큄째챙쨍징챙��챙��짯 */
 
 .section-right  .section-title { border-top:2px solid #000; height:25px; padding-top:10px; color:#000; font-size:15px;}
 .section-right  .section-title  a {color:#000; font-size:15px;}
@@ -412,9 +412,9 @@
 
 
 
-/****************** ê°œíŽ¸ì „ ë‚´ìš© ìˆ˜ì • ê³µí†µì‚¬í•­ ì ìš© ************************/
+/****************** 챗째�챠탐쨍챙��� 챘��쨈챙큄짤 챙��챙��� 챗쨀쨉챠��쨉챙��짭챠�◈� 챙��챙큄짤 ************************/
 
-/* ìƒë‹¨ íƒ€ì´í‹€ ì˜ì—­ */
+/* 챙��챘�뮤� 챠���챙�쨈챠�밟�� 챙��챙��짯 */
 .headings-section { position: relative; padding-bottom: 20px; zoom: 1;  }
 .headings-section:after { content: "."; display: block; font-size: 0; height: 0; line-height: 0; clear: both; }
 .headings-section .left { float: left; }
@@ -451,7 +451,7 @@
 #social-related-links .inner { float: right; }
 
 /* widgets */
-.widgets span.icon { display: inline-block; width: 19px; height: 18px; background: url(//img.hani.co.kr/section-image/12/news/hani/images/com/ico/ico_set.gif) no-repeat 0 0; vertical-align: middle; }/*2013.5.9 ìˆ˜ì •*/
+.widgets span.icon { display: inline-block; width: 19px; height: 18px; background: url(//img.hani.co.kr/section-image/12/news/hani/images/com/ico/ico_set.gif) no-repeat 0 0; vertical-align: middle; }/*2013.5.9 챙��챙���*/
 .widgets span.count a { display: inline-block; height: 16px; background:url(//img.hani.co.kr/section-image/12/news/hani/images/com/bg/bg_sns_inquiry_number_bubble_left.gif) no-repeat 0 0; line-height: 17px; font-weight: bold; }
 .widgets span.count a .inner-button { display: inline-block; height: 16px; padding: 0 6px; background:url(//img.hani.co.kr/section-image/12/news/hani/images/com/bg/bg_sns_inquiry_number_bubble_right.gif) no-repeat 100% 0; line-height: 17px; font-weight: bold; }
 .widgets .facebook span.icon {}
@@ -460,8 +460,8 @@
 .widgets .cyworld span.icon { background-position: -61px 0; }
 .widgets .msn span.icon { background-position: -81px 0; }
 .widgets .naver span.icon { background-position: -140px 0; }
-.widgets .google2 span.icon { background-position: -160px 0; }/*2013.5.9 ì¶”ê°€*/
-.widgets .gplus span.icon { background-position: -180px 0; }/*2013.5.9 ì¶”ê°€*/
+.widgets .google2 span.icon { background-position: -160px 0; }/*2013.5.9 챙쨋��챗째��*/
+.widgets .gplus span.icon { background-position: -180px 0; }/*2013.5.9 챙쨋��챗째��*/
 .widgets .mail span.icon { background-position: -200px 0; }
 .widgets .facebook .count a { color: #14488f; }
 .widgets .twitter .count a { color: #4ca5ff; }
@@ -470,13 +470,13 @@
 .widgets .rss span.icon { width: 16px; height: 16px; background-position: -102px 0; }
 .widgets .help span.icon { width: 16px; height: 16px; background-position: -122px 0; }
 .widgets .google span.icon { width: 24px; height: 16px; margin: 0 2px 0 5px; background-image: url(//img.hani.co.kr/section-image/12/news/hani/images/com/ico/ico_google.gif); }
-.widgets .gplus2 span.icon { display: inline-block; width: 24px; height: 15px; background: url(//img.hani.co.kr/section-image/12/news/hani/images/com/ico/ico_gplus.gif) no-repeat 0 0; vertical-align: middle; }/*2013.5.15 ì¶”ê°€*/
+.widgets .gplus2 span.icon { display: inline-block; width: 24px; height: 15px; background: url(//img.hani.co.kr/section-image/12/news/hani/images/com/ico/ico_gplus.gif) no-repeat 0 0; vertical-align: middle; }/*2013.5.15 챙쨋��챗째��*/
 .widgets .gplus2  { vertical-align:top;}
 .widgets .gplus2 span.text{ vertical-align:top; padding-left:3px;}
 .ie6 .widgets .gplus2, .ie7 .widgets .gplus2{ overflow:hidden; display:none;}
 
 
-/* ì˜¤ë¥¸ìª½ ì˜ì—­ - ì»¨í…ì¸  ë ˆì´ì•„ì›ƒ (ê³µí†µ) */
+/* 챙�짚챘짜쨍챙짧쩍 챙��챙��짯 - 챙쨩짢챠�┑�챙쨍� 챘��챙�쨈챙�™��챙�뵈� (챗쨀쨉챠��쨉) */
 #aside .aside-section .list li {padding-left: 8px;background: url(//img.hani.co.kr/section-image/12/news/hani/images/com/bul/bul_2x2_666.gif) no-repeat 0 13px;line-height: 29px; font-size: 13px;}
 #aside .aside-section .list li a { color:#333;}
 #aside .aside-section { margin-top: 20px; zoom: 1; }
@@ -489,13 +489,13 @@
 #aside .aside-section h3.title { border-top: 2px solid #222; height: 25px; padding-top: 10px; color: #000; font-size: 15px;}
 #aside .aside-section h4 { padding-bottom: 2px; font-size: 12px; color: #000; }
 #aside .aside-section h4.title { border-top: 2px solid #222; height: 25px; padding-top: 10px; color: #000; font-size: 15px;}
-#aside .aside-section h4 .advertise { display: inline-block; width: 17px; height: 9px; margin: 2px 0 0 4px; background:url(//img.hani.co.kr/section-image/12/news/hani/images/com/ico/ico_s_advertising.gif) no-repeat 0 0; text-indent: -500em; vertical-align: top; } /* ê´‘ê³  ì•„ì´ì½˜ */
+#aside .aside-section h4 .advertise { display: inline-block; width: 17px; height: 9px; margin: 2px 0 0 4px; background:url(//img.hani.co.kr/section-image/12/news/hani/images/com/ico/ico_s_advertising.gif) no-repeat 0 0; text-indent: -500em; vertical-align: top; } /* 챗쨈��챗쨀� 챙�™��챙�쨈챙쩍� */
 
 #aside .aside-section .hani-advertise_280_240 { width:280px; height:240px; margin:0px 0px 0px -20px; }
 #aside .aside-section .hani-advertise_280_250 { width:280px; height:250px; margin:0px 0px 0px -20px; }
 
 
-/* íŠ¸ìœ„í„° ê¸°ì‚¬ */
+/* 챠�쨍챙���챠��째 챗쨍째챙��짭 */
 #aside .twitter-control { position: absolute; top:8px; right: 0; z-index: 100; font-size: 0; line-height: 0; background: #fff;}
 #aside .twitter-control button { border:none;}
 #aside .twitter-control #twitter-stop.off{ display:block; width:60px; height:18px; background:url(//img.hani.co.kr/section-image/12/news/hani/images/com/btn/btn_Tupdate.gif) no-repeat 0 0; }
@@ -515,7 +515,7 @@
 #aside #twitter-news #tw { padding-top:10px;}
 
 
-/* ë©€í‹°ë¯¸ë””ì–´ */
+/* 챘짤��챠�뮤걘ヂ�쨍챘����챙��쨈 */
 #multimedia { position: relative; margin-bottom:20px; }
 #multimedia .multimedia-contents { overflow: hidden; }
 #multimedia .multimedia-contents .main-image { overflow: hidden; position: relative; width: 300px; height: 180px; background: #333; }
@@ -531,7 +531,7 @@
 #multimedia .multimedia-contents .thumb-image li a:hover span { display: block; }
 
 
-/****************** ê¸°ì‚¬ë³¸ë¬¸ì— ì‚¬ìš©ì¤‘ì¸ snsì˜ì—­ ì—°ìž¬ì—ì„œ ì‚¬ìš© 20151104 ************************/
+/****************** 챗쨍째챙��짭챘쨀쨍챘짭쨍챙��� 챙��짭챙큄짤챙짚��챙�쨍 sns챙��챙��짯 챙��째챙탑짭챙���챙��� 챙��짭챙큄짤 20151104 ************************/
 .article-tools { position:relative; height:30px;}
 .article-tools .tools { position:absolute; top:0; left:0;}
 .article-tools .tools li { float:left; padding:7px 10px; overflow:hidden; position:relative; } 
@@ -600,42 +600,42 @@
 .legacyBtn  .banner-txt .btn { display: inline-block; background-color: #7dcac2; border-radius: 20px; width: 50px; height: 19px; text-align: center; color: #fff;vertical-align: middle; padding-top: 1px;}
 
 /* subscribe-20200106 issue,serie  */
-.section-sorting-option + .section-list-area.photo-view2 { margin-top:0;}/*ê°„ê²©ì¡°ì ˆ*/
+.section-sorting-option + .section-list-area.photo-view2 { margin-top:0;}/*챗째��챗짼짤챙징째챙��*/
 #social-related-links {overflow: visible;height: 25px;padding-right: 0;margin-top: 0;margin-bottom:-7px;}
 .section-sorting-option .sort-key li:last-child { background: none; margin-right: 0; }
 
 /* ------------article-title------------ */
-    /* 방문하지 않은 링크의 제목 스타일 */
+    /* 諛⑸Ц��吏� ���� 留��ъ�� ��紐� �ㅽ���� */
     .article-title>a:link{
         color: black;
         text-decoration: none;
     }
-    /* 방문한 기록이 있는 태그의 스타일*/
+    /* 諛⑸Ц�� 湲곕��� ���� ��洹몄�� �ㅽ����*/
     .article-title>a:visited{      
         color: black;
         text-decoration: none;
     }
-    /* 링크 위에 마우스를 올렸을때 나타나는 스타일 */
+    /* 留��� ���� 留��곗�ㅻ�� �щ�몄���� �������� �ㅽ���� */
     .article-title>a:hover{
         color: black;
         text-decoration: underline;
     }
     .article-title>a{
-    	font-weight: bold;
+    	font-weight: 400;
     }
 
     /* ----------article-prologue---------- */
-    /* 방문하지 않은 링크의 내용 스타일 */
+    /* 諛⑸Ц��吏� ���� 留��ъ�� �댁�� �ㅽ���� */
     .article-prologue>a:link{
         color: black;
         text-decoration: none;
     }
-    /* 방문한 기록이 있는 태그의 스타일*/
+    /* 諛⑸Ц�� 湲곕��� ���� ��洹몄�� �ㅽ����*/
     .article-prologue>a:visited{      
         color: black;
         text-decoration: none;
     }
-    /* 링크 위에 마우스를 올렸을때 나타나는 스타일 */
+    /* 留��� ���� 留��곗�ㅻ�� �щ�몄���� �������� �ㅽ���� */
     .article-prologue>a:hover{
         color: black;
         text-decoration: underline;
@@ -644,20 +644,20 @@
 
 
      /* ----------article-photo---------- */
-    /* 기사의 메인 이미지 파일 */
+    /* 湲곗�ъ�� 硫��� �대�몄� ���� */
     .article-photo{
         margin: 10px;
         display: inline;
     }
      /* --------section-list-area-------- */
-     /* 기사 메인 화면 범위의 크기*/
+     /* 湲곗�� 硫��� ��硫� 踰����� �ш린*/
      .section-list-area{
             padding-left: 25%;
             padding-right: 25%;
             padding-top: 50px;
         }
      /* ------------input text----------- */
-     /* 검색창의 위치 조정 */
+     /* 寃���李쎌�� ��移� 議곗�� */
         .text{
             margin-left: 45%;
             width: 200px;
@@ -667,7 +667,7 @@
             margin-left: 10px;
          }
  /* ------------blind----------- */
-     /* 실시간 기사 페이지 타이틀 위치 */
+     /* �ㅼ��媛� 湲곗�� ���댁� ���댄�� ��移� */
          .blind{
     	margin-top: 135px;	
     	margin-bottom: 50px;
@@ -675,8 +675,8 @@
    	}
    	
    	
- /* ----실시간 기사 외부 페이지 ---- */
-     /* img, cont, title 우치 */
+ /* ----�ㅼ��媛� 湲곗�� �몃� ���댁� ---- */
+     /* img, cont, title �곗� */
         .external_news_img{
         	margin-top: 20px;
 			height :260px;
@@ -684,7 +684,7 @@
         }
         .external_news_title{
         	font-size: 20px;
-        	font-weight: bold;
+        	font-weight: 400;
         }
         .external_news_content{
         	font-size: 14px;
@@ -704,7 +704,7 @@
    	
    	
    	/* ------------menu-scroll----------- */
-     /* 실시간 기사 페이지 상단바 */
+     /* �ㅼ��媛� 湲곗�� ���댁� ���⑤� */
    	.menu-scroll_news {
     padding-top: 0px;
     padding-bottom: 0px;
