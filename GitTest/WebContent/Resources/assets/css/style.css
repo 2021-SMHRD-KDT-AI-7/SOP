@@ -7,6 +7,8 @@ Author URI: http://bootstrapthemes.co
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+
 html,
 body {
     background-color: #fff;
@@ -1015,7 +1017,7 @@ button.btn-md:hover {
                     counter section css
 =======================================================================*/
 .counter{
-    background: url(../images/counterbg.jpg) no-repeat top center;
+    background: url(../images/whitebg.jpg) no-repeat top center;
     background-size: cover;
 }
 .counter .main_counter_area{
@@ -1023,14 +1025,14 @@ button.btn-md:hover {
 }
 
 .main_counter_area .single_counter h2{
-    color:#fff;
+    color:#797979;
     font-size:2.8125rem;
 }
 .main_counter_area .single_counter i{
-    color: #fff;
+    color: #797979;
     font-size: 1.875rem;
     display: inline-block;
-    border: 1px solid #fff;
+    border: 1px solid #797979;
     width: 70px;
     height: 70px;
     line-height: 70px;
@@ -1039,7 +1041,7 @@ button.btn-md:hover {
     margin-top: 20px;
 }
 .main_counter_area .single_counter h4{
-    color:#fff;
+    color:#797979;
     font-size:0.8125rem;
     text-transform: lowercase;
 }
@@ -1141,7 +1143,7 @@ button.btn-md:hover {
 }
 .video .icon{}
 .video .icon h3{
-    color:#fff;
+    color:#797979;
     margin-top:30px;
     margin-bottom: 0px;
 }*/

@@ -72,7 +72,7 @@
 												class="icon-bar"></span>
 										</button>
 										<a class="navbar-brand" href="#home"> <img
-											 src="sopsop.JPG" />
+											src="sopsop.JPG" />
 										</a>
 									</div>
 
@@ -103,12 +103,14 @@
 											<%
 												}
 											%>
-											<li><a href="#portfolio">PORTFOLIO</a></li>
-											<li><a href="#history">ABOUT US</a></li>
+											<li><a href="#service">데일리미션</a></li>
 											<li><a href="#portfolio">차트</a></li>
+											<li><a href="#study">환경 기사</a></li>
 											<li><a href="#pricing">캠페인</a></li>
-											<li><a href="#team">블로그</a></li>
-											<li><a href="#blog">커뮤니티</a></li>
+											<li><a href="#team">팀</a></li>
+											<li><a href="#clogo">사례</a></li>
+											<li><a href="#counter">조회수</a></li>
+											<li><a href="#trial">게시판</a></li>
 										</ul>
 
 									</div>
@@ -174,7 +176,7 @@
 							<%
 								if (info == null) {
 							%>
-							<div class="col-sm-6">
+							<div class="col-sm-12">
 								<div
 									class="single_contant_left padding-top-90 padding-bottom-90">
 									<form action="../LoginCon" id="formid" method="post">
@@ -182,20 +184,20 @@
 											class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">
 
 											<div class="row">
-												<div class="col-sm-12">
+												<div class="col-sm-11">
 													<div class="form-group">
 														<input type="text" class="form-control" name="id"
 															placeholder="아이디를 입력하세요" required>
 
 													</div>
 												</div>
-												<div class="col-sm-12">
+												<div class="col-sm-11">
 													<div class="form-group">
 														<input type="password" class="form-control" name="pw"
 															placeholder="비밀번호를 입력하세요" required="">
 													</div>
 												</div>
-												<div class="col-sm-12">
+												<div class="col-sm-11">
 													<div class="form-group">
 														<ul>
 															<fieldset>
@@ -268,7 +270,7 @@
 
 
 
-	<!--feature section -->
+	<!--feature section 
 	<section id="feature" class="feature sections">
 		<div class="container">
 			<div class="row">
@@ -328,13 +330,13 @@
 				</div>
 			</div>
 		</div>
-		<!--End of container -->
 	</section>
+	<hr />-->
+	<!--End of container -->
 	<!--End of feature Section -->
-	<hr />
 
 
-	<!-- History section -->
+	<!-- History section 
 	<section id="history" class="history sections">
 		<div class="container">
 			<div class="row">
@@ -364,15 +366,15 @@
 					</div>
 				</div>
 			</div>
-			<!--End of row -->
 		</div>
-		<!--End of container -->
-	</section>
+	</section>-->
+	<!--End of row -->
+	<!--End of container -->
 	<!--End of history -->
 
 
 	<!-- 데일리 미션 (진주) 시작 -->
-	
+
 	<section id="service" class="service">
 		<div class="container-fluid">
 			<div class="row">
@@ -380,23 +382,24 @@
 					<div class="no-padding">
 
 						<div class="single_service single_service_text text-right">
-							<div class="head_title" style="margin-right:500px;">
+							<div class="head_title" style="margin-right: 500px;">
 								<h2>DAILY MISSION</h2>
 							</div>
 
-							<div class="row" style="margin-right:500px;">
+							<div class="row" style="margin-right: 500px;">
 								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
 									<div class="row">
 
 										<div
 											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
 											<article class="single_service_right_text">
-											<% DailyMissionDAO dm_dao = new DailyMissionDAO(); 
-											   int day = dm_dao.getDayOfweek() * 2;
-											%>
-												<h4><%= dm_dao.dm_title(day) %></h4>
+												<%
+													DailyMissionDAO dm_dao = new DailyMissionDAO();
+												int day = dm_dao.getDayOfweek() * 2;
+												%>
+												<h4><%=dm_dao.dm_title(day)%></h4>
 												<p>
-													<%= dm_dao.dm_value(day) %>
+													<%=dm_dao.dm_value(day)%>
 												</p>
 											</article>
 										</div>
@@ -416,9 +419,9 @@
 										<div
 											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
 											<article class="single_service_right_text">
-												<h4><%= dm_dao.dm_title(day+1) %></h4>
+												<h4><%=dm_dao.dm_title(day + 1)%></h4>
 												<p>
-													<%= dm_dao.dm_value(day+1) %>
+													<%=dm_dao.dm_value(day + 1)%>
 												</p>
 											</article>
 										</div>
@@ -487,9 +490,8 @@
 				<div class="main_portfolio">
 					<div class="col-sm-12">
 						<div class="head_title text-center">
-							<h2>RECENT WORKS</h2>
-							<div class="subtitle">It has survived not only five
-								centuries, but also the leap scrambled it to make a type.</div>
+							<h2>차트</h2>
+							<div class="subtitle">여러 가지의 차트를 만나보세요!</div>
 							<div class="separator"></div>
 						</div>
 					</div>
@@ -675,65 +677,6 @@
 	<!-- End off Study Section -->
 
 
-	<!-- Counter Section -->
-	<section id="counter" class="counter">
-		<div class="video_overlay">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="main_counter_area text-center">
-
-							<div class="row">
-								<div class="single_counter border_right">
-									<div class="col-sm-3 col-xs-12">
-										<div class="single_counter_item">
-											<i class="icon icon-thumbs-up"></i>
-											<h2 class="statistic-counter">3891</h2>
-											<h4 class="">User Favourites</h4>
-										</div>
-									</div>
-								</div>
-
-								<div class="single_counter">
-									<div class="col-sm-3 col-xs-12">
-										<div class="single_counter_item">
-											<i class="icon icon-business-3"></i>
-											<h2 class="statistic-counter">281</h2>
-											<h4 class="">Posts Last 24 Hours</h4>
-										</div>
-									</div>
-								</div>
-
-								<div class="single_counter">
-									<div class="col-sm-3 col-xs-12">
-										<div class="single_counter_item">
-											<i class="icon icon-people-32"></i>
-											<h2 class="statistic-counter">618</h2>
-											<h4 class="">Total Posts</h4>
-										</div>
-
-									</div>
-								</div>
-
-								<div class="single_counter">
-									<div class="col-sm-3 col-xs-12">
-										<div class="single_counter_item">
-											<i class="icon icon-cup"></i>
-											<h2 class="statistic-counter">178</h2>
-											<h4 class="">Amazing Features</h4>
-
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- End off container -->
-	</section>
-	<!-- End of counter section -->
 
 	<!-- Pricing Section -->
 	<section id="pricing" class="pricing">
@@ -824,6 +767,7 @@
 	<!-- End off Pricing Section -->
 
 	<!-- Team Section -->
+	<!-- Team Section -->
 	<section id="team" class="team">
 		<div class="main_team_area">
 			<div class="container">
@@ -831,8 +775,7 @@
 					<div class="col-sm-12">
 						<div class="head_title textwhite text-center margin-top-80">
 							<h2>OUR TEAM</h2>
-							<div class="subtitle">Meet the craziest team. Share your
-								thoughts with them.</div>
+							<div class="subtitle" id="team_name">깐부</div>
 							<div class="separator"></div>
 						</div>
 						<!-- End off Head_title -->
@@ -841,47 +784,57 @@
 							<ul>
 								<li>
 									<div class="single_team_img">
-										<img src="assets/images/team1.jpg" alt="" />
+										<img src="image/kkj.png" alt="" />
 									</div>
 									<div class="single_team_text">
-										<h4>Semf Ucuk</h4>
-										<p>Founder</p>
+										<h4>김국중</h4>
+										<p id="team_list">
+											프로젝트 총괄,<br> 프론트, 백앤드, DB
+										</p>
 									</div>
 								</li>
 								<li>
 									<div class="single_team_img">
-										<img src="assets/images/team2.jpg" alt="" />
+										<img src="image/kjn.png" alt="" />
 									</div>
 									<div class="single_team_text">
-										<h4>Kazi Erfan</h4>
-										<p>Engineering</p>
+										<h4>김지나</h4>
+										<p id="team_list">
+											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+										</p>
 									</div>
 								</li>
 								<li>
 									<div class="single_team_img">
-										<img src="assets/images/team3.jpg" alt="" />
+										<img src="image/pjy.png" alt="" />
 									</div>
 									<div class="single_team_text">
-										<h4>Jeng Koli</h4>
-										<p>Designer</p>
+										<h4>박준영</h4>
+										<p id="team_list">
+											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+										</p>
 									</div>
 								</li>
 								<li>
 									<div class="single_team_img">
-										<img src="assets/images/team4.jpg" alt="" />
+										<img src="image/pjj.png" alt="" />
 									</div>
 									<div class="single_team_text">
-										<h4>Pet Romak</h4>
-										<p>Marketing</p>
+										<h4>박진주</h4>
+										<p id="team_list">
+											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+										</p>
 									</div>
 								</li>
 								<li>
 									<div class="single_team_img">
-										<img src="assets/images/test2.jpg" alt="" />
+										<img src="image/lhw.png" alt="" />
 									</div>
 									<div class="single_team_text">
-										<h4>Chet Pok</h4>
-										<p>Web Developer</p>
+										<h4>이혜원</h4>
+										<p id="team_list">
+											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+										</p>
 									</div>
 								</li>
 							</ul>
@@ -900,41 +853,96 @@
 	<section id="clogo" class="clogo">
 		<div class="container">
 			<div class="row">
-				<div class="main_clogo sections text-center">
+				<div class="main_clogo sections_weather text-center">
 					<div class="head_title text-center">
-						<h2>Great Integrations with Others</h2>
-						<div class="subtitle">Suspendisse sed eros mollis, tincidunt
-							felis eget, interdum erat. Nullam sit amet odio eu est aliquet
-							euismod a a urna. Proin eu urna suscipit, dictum quam nec.</div>
-						<div class="separator"></div>
+						<h2>국내 이상기후 사례</h2>
+						<div class="subtitle"></div>
+						<div class="external_news_content">국내의 충격적인 이상기후로 인한 여러 사례를
+							확인하세요.</div>
 					</div>
 					<!-- End off Head_title -->
 
-					<div class="col-sm-3 col-xs-6">
-						<a href=""><img src="assets/images/clogo1.png" alt="" /></a>
-					</div>
-					<div class="col-sm-3 col-xs-6">
-						<a href=""><img src="assets/images/clogo2.png" alt="" /></a>
-					</div>
-					<div class="col-sm-3 col-xs-6">
-						<a href=""><img src="assets/images/clogo3.png" alt="" /></a>
-					</div>
-					<div class="col-sm-3 col-xs-6">
-						<a href=""><img src="assets/images/clogo4.png" alt="" /></a>
-					</div>
-					<div class="col-sm-3 col-xs-6">
-						<a href=""><img src="assets/images/clogo5.png" alt="" /></a>
-					</div>
-					<div class="col-sm-3 col-xs-6">
-						<a href=""><img src="assets/images/clogo6.png" alt="" /></a>
-					</div>
-					<div class="col-sm-3 col-xs-6">
-						<a href=""><img src="assets/images/clogo9.png" alt="" /></a>
-					</div>
-					<div class="col-sm-3 col-xs-6">
-						<a href=""><img src="assets/images/clogo8.png" alt="" /></a>
-					</div>
+
+					<div class="col-sm-3 col-xs-6"></div>
+					<div class="col-sm-3 col-xs-6"></div>
+					<div class="col-sm-3 col-xs-6"></div>
 				</div>
+
+				<div class="left">
+					<div class="div_title">
+						<a href="https://www.bbc.com/korean/news-53577483"><img
+							width="100%" height="400px"
+							src="https://ichef.bbci.co.uk/news/800/cpsprodpb/13FA5/production/_113692818_origin_.jpg"
+							alt="" /></a>
+					</div>
+					<br>
+					<figure class="txt_pig">&lt;사과 재배 못하고 강원도에서 귤 재배하는 21세기말
+						한국&gt;
+					</figure>
+					<p class="txt_line">연간 10.1일인 폭염일수가 3배 이상인 35.5일이 된다. 사과 재배지는
+						사라지며, 강원도에서 감귤 재배가 가능해진다. 모기나 진드기와 같은 해충 발생이 늘어나 감염병도 급증한다. 벚꽃의
+						개화시기는 지금보다 11.2일 빨라지고 소나무숲은 15% 사라진다. 이는 온실가스 배출이 현재 추세대로 이어지면
+						21세기 중반 이후부터 한반도가 목격하게 될 모습이다. 환경부와 기상청은 28일 논문 1900여편을 분석해 공동으로
+						'한국 기후변화 평가보고서 2020'를 내고 한반도 기후변화 동향과 전망을 정리했다.</p>
+				</div>
+
+				<div class="right">
+					<div class="div_title">
+						<a
+							href="https://www.hani.co.kr/arti/society/society_general/1003844.html"><img
+							width="100%" height="400px"
+							src="https://flexible.img.hani.co.kr/flexible/normal/970/643/imgdb/original/2021/0714/20210714502784.jpg"
+							alt="" /></a>
+					</div>
+					<br>
+					<figure class="txt_pig">&lt;폭염-태풍-폭우 ‘트리플 이상기후’…이젠 여름철마다
+						온다&gt;
+					</figure>
+					<p class="txt_line">수만 년 전의 빙하기가 46억 년 지구 역사상 가장 추웠던 시기에 속한다고
+						한다. 인류가 지구의 지배자가 된 지금은 그때보다 훨씬 따뜻하지만, 그래도 추운 시기에 속하는 건 마찬가지다.
+						2021년 6월부터 러시아 모스크바에서 섭씨 30도가 훌쩍 넘는 고온이, 캐나다 서부 브리티시컬럼비아에서 섭씨 50도에
+						가까운 폭염이 이어져서 마치 지구에 불난 것처럼 수은주가 치솟는데, 이건 어떻게 된 일이냐고 반문하는 분이 있을
+						것이다. 한여름에도 에어컨을 켜지 않고 지낼 수 있는 지역에 불폭탄이 터졌으니 이런 물음이 나올 만도 하다. 그러나
+						기상관측 자료는 거짓말하지 않는다.</p>
+				</div>
+
+				<div class="left">
+					<div class="div_title">
+						<a href="https://www.bbc.com/korean/international-51470772"><img
+							width="100%" height="400px"
+							src="https://ichef.bbci.co.uk/news/800/cpsprodpb/7210/production/_110900292_origin_.jpg"
+							alt="" /></a>
+					</div>
+					<br>
+					<figure class="txt_pig">&lt;기후변화: 더워지는 한국, 겨울이 사라진다?&gt;
+					</figure>
+					<p class="txt_line">국립공원공단은 지리산국립공원 구룡계곡 일대에 사는 북방산개구리의 산란을 지난달
+						23일 처음 관측했다고 밝혔다. 지난해 2월 19일보다 27일 빠른 시기다. 해당 조사가 시작된 2010년 이후 1월에
+						산란이 관측된 것은 이번이 처음이다. 공원공단 연구진은 유난히 따뜻했던 겨울 날씨 때문에 산란일이 앞당겨진 것으로 보고
+						있다. 1월 중 낮 기온이 23도까지 올랐던 제주에서는 제주도롱뇽의 산란시기가 한 달 앞당겨졌다. 제주 백서향도 예년에
+						비해 한 달 먼저 개화했다. 매년 관광객이 몰려드는 화천 산천어축제는 개막을 두 차례 연기하기도 했다. 포근한 날씨에
+						비까지 많이 내려 얼음이 제대로 얼지 않아서다.</p>
+				</div>
+
+				<div class="right">
+					<div class="div_title">
+						<a href="http://www.hdhy.co.kr/news/articleView.html?idxno=15429"><img
+							width="100%" height="400px"
+							src="http://www.hdhy.co.kr/news/photo/202109/15429_20071_322.jpg"
+							alt="" /></a>
+					</div>
+					<br>
+					<figure class="txt_pig">&lt;펄펄 끓는 지구, 한반도 어장지도가 바뀐다 - 2021
+						어종 변화 보고서&gt;
+					</figure>
+					<p class="txt_line">지난 7월, 기후변화로 고통받는 해양생물들의 실태가 공개돼 전 세계에 큰
+						충격을 줬다. 미국 환경보호단체 컬럼비아 리버키퍼(Columbia Riverkeeper)는 컬럼비아강의 연어들이
+						폭염으로 급등한 수온에 피부 살점이 벗겨진 채 유영하고 있는 모습을 영상으로 공개했다. 회유성 어류인 연어는 바다에
+						살지만 산란하기 위해 강을 거슬러 오른다. 여름철 알을 낳기 위해 유영하던 연어는 20도 이내의 수온을 유지해 오던
+						컬럼비아강이 폭염으로 21도까지 높아지자 심각한 화상을 입게 된 것으로 파악됐다. 7월 초부터 연어 영상을 촬영해 온
+						컬럼비아 리버키퍼 회원 브렛 밴던호리벌은 “앞으로 강물이 더 뜨거워진다면 더 많은 연어가 죽을 수 있다”고 경고했다.</p>
+				</div>
+
 			</div>
 		</div>
 		<div class="divider"></div>
@@ -942,7 +950,7 @@
 	<!-- End off clogo Section -->
 
 
-	<!-- Blog Section -->
+	<!-- Blog Section
 	<section id="blog" class="blog">
 		<div class="container-fluid">
 			<div class="row">
@@ -953,7 +961,7 @@
 							felis eget, interdum eratullam sit amet odio.</div>
 						<div class="separator"></div>
 					</div>
-					<!-- End off Head_title -->
+					
 
 					<div class="main_blog_content">
 						<div class="col-sm-6">
@@ -1068,11 +1076,71 @@
 				</div>
 			</div>
 		</div>
-		<!-- End off container -->
-	</section>
+	</section> -->
+	<!-- End off container -->
 	<!-- End off Blog Section -->
 
 
+	<!-- Counter Section -->
+	<section id="counter" class="counter">
+		<div class="video_overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="main_counter_area text-center">
+
+							<div class="row">
+								<div class="single_counter border_right">
+									<div class="col-sm-3 col-xs-12">
+										<div class="single_counter_item">
+											<i class="../images/f_icon.png"></i>
+											<!-- <img src=""> -->
+											<h2 class="statistic-counter">3891</h2>
+											<h4 class="">즐겨찾기</h4>
+										</div>
+									</div>
+								</div>
+
+								<div class="single_counter">
+									<div class="col-sm-3 col-xs-12">
+										<div class="single_counter_item">
+											<i class="icon icon-business-3"></i>
+											<h2 class="statistic-counter">281</h2>
+											<h4 class="">24시간 포스팅 수</h4>
+										</div>
+									</div>
+								</div>
+
+								<div class="single_counter">
+									<div class="col-sm-3 col-xs-12">
+										<div class="single_counter_item">
+											<i class="icon icon-people-32"></i>
+											<h2 class="statistic-counter">618</h2>
+											<h4 class="">전체 포스팅 수</h4>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="single_counter">
+									<div class="col-sm-3 col-xs-12">
+										<div class="single_counter_item">
+											<i class="icon icon-cup"></i>
+											<h2 class="statistic-counter">178</h2>
+											<h4 class="">특징 수</h4>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End off container -->
+	</section>
+	<!-- End of counter section -->
 
 	<section id="trial" class="trial text-center wow fadeIn"
 		data-wow-duration="2s" data-wow-dealy="1.5s">
@@ -1082,11 +1150,8 @@
 					<div class="row">
 						<div class="main_trial">
 							<div class="col-sm-12">
-								<h2>
-									Let's Get Started Now. <span>It's FREE!</span>
-								</h2>
-								<h4>30 day free trial. Free plan allows up to 2 projects.
-									Pay if you need more. Cancel anytime. No catches.</h4>
+								<h2>게시판</h2>
+								<h4>사람들의 소리를 들어보세요</h4>
 								<a href="Community.jsp" class="btn btn-lg">Comminuty Board</a>
 							</div>
 						</div>
