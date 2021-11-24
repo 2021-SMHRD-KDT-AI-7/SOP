@@ -1,6 +1,6 @@
 <%@page import="Model.DailyMissionDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+	pageEncoding="EUC-KR"%>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -64,8 +64,8 @@
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
-										<a class="navbar-brand" href="#home"> <img
-											src="sopsop.JPG" />
+										<a class="navbar-brand" href="#home"> 
+										<img src="assets/images/sopsop.jpg" />
 										</a>
 									</div>
 
@@ -80,9 +80,6 @@
 											<li><a href="#home">HOME</a></li>
 											<li><a href="join.jsp">회원가입</a></li>
 											<li><a href="#contact">로그인</a></li>
-											<!-- <li><a href="#portfolio">PORTFOLIO</a></li> -->
-											<!-- <li><a href="#history">ABOUT US</a></li> -->
-											<li><a href="../LogoutCon">로그아웃</a></li>
 											<li><a href="#service">데일리미션</a></li>
 											<li><a href="#portfolio">차트</a></li>
 											<li><a href="#study">환경 기사</a></li>
@@ -251,7 +248,6 @@
 
 
 	<!-- 데일리 미션 (진주) 시작 -->
-
 	<section id="service" class="service">
 		<div class="container-fluid">
 			<div class="row">
@@ -260,95 +256,97 @@
 
 						<div class="single_service single_service_text text-right">
 							<div class="head_title" style="margin-right: 500px;">
-								<div class="head_title" style="margin-right: 500px;">
-									<h2>DAILY MISSION</h2>
-								</div>
+								<h2>DAILY MISSION</h2>
+							</div>
 
-								<div class="row" style="margin-right: 500px;">
-									<div class="row" style="margin-right: 500px;">
-										<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-											<div class="row">
+							<div class="row" style="margin-right: 500px;">
+								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+									<div class="row">
 
-												<div
-													class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
-													<article class="single_service_right_text">
-														<% DailyMissionDAO dm_dao = new DailyMissionDAO(); 
-														int day = dm_dao.getDayOfweek() * 2; %>
-														<h4><%=dm_dao.dm_title(day)%></h4>
-														<p><%=dm_dao.dm_value(day)%></p>
-													</article>
-												</div>
-												<div class="col-sm-1 col-xs-1">
-													<figure class="single_service_icon">
-														<a href="Community.jsp"><i class="fa fa-heart"></i></a>
-													</figure>
-													<!-- End of figure -->
-												</div>
-											</div>
+										<div
+											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
+											<article class="single_service_right_text">
+												<h4>난방온도 2℃ 낮추기</h4>
+												<p>
+													동절기 적정 실내온도(겨울철 18~20℃)를 고려하여, 보일러 온도 설정시 2℃ 낮추기<br>
+													겨울에는 내복, 수면양말, 무릎담요 같은 보온용품 적극 활용하기
+												</p>
+											</article>
 										</div>
-										<!-- End of col-sm-12 -->
-
-										<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-											<div class="row">
-
-												<div
-													class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
-													<article class="single_service_right_text">
-														<h4><%=dm_dao.dm_title(day + 1)%></h4>
-														<p><%=dm_dao.dm_value(day + 1)%></p>
-													</article>
-												</div>
-												<div class="col-sm-1 col-xs-1">
-													<figure class="single_service_icon">
-														<a href="Community.jsp"><i class="fa fa-heart"></i></a>
-													</figure>
-													<!-- End of figure -->
-												</div>
-											</div>
+										<div class="col-sm-1 col-xs-1">
+											<figure class="single_service_icon">
+												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
+											</figure>
+											<!-- End of figure -->
 										</div>
-										<!-- End of col-sm-12 -->
-
-										<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-											<div class="row">
-
-												<div
-													class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1 margin-bottom-20">
-													<!-- <article class="single_service_right_text">
-												<h4>PHOTOGRAPHY</h4>
-												<p>Lorem Ipsum is simply dummy text of the printing and
-													typesetting industry. Lorem Ip sum has been the industry's
-													standard dummy text ever.</p>
-											</article> -->
-												</div>
-												<div class="col-sm-1 col-xs-1">
-													<!-- <figure class="single_service_icon">
-												<i class="fa fa-heart"></i>
-											</figure> -->
-													<!-- End of figure -->
-												</div>
-											</div>
-										</div>
-										<!-- End of col-sm-12 -->
-
 									</div>
 								</div>
+								<!-- End of col-sm-12 -->
+
+								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+									<div class="row">
+
+										<div
+											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
+											<article class="single_service_right_text">
+												<h4>전기밥솥 보온기능 사용 줄이기</h4>
+												<p>
+													전기밥솥은 취사때만 사용하고 밥을 먹을 만큼만 짓기. 남은 밥은 먹을 만큼씩 나눠 냉동하기<br>
+													1일 평균 보온시간 약0시간(2018년 가구에너지 상설표본조사 결과)
+												</p>
+											</article>
+										</div>
+										<div class="col-sm-1 col-xs-1">
+											<figure class="single_service_icon">
+												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
+											</figure>
+											<!-- End of figure -->
+										</div>
+									</div>
+								</div>
+								<!-- End of col-sm-12 -->
+
+								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+									<div class="row">
+
+										<div
+											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1 margin-bottom-20">
+											<!-- <article class="single_service_right_text">
+                                    <h4>PHOTOGRAPHY</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and
+                                       typesetting industry. Lorem Ip sum has been the industry's
+                                       standard dummy text ever.</p>
+                                 </article> -->
+										</div>
+										<div class="col-sm-1 col-xs-1">
+											<!-- <figure class="single_service_icon">
+                                    <i class="fa fa-heart"></i>
+                                 </figure> -->
+											<!-- End of figure -->
+										</div>
+									</div>
+								</div>
+								<!-- End of col-sm-12 -->
+
 							</div>
-							<!-- End of col-sm-6 -->
-
-							<!-- <div class="col-md-6 col-sm-12 no-padding">
-						<figure class="single_service single_service_img">
-							<div class="overlay-img"></div>
-							<img src="assets/images/servicerightimg.jpg" alt="" /> 
-						</figure>
-						End of figure
-					</div> -->
-							<!-- End of col-sm-6 -->
-
 						</div>
 					</div>
-					<!-- End of row -->
+					<!-- End of col-sm-6 -->
+
+					<!-- <div class="col-md-6 col-sm-12 no-padding">
+                  <figure class="single_service single_service_img">
+                     <div class="overlay-img"></div>
+                     <img src="assets/images/servicerightimg.jpg" alt="" />
+                  </figure>
+                  End of figure
+               </div> -->
+					<!-- End of col-sm-6 -->
+
 				</div>
-				<!-- End of Container-fluid -->
+			</div>
+			<!-- End of row -->
+		</div>
+		<!-- End of Container-fluid -->
 	</section>
 	<!-- 데일리 미션 끝! (진주) -->
 

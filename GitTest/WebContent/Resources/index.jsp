@@ -71,8 +71,8 @@
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
-										<a class="navbar-brand" href="#home"> <img
-											src="sopsop.JPG" />
+										<a class="navbar-brand" href="#home"> 
+										<img src="assets/images/sopsop.jpg" />
 										</a>
 									</div>
 
@@ -178,7 +178,7 @@
 							%>
 							<div class="col-sm-12">
 								<div
-									class="single_contant_left padding-top-90 padding-bottom-90">
+									class="single_contant_left text-center padding-top-90 padding-bottom-90">
 									<form action="../LoginCon" id="formid" method="post">
 										<div
 											class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">
@@ -193,7 +193,7 @@
 												</div>
 												<div class="col-sm-11">
 													<div class="form-group">
-														<input type="password" class="form-control" name="pw"
+														<input type="password" class="form-control" name="pwd"
 															placeholder="비밀번호를 입력하세요" required="">
 													</div>
 												</div>
@@ -215,7 +215,7 @@
 
 											</div>
 
-											<div class="">
+											<div class="col-sm-11">
 												<input type="submit" value="로그인" class="btn btn-lg">
 											</div>
 										</div>
@@ -225,7 +225,7 @@
 							<%
 								} else {
 							%>
-							<div class="col-sm-6">
+							<div class="col-sm-12">
 								<div
 									class="single_contant_left padding-top-90 padding-bottom-90">
 									<form action="../LogoutCon" id="formid" method="post">
@@ -249,7 +249,7 @@
 
 											</div>
 
-											<div class="">
+											<div class="col-sm-12">
 												<input type="submit" value="로그아웃" class="btn btn-lg">
 											</div>
 										</div>
@@ -853,6 +853,7 @@
 	<section id="clogo" class="clogo">
 		<div class="container">
 			<div class="row">
+			
 				<div class="main_clogo sections_weather text-center">
 					<div class="head_title text-center">
 						<h2>국내 이상기후 사례</h2>

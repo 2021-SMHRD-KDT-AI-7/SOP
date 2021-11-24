@@ -13,7 +13,7 @@ html,
 body {
     background-color: #fff;
     font-size: 14px;
-    color: #797979;
+    color: #79;
     width: 100%;
     padding: 0;
     margin-left: 0;
@@ -672,7 +672,9 @@ input::-ms-input-placeholder {
 }
 /*home section*/
 .home{
-    background: url(../images/homebg.jpg) no-repeat center center;
+
+    background: url(../images/forest.jpg) no-repeat center center;
+
     background-size: cover;
 }
 .home_skew_border{
@@ -715,7 +717,7 @@ input::-ms-input-placeholder {
     max-width: 60%;
     margin: 0 auto;
     padding-bottom: 30px;
-    font-size:1.125rem;
+    font-size:2rem;
 
 }
 
