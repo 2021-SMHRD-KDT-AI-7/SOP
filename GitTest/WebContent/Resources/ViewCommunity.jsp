@@ -217,15 +217,24 @@
    <script src="assets/js/plugins.js"></script>
    <script src="assets/js/main.js"></script>
 	<script src="jquery-3.6.0.min.js"></script>
+	
+	
+	
+	<!-- 댓글 스크립트  -->
 	<script> 
 		//type=text 인 input 태그에 작성한 댓글을 ul(id=comments) 태그에 추가(li태그 사이에)
 		var num = 1;
 		$('#write_com').on('click',function(){
+<<<<<<< HEAD
+			
+			// db 보내는 준비
+=======
 			var com = $('input[type=text]').val()
 			$('#comments').append('<li class="com'+num+'">'+com+'<input type="button" value="댓글삭제" onclick="del('+num+')"></li>');
 			num++;
 			$('imput[type=text]').val('');
 			
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 			$.ajax({
 				type : "post",
 				data : {
@@ -240,8 +249,13 @@
 					alert("실패!");
 				}
 			});
-			
-		}); 
+
+			// 실제 댓글 달리는 기능
+			var com = $('input[type=text]').val()
+			$('#comments').append('<li class="com'+num+'">'+com+'<input type="button" value="댓글삭제" onclick="del('+num+')"></li>');
+			num++;
+			$('imput[type=text]').val('');
+ 
 		
 		function del(num){
 			$('.com'+num).remove();
