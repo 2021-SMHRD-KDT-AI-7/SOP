@@ -672,11 +672,9 @@ input::-ms-input-placeholder {
 }
 /*home section*/
 .home{
-<<<<<<< HEAD
+
     background: url(../images/forest.jpg) no-repeat center center;
-=======
-    background: url(../images/homebg.jpg) no-repeat center center; 
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
+
     background-size: cover;
 }
 .home_skew_border{
