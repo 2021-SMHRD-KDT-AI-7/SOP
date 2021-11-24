@@ -71,8 +71,8 @@
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
-										<a class="navbar-brand" href="#home"> <img
-											src="sopsop.JPG" />
+										<a class="navbar-brand" href="#home"> 
+										<img src="assets/images/sopsop.jpg" />
 										</a>
 									</div>
 
@@ -178,7 +178,7 @@
 							%>
 							<div class="col-sm-12">
 								<div
-									class="single_contant_left padding-top-90 padding-bottom-90">
+									class="single_contant_left text-center padding-top-90 padding-bottom-90">
 									<form action="../LoginCon" id="formid" method="post">
 										<div
 											class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">
@@ -215,7 +215,7 @@
 
 											</div>
 
-											<div class="">
+											<div class="col-sm-11">
 												<input type="submit" value="로그인" class="btn btn-lg">
 											</div>
 										</div>
@@ -225,7 +225,7 @@
 							<%
 								} else {
 							%>
-							<div class="col-sm-6">
+							<div class="col-sm-12">
 								<div
 									class="single_contant_left padding-top-90 padding-bottom-90">
 									<form action="../LogoutCon" id="formid" method="post">
@@ -249,7 +249,7 @@
 
 											</div>
 
-											<div class="">
+											<div class="col-sm-12">
 												<input type="submit" value="로그아웃" class="btn btn-lg">
 											</div>
 										</div>
@@ -617,7 +617,7 @@
 											<p class="external_news_content">정부가 8000억원을 투입하고 지난해
 												중단시킨 사용후핵연료 파이로프로세싱과 소듐냉각고속로(SFR) 국책 연구개발사업의 재개...</p>
 
-											<a
+											<a target="_blank"
 												href="https://www.hani.co.kr/arti/society/environment/1019805.html"
 												class="btn btn-lg">기사 더보기</a>
 
@@ -653,8 +653,7 @@
 										</div>
 									</div>
 									<!--  전체 기사 보기로 이동 -->
-									<a href="news.html" class="btn btn-lg" id="all_news_page">전체
-										기사</a>
+									<a href="DailyNews.jsp" class="btn_article_daily btn_lg_article_daily" >전체 기사</a>
 								</div>
 							</div>
 						</div>
@@ -853,6 +852,7 @@
 	<section id="clogo" class="clogo">
 		<div class="container">
 			<div class="row">
+			
 				<div class="main_clogo sections_weather text-center">
 					<div class="head_title text-center">
 						<h2>국내 이상기후 사례</h2>

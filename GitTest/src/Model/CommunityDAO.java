@@ -175,5 +175,30 @@ public class CommunityDAO {
 				}return cnt;
 			}
 			
-			
+		// 댓글 업로드 메소드
+		
+			 public int cmt_upload(CommentDTO dto) {
+				 System.out.println("============");
+				 System.out.println(dto.getArticle_seq());
+				 System.out.println(dto.getComment_content());
+				 System.out.println(dto.getMb_id());
+				 getConn();
+				 try {
+					 String sql="insert into t_comment values (t_comment_seq.NEXTVAL,?,?,sysdate,?)";
+					 
+					 psmt=conn.prepareStatement(sql);
+					 
+					 psmt.setInt(1,dto.getArticle_seq());
+					 psmt.setString(2,dto.getComment_content());
+					 psmt.setString(3,dto.getMb_id());
+					
+					 cnt=psmt.executeUpdate();
+					 
+				 }catch(Exception e){
+						e.printStackTrace();
+					}finally {
+						dbClose();
+					}return cnt;
+			 }
+			 
 }

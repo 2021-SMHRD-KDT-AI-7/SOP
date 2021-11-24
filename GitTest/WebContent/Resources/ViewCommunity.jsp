@@ -3,6 +3,10 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> 
+<%@page import="Model.MemberDTO"%>
+<%@page import="Model.CommentDAO"%>
+<%@page import="Model.CommentDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="Model.CommunityDTO"%>
 <%@page import="Model.CommunityDAO"%>
 <%@page import="Model.CampaignDTO"%>
@@ -46,9 +50,22 @@
     </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
    <%
+	  /* HttpSession session = request.getSession(); */
+		
+	  MemberDTO info=(MemberDTO)session.getAttribute("info"); 
+	   
       String article_seq = request.getParameter("article_seq");
+      String comment_seq = request.getParameter("comment_seq");
+      
       CommunityDAO dao = new CommunityDAO();
       CommunityDTO dto = dao.viewOneBoard(article_seq);
+      
+      CommentDAO cmt_dao = new CommentDAO();
+      ArrayList<CommentDTO> cmt_list = new ArrayList<>();
+      
+      if(info != null){
+			cmt_list = cmt_dao.getComment(article_seq);
+      }
    %>
 
    <div class='preloader'>
@@ -74,7 +91,7 @@
                                     class="icon-bar"></span>
                               </button>
                               <a class="navbar-brand" href="index.html"> <img
-                                 src="assets/images/logo.png" />
+                                 src="assets/images/sopsop.jpg" />
                               </a>
                            </div>
 
@@ -121,21 +138,30 @@
                                        <tr>
                                           <td colspan="2">내용</td>
                                        </tr>
+                                       <!-- 댓글 다는 곳 -->
                                        <tr>
                                           <td colspan="2"><%=dto.getArticle_content() %> 
                                           <img src="./image/<%=dto.getArticle_file1()%>"></td>
                                        </tr>
                                        <tr>
-                                       		<td colspan="2"><input type="text" size="50"><input id="write_com" type="button" value="댓글작성"> </td>
+                                             <td colspan="2"><input type="text" size="50"><input id="write_com" type="button" value="댓글작성"> </td>
                                        </tr>
-										<tr>
-											<td colspan="2">
-												<ul id="comments" style="list-style:none; padding:0">
-													
-												</ul>
-											</td>
-										</tr>
-										<tr>
+                              <tr>
+                                 <td colspan="2">
+                                    <%
+                                    	for (int i=0; i<cmt_list.size(); i++){ %>
+											
+                                    		<tr id="comments-<%=i%>" style="list-style:none; padding:0">
+											<td><%=cmt_list.get(i).getComment_content()%></td>
+											<td></td>
+											</tr>
+                                    	<%}
+                                    %>
+                                       
+                                    
+                                 </td>
+                              </tr>
+                              <tr>
                                           <td colspan="2"><a href="Community.jsp"><button>뒤로가기</button></a>
                                                       <a href="CommunityUpdateBoard.jsp?article_seq=<%=dto.getArticle_seq()%>"><button>수정하기</button></a></td>
                                                
@@ -216,6 +242,81 @@
 
    <script src="assets/js/plugins.js"></script>
    <script src="assets/js/main.js"></script>
+
+   <script src="jquery-3.6.0.min.js"></script>
+   <script> 
+      //type=text 인 input 태그에 작성한 댓글을 ul(id=comments) 태그에 추가(li태그 사이에)
+       var num = 1;
+      $('#write_com').on('click',function(){
+    	  /* alert("!") */
+    	  var seq = <%=article_seq%>;
+    	  var number = <%=cmt_list.size()-1%>;
+          var com = $('input[type=text]').val()    //댓글
+          $('#comments-' + number).after('<tr id="comments-'+(number+1)+'" style="list-style:none; padding:0"><td class="com'+num+'">'+com+'</td><td><input type="button" value="댓글삭제" onclick="del('+num+')"></td></tr>');
+          num++;
+          location.reload();
+          // $('imput[type=text]').val('');
+          /* alert(com) */
+          insert_com(seq, com);
+         
+      }); 
+      
+      function del(num){
+         $('.com'+num).remove();
+      }
+      
+      
+      function insert_com(seq, com){
+    	  $.ajax({
+              type : "post",
+              data : {
+                 "article_seq" : seq,
+                 "comment" : com
+              },
+              url : "../CommentService",
+              dataType : "text",
+              success : function(data){
+                 alert(data);
+              },
+              error : function(){
+                 alert("실패!");
+              }
+           }); 
+      }
+       
+      //댓글등록
+   /*    function WriteCmt(){
+         var form =document.getElementById("writeCommentForm");
+         
+         var board=form.comment_board.value
+         var id = form.comment_id.value
+         var content=form.comment_content.value;
+         
+         if(!content){
+            alert("내용을 입력하세요");
+            return false;
+         }else{
+            var param="comment_board"+ board +"&comment_id"+id+"&comment_content="+content;
+            
+            httpRequest=getXMLHttpRequest();
+            httpRequest.onreadystatechange=checkFun;
+            httpRequest.open("POST","CommentWriteAction.co",true);
+            httpRequest.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=euc-kr');
+            httpRequest.send(param);
+         }
+         
+         function checkFunc(){
+            if)httpRequest.readyState==4{
+               //결과값을 가져온다
+               var resultText=httpRequest.responseText;
+               if(resultText==1){
+                  document.location.reload();//상세보기 창 새로고침
+               }
+            }
+         }
+      } */
+   
+   </script>
 	<script src="jquery-3.6.0.min.js"></script>
 	
 	
@@ -225,20 +326,15 @@
 		//type=text 인 input 태그에 작성한 댓글을 ul(id=comments) 태그에 추가(li태그 사이에)
 		 var num = 1;
 		$('#write_com').on('click',function(){
-<<<<<<< HEAD
 			
 			// db 보내는 준비
-=======
 			var com = $('input[type=text]').val()
 			$('#comments').append('<li class="com'+num+'">'+com+'<input type="button" value="댓글삭제" onclick="del('+num+')"></li>');
 			num++;
 			$('imput[type=text]').val('');
-<<<<<<< HEAD
 			/* 
 =======
 			
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 			$.ajax({
 				type : "post",
 				data : {
@@ -252,11 +348,9 @@
 				error : function(){
 					alert("실패!");
 				}
-<<<<<<< HEAD
 			}); */
 			
 		}); 
-=======
 			});
 
 			// 실제 댓글 달리는 기능
@@ -265,7 +359,6 @@
 			num++;
 			$('imput[type=text]').val('');
  
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 		
 		function del(num){
 			$('.com'+num).remove();
