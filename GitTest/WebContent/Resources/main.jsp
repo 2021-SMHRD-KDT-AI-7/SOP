@@ -1,8 +1,6 @@
 <%@page import="Model.DailyMissionDAO"%>
-<%@page import="Controller.DailyMission"%>
-<%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+    pageEncoding="EUC-KR"%>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -45,11 +43,6 @@
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
 
-	<%
-		request.setCharacterEncoding("euc-kr");
-	MemberDTO info = (MemberDTO) session.getAttribute("info");
-	%>
-
 	<div class='preloader'>
 		<div class='loaded'>&nbsp;</div>
 	</div>
@@ -85,24 +78,11 @@
 
 										<ul class="nav navbar-nav navbar-right">
 											<li><a href="#home">HOME</a></li>
-											<%
-												if (info == null) {
-											%>
 											<li><a href="join.jsp">회원가입</a></li>
-											<%
-												}
-											%>
-											<%
-												if (info == null) {
-											%>
 											<li><a href="#contact">로그인</a></li>
-											<%
-												} else {
-											%>
+											<!-- <li><a href="#portfolio">PORTFOLIO</a></li> -->
+											<!-- <li><a href="#history">ABOUT US</a></li> -->
 											<li><a href="../LogoutCon">로그아웃</a></li>
-											<%
-												}
-											%>
 											<li><a href="#service">데일리미션</a></li>
 											<li><a href="#portfolio">차트</a></li>
 											<li><a href="#study">환경 기사</a></li>
@@ -136,10 +116,8 @@
 								<div class="main_home_slider text-center">
 									<div class="single_home_slider">
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
-											<h3>Save Ozon Party</h3>
 											<h1>SOP</h1>
-											<div class="separator"></div>
-											<p>Save Ozon Party</p>
+											<h1>Save Ozon Party</h1>
 											<div class="home_btn">
 												<a href="" class="btn btn-lg m_t_10">GET STARTED NOW</a> <a
 													href="" class="btn btn-default">LEARN MORE</a>
@@ -153,9 +131,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="scrooldown">
-						<a href="#feature"><i class="fa fa-arrow-down"></i></a>
-					</div>
+
 				</div>
 			</div>
 		</section>
@@ -173,12 +149,10 @@
 							</div>
 							<!-- End off Head_title -->
 
-							<%
-								if (info == null) {
-							%>
+
 							<div class="col-sm-12">
 								<div
-									class="single_contant_left padding-top-90 padding-bottom-90">
+									class="single_contant_left text-center padding-top-90 padding-bottom-90 ">
 									<form action="../LoginCon" id="formid" method="post">
 										<div
 											class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">
@@ -188,7 +162,6 @@
 													<div class="form-group">
 														<input type="text" class="form-control" name="id"
 															placeholder="아이디를 입력하세요" required>
-
 													</div>
 												</div>
 												<div class="col-sm-11">
@@ -215,50 +188,13 @@
 
 											</div>
 
-											<div class="">
+											<div class="col-sm-11">
 												<input type="submit" value="로그인" class="btn btn-lg">
 											</div>
 										</div>
 									</form>
 								</div>
 							</div>
-							<%
-								} else {
-							%>
-							<div class="col-sm-6">
-								<div
-									class="single_contant_left padding-top-90 padding-bottom-90">
-									<form action="../LogoutCon" id="formid" method="post">
-										<div
-											class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">
-
-											<div class="row">
-												<div class="col-sm-12">
-													<div class="form-group">
-														<ul>
-															<fieldset>
-																<p><%=info.getMb_nickname()%>
-																	님
-																</p>
-															</fieldset>
-
-														</ul>
-
-													</div>
-												</div>
-
-											</div>
-
-											<div class="">
-												<input type="submit" value="로그아웃" class="btn btn-lg">
-											</div>
-										</div>
-									</form>
-								</div>
-							</div>
-							<%
-								}
-							%>
 
 
 						</div>
@@ -270,106 +206,47 @@
 
 
 
-	<!--feature section 
-	<section id="feature" class="feature sections">
-		<div class="container">
-			<div class="row">
-				<div class="main_feature text-center">
 
-					<div class="col-sm-3">
-						<div class="single_feature">
-							<div class="single_feature_icon">
-								<i class="fa fa-clone"></i>
-							</div>
-
-							<h4>SLEEK DESIGN</h4>
-							<div class="separator3"></div>
-							<p>Lorem Ipsum is simply dummy text of the printing and
-								typesetting let. Lorem Ipsum has been the industry.</p>
-						</div>
-					</div>
-
-					<div class="col-sm-3">
-						<div class="single_feature">
-							<div class="single_feature_icon">
-								<i class="fa fa-heart-o"></i>
-							</div>
-
-							<h4>CLEAN CODE</h4>
-							<div class="separator3"></div>
-							<p>Lorem Ipsum is simply dummy text of the printing and
-								typesetting let. Lorem Ipsum has been the industry.</p>
-						</div>
-					</div>
-
-					<div class="col-sm-3">
-						<div class="single_feature">
-							<div class="single_feature_icon">
-								<i class="fa fa-lightbulb-o"></i>
-							</div>
-							<h4>CREATIVE IDEAS</h4>
-							<div class="separator3"></div>
-							<p>Lorem Ipsum is simply dummy text of the printing and
-								typesetting let. Lorem Ipsum has been the industry.</p>
-						</div>
-					</div>
-
-					<div class="col-sm-3">
-						<div class="single_feature">
-							<div class="single_feature_icon">
-								<i class="fa fa-comments-o"></i>
-							</div>
-
-							<h4>FREE SUPPORT</h4>
-							<div class="separator3"></div>
-							<p>Lorem Ipsum is simply dummy text of the printing and
-								typesetting let. Lorem Ipsum has been the industry.</p>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section>
-	<hr />-->
-	<!--End of container -->
 	<!--End of feature Section -->
+	<hr />
 
 
 	<!-- History section 
-	<section id="history" class="history sections">
-		<div class="container">
-			<div class="row">
-				<div class="main_history">
-					<div class="col-sm-6">
-						<div class="single_history_img">
-							<img src="assets/images/stab1.png" alt="" />
-						</div>
-					</div>
+      <section id="history" class="history sections">
+         <div class="container">
+            <div class="row">
+               <div class="main_history">
+                  <div class="col-sm-6">
+                     <div class="single_history_img">
+                        <img src="sopsop.jpg" alt="" />
+                     </div>
+                  </div>
 
-					<div class="col-sm-6">
-						<div class="single_history_content">
-							<div class="head_title">
-								<h2>OUR HISTORY</h2>
-							</div>
-							<p>It is a long established fact that a reader will be
-								distracted by the readable content of a page when looking at its
-								layout. The point of using Lorem Ipsum is that it has a
-								more-or-less normal distribution of letters, as opposed to using
-								'Content here, content here', making it look like readable
-								English. Many desktop publishing packages and web page editors
-								now use Lorem Ipsum as their default model text, and a search
-								for 'lorem ipsum'</p>
+                  <div class="col-sm-6">
+                     <div class="single_history_content">
+                        <div class="head_title">
+                           <h2>OUR HISTORY</h2>
+                        </div>
+                        <p>It is a long established fact that a reader will be
+                           distracted by the readable content of a page when looking at
+                           its layout. The point of using Lorem Ipsum is that it has a
+                           more-or-less normal distribution of letters, as opposed to
+                           using 'Content here, content here', making it look like
+                           readable English. Many desktop publishing packages and web page
+                           editors now use Lorem Ipsum as their default model text, and a
+                           search for 'lorem ipsum'</p>
 
-							<a href="" class="btn btn-lg">BROWSE OUR WORK</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>-->
-	<!--End of row -->
-	<!--End of container -->
+                        <a href="" class="btn btn-lg">BROWSE OUR WORK</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </section>
+         <!--End of container -->
+
+
 	<!--End of history -->
 
 
@@ -383,99 +260,95 @@
 
 						<div class="single_service single_service_text text-right">
 							<div class="head_title" style="margin-right: 500px;">
-								<h2>DAILY MISSION</h2>
-							</div>
-
-							<div class="row" style="margin-right: 500px;">
-								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-									<div class="row">
-
-										<div
-											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
-											<article class="single_service_right_text">
-												<%
-													DailyMissionDAO dm_dao = new DailyMissionDAO();
-												int day = dm_dao.getDayOfweek() * 2;
-												%>
-												<h4><%=dm_dao.dm_title(day)%></h4>
-												<p>
-													<%=dm_dao.dm_value(day)%>
-												</p>
-											</article>
-										</div>
-										<div class="col-sm-1 col-xs-1">
-											<figure class="single_service_icon">
-												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
-											</figure>
-											<!-- End of figure -->
-										</div>
-									</div>
+								<div class="head_title" style="margin-right: 500px;">
+									<h2>DAILY MISSION</h2>
 								</div>
-								<!-- End of col-sm-12 -->
 
-								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-									<div class="row">
+								<div class="row" style="margin-right: 500px;">
+									<div class="row" style="margin-right: 500px;">
+										<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+											<div class="row">
 
-										<div
-											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
-											<article class="single_service_right_text">
-												<h4><%=dm_dao.dm_title(day + 1)%></h4>
-												<p>
-													<%=dm_dao.dm_value(day + 1)%>
-												</p>
-											</article>
+												<div
+													class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
+													<article class="single_service_right_text">
+														<% DailyMissionDAO dm_dao = new DailyMissionDAO(); 
+														int day = dm_dao.getDayOfweek() * 2; %>
+														<h4><%=dm_dao.dm_title(day)%></h4>
+														<p><%=dm_dao.dm_value(day)%></p>
+													</article>
+												</div>
+												<div class="col-sm-1 col-xs-1">
+													<figure class="single_service_icon">
+														<a href="Community.jsp"><i class="fa fa-heart"></i></a>
+													</figure>
+													<!-- End of figure -->
+												</div>
+											</div>
 										</div>
-										<div class="col-sm-1 col-xs-1">
-											<figure class="single_service_icon">
-												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
-											</figure>
-											<!-- End of figure -->
+										<!-- End of col-sm-12 -->
+
+										<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+											<div class="row">
+
+												<div
+													class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
+													<article class="single_service_right_text">
+														<h4><%=dm_dao.dm_title(day + 1)%></h4>
+														<p><%=dm_dao.dm_value(day + 1)%></p>
+													</article>
+												</div>
+												<div class="col-sm-1 col-xs-1">
+													<figure class="single_service_icon">
+														<a href="Community.jsp"><i class="fa fa-heart"></i></a>
+													</figure>
+													<!-- End of figure -->
+												</div>
+											</div>
 										</div>
-									</div>
-								</div>
-								<!-- End of col-sm-12 -->
+										<!-- End of col-sm-12 -->
 
-								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-									<div class="row">
+										<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+											<div class="row">
 
-										<div
-											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1 margin-bottom-20">
-											<!-- <article class="single_service_right_text">
+												<div
+													class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1 margin-bottom-20">
+													<!-- <article class="single_service_right_text">
 												<h4>PHOTOGRAPHY</h4>
 												<p>Lorem Ipsum is simply dummy text of the printing and
 													typesetting industry. Lorem Ip sum has been the industry's
 													standard dummy text ever.</p>
 											</article> -->
-										</div>
-										<div class="col-sm-1 col-xs-1">
-											<!-- <figure class="single_service_icon">
+												</div>
+												<div class="col-sm-1 col-xs-1">
+													<!-- <figure class="single_service_icon">
 												<i class="fa fa-heart"></i>
 											</figure> -->
-											<!-- End of figure -->
+													<!-- End of figure -->
+												</div>
+											</div>
 										</div>
+										<!-- End of col-sm-12 -->
+
 									</div>
 								</div>
-								<!-- End of col-sm-12 -->
-
 							</div>
-						</div>
-					</div>
-					<!-- End of col-sm-6 -->
+							<!-- End of col-sm-6 -->
 
-					<!-- <div class="col-md-6 col-sm-12 no-padding">
+							<!-- <div class="col-md-6 col-sm-12 no-padding">
 						<figure class="single_service single_service_img">
 							<div class="overlay-img"></div>
 							<img src="assets/images/servicerightimg.jpg" alt="" /> 
 						</figure>
 						End of figure
 					</div> -->
-					<!-- End of col-sm-6 -->
+							<!-- End of col-sm-6 -->
 
+						</div>
+					</div>
+					<!-- End of row -->
 				</div>
-			</div>
-			<!-- End of row -->
-		</div>
-		<!-- End of Container-fluid -->
+				<!-- End of Container-fluid -->
 	</section>
 	<!-- 데일리 미션 끝! (진주) -->
 
@@ -767,7 +640,6 @@
 	<!-- End off Pricing Section -->
 
 	<!-- Team Section -->
-	<!-- Team Section -->
 	<section id="team" class="team">
 		<div class="main_team_area">
 			<div class="container">
@@ -950,136 +822,110 @@
 	<!-- End off clogo Section -->
 
 
-	<!-- Blog Section
-	<section id="blog" class="blog">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="main_blog sections">
-					<div class="head_title text-center">
-						<h2>OUR BLOG</h2>
-						<div class="subtitle">Suspendisse sed eros mollis, tincidunt
-							felis eget, interdum eratullam sit amet odio.</div>
-						<div class="separator"></div>
-					</div>
-					
+	<!-- Blog Section-->
+	<!-- <section id="blog" class="blog">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="main_blog sections">
+                  <div class="head_title text-center">
+                     <h2>OUR BLOG</h2>
+                     <div class="subtitle">Suspendisse sed eros mollis,
+                        tincidunt felis eget, interdum eratullam sit amet odio.</div>
+                     <div class="separator"></div>
+                  </div>
+                
 
-					<div class="main_blog_content">
-						<div class="col-sm-6">
-							<div class="single_blog_area textwhite">
-								<div class="row">
-									<div class="col-sm-6 no-padding">
-										<div class="single_blog_img">
-											<img src="assets/images/blog1.jpg" alt="" />
-										</div>
-									</div>
-									<div class="col-sm-6 no-padding">
-										<div class="single_blog_text s_b_left">
-											<p>art/t-shirt</p>
-											<h3>T-SHIRT DESIGN</h3>
-											<div class="separator2"></div>
-											<p>Lorem Ipsum is simply dummy text of the printing and
-												typesetting industry. Lorem Ipsum has been the indu Stry's
-												standard dummy text ever since the 1500s, an unknown printer
-												took a galley of type a scrambled it to make a type specimen
-												book.</p>
+                  <div class="main_blog_content">
+                     <div class="col-sm-6">
+                        <div class="single_blog_area textwhite">
+                           <div class="row">
+                              <div class="col-sm-6 no-padding">
+                                 <div class="single_blog_img">
+                                    <img src="assets/images/blog1.jpg" alt="" />
+                                 </div>
+                              </div>
+                              <div class="col-sm-6 no-padding">
+                                 <div class="single_blog_text s_b_left">
+                                    <p>art/t-shirt</p>
+                                    <h3>T-SHIRT DESIGN</h3>
+                                    <div class="separator2"></div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and
+                                       typesetting industry. Lorem Ipsum has been the indu Stry's
+                                       standard dummy text ever since the 1500s, an unknown
+                                       printer took a galley of type a scrambled it to make a type
+                                       specimen book.</p>
 
-											<a href="" class="read_more">Read More >></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+                                    <a href="" class="read_more">Read More >></a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
 
-						<div class="col-sm-6">
-							<div class="single_blog_area textwhite">
-								<div class="row">
-									<div class="col-sm-6 no-padding">
-										<div class="single_blog_img">
-											<img src="assets/images/blog2.jpg" alt="" />
-										</div>
-									</div>
-									<div class="col-sm-6 no-padding">
-										<div class="single_blog_text s_b_left">
-											<p>art/t-shirt</p>
-											<h3>T-SHIRT DESIGN</h3>
-											<div class="separator2"></div>
-											<p>Lorem Ipsum is simply dummy text of the printing and
-												typesetting industry. Lorem Ipsum has been the indu Stry's
-												standard dummy text ever since the 1500s, an unknown printer
-												took a galley of type a scrambled it to make a type specimen
-												book.</p>
+                     <div class="col-sm-6">
+                        <div class="single_blog_area textwhite">
+                           <div class="row">
+                              <div class="col-sm-6 no-padding">
+                                 <div class="single_blog_img">
+                                    <img src="assets/images/blog2.jpg" alt="" />
+                                 </div>
+                              </div>
+                              <div class="col-sm-6 no-padding">
+                                 <div class="single_blog_text s_b_left">
+                                    <p>art/t-shirt</p>
+                                    <h3>T-SHIRT DESIGN</h3>
+                                    <div class="separator2"></div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and
+                                       typesetting industry. Lorem Ipsum has been the indu Stry's
+                                       standard dummy text ever since the 1500s, an unknown
+                                       printer took a galley of type a scrambled it to make a type
+                                       specimen book.</p>
 
-											<a href="" class="read_more">Read More >></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="single_blog_area textwhite">
-								<div class="row">
+                                    <a href="" class="read_more">Read More >></a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-sm-6">
+                        <div class="single_blog_area textwhite">
+                           <div class="row">
 
-									<div class="col-sm-6 col-sm-push-6 no-padding">
-										<div class="single_blog_img">
-											<img src="assets/images/blog3.jpg" alt="" />
-										</div>
-									</div>
+                              <div class="col-sm-6 col-sm-push-6 no-padding">
+                                 <div class="single_blog_img">
+                                    <img src="assets/images/blog3.jpg" alt="" />
+                                 </div>
+                              </div>
 
-									<div class="col-sm-6 col-sm-pull-6 no-padding">
-										<div class="single_blog_text s_b_right">
-											<p>art/t-shirt</p>
-											<h3>T-SHIRT DESIGN</h3>
-											<div class="separator2"></div>
-											<p>Lorem Ipsum is simply dummy text of the printing and
-												typesetting industry. Lorem Ipsum has been the indu Stry's
-												standard dummy text ever since the 1500s, an unknown printer
-												took a galley of type a scrambled it to make a type specimen
-												book.</p>
+                              <div class="col-sm-6 col-sm-pull-6 no-padding">
+                                 <div class="single_blog_text s_b_right">
+                                    <p>art/t-shirt</p>
+                                    <h3>T-SHIRT DESIGN</h3>
+                                    <div class="separator2"></div>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and
+                                       typesetting industry. Lorem Ipsum has been the indu Stry's
+                                       standard dummy text ever since the 1500s, an unknown
+                                       printer took a galley of type a scrambled it to make a type
+                                       specimen book.</p>
 
-											<a href="" class="read_more">Read More >></a>
-										</div>
-									</div>
+                                    <a href="" class="read_more">Read More >></a>
+                                 </div>
+                              </div>
 
-								</div>
-							</div>
-						</div>
+                           </div>
+                        </div>
+                     </div>
+      
+      
 
-						<div class="col-sm-6">
-							<div class="single_blog_area textwhite">
-								<div class="row">
-									<div class="col-sm-6 col-sm-push-6 no-padding">
-										<div class="single_blog_img">
-											<img src="assets/images/blog4.jpg" alt="" />
-										</div>
-									</div>
-									<div class="col-sm-6 col-sm-pull-6 no-padding">
-										<div class="single_blog_text s_b_right">
-											<p>art/t-shirt</p>
-											<h3>T-SHIRT DESIGN</h3>
-											<div class="separator2"></div>
-											<p>Lorem Ipsum is simply dummy text of the printing and
-												typesetting industry. Lorem Ipsum has been the indu Stry's
-												standard dummy text ever since the 1500s, an unknown printer
-												took a galley of type a scrambled it to make a type specimen
-												book.</p>
 
-											<a href="" class="read_more">Read More >></a>
-										</div>
-									</div>
-
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!-- End off container -->
+                  </div>
+               </div>
+            </div>
+         </div>
+   </div>
+   </section> -->
 	<!-- End off Blog Section -->
-
 
 	<!-- Counter Section -->
 	<section id="counter" class="counter">
@@ -1142,6 +988,7 @@
 	</section>
 	<!-- End of counter section -->
 
+
 	<section id="trial" class="trial text-center wow fadeIn"
 		data-wow-duration="2s" data-wow-dealy="1.5s">
 		<div class="main_trial_area">
@@ -1152,7 +999,7 @@
 							<div class="col-sm-12">
 								<h2>게시판</h2>
 								<h4>사람들의 소리를 들어보세요</h4>
-								<a href="Community.jsp" class="btn btn-lg">Comminuty Board</a>
+								<a href="" class="btn btn-lg">Comminuty Board</a>
 							</div>
 						</div>
 					</div>
@@ -1160,8 +1007,6 @@
 			</div>
 		</div>
 	</section>
-	<!-- End of Trial section -->
-
 
 	<!--Footer section-->
 	<section class="footer">
@@ -1198,16 +1043,7 @@
 	</section>
 	<!-- End off footer Section-->
 
-
-
-
-
-
-
-
-
-
-
+	</div>
 	</div>
 
 	<!-- START SCROLL TO TOP  -->
@@ -1231,6 +1067,6 @@
 
 	<script src="assets/js/plugins.js"></script>
 	<script src="assets/js/main.js"></script>
-
 </body>
+
 </html>

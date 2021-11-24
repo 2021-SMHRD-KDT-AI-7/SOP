@@ -239,6 +239,7 @@
 
    <script src="assets/js/plugins.js"></script>
    <script src="assets/js/main.js"></script>
+<<<<<<< HEAD
    <script src="jquery-3.6.0.min.js"></script>
    <script> 
       //type=text 인 input 태그에 작성한 댓글을 ul(id=comments) 태그에 추가(li태그 사이에)
@@ -311,5 +312,85 @@
       } */
    
    </script>
+	<script src="jquery-3.6.0.min.js"></script>
+	
+	
+	
+	<!-- 댓글 스크립트  -->
+	<script> 
+		//type=text 인 input 태그에 작성한 댓글을 ul(id=comments) 태그에 추가(li태그 사이에)
+		 var num = 1;
+		$('#write_com').on('click',function(){
+			
+			// db 보내는 준비
+			var com = $('input[type=text]').val()
+			$('#comments').append('<li class="com'+num+'">'+com+'<input type="button" value="댓글삭제" onclick="del('+num+')"></li>');
+			num++;
+			$('imput[type=text]').val('');
+			/* 
+=======
+			
+			$.ajax({
+				type : "post",
+				data : {
+					"article_seq" : $('#article_seq').jsp()
+				},
+				url : "CommentService",
+				dataType : "text",
+				success : function(data){
+					alert(data);
+				},
+				error : function(){
+					alert("실패!");
+				}
+			}); */
+			
+		}); 
+			});
+
+			// 실제 댓글 달리는 기능
+			var com = $('input[type=text]').val()
+			$('#comments').append('<li class="com'+num+'">'+com+'<input type="button" value="댓글삭제" onclick="del('+num+')"></li>');
+			num++;
+			$('imput[type=text]').val('');
+ 
+		
+		function del(num){
+			$('.com'+num).remove();
+		}
+		 
+		//댓글등록
+	/* 	function WriteCmt(){
+			var form =document.getElementById("writeCommentForm");
+			
+			var board=form.comment_board.value
+			var id = form.comment_id.value
+			var content=form.comment_content.value;
+			
+			if(!content){
+				alert("내용을 입력하세요");
+				return false;
+			}else{
+				var param="comment_board"+ board +"&comment_id"+id+"&comment_content="+content;
+				
+				httpRequest=getXMLHttpRequest();
+				httpRequest.onreadystatechange=checkFun;
+				httpRequest.open("POST","CommentWriteAction.co",true);
+				httpRequest.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=euc-kr');
+				httpRequest.send(param);
+			}
+			
+			function checkFunc(){
+				if)httpRequest.readyState==4{
+					//결과값을 가져온다
+					var resultText=httpRequest.responseText;
+					if(resultText==1){
+						document.location.reload();//상세보기 창 새로고침
+					}
+				}
+			}
+		} */
+	
+	</script>
 </body>
 </html>
