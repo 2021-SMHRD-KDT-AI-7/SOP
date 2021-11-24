@@ -1,3 +1,4 @@
+<%@page import="Model.DailyMissionDAO"%>
 <%@page import="Controller.DailyMission"%>
 <%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
@@ -376,30 +377,30 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="main_service">
-					<div class="col-md-6 col-sm-12 no-padding">
+					<div class="no-padding">
 
 						<div class="single_service single_service_text text-right">
-							<div class="head_title">
+							<div class="head_title" style="margin-right:500px;">
 								<h2>DAILY MISSION</h2>
 							</div>
 
-							<div class="row">
+							<div class="row" style="margin-right:500px;">
 								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
 									<div class="row">
 
 										<div
 											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
 											<article class="single_service_right_text">
-												<h4>난방온도 2℃ 낮추기</h4>
+											<% DailyMissionDAO dm_dao = new DailyMissionDAO(); %>
+												<h4><%= dm_dao.dm_title(0) %></h4>
 												<p>
-													동절기 적정 실내온도(겨울철 18~20℃)를 고려하여, 보일러 온도 설정시 2℃ 낮추기<br>
-													겨울에는 내복, 수면양말, 무릎담요 같은 보온용품 적극 활용하기
+													<%= dm_dao.dm_value(0) %>
 												</p>
 											</article>
 										</div>
 										<div class="col-sm-1 col-xs-1">
 											<figure class="single_service_icon">
-												<i class="fa fa-heart"></i>
+												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
 											</figure>
 											<!-- End of figure -->
 										</div>
@@ -422,7 +423,7 @@
 										</div>
 										<div class="col-sm-1 col-xs-1">
 											<figure class="single_service_icon">
-												<i class="fa fa-heart"></i>
+												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
 											</figure>
 											<!-- End of figure -->
 										</div>
@@ -457,13 +458,13 @@
 					</div>
 					<!-- End of col-sm-6 -->
 
-					<div class="col-md-6 col-sm-12 no-padding">
+					<!-- <div class="col-md-6 col-sm-12 no-padding">
 						<figure class="single_service single_service_img">
 							<div class="overlay-img"></div>
 							<img src="assets/images/servicerightimg.jpg" alt="" /> 
 						</figure>
-						<!-- End of figure -->
-					</div>
+						End of figure
+					</div> -->
 					<!-- End of col-sm-6 -->
 
 				</div>

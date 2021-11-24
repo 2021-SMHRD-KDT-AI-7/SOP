@@ -39,10 +39,7 @@ public class searchpwCon extends HttpServlet {
 		System.out.println("mb_id : " + id);
 		System.out.println("mb_birthdate : " + birthdate);
 		System.out.println("mb_phone : " +phone );
-<<<<<<< HEAD
-=======
-		
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
+
 
 		
 		response.setContentType("text/html; charset=UTF-8");
@@ -56,10 +53,7 @@ public class searchpwCon extends HttpServlet {
 		//response.sendRedirect("./Resources/index.jsp");
 
 		response.sendRedirect("./Resources/index.html");
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 		
 	}
 
