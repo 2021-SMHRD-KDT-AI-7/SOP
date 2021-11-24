@@ -204,11 +204,11 @@ p:last-child {
 .home-wrap h4,
 .home-wrap h5,
 .home-wrap p {
-    color: #ffffff;
+	*color: #ffffff;
     /*font-family: 'roboto', sans-serif;*/
 }
 .textwhite {
-    color: #fff;
+    color: #797979;
 }
 .colorstext {
     color: #5e9a28;
@@ -1150,7 +1150,7 @@ button.btn-md:hover {
 
 /* Team section css */
 .main_team_area{
-    background: url(../images/teambg.jpg) no-repeat scroll top center;
+    background: url(../images/team.jpg) no-repeat scroll top center;
     background-size: cover;
     position: relative;
     height: 650px;
@@ -1162,7 +1162,7 @@ button.btn-md:hover {
     left:0;
     bottom:0;
     content:"";
-    background: url(../images/teambg2.png) no-repeat bottom center;  
+    background: url(../images/teambg2.png) no-repeat bottom center;
 }
 .main_team ul li{
     text-align: center;
@@ -1214,9 +1214,9 @@ button.btn-md:hover {
     top:94%;
 }
 .main_team ul li .single_team_img img{
-    width:60px;
-    height: 60px;
-    margin:20px auto;
+    width:100px;
+    height: 100px;
+    margin:0px auto;
     border-radius: 50%;
     box-shadow: 0px 0px 0px 3px rgba(231, 76, 60, 0.65);
 }
@@ -1241,9 +1241,18 @@ li .single_team_text h4{
     display: inline-block;
     text-transform:none ;
     color:#e74c3c;
+    font-size:20px;
 }
 li .single_team_text p{
-    color:#fff;
+    color:#797979;
+}
+
+div#team_name {
+	font-size:25px;
+}
+
+p#team_list{
+	font-size:13px;
 }
 
 
