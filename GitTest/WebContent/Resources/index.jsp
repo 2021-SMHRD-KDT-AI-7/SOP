@@ -617,7 +617,7 @@
 											<p class="external_news_content">정부가 8000억원을 투입하고 지난해
 												중단시킨 사용후핵연료 파이로프로세싱과 소듐냉각고속로(SFR) 국책 연구개발사업의 재개...</p>
 
-											<a
+											<a target="_blank"
 												href="https://www.hani.co.kr/arti/society/environment/1019805.html"
 												class="btn btn-lg">기사 더보기</a>
 
@@ -653,8 +653,7 @@
 										</div>
 									</div>
 									<!--  전체 기사 보기로 이동 -->
-									<a href="news.html" class="btn btn-lg" id="all_news_page">전체
-										기사</a>
+									<a href="DailyNews.jsp" class="btn_article_daily btn_lg_article_daily" >전체 기사</a>
 								</div>
 							</div>
 						</div>
