@@ -104,6 +104,7 @@
 								<div class="main_home_slider text-center">
 									<div class="single_home_slider">
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
+										<p class = " wow fadeInRight animated"> 관리자 확인 후 게시글이 등록 됩니다. </p>
 											<div id="board">
 												<table id="list">
 													<tr>
