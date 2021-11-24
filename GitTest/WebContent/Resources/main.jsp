@@ -739,7 +739,7 @@
 
 				<div class="left">
 					<div class="div_title">
-						<a href="https://www.bbc.com/korean/news-53577483"><img
+						<a target="_blank" href="https://www.bbc.com/korean/news-53577483"><img
 							width="100%" height="400px"
 							src="https://ichef.bbci.co.uk/news/800/cpsprodpb/13FA5/production/_113692818_origin_.jpg"
 							alt="" /></a>
@@ -757,7 +757,7 @@
 
 				<div class="right">
 					<div class="div_title">
-						<a
+						<a target="_blank"
 							href="https://www.hani.co.kr/arti/society/society_general/1003844.html"><img
 							width="100%" height="400px"
 							src="https://flexible.img.hani.co.kr/flexible/normal/970/643/imgdb/original/2021/0714/20210714502784.jpg"
@@ -777,7 +777,7 @@
 
 				<div class="left">
 					<div class="div_title">
-						<a href="https://www.bbc.com/korean/international-51470772"><img
+						<a target="_blank" href="https://www.bbc.com/korean/international-51470772"><img
 							width="100%" height="400px"
 							src="https://ichef.bbci.co.uk/news/800/cpsprodpb/7210/production/_110900292_origin_.jpg"
 							alt="" /></a>
@@ -795,7 +795,7 @@
 
 				<div class="right">
 					<div class="div_title">
-						<a href="http://www.hdhy.co.kr/news/articleView.html?idxno=15429"><img
+						<a target="_blank" href="http://www.hdhy.co.kr/news/articleView.html?idxno=15429"><img
 							width="100%" height="400px"
 							src="http://www.hdhy.co.kr/news/photo/202109/15429_20071_322.jpg"
 							alt="" /></a>
