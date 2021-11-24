@@ -182,10 +182,7 @@ p.c_2 {
 						</div>
 					</div>
 				</div>
-				<div class="scrooldown">
-					<a href="#feature"><i class="fa fa-arrow-down"></i></a>
-				</div>
-			</div>
+				
 	</div>
 	</section>
 	<!--End of home section -->
@@ -199,7 +196,7 @@ p.c_2 {
 						<div class="row">
 							<div class="col-sm-6 col-xs-12">
 								<div class="flowus">
-									<a href=""><i class="fa fa-facebook"></i></a> <a href=""><i
+									<a href="Community.jsp"><i class="fa fa-facebook"></i></a> <a href=""><i
 										class="fa fa-twitter"></i></a> <a href=""><i
 										class="fa fa-google-plus"></i></a> <a href=""><i
 										class="fa fa-instagram"></i></a> <a href=""><i
