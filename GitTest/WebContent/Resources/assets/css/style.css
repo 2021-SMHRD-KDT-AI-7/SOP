@@ -7,6 +7,8 @@ Author URI: http://bootstrapthemes.co
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+
 html,
 body {
     background-color: #fff;
@@ -204,11 +206,11 @@ p:last-child {
 .home-wrap h4,
 .home-wrap h5,
 .home-wrap p {
-    color: #ffffff;
+	*color: #ffffff;
     /*font-family: 'roboto', sans-serif;*/
 }
 .textwhite {
-    color: #fff;
+    color: #797979;
 }
 .colorstext {
     color: #5e9a28;
@@ -242,6 +244,11 @@ Section
 .sections {
     padding-top:85px;
     padding-bottom: 105px;
+    /*overflow: hidden;*/
+}
+.sections_weather {
+    padding-top:110px;
+    padding-bottom: 30px;
     /*overflow: hidden;*/
 }
 .sections.footer {
@@ -1010,7 +1017,7 @@ button.btn-md:hover {
                     counter section css
 =======================================================================*/
 .counter{
-    background: url(../images/counterbg.jpg) no-repeat top center;
+    background: url(../images/whitebg.jpg) no-repeat top center;
     background-size: cover;
 }
 .counter .main_counter_area{
@@ -1018,14 +1025,14 @@ button.btn-md:hover {
 }
 
 .main_counter_area .single_counter h2{
-    color:#fff;
+    color:#797979;
     font-size:2.8125rem;
 }
 .main_counter_area .single_counter i{
-    color: #fff;
+    color: #797979;
     font-size: 1.875rem;
     display: inline-block;
-    border: 1px solid #fff;
+    border: 1px solid #797979;
     width: 70px;
     height: 70px;
     line-height: 70px;
@@ -1034,7 +1041,7 @@ button.btn-md:hover {
     margin-top: 20px;
 }
 .main_counter_area .single_counter h4{
-    color:#fff;
+    color:#797979;
     font-size:0.8125rem;
     text-transform: lowercase;
 }
@@ -1136,7 +1143,7 @@ button.btn-md:hover {
 }
 .video .icon{}
 .video .icon h3{
-    color:#fff;
+    color:#797979;
     margin-top:30px;
     margin-bottom: 0px;
 }*/
@@ -1150,7 +1157,7 @@ button.btn-md:hover {
 
 /* Team section css */
 .main_team_area{
-    background: url(../images/teambg.jpg) no-repeat scroll top center;
+    background: url(../images/team.jpg) no-repeat scroll top center;
     background-size: cover;
     position: relative;
     height: 650px;
@@ -1162,7 +1169,7 @@ button.btn-md:hover {
     left:0;
     bottom:0;
     content:"";
-    background: url(../images/teambg2.png) no-repeat bottom center;  
+    background: url(../images/teambg2.png) no-repeat bottom center;
 }
 .main_team ul li{
     text-align: center;
@@ -1214,9 +1221,9 @@ button.btn-md:hover {
     top:94%;
 }
 .main_team ul li .single_team_img img{
-    width:60px;
-    height: 60px;
-    margin:20px auto;
+    width:100px;
+    height: 100px;
+    margin:0px auto;
     border-radius: 50%;
     box-shadow: 0px 0px 0px 3px rgba(231, 76, 60, 0.65);
 }
@@ -1241,9 +1248,18 @@ li .single_team_text h4{
     display: inline-block;
     text-transform:none ;
     color:#e74c3c;
+    font-size:20px;
 }
 li .single_team_text p{
-    color:#fff;
+    color:#797979;
+}
+
+div#team_name {
+	font-size:25px;
+}
+
+p#team_list{
+	font-size:13px;
 }
 
 
@@ -1495,10 +1511,45 @@ li .single_team_text p{
     text-decoration: none;
 
 }
+.div_title{
+        width: 100%;
+        height: 400px;
 
+    }
+    .left {
+        width: 45%;
+        margin-left: 2%;
+        margin-bottom: 10px;
+        float: left;
+        box-sizing: border-box;
+        margin-right:10px;
 
+    }
+    .right {
+        width: 45%;
+        margin-right: 2%;
+        margin-bottom: 10px;
+        float: right;
+        box-sizing: border-box;
+    }
+.txt_pig{
+	font-size: 13px;
+    margin-bottom: 10px;
+}
 
+.txt_line{
+	font-size: 16px;
+    overflow: hidden;
+    white-space:normal;
+    display: -webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+}
 
+.img_size{
+	width: 100%;
+	height: 150px;
+}
 
 
 
