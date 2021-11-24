@@ -41,6 +41,7 @@ public class searchpwCon extends HttpServlet {
 		System.out.println("mb_phone : " +phone );
 
 
+
 		
 		response.setContentType("text/html; charset=UTF-8");
 
@@ -54,7 +55,6 @@ public class searchpwCon extends HttpServlet {
 
 		response.sendRedirect("./Resources/index.html");
 
-		
 	}
 
 }

@@ -112,7 +112,7 @@
                                     <table id="list">
                                        <tr>
                                           <td>제목</td>
-                                          <td><%=dto.getArticle_title() %></td>
+                                          <td id="article_seq"><%=dto.getArticle_title() %></td>
                                        </tr>
                                        <tr>
                                           <td>작성자</td>
@@ -126,6 +126,16 @@
                                           <img src="./image/<%=dto.getArticle_file1()%>"></td>
                                        </tr>
                                        <tr>
+                                       		<td colspan="2"><input type="text" size="50"><input id="write_com" type="button" value="댓글작성"> </td>
+                                       </tr>
+										<tr>
+											<td colspan="2">
+												<ul id="comments" style="list-style:none; padding:0">
+													
+												</ul>
+											</td>
+										</tr>
+										<tr>
                                           <td colspan="2"><a href="Community.jsp"><button>뒤로가기</button></a>
                                                       <a href="CommunityUpdateBoard.jsp?article_seq=<%=dto.getArticle_seq()%>"><button>수정하기</button></a></td>
                                                
@@ -215,6 +225,21 @@
 
    <script src="assets/js/plugins.js"></script>
    <script src="assets/js/main.js"></script>
-
+	<script src="jquery-3.6.0.min.js"></script>
+	<script> 
+		//type=text 인 input 태그에 작성한 댓글을 ul(id=comments) 태그에 추가(li태그 사이에)
+		var num = 1;
+		$('#write_com').on('click',function(){
+			var com = $('input[type=text]').val()
+			$('#comments').append('<li class="com'+num+'">'+com+'<input type="button" value="댓글삭제" onclick="del('+num+')"></li>');
+			num++;
+			$('imput[type=text]').val('');
+		}); 
+		
+		function del(num){
+			$('.com'+num).remove();
+		}
+	
+	</script>
 </body>
 </html>
