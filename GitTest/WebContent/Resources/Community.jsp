@@ -45,7 +45,7 @@
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 <style>
 p.c_2 {
-	font-size: 8px;
+	font-size: 13px;
 }
 </style>
 </head>
@@ -78,7 +78,7 @@ p.c_2 {
 												class="icon-bar"></span>
 										</button>
 										<a class="navbar-brand" href="#home"> 
-										<img src="assets/images/logo.png" />
+										<img src="assets/images/sopsop.jpg" />
 										</a>
 
 									</div>

@@ -74,7 +74,7 @@
                                     class="icon-bar"></span>
                               </button>
                               <a class="navbar-brand" href="index.html"> <img
-                                 src="assets/images/logo.png" />
+                                 src="assets/images/sopsop.jpg" />
                               </a>
                            </div>
 
@@ -223,7 +223,7 @@
 	<!-- 댓글 스크립트  -->
 	<script> 
 		//type=text 인 input 태그에 작성한 댓글을 ul(id=comments) 태그에 추가(li태그 사이에)
-		var num = 1;
+		 var num = 1;
 		$('#write_com').on('click',function(){
 <<<<<<< HEAD
 			
@@ -233,7 +233,11 @@
 			$('#comments').append('<li class="com'+num+'">'+com+'<input type="button" value="댓글삭제" onclick="del('+num+')"></li>');
 			num++;
 			$('imput[type=text]').val('');
+<<<<<<< HEAD
+			/* 
+=======
 			
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 >>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 			$.ajax({
 				type : "post",
@@ -248,6 +252,11 @@
 				error : function(){
 					alert("실패!");
 				}
+<<<<<<< HEAD
+			}); */
+			
+		}); 
+=======
 			});
 
 			// 실제 댓글 달리는 기능
@@ -256,11 +265,12 @@
 			num++;
 			$('imput[type=text]').val('');
  
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 		
 		function del(num){
 			$('.com'+num).remove();
 		}
-		
+		 
 		//댓글등록
 	/* 	function WriteCmt(){
 			var form =document.getElementById("writeCommentForm");

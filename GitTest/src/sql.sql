@@ -3,6 +3,8 @@ select * from T_MEMBER
 select * from t_campaign
 select * from t_community
 
+select * from T_COMMENT
+
 INSERT INTO t_campaign (cam_title, cam_content, reg_date, mb_id, cam_file1) VALUES ('cam_title 1', 'cam_content 1', sysdate, 'test', 'cam_file1 1');
 
 ALTER SEQUENCE T_CAMPAIGN_SEQ INCREMENT BY 1;

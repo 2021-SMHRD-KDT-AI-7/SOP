@@ -64,7 +64,7 @@
                                     class="icon-bar"></span>
                               </button>
                               <a class="navbar-brand" href="#home"> <img
-                                 src="assets/images/logo.png" />
+                                 src="assets/images/sopsop.jpg" />
                               </a>
                            </div>
 

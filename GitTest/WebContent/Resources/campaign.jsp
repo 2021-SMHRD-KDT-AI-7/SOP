@@ -70,7 +70,7 @@
 												class="icon-bar"></span>
 										</button>
 										<a class="navbar-brand" href="index.html"> <img
-											src="assets/images/logo.png" />
+											src="assets/images/sopsop.jpg" />
 										</a>
 									</div>
 
@@ -104,6 +104,7 @@
 								<div class="main_home_slider text-center">
 									<div class="single_home_slider">
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
+										<p class = " wow fadeInRight animated"> 관리자 확인 후 게시글이 등록 됩니다. </p>
 											<div id="board">
 												<table id="list">
 													<tr>
