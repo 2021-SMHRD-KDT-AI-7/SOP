@@ -230,6 +230,21 @@
 		//type=text 인 input 태그에 작성한 댓글을 ul(id=comments) 태그에 추가(li태그 사이에)
 		var num = 1;
 		$('#write_com').on('click',function(){
+			$.ajax({
+				type : "post",
+				data : {
+					"article_seq" : $('#article_seq').html()
+				},
+				url : "CommentService",
+				dataType : "text",
+				success : function(data){
+					alert(data);
+				},
+				error : function(){
+					alert("실패!");
+				}
+			});
+			
 			var com = $('input[type=text]').val()
 			$('#comments').append('<li class="com'+num+'">'+com+'<input type="button" value="댓글삭제" onclick="del('+num+')"></li>');
 			num++;

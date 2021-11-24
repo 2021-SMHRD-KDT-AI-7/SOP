@@ -27,3 +27,7 @@ insert into T_LOCATION values(14,'경상남도')
 insert into T_LOCATION values(15,'전라북도')
 insert into T_LOCATION values(16,'전라남도')
 insert into T_LOCATION values(17,'제주도')
+
+select * from T_COMMENT
+
+insert into T_COMMENT values (0,34,'wow',sysdate,'jina')
