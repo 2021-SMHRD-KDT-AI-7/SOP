@@ -166,4 +166,10 @@ public class CommunityDAO {
 					dbClose();
 				}return cnt;
 			}
+			
+			//게시판 댓글 저장 메소드
+			public void comment_save(int article_seq) {
+				int cnt =0;
+				
+			}
 }
