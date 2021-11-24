@@ -46,19 +46,19 @@ public class WriterCampaignServiceCon extends HttpServlet {
 		}
 		
 
-		System.out.println("title : " + cam_title);
-		System.out.println("writer : " + mb_id);
-		System.out.println("content : " +cam_content );
-
-		
-		
-		System.out.println("cam_title : " + cam_title);
-		System.out.println("mb_id : " + mb_id);
-		System.out.println("cam_content : " + cam_content);
-
-		System.out.println("cam_start : " + cam_start);
-		System.out.println("cam_finish : " + cam_finish);
-		System.out.println("fileName : " + cam_file1);
+//		System.out.println("title : " + cam_title);
+//		System.out.println("writer : " + mb_id);
+//		System.out.println("content : " +cam_content );
+//
+//		
+//		
+//		System.out.println("cam_title : " + cam_title);
+//		System.out.println("mb_id : " + mb_id);
+//		System.out.println("cam_content : " + cam_content);
+//
+//		System.out.println("cam_start : " + cam_start);
+//		System.out.println("cam_finish : " + cam_finish);
+//		System.out.println("fileName : " + cam_file1);
 		
 		CampaignDTO dto = new CampaignDTO(cam_title, cam_content, mb_id, cam_file1, cam_start, cam_finish);
 

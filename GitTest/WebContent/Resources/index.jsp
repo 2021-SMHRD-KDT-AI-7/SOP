@@ -391,10 +391,12 @@
 										<div
 											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
 											<article class="single_service_right_text">
-											<% DailyMissionDAO dm_dao = new DailyMissionDAO(); %>
-												<h4><%= dm_dao.dm_title(0) %></h4>
+											<% DailyMissionDAO dm_dao = new DailyMissionDAO(); 
+											   int day = dm_dao.getDayOfweek() * 2;
+											%>
+												<h4><%= dm_dao.dm_title(day) %></h4>
 												<p>
-													<%= dm_dao.dm_value(0) %>
+													<%= dm_dao.dm_value(day) %>
 												</p>
 											</article>
 										</div>
@@ -414,10 +416,9 @@
 										<div
 											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
 											<article class="single_service_right_text">
-												<h4>전기밥솥 보온기능 사용 줄이기</h4>
+												<h4><%= dm_dao.dm_title(day+1) %></h4>
 												<p>
-													전기밥솥은 취사때만 사용하고 밥을 먹을 만큼만 짓기. 남은 밥은 먹을 만큼씩 나눠 냉동하기<br>
-													1일 평균 보온시간 약0시간(2018년 가구에너지 상설표본조사 결과)
+													<%= dm_dao.dm_value(day+1) %>
 												</p>
 											</article>
 										</div>

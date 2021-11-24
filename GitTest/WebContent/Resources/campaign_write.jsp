@@ -1,3 +1,4 @@
+<%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -41,6 +42,11 @@
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
+
+<%
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
+%>
+
 
 	<div class='preloader'>
 		<div class='loaded'>&nbsp;</div>
@@ -111,12 +117,7 @@
 														<input type="text" class="form-control" id="cam_title"
 															placeholder="제목 입력" name="cam_title" maxlength="100"
 															required="required">
-													</div>
-													<div class="form-group">
-														<label for="title">작성자</label>
-														<input type="text" class="form-control" id="mb_id"
-															placeholder="작성자 입력" name="mb_id" maxlength="100"
-															required="required">
+														<input type="hidden" class="class" name="mb_id" id="id" value=<%= info.getMb_id() %>>
 													</div>
 													<div class="form-group">
 														<label for="content">내용</label>

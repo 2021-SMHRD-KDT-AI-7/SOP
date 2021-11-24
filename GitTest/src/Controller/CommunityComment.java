@@ -10,7 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/CommunityComment")
 public class CommunityComment extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getParameter("article_seq");
+		int article_seq=Integer.parseInt(request.getParameter("article_seq"));
+		System.out.println(article_seq);
 	}
 
 }
