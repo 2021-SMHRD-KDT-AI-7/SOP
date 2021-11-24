@@ -824,76 +824,76 @@
 	<!-- End off Pricing Section -->
 
 	<!-- Team Section -->
-	<section id="team" class="team">
-		<div class="main_team_area">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="head_title textwhite text-center margin-top-80">
-							<h2>OUR TEAM</h2>
-							<div class="subtitle">Meet the craziest team. Share your
-								thoughts with them.</div>
-							<div class="separator"></div>
-						</div>
-						<!-- End off Head_title -->
+	     <!-- Team Section -->
+      <section id="team" class="team">
+         <div class="main_team_area">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="head_title textwhite text-center margin-top-80">
+                        <h2>OUR TEAM</h2>
+                        <div class="subtitle" id="team_name">깐부</div>
+                        <div class="separator"></div>
+                     </div>
+                     <!-- End off Head_title -->
 
-						<div class="main_team">
-							<ul>
-								<li>
-									<div class="single_team_img">
-										<img src="assets/images/team1.jpg" alt="" />
-									</div>
-									<div class="single_team_text">
-										<h4>Semf Ucuk</h4>
-										<p>Founder</p>
-									</div>
-								</li>
-								<li>
-									<div class="single_team_img">
-										<img src="assets/images/team2.jpg" alt="" />
-									</div>
-									<div class="single_team_text">
-										<h4>Kazi Erfan</h4>
-										<p>Engineering</p>
-									</div>
-								</li>
-								<li>
-									<div class="single_team_img">
-										<img src="assets/images/team3.jpg" alt="" />
-									</div>
-									<div class="single_team_text">
-										<h4>Jeng Koli</h4>
-										<p>Designer</p>
-									</div>
-								</li>
-								<li>
-									<div class="single_team_img">
-										<img src="assets/images/team4.jpg" alt="" />
-									</div>
-									<div class="single_team_text">
-										<h4>Pet Romak</h4>
-										<p>Marketing</p>
-									</div>
-								</li>
-								<li>
-									<div class="single_team_img">
-										<img src="assets/images/test2.jpg" alt="" />
-									</div>
-									<div class="single_team_text">
-										<h4>Chet Pok</h4>
-										<p>Web Developer</p>
-									</div>
-								</li>
-							</ul>
-						</div>
+                     <div class="main_team">
+                        <ul>
+                           <li>
+                              <div class="single_team_img" >
+                                 <img src="image/kkj.png" alt="" />
+                              </div>
+                              <div class="single_team_text">
+                                 <h4>김국중</h4>
+                                 <p id="team_list">프로젝트 총괄,<br> 프론트, 백앤드, DB </p>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="single_team_img">
+                                 <img src="image/kjn.png" alt="" />
+                              </div>
+                              <div class="single_team_text">
+                                 <h4>김지나</h4>
+                                <p id="team_list">데이터 전처리 및 분석,<br> 프론트, 백앤드. DB </p>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="single_team_img">
+                                 <img src="image/pjy.png" alt="" />
+                              </div>
+                              <div class="single_team_text">
+                                 <h4>박준영</h4>
+                                 <p id="team_list">데이터 전처리 및 분석,<br> 프론트, 백앤드. DB </p>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="single_team_img">
+                                 <img src="image/pjj.png" alt="" />
+                              </div>
+                              <div class="single_team_text">
+                                 <h4>박진주</h4>
+                                 <p id="team_list">데이터 전처리 및 분석,<br> 프론트, 백앤드. DB </p>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="single_team_img">
+                                 <img src="image/lhw.png" alt="" />
+                              </div>
+                              <div class="single_team_text">
+                                 <h4>이혜원</h4>
+                                 <p id="team_list">데이터 전처리 및 분석,<br> 프론트, 백앤드. DB </p>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
 
-					</div>
-					<!-- End of main team contant -->
-				</div>
-			</div>
-			<!-- End of container -->
-		</div>
-	</section>
+                  </div>
+                  <!-- End of main team contant -->
+               </div>
+            </div>
+            <!-- End of container -->
+         </div>
+      </section>
 	<!-- End off Team Section -->
 
 	<!-- Client Logo Section -->
