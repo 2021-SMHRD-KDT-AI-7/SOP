@@ -178,7 +178,7 @@
 							%>
 							<div class="col-sm-12">
 								<div
-									class="single_contant_left padding-top-90 padding-bottom-90">
+									class="single_contant_left text-center padding-top-90 padding-bottom-90">
 									<form action="../LoginCon" id="formid" method="post">
 										<div
 											class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">
@@ -215,7 +215,7 @@
 
 											</div>
 
-											<div class="">
+											<div class="col-sm-11">
 												<input type="submit" value="·Î±×ÀÎ" class="btn btn-lg">
 											</div>
 										</div>
