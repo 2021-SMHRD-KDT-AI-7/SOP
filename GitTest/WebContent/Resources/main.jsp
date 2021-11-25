@@ -64,8 +64,8 @@
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
-										<a class="navbar-brand" href="#home"> 
-										<img src="assets/images/logo1.png" />
+										<a class="navbar-brand" href="#home"> <img
+											src="assets/images/logo1.png" />
 										</a>
 									</div>
 
@@ -115,7 +115,7 @@
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
 											<h1>SOP</h1>
 											<h1>Save Ozon Party</h1>
-											
+
 
 										</div>
 									</div>
@@ -156,14 +156,14 @@
 													<div class="form-group">
 														<input type="text" class="form-control" name="id"
 															placeholder="아이디를 입력하세요" required
-															style="font-family : 'Malgun gothic'">
+															style="font-family: 'Malgun gothic'">
 													</div>
 												</div>
 												<div class="col-sm-11">
 													<div class="form-group">
 														<input type="password" class="form-control" name="pwd"
 															placeholder="비밀번호를 입력하세요" required=""
-															style = "font-family : 'Malgun gothic'">
+															style="font-family: 'Malgun gothic'">
 													</div>
 												</div>
 												<div class="col-sm-11">
@@ -670,21 +670,22 @@
 					<div class="col-md-4 col-sm-6">
 						<div class="single_pricing">
 							<div class="pricing_head">
-								<h3>STARTER</h3>
+								<h3>어스 앤 런</h3>
 								<div class="pricing_price">
-									<div class="p_r text-center">$19</div>
-									<div class="m_t text-center">per month</div>
+									<div class="p_r text-center">free</div>
+
 								</div>
 							</div>
 
 							<div class="pricing_body">
 								<ul>
-									<li>Competition Analysis Methods</li>
-									<li>All Ranked URLs</li>
-									<li>International Support System</li>
-									<li>Social Media Tracking</li>
+									<li> 무심코 지나쳤던 플라스틱 쓰레기, 
+									<br>더 돌아다니지 않게 함께 주워볼까요?
+									<br> 공원, 하천, 아파트 단지 어디든 상관없어요!
+									</li>
+
 								</ul>
-								<a href="" class="btn btn-md">CHOOSE PLAN</a>
+								<a href="" class="btn btn-md">JOIN US</a>
 							</div>
 						</div>
 					</div>
@@ -692,21 +693,20 @@
 					<div class="col-md-4 col-sm-6">
 						<div class="single_pricing pricing_business">
 							<div class="pricing_head ">
-								<h3>PREMIUM</h3>
+								<h3>채소 한끼,최소 한끼</h3>
 								<div class="pricing_price">
-									<div class="p_r text-center">$39</div>
-									<div class="m_t text-center">per month</div>
+									<div class="p_r text-center">free</div>
 								</div>
 							</div>
 
 							<div class="pricing_body">
 								<ul>
-									<li>Competition Analysis Methods</li>
-									<li>All Ranked URLs</li>
-									<li>International Support System</li>
-									<li>Social Media Tracking</li>
+									<li> 오늘 내가 고기 대신 선택한 '채소한 끼'로 
+									<br>점점 심각해져 가는 기후위기를 막을 수 있다면, 
+									<br>어떨까요?</li>
+
 								</ul>
-								<a href="" class="btn btn-md">CHOOSE PLAN</a>
+								<a href="" class="btn btn-md">JOIN US</a>
 							</div>
 						</div>
 					</div>
@@ -714,21 +714,21 @@
 					<div class="col-md-4 col-sm-6">
 						<div class="single_pricing">
 							<div class="pricing_head">
-								<h3>BUSINESS</h3>
+								<h3>분바스틱</h3>
 								<div class="pricing_price">
-									<div class="p_r text-center">$99</div>
-									<div class="m_t text-center">per month</div>
+									<div class="p_r text-center">free</div>
+
 								</div>
 							</div>
 
 							<div class="pricing_body">
 								<ul>
-									<li>Competition Analysis Methods</li>
-									<li>All Ranked URLs</li>
-									<li>International Support System</li>
-									<li>Social Media Tracking</li>
+									<li>페트병의 라벨과 뚜껑링을
+									<br>쉽게 뜯어 분리배출을
+									<br>시작해 볼까요?</li>
+
 								</ul>
-								<a href="" class="btn btn-md">CHOOSE PLAN</a>
+								<a href="" class="btn btn-md">JOIN US</a>
 							</div>
 						</div>
 					</div>
@@ -861,7 +861,7 @@
 							<div class="col-sm-12">
 								<h2>게시판</h2>
 								<h4>사람들의 소리를 들어보세요</h4>
-								<a href="" class="btn btn-lg">Comminuty Board</a>
+								<a href="" class="btn btn-lg">소리 듣기</a>
 							</div>
 						</div>
 					</div>
@@ -883,7 +883,7 @@
 								<div class="single_counter border_right">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											
+
 											<h2 class="statistic-counter">3891</h2>
 											<h4 class="">즐겨찾기</h4>
 										</div>
@@ -893,7 +893,7 @@
 								<div class="single_counter">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											
+
 											<h2 class="statistic-counter">281</h2>
 											<h4 class="">24시간 포스팅 수</h4>
 										</div>
@@ -903,7 +903,7 @@
 								<div class="single_counter">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											
+
 											<h2 class="statistic-counter">618</h2>
 											<h4 class="">전체 포스팅 수</h4>
 										</div>
@@ -914,7 +914,7 @@
 								<div class="single_counter">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											
+
 											<h2 class="statistic-counter">178</h2>
 											<h4 class="">특징 수</h4>
 
@@ -952,8 +952,9 @@
 									</div>
 									<div class="single_team_text">
 										<h4>김국중</h4>
+										<br>
 										<p id="team_list">
-											프로젝트 총괄,<br> 프론트, 백앤드, DB
+											<br>프로젝트 총괄,<br> 프론트, 백앤드, DB
 										</p>
 									</div>
 								</li>
@@ -963,8 +964,9 @@
 									</div>
 									<div class="single_team_text">
 										<h4>김지나</h4>
+										<br>
 										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+											<br>데이터 전처리 및<br> 분석, 프론트, 백앤드. DB
 										</p>
 									</div>
 								</li>
@@ -974,8 +976,9 @@
 									</div>
 									<div class="single_team_text">
 										<h4>박준영</h4>
+										<br>
 										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+											<br>데이터 전처리 및<br> 분석, 프론트, 백앤드. DB
 										</p>
 									</div>
 								</li>
@@ -985,8 +988,9 @@
 									</div>
 									<div class="single_team_text">
 										<h4>박진주</h4>
+										<br>
 										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+											<br>데이터 전처리 및<br> 분석, 프론트, 백앤드. DB
 										</p>
 									</div>
 								</li>
@@ -996,8 +1000,9 @@
 									</div>
 									<div class="single_team_text">
 										<h4>이혜원</h4>
+										
 										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+										<br>데이터 전처리 및<br> 분석, 프론트, 백앤드. DB
 										</p>
 									</div>
 								</li>
@@ -1035,8 +1040,8 @@
 							<div class="col-sm-6 col-xs-12">
 								<div class="copyright_text">
 									<p class=" wow fadeInRight" data-wow-duration="1s">
-										Made with <i class="fa fa-heart"></i> by 
-										<a href="http://bootstrapthemes.co">깐부  김국종 김지나 박준영 박진주 이혜원</a>
+										Made with <i class="fa fa-heart"></i> by <a
+											href="http://bootstrapthemes.co">깐부 김국종 김지나 박준영 박진주 이혜원</a>
 									</p>
 								</div>
 							</div>
