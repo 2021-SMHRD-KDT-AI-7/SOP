@@ -119,7 +119,7 @@ p.c_2 {
 												<form>
 													<fieldset>
 														<legend>
-															<p class='c_1_1'>location</p>
+															<p class='c_1_1'>Áö¿ª</p>
 														</legend>
 
 														<p class="c_2">

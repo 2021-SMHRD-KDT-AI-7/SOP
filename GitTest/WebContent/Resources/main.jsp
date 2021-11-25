@@ -408,6 +408,11 @@
 	<!--End of feature Section -->
 	<hr />
 
+
+
+
+
+
 	<!-- Study Section -->
 	<section id="study" class="study text-center wow fadeIn"
 		data-wow-duration="2s" data-wow-dealy="1.5s">
@@ -638,17 +643,6 @@
 
 
 	<!--End of history -->
-
-
-
-
-
-
-
-
-
-
-
 
 
 
