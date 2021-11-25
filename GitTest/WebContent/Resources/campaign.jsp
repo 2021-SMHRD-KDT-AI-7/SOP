@@ -74,12 +74,17 @@
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
+<<<<<<< HEAD
+										<a class="navbar-brand" href="index.html"> 
+										<img src="assets/images/logo.png" />
+=======
 										<%if(info != null){ %>
 										<a class="navbar-brand" href="index.jsp"> <img src="assets/images/sopsop.jpg" />
 										<%}else{ %>
 										<a class="navbar-brand" href="main.jsp"> <img src="assets/images/sopsop.jpg" />
 										<%} %>
 											
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 										</a>
 									</div>
 

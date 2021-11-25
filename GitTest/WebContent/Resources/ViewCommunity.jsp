@@ -90,8 +90,8 @@
                                     class="icon-bar"></span> <span class="icon-bar"></span> <span
                                     class="icon-bar"></span>
                               </button>
-                              <a class="navbar-brand" href="index.html"> <img
-                                 src="assets/images/sopsop.jpg" />
+                              <a class="navbar-brand" href="main.jsp"> 
+                              <img src="assets/images/logo.png" />
                               </a>
                            </div>
 

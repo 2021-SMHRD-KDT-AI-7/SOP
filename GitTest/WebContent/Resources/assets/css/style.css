@@ -12,7 +12,7 @@ Author URI: http://bootstrapthemes.co
 html,
 body {
     background-color: #fff;
-    font-size: 14px;
+    font-size: 22px;
     color: #79;
     width: 100%;
     padding: 0;
@@ -119,7 +119,7 @@ input[type="color"],
     display: inline-block;
     height: 38px;
     padding: 10px 2px;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.42857143;
     color: #000;
     background-color: #fff;
@@ -163,7 +163,7 @@ h1 {
 }
 h2 {
     font-family: 'ONE-Mobile-POP';
-    font-size:2.571rem;
+    font-size:3rem;
     line-height: 3rem;
     text-transform: uppercase;
 
@@ -561,7 +561,11 @@ input::-ms-input-placeholder {
     -webkit-transition:all .3s;
     -moz-transition:all .3s;
     transition:all .3s;
+<<<<<<< HEAD
     height: 120px;
+=======
+    height: 150px;
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 
 }
 .main_menu_bg{
@@ -589,18 +593,33 @@ input::-ms-input-placeholder {
 }
 
 .main_menu_bg .navbar-nav>li>a {
+<<<<<<< HEAD
     padding-top: 10px;
+=======
+    padding-top: 15px;
+    font-weight:bold;
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
     padding-bottom: 20px;
     text-transform: uppercase;
+<<<<<<< HEAD
     font-size: 1.2rem;
+=======
+    font-size: 1rem;
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
     color: #fff;
 }
 .navbar-brand {
     padding: 0px 15px;
 }
 .navbar-brand>img {
+<<<<<<< HEAD
     max-width: 28%;
     margin-left: -130px;
+=======
+    max-width: 53%;
+    margin-top:-30px;
+    margin-left:-300px;
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
     background-color:transparent;
@@ -1166,6 +1185,7 @@ button.btn-md:hover {
     position: relative;
     height: 650px;
 }
+
 .main_team_area:before{
     width: 100%;
     height: 100%;
@@ -1175,6 +1195,7 @@ button.btn-md:hover {
     content:"";
     background: url(../images/teambg2.png) no-repeat bottom center;
 }
+
 .main_team ul li{
     text-align: center;
 
@@ -1252,7 +1273,7 @@ li .single_team_text h4{
     display: inline-block;
     text-transform:none ;
     color:#e74c3c;
-    font-size:20px;
+    font-size:22px;
 }
 li .single_team_text p{
     color:#797979;
@@ -1263,7 +1284,7 @@ div#team_name {
 }
 
 p#team_list{
-	font-size:13px;
+	font-size:18px;
 }
 
 
@@ -1415,7 +1436,7 @@ p#team_list{
                         Trail Section 
 ======================================================================*/
 .main_trial_area{
-    background: url(../images/trailbg.jpg) no-repeat top center;
+    background: url(../images/sea.jpg) no-repeat top center;
     overflow: hidden;
     background-size: cover;
     color:#fff;
@@ -1437,7 +1458,7 @@ p#team_list{
                         footer section
 ===================================================================*/
 .footer{
-    background: #000000;
+    background: #389561;
 }
 .main_footer{
     overflow: hidden;
@@ -1470,11 +1491,11 @@ p#team_list{
 }
 .copyright_text p i{
     padding:0px 10px;
-    color:#ff0000;
+    color:#fff;
 }
 .copyright_text p a{
     padding:0px 10px;
-    color:#e74c3c;
+    color:#fff;
 }
 
 
@@ -1536,7 +1557,7 @@ p#team_list{
         box-sizing: border-box;
     }
 .txt_pig{
-	font-size: 13px;
+	font-size: 14px;
     margin-bottom: 10px;
 }
 
