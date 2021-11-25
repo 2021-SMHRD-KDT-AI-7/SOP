@@ -24,6 +24,24 @@ public class CommentDTO {
 		this.mb_id = mb_id;
 	}
 	
+	public CommentDTO(int comment_seq, int article_seq, String comment_content, String mb_id) {
+		this.comment_seq = comment_seq;
+		this.article_seq = article_seq;
+		this.comment_content = comment_content;
+		this.mb_id = mb_id;
+	}
+	
+	public CommentDTO(int article_seq, String mb_id) {
+		this.article_seq = article_seq;
+		this.mb_id = mb_id;
+	} 
+	
+	public CommentDTO(int comment_seq, int article_seq, String mb_id) {
+		this.comment_seq = comment_seq;
+		this.article_seq = article_seq;
+		this.mb_id = mb_id;
+	}
+	
 	public int getComment_seq() {
 		return comment_seq;
 	}
