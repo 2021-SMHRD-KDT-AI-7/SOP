@@ -888,7 +888,7 @@ button.btn-md {
     color: #444;
     letter-spacing: 1px;
     margin: 0;
-    font-size: 0.8125rem;
+    font-size:1rem;
     border-radius: 0px;
     margin-top: 0px;
     background-color: transparent;
@@ -1437,7 +1437,7 @@ p#team_list{
                         footer section
 ===================================================================*/
 .footer{
-    background: #000000;
+    background: #389561;
 }
 .main_footer{
     overflow: hidden;
@@ -1470,11 +1470,11 @@ p#team_list{
 }
 .copyright_text p i{
     padding:0px 10px;
-    color:#ff0000;
+    color:#fff;
 }
 .copyright_text p a{
     padding:0px 10px;
-    color:#e74c3c;
+    color:#fff;
 }
 
 

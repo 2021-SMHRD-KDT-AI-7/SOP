@@ -309,7 +309,7 @@
 
 						<div class="single_service single_service_text text-right">
 							<div class="head_title" style="margin-right: 500px;">
-								<h2>DAILY MISSION</h2>
+								<h2>데일리 미션</h2>
 							</div>
 
 							<div class="row" style="margin-right: 500px;">
@@ -881,8 +881,7 @@
 								<div class="single_counter border_right">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											<i class="../images/f_icon.png"></i>
-											<!-- <img src=""> -->
+											
 											<h2 class="statistic-counter">3891</h2>
 											<h4 class="">즐겨찾기</h4>
 										</div>
@@ -892,7 +891,7 @@
 								<div class="single_counter">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											<i class="icon icon-business-3"></i>
+											
 											<h2 class="statistic-counter">281</h2>
 											<h4 class="">24시간 포스팅 수</h4>
 										</div>
@@ -902,7 +901,7 @@
 								<div class="single_counter">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											<i class="icon icon-people-32"></i>
+											
 											<h2 class="statistic-counter">618</h2>
 											<h4 class="">전체 포스팅 수</h4>
 										</div>
@@ -913,7 +912,7 @@
 								<div class="single_counter">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											<i class="icon icon-cup"></i>
+											
 											<h2 class="statistic-counter">178</h2>
 											<h4 class="">특징 수</h4>
 

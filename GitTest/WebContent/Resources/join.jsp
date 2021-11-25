@@ -14,9 +14,9 @@
 		<header>
 			<!--NAVER LOGO-->
 			<div class="logo">
-				<a href="http://localhost:8081/GitTest/Resources/index.html"
-					target="_blank" title="SOP 权其捞瘤"><img src="sop.JPG"
-					class="image"></a>
+				<a href="http://localhost:8081/GitTest/Resources/main.jsp"
+					target="_blank" title="SOP 权其捞瘤">
+					<img src="assets/images/logo1.png" class="image"></a>
 			</div>
 		</header>
 
