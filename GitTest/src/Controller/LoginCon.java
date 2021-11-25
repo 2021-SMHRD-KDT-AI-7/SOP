@@ -23,12 +23,6 @@ public class LoginCon extends HttpServlet {
 		MemberDAO dao = new MemberDAO();
 		MemberDTO info = dao.login(id, pwd);
 		
-		System.out.println("==login==");
-		System.out.println(info.getMb_id());
-		System.out.println("==point==");
-		System.out.println(info.getMb_point());
-		
-		
 		if(info != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("info", info);

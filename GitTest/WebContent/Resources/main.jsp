@@ -155,13 +155,15 @@
 												<div class="col-sm-11">
 													<div class="form-group">
 														<input type="text" class="form-control" name="id"
-															placeholder="아이디를 입력하세요" required>
+															placeholder="아이디를 입력하세요" required
+															style="font-family : 'Malgun gothic'">
 													</div>
 												</div>
 												<div class="col-sm-11">
 													<div class="form-group">
 														<input type="password" class="form-control" name="pwd"
-															placeholder="비밀번호를 입력하세요" required="">
+															placeholder="비밀번호를 입력하세요" required=""
+															style = "font-family : 'Malgun gothic'">
 													</div>
 												</div>
 												<div class="col-sm-11">
@@ -483,7 +485,7 @@
 						<div class="single_study_right_img">
 							<div class="col-sm-6">
 								<div class="single_study_img">
-									<img src="assets/images/study.jpg" alt="" />
+									<img src="assets/images/공장수정.jpg" alt="" />
 								</div>
 							</div>
 						</div>
