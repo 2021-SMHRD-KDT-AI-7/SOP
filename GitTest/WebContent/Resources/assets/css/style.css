@@ -593,33 +593,24 @@ input::-ms-input-placeholder {
 }
 
 .main_menu_bg .navbar-nav>li>a {
-<<<<<<< HEAD
+
     padding-top: 10px;
-=======
-    padding-top: 15px;
     font-weight:bold;
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
     padding-bottom: 20px;
     text-transform: uppercase;
-<<<<<<< HEAD
     font-size: 1.2rem;
-=======
-    font-size: 1rem;
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
     color: #fff;
 }
 .navbar-brand {
     padding: 0px 15px;
 }
 .navbar-brand>img {
-<<<<<<< HEAD
+
     max-width: 28%;
     margin-left: -130px;
-=======
-    max-width: 53%;
     margin-top:-30px;
-    margin-left:-300px;
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
+  
+
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
     background-color:transparent;
