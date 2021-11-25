@@ -65,7 +65,7 @@
 												class="icon-bar"></span>
 										</button>
 										<a class="navbar-brand" href="#home"> 
-										<img src="assets/images/sopsop.jpg" />
+										<img src="assets/images/logo.png" />
 										</a>
 									</div>
 
@@ -80,14 +80,14 @@
 											<li><a href="#home">HOME</a></li>
 											<li><a href="join.jsp">회원가입</a></li>
 											<li><a href="#contact">로그인</a></li>
-											<li><a href="#service">데일리미션</a></li>
 											<li><a href="#portfolio">차트</a></li>
+											<li><a href="#service">데일리미션</a></li>
 											<li><a href="#study">환경 기사</a></li>
-											<li><a href="#pricing">캠페인</a></li>
-											<li><a href="#team">팀</a></li>
 											<li><a href="#clogo">사례</a></li>
-											<li><a href="#counter">조회수</a></li>
+											<li><a href="#pricing">캠페인</a></li>
 											<li><a href="#trial">게시판</a></li>
+											<li><a href="#counter">조회수</a></li>
+											<li><a href="#team">팀</a></li>
 										</ul>
 
 									</div>
@@ -115,10 +115,7 @@
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
 											<h1>SOP</h1>
 											<h1>Save Ozon Party</h1>
-											<div class="home_btn">
-												<a href="" class="btn btn-lg m_t_10">GET STARTED NOW</a> <a
-													href="" class="btn btn-default">LEARN MORE</a>
-											</div>
+
 
 										</div>
 									</div>
@@ -204,155 +201,8 @@
 
 
 
-	<!--End of feature Section -->
 	<hr />
-
-
-	<!-- History section 
-      <section id="history" class="history sections">
-         <div class="container">
-            <div class="row">
-               <div class="main_history">
-                  <div class="col-sm-6">
-                     <div class="single_history_img">
-                        <img src="sopsop.jpg" alt="" />
-                     </div>
-                  </div>
-
-                  <div class="col-sm-6">
-                     <div class="single_history_content">
-                        <div class="head_title">
-                           <h2>OUR HISTORY</h2>
-                        </div>
-                        <p>It is a long established fact that a reader will be
-                           distracted by the readable content of a page when looking at
-                           its layout. The point of using Lorem Ipsum is that it has a
-                           more-or-less normal distribution of letters, as opposed to
-                           using 'Content here, content here', making it look like
-                           readable English. Many desktop publishing packages and web page
-                           editors now use Lorem Ipsum as their default model text, and a
-                           search for 'lorem ipsum'</p>
-
-                        <a href="" class="btn btn-lg">BROWSE OUR WORK</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            
-         </div>
-      </section>
-         <!--End of container -->
-
-
-	<!--End of history -->
-
-
-	<!-- 데일리 미션 (진주) 시작 -->
-	<section id="service" class="service">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="main_service">
-					<div class="no-padding">
-
-						<div class="single_service single_service_text text-right">
-							<div class="head_title" style="margin-right: 500px;">
-								<h2>DAILY MISSION</h2>
-							</div>
-
-							<div class="row" style="margin-right: 500px;">
-								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-									<div class="row">
-
-										<div
-											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
-											<article class="single_service_right_text">
-												<h4>난방온도 2℃ 낮추기</h4>
-												<p>
-													동절기 적정 실내온도(겨울철 18~20℃)를 고려하여, 보일러 온도 설정시 2℃ 낮추기<br>
-													겨울에는 내복, 수면양말, 무릎담요 같은 보온용품 적극 활용하기
-												</p>
-											</article>
-										</div>
-										<div class="col-sm-1 col-xs-1">
-											<figure class="single_service_icon">
-												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
-											</figure>
-											<!-- End of figure -->
-										</div>
-									</div>
-								</div>
-								<!-- End of col-sm-12 -->
-
-								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-									<div class="row">
-
-										<div
-											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
-											<article class="single_service_right_text">
-												<h4>전기밥솥 보온기능 사용 줄이기</h4>
-												<p>
-													전기밥솥은 취사때만 사용하고 밥을 먹을 만큼만 짓기. 남은 밥은 먹을 만큼씩 나눠 냉동하기<br>
-													1일 평균 보온시간 약0시간(2018년 가구에너지 상설표본조사 결과)
-												</p>
-											</article>
-										</div>
-										<div class="col-sm-1 col-xs-1">
-											<figure class="single_service_icon">
-												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
-											</figure>
-											<!-- End of figure -->
-										</div>
-									</div>
-								</div>
-								<!-- End of col-sm-12 -->
-
-								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-									<div class="row">
-
-										<div
-											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1 margin-bottom-20">
-											<!-- <article class="single_service_right_text">
-                                    <h4>PHOTOGRAPHY</h4>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and
-                                       typesetting industry. Lorem Ip sum has been the industry's
-                                       standard dummy text ever.</p>
-                                 </article> -->
-										</div>
-										<div class="col-sm-1 col-xs-1">
-											<!-- <figure class="single_service_icon">
-                                    <i class="fa fa-heart"></i>
-                                 </figure> -->
-											<!-- End of figure -->
-										</div>
-									</div>
-								</div>
-								<!-- End of col-sm-12 -->
-
-							</div>
-						</div>
-					</div>
-					<!-- End of col-sm-6 -->
-
-					<!-- <div class="col-md-6 col-sm-12 no-padding">
-                  <figure class="single_service single_service_img">
-                     <div class="overlay-img"></div>
-                     <img src="assets/images/servicerightimg.jpg" alt="" />
-                  </figure>
-                  End of figure
-               </div> -->
-					<!-- End of col-sm-6 -->
-
-				</div>
-			</div>
-			<!-- End of row -->
-		</div>
-		<!-- End of Container-fluid -->
-	</section>
-	<!-- 데일리 미션 끝! (진주) -->
-
-
-
-
+	<!--End of feature Section -->
 	<!-- 차트 시각화 (진주)  -->
 
 	<section id="portfolio" class="portfolio sections">
@@ -456,6 +306,147 @@
 	<!-- 차트 파트 끝!!  -->
 
 
+	<!-- History section 
+      <section id="history" class="history sections">
+         <div class="container">
+            <div class="row">
+               <div class="main_history">
+                  <div class="col-sm-6">
+                     <div class="single_history_img">
+                        <img src="sopsop.jpg" alt="" />
+                     </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                     <div class="single_history_content">
+                        <div class="head_title">
+                           <h2>OUR HISTORY</h2>
+                        </div>
+                        <p>It is a long established fact that a reader will be
+                           distracted by the readable content of a page when looking at
+                           its layout. The point of using Lorem Ipsum is that it has a
+                           more-or-less normal distribution of letters, as opposed to
+                           using 'Content here, content here', making it look like
+                           readable English. Many desktop publishing packages and web page
+                           editors now use Lorem Ipsum as their default model text, and a
+                           search for 'lorem ipsum'</p>
+
+                        <a href="" class="btn btn-lg">BROWSE OUR WORK</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </section>
+         <!--End of container -->
+
+
+	<!--End of history -->
+
+
+	<!-- 데일리 미션 (진주) 시작 -->
+	<section id="service" class="service">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="main_service">
+					<div class="no-padding">
+
+						<div class="single_service single_service_text text-right">
+							<div class="head_title" style="margin-right: 500px;">
+								<h2>데일리 미션</h2>
+							</div>
+
+							<div class="row" style="margin-right: 500px;">
+								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+									<div class="row">
+
+										<div
+											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
+											<article class="single_service_right_text">
+												<h4>난방온도 2℃ 낮추기</h4>
+												<p>
+													동절기 적정 실내온도(겨울철 18~20℃)를 고려하여, 보일러 온도 설정시 2℃ 낮추기<br>
+													겨울에는 내복, 수면양말, 무릎담요 같은 보온용품 적극 활용하기
+												</p>
+											</article>
+										</div>
+										<div class="col-sm-1 col-xs-1">
+											<figure class="single_service_icon">
+												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
+											</figure>
+											<!-- End of figure -->
+										</div>
+									</div>
+								</div>
+								<!-- End of col-sm-12 -->
+
+								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+									<div class="row">
+
+										<div
+											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
+											<article class="single_service_right_text">
+												<h4>전기밥솥 보온기능 사용 줄이기</h4>
+												<p>
+													전기밥솥은 취사때만 사용하고 밥을 먹을 만큼만 짓기. 남은 밥은 먹을 만큼씩 나눠 냉동하기<br>
+													1일 평균 보온시간 약0시간(2018년 가구에너지 상설표본조사 결과)
+												</p>
+											</article>
+										</div>
+										<div class="col-sm-1 col-xs-1">
+											<figure class="single_service_icon">
+												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
+											</figure>
+											<!-- End of figure -->
+										</div>
+									</div>
+								</div>
+								<!-- End of col-sm-12 -->
+
+								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+									<div class="row">
+
+										<div
+											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1 margin-bottom-20">
+											<!-- <article class="single_service_right_text">
+                                    <h4>PHOTOGRAPHY</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and
+                                       typesetting industry. Lorem Ip sum has been the industry's
+                                       standard dummy text ever.</p>
+                                 </article> -->
+										</div>
+										<div class="col-sm-1 col-xs-1">
+											<!-- <figure class="single_service_icon">
+                                    <i class="fa fa-heart"></i>
+                                 </figure> -->
+											<!-- End of figure -->
+										</div>
+									</div>
+								</div>
+								<!-- End of col-sm-12 -->
+
+							</div>
+						</div>
+					</div>
+					<!-- End of col-sm-6 -->
+
+					<!-- <div class="col-md-6 col-sm-12 no-padding">
+                  <figure class="single_service single_service_img">
+                     <div class="overlay-img"></div>
+                     <img src="assets/images/servicerightimg.jpg" alt="" />
+                  </figure>
+                  End of figure
+               </div> -->
+					<!-- End of col-sm-6 -->
+
+				</div>
+			</div>
+			<!-- End of row -->
+		</div>
+		<!-- End of Container-fluid -->
+	</section>
+	<!-- 데일리 미션 끝! (진주) -->
 
 	<!-- Study Section -->
 	<section id="study" class="study text-center wow fadeIn"
@@ -524,7 +515,8 @@
 										</div>
 									</div>
 									<!--  전체 기사 보기로 이동 -->
-									<a href="News.jsp" class="btn_article_daily btn_lg_article_daily" >전체 기사</a>
+									<a href="News.jsp"
+										class="btn_article_daily btn_lg_article_daily">전체 기사</a>
 								</div>
 							</div>
 						</div>
@@ -546,6 +538,110 @@
 	</section>
 	<!-- End off Study Section -->
 
+
+
+
+	<!-- Client Logo Section -->
+	<section id="clogo" class="clogo">
+		<div class="container">
+			<div class="row">
+				<div class="main_clogo sections_weather text-center">
+					<div class="head_title text-center">
+						<h2>국내 이상기후 사례</h2>
+						<div class="subtitle"></div>
+						<div class="external_news_content">국내의 충격적인 이상기후로 인한 여러 사례를
+							확인하세요.</div>
+					</div>
+					<!-- End off Head_title -->
+
+
+					<div class="col-sm-3 col-xs-6"></div>
+					<div class="col-sm-3 col-xs-6"></div>
+					<div class="col-sm-3 col-xs-6"></div>
+				</div>
+
+				<div class="left">
+					<div class="div_title">
+						<a target="_blank" href="https://www.bbc.com/korean/news-53577483"><img
+							width="100%" height="400px"
+							src="https://ichef.bbci.co.uk/news/800/cpsprodpb/13FA5/production/_113692818_origin_.jpg"
+							alt="" /></a>
+					</div>
+					<br>
+					<figure class="txt_pig">&lt;사과 재배 못하고 강원도에서 귤 재배하는 21세기말
+						한국&gt;
+					</figure>
+					<p class="txt_line">연간 10.1일인 폭염일수가 3배 이상인 35.5일이 된다. 사과 재배지는
+						사라지며, 강원도에서 감귤 재배가 가능해진다. 모기나 진드기와 같은 해충 발생이 늘어나 감염병도 급증한다. 벚꽃의
+						개화시기는 지금보다 11.2일 빨라지고 소나무숲은 15% 사라진다. 이는 온실가스 배출이 현재 추세대로 이어지면
+						21세기 중반 이후부터 한반도가 목격하게 될 모습이다. 환경부와 기상청은 28일 논문 1900여편을 분석해 공동으로
+						'한국 기후변화 평가보고서 2020'를 내고 한반도 기후변화 동향과 전망을 정리했다.</p>
+				</div>
+
+				<div class="right">
+					<div class="div_title">
+						<a target="_blank"
+							href="https://www.hani.co.kr/arti/society/society_general/1003844.html"><img
+							width="100%" height="400px"
+							src="https://flexible.img.hani.co.kr/flexible/normal/970/643/imgdb/original/2021/0714/20210714502784.jpg"
+							alt="" /></a>
+					</div>
+					<br>
+					<figure class="txt_pig">&lt;폭염-태풍-폭우 ‘트리플 이상기후’…이젠 여름철마다
+						온다&gt;
+					</figure>
+					<p class="txt_line">수만 년 전의 빙하기가 46억 년 지구 역사상 가장 추웠던 시기에 속한다고
+						한다. 인류가 지구의 지배자가 된 지금은 그때보다 훨씬 따뜻하지만, 그래도 추운 시기에 속하는 건 마찬가지다.
+						2021년 6월부터 러시아 모스크바에서 섭씨 30도가 훌쩍 넘는 고온이, 캐나다 서부 브리티시컬럼비아에서 섭씨 50도에
+						가까운 폭염이 이어져서 마치 지구에 불난 것처럼 수은주가 치솟는데, 이건 어떻게 된 일이냐고 반문하는 분이 있을
+						것이다. 한여름에도 에어컨을 켜지 않고 지낼 수 있는 지역에 불폭탄이 터졌으니 이런 물음이 나올 만도 하다. 그러나
+						기상관측 자료는 거짓말하지 않는다.</p>
+				</div>
+
+				<div class="left">
+					<div class="div_title">
+						<a target="_blank"
+							href="https://www.bbc.com/korean/international-51470772"><img
+							width="100%" height="400px"
+							src="https://ichef.bbci.co.uk/news/800/cpsprodpb/7210/production/_110900292_origin_.jpg"
+							alt="" /></a>
+					</div>
+					<br>
+					<figure class="txt_pig">&lt;기후변화: 더워지는 한국, 겨울이 사라진다?&gt;
+					</figure>
+					<p class="txt_line">국립공원공단은 지리산국립공원 구룡계곡 일대에 사는 북방산개구리의 산란을 지난달
+						23일 처음 관측했다고 밝혔다. 지난해 2월 19일보다 27일 빠른 시기다. 해당 조사가 시작된 2010년 이후 1월에
+						산란이 관측된 것은 이번이 처음이다. 공원공단 연구진은 유난히 따뜻했던 겨울 날씨 때문에 산란일이 앞당겨진 것으로 보고
+						있다. 1월 중 낮 기온이 23도까지 올랐던 제주에서는 제주도롱뇽의 산란시기가 한 달 앞당겨졌다. 제주 백서향도 예년에
+						비해 한 달 먼저 개화했다. 매년 관광객이 몰려드는 화천 산천어축제는 개막을 두 차례 연기하기도 했다. 포근한 날씨에
+						비까지 많이 내려 얼음이 제대로 얼지 않아서다.</p>
+				</div>
+
+				<div class="right">
+					<div class="div_title">
+						<a target="_blank"
+							href="http://www.hdhy.co.kr/news/articleView.html?idxno=15429"><img
+							width="100%" height="400px"
+							src="http://www.hdhy.co.kr/news/photo/202109/15429_20071_322.jpg"
+							alt="" /></a>
+					</div>
+					<br>
+					<figure class="txt_pig">&lt;펄펄 끓는 지구, 한반도 어장지도가 바뀐다 - 2021
+						어종 변화 보고서&gt;
+					</figure>
+					<p class="txt_line">지난 7월, 기후변화로 고통받는 해양생물들의 실태가 공개돼 전 세계에 큰
+						충격을 줬다. 미국 환경보호단체 컬럼비아 리버키퍼(Columbia Riverkeeper)는 컬럼비아강의 연어들이
+						폭염으로 급등한 수온에 피부 살점이 벗겨진 채 유영하고 있는 모습을 영상으로 공개했다. 회유성 어류인 연어는 바다에
+						살지만 산란하기 위해 강을 거슬러 오른다. 여름철 알을 낳기 위해 유영하던 연어는 20도 이내의 수온을 유지해 오던
+						컬럼비아강이 폭염으로 21도까지 높아지자 심각한 화상을 입게 된 것으로 파악됐다. 7월 초부터 연어 영상을 촬영해 온
+						컬럼비아 리버키퍼 회원 브렛 밴던호리벌은 “앞으로 강물이 더 뜨거워진다면 더 많은 연어가 죽을 수 있다”고 경고했다.</p>
+				</div>
+
+			</div>
+		</div>
+		<div class="divider"></div>
+	</section>
+	<!-- End off clogo Section -->
 
 
 	<!-- Pricing Section -->
@@ -636,6 +732,90 @@
 	</section>
 	<!-- End off Pricing Section -->
 
+
+	<section id="trial" class="trial text-center wow fadeIn"
+		data-wow-duration="2s" data-wow-dealy="1.5s">
+		<div class="main_trial_area">
+			<div class="video_overlay sections">
+				<div class="container">
+					<div class="row">
+						<div class="main_trial">
+							<div class="col-sm-12">
+								<h2>게시판</h2>
+								<h4>사람들의 소리를 들어보세요</h4>
+								<a href="Community.jsp" class="btn btn-lg">Comminuty Board</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Counter Section -->
+	<section id="counter" class="counter">
+		<div class="video_overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="main_counter_area text-center">
+
+							<div class="row">
+								<div class="single_counter border_right">
+									<div class="col-sm-3 col-xs-12">
+										<div class="single_counter_item">
+											<!-- <i class="../images/f_icon.png"></i> -->
+											<!-- <img src=""> -->
+											<h2 class="statistic-counter">3891</h2>
+											<h4 class="">즐겨찾기</h4>
+										</div>
+									</div>
+								</div>
+
+								<div class="single_counter">
+									<div class="col-sm-3 col-xs-12">
+										<div class="single_counter_item">
+											
+											<h2 class="statistic-counter">281</h2>
+											<h4 class="">24시간 포스팅 수</h4>
+										</div>
+									</div>
+								</div>
+
+								<div class="single_counter">
+									<div class="col-sm-3 col-xs-12">
+										<div class="single_counter_item">
+											
+											<h2 class="statistic-counter">618</h2>
+											<h4 class="">전체 포스팅 수</h4>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="single_counter">
+									<div class="col-sm-3 col-xs-12">
+										<div class="single_counter_item">
+											
+											<h2 class="statistic-counter">178</h2>
+											<h4 class="">특징 수</h4>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End off container -->
+	</section>
+	<!-- End of counter section -->
+
+
+
 	<!-- Team Section -->
 	<section id="team" class="team">
 		<div class="main_team_area">
@@ -658,7 +838,7 @@
 									<div class="single_team_text">
 										<h4>김국중</h4>
 										<p id="team_list">
-											프로젝트 총괄,<br> 프론트, 백앤드, DB
+											프로젝트 총괄, 프론트, <br>백앤드, DB
 										</p>
 									</div>
 								</li>
@@ -669,7 +849,7 @@
 									<div class="single_team_text">
 										<h4>김지나</h4>
 										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+											데이터 전처리 및 분석, 프론트, <br>백앤드. DB
 										</p>
 									</div>
 								</li>
@@ -680,7 +860,7 @@
 									<div class="single_team_text">
 										<h4>박준영</h4>
 										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+											데이터 전처리 및 분석, 프론트, <br>백앤드. DB
 										</p>
 									</div>
 								</li>
@@ -691,7 +871,7 @@
 									<div class="single_team_text">
 										<h4>박진주</h4>
 										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+											데이터 전처리 및 분석, 프론트,<br> 백앤드. DB
 										</p>
 									</div>
 								</li>
@@ -702,7 +882,7 @@
 									<div class="single_team_text">
 										<h4>이혜원</h4>
 										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+											데이터 전처리 및 분석, 프론트, <br>백앤드. DB
 										</p>
 									</div>
 								</li>
@@ -718,105 +898,7 @@
 	</section>
 	<!-- End off Team Section -->
 
-	<!-- Client Logo Section -->
-	<section id="clogo" class="clogo">
-		<div class="container">
-			<div class="row">
-				<div class="main_clogo sections_weather text-center">
-					<div class="head_title text-center">
-						<h2>국내 이상기후 사례</h2>
-						<div class="subtitle"></div>
-						<div class="external_news_content">국내의 충격적인 이상기후로 인한 여러 사례를
-							확인하세요.</div>
-					</div>
-					<!-- End off Head_title -->
 
-
-					<div class="col-sm-3 col-xs-6"></div>
-					<div class="col-sm-3 col-xs-6"></div>
-					<div class="col-sm-3 col-xs-6"></div>
-				</div>
-
-				<div class="left">
-					<div class="div_title">
-						<a target="_blank" href="https://www.bbc.com/korean/news-53577483"><img
-							width="100%" height="400px"
-							src="https://ichef.bbci.co.uk/news/800/cpsprodpb/13FA5/production/_113692818_origin_.jpg"
-							alt="" /></a>
-					</div>
-					<br>
-					<figure class="txt_pig">&lt;사과 재배 못하고 강원도에서 귤 재배하는 21세기말
-						한국&gt;
-					</figure>
-					<p class="txt_line">연간 10.1일인 폭염일수가 3배 이상인 35.5일이 된다. 사과 재배지는
-						사라지며, 강원도에서 감귤 재배가 가능해진다. 모기나 진드기와 같은 해충 발생이 늘어나 감염병도 급증한다. 벚꽃의
-						개화시기는 지금보다 11.2일 빨라지고 소나무숲은 15% 사라진다. 이는 온실가스 배출이 현재 추세대로 이어지면
-						21세기 중반 이후부터 한반도가 목격하게 될 모습이다. 환경부와 기상청은 28일 논문 1900여편을 분석해 공동으로
-						'한국 기후변화 평가보고서 2020'를 내고 한반도 기후변화 동향과 전망을 정리했다.</p>
-				</div>
-
-				<div class="right">
-					<div class="div_title">
-						<a target="_blank"
-							href="https://www.hani.co.kr/arti/society/society_general/1003844.html"><img
-							width="100%" height="400px"
-							src="https://flexible.img.hani.co.kr/flexible/normal/970/643/imgdb/original/2021/0714/20210714502784.jpg"
-							alt="" /></a>
-					</div>
-					<br>
-					<figure class="txt_pig">&lt;폭염-태풍-폭우 ‘트리플 이상기후’…이젠 여름철마다
-						온다&gt;
-					</figure>
-					<p class="txt_line">수만 년 전의 빙하기가 46억 년 지구 역사상 가장 추웠던 시기에 속한다고
-						한다. 인류가 지구의 지배자가 된 지금은 그때보다 훨씬 따뜻하지만, 그래도 추운 시기에 속하는 건 마찬가지다.
-						2021년 6월부터 러시아 모스크바에서 섭씨 30도가 훌쩍 넘는 고온이, 캐나다 서부 브리티시컬럼비아에서 섭씨 50도에
-						가까운 폭염이 이어져서 마치 지구에 불난 것처럼 수은주가 치솟는데, 이건 어떻게 된 일이냐고 반문하는 분이 있을
-						것이다. 한여름에도 에어컨을 켜지 않고 지낼 수 있는 지역에 불폭탄이 터졌으니 이런 물음이 나올 만도 하다. 그러나
-						기상관측 자료는 거짓말하지 않는다.</p>
-				</div>
-
-				<div class="left">
-					<div class="div_title">
-						<a target="_blank" href="https://www.bbc.com/korean/international-51470772"><img
-							width="100%" height="400px"
-							src="https://ichef.bbci.co.uk/news/800/cpsprodpb/7210/production/_110900292_origin_.jpg"
-							alt="" /></a>
-					</div>
-					<br>
-					<figure class="txt_pig">&lt;기후변화: 더워지는 한국, 겨울이 사라진다?&gt;
-					</figure>
-					<p class="txt_line">국립공원공단은 지리산국립공원 구룡계곡 일대에 사는 북방산개구리의 산란을 지난달
-						23일 처음 관측했다고 밝혔다. 지난해 2월 19일보다 27일 빠른 시기다. 해당 조사가 시작된 2010년 이후 1월에
-						산란이 관측된 것은 이번이 처음이다. 공원공단 연구진은 유난히 따뜻했던 겨울 날씨 때문에 산란일이 앞당겨진 것으로 보고
-						있다. 1월 중 낮 기온이 23도까지 올랐던 제주에서는 제주도롱뇽의 산란시기가 한 달 앞당겨졌다. 제주 백서향도 예년에
-						비해 한 달 먼저 개화했다. 매년 관광객이 몰려드는 화천 산천어축제는 개막을 두 차례 연기하기도 했다. 포근한 날씨에
-						비까지 많이 내려 얼음이 제대로 얼지 않아서다.</p>
-				</div>
-
-				<div class="right">
-					<div class="div_title">
-						<a target="_blank" href="http://www.hdhy.co.kr/news/articleView.html?idxno=15429"><img
-							width="100%" height="400px"
-							src="http://www.hdhy.co.kr/news/photo/202109/15429_20071_322.jpg"
-							alt="" /></a>
-					</div>
-					<br>
-					<figure class="txt_pig">&lt;펄펄 끓는 지구, 한반도 어장지도가 바뀐다 - 2021
-						어종 변화 보고서&gt;
-					</figure>
-					<p class="txt_line">지난 7월, 기후변화로 고통받는 해양생물들의 실태가 공개돼 전 세계에 큰
-						충격을 줬다. 미국 환경보호단체 컬럼비아 리버키퍼(Columbia Riverkeeper)는 컬럼비아강의 연어들이
-						폭염으로 급등한 수온에 피부 살점이 벗겨진 채 유영하고 있는 모습을 영상으로 공개했다. 회유성 어류인 연어는 바다에
-						살지만 산란하기 위해 강을 거슬러 오른다. 여름철 알을 낳기 위해 유영하던 연어는 20도 이내의 수온을 유지해 오던
-						컬럼비아강이 폭염으로 21도까지 높아지자 심각한 화상을 입게 된 것으로 파악됐다. 7월 초부터 연어 영상을 촬영해 온
-						컬럼비아 리버키퍼 회원 브렛 밴던호리벌은 “앞으로 강물이 더 뜨거워진다면 더 많은 연어가 죽을 수 있다”고 경고했다.</p>
-				</div>
-
-			</div>
-		</div>
-		<div class="divider"></div>
-	</section>
-	<!-- End off clogo Section -->
 
 
 	<!-- Blog Section-->
@@ -924,86 +1006,10 @@
    </section> -->
 	<!-- End off Blog Section -->
 
-	<!-- Counter Section -->
-	<section id="counter" class="counter">
-		<div class="video_overlay">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="main_counter_area text-center">
-
-							<div class="row">
-								<div class="single_counter border_right">
-									<div class="col-sm-3 col-xs-12">
-										<div class="single_counter_item">
-											<i class="../images/f_icon.png"></i>
-											<!-- <img src=""> -->
-											<h2 class="statistic-counter">3891</h2>
-											<h4 class="">즐겨찾기</h4>
-										</div>
-									</div>
-								</div>
-
-								<div class="single_counter">
-									<div class="col-sm-3 col-xs-12">
-										<div class="single_counter_item">
-											<i class="icon icon-business-3"></i>
-											<h2 class="statistic-counter">281</h2>
-											<h4 class="">24시간 포스팅 수</h4>
-										</div>
-									</div>
-								</div>
-
-								<div class="single_counter">
-									<div class="col-sm-3 col-xs-12">
-										<div class="single_counter_item">
-											<i class="icon icon-people-32"></i>
-											<h2 class="statistic-counter">618</h2>
-											<h4 class="">전체 포스팅 수</h4>
-										</div>
-
-									</div>
-								</div>
-
-								<div class="single_counter">
-									<div class="col-sm-3 col-xs-12">
-										<div class="single_counter_item">
-											<i class="icon icon-cup"></i>
-											<h2 class="statistic-counter">178</h2>
-											<h4 class="">특징 수</h4>
-
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- End off container -->
-	</section>
-	<!-- End of counter section -->
 
 
-	<section id="trial" class="trial text-center wow fadeIn"
-		data-wow-duration="2s" data-wow-dealy="1.5s">
-		<div class="main_trial_area">
-			<div class="video_overlay sections">
-				<div class="container">
-					<div class="row">
-						<div class="main_trial">
-							<div class="col-sm-12">
-								<h2>게시판</h2>
-								<h4>사람들의 소리를 들어보세요</h4>
-								<a href="" class="btn btn-lg">Comminuty Board</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+
+
 
 	<!--Footer section-->
 	<section class="footer">
@@ -1026,9 +1032,10 @@
 							<div class="col-sm-6 col-xs-12">
 								<div class="copyright_text">
 									<p class=" wow fadeInRight" data-wow-duration="1s">
-										Made with <i class="fa fa-heart"></i> by <a
-											href="http://bootstrapthemes.co">Bootstrap Themes</a>2016.
-										All Rights Reserved
+										Made with <i class="fa fa-heart"></i> by 
+										<a href="http://bootstrapthemes.co"> 깐부 </a>
+										김국중 김지나 박준영 박진주 이혜원 
+										
 									</p>
 								</div>
 							</div>

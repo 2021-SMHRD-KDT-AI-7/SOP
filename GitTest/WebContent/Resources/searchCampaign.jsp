@@ -84,13 +84,13 @@
 											if (info != null) {
 										%>
 										<a class="navbar-brand" href="index.jsp"> <img
-											src="assets/images/sopsop.jpg" />
+											src="assets/images/logo.png" />
 										</a>
 										<%
 											} else {
 										%>
 										<a class="navbar-brand" href="main.jsp"> <img
-											src="assets/images/sopsop.jpg" />
+											src="assets/images/logo.png" />
 										</a>
 										<%
 											}

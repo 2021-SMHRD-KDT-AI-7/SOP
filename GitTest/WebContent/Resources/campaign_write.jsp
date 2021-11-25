@@ -70,7 +70,7 @@
 												class="icon-bar"></span>
 										</button>
 										<a class="navbar-brand" href="index.jsp"> <img
-											src="assets/images/sopsop.jpg" />
+											src="assets/images/logo.png" />
 										</a>
 									</div>
 

@@ -10,24 +10,31 @@
 <title>Document</title>
 <style>
 .tr{
-	height: 35px;
+	height: 50px;
     background-color:whitesmoke;
     
 }
 .td{
 	text-align:right;
+	font-size:25px;
 }
 th{
-font-size:20px;
+font-size:30px;
 background-color:#389561;
 }
 #th2{
 bgcolor:green;
-font-size:15px;
+font-size:20px;
 background-color:#389561;
 }
 
-
+input[type="text" i] {
+    padding: 6px 6px;
+    padding-top: 6px;
+    padding-right: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+}
 </style>
 </head>
 
@@ -51,7 +58,7 @@ background-color:#389561;
 		</tr>
 		<tr class="tr">
 					<td class="td">생년월일</td>
-					<td colspan="3"><input type="text" name="mb_birthdate" placeholder="생년월일"></td>
+					<td colspan="3"><input type="text" name="mb_birthdate" placeholder="ex)yyyymmdd"></td>
 		</tr>
 		<tr class="tr">
 					<td class="td">휴대전화</td>
