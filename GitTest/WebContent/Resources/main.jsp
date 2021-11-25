@@ -533,7 +533,7 @@
 						<div class="single_study_right_img">
 							<div class="col-sm-6">
 								<div class="single_study_img">
-									<img src="assets/images/study.jpg" alt="" />
+									<img src="assets/images/공장수정.jpg" alt="" />
 								</div>
 							</div>
 						</div>
