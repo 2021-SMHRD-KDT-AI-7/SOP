@@ -78,7 +78,7 @@ p.c_2 {
 												class="icon-bar"></span>
 										</button>
 										<a class="navbar-brand" href="#home"> 
-										<img src="assets/images/sopsop.jpg" />
+										<img src="assets/images/logo1.png" />
 										</a>
 
 									</div>
@@ -171,7 +171,7 @@ p.c_2 {
 														}
 													%>
 												</table>
-												<a href="index.html"><button id="writer">홈으로가기</button></a>
+												<a href=main.jsp><button id="writer">홈으로가기</button></a>
 												<a href="CommunityWrite.jsp"><button id="writer">작성하러가기</button></a>
 											</div>
 

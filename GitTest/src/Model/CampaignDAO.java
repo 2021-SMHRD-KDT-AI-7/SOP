@@ -189,7 +189,6 @@ public class CampaignDAO {
 		ArrayList<CampaignDTO> list = new ArrayList<CampaignDTO>();
 		
 		try {
-			System.out.println(searchText);
 			String sql = "select * from t_campaign where cam_title like ? and cam_accept = 'Y' order by reg_date desc";
 			
 			psmt = conn.prepareStatement(sql);

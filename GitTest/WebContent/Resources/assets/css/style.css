@@ -242,7 +242,7 @@ p:last-child {
 Section
 */
 .sections {
-    padding-top:85px;
+    padding-top:105px;
     padding-bottom: 105px;
     /*overflow: hidden;*/
 }
@@ -404,7 +404,7 @@ Button
     color: #fff;
     letter-spacing: 1px;
     margin: 0;
-    font-size:0.8125rem;
+    font-size:1rem;
     border-radius: 0px;
     margin-top: 20px;
     transition: .5s;
@@ -561,7 +561,7 @@ input::-ms-input-placeholder {
     -webkit-transition:all .3s;
     -moz-transition:all .3s;
     transition:all .3s;
-    height: 75px;
+    height: 120px;
 
 }
 .main_menu_bg{
@@ -589,17 +589,18 @@ input::-ms-input-placeholder {
 }
 
 .main_menu_bg .navbar-nav>li>a {
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 20px;
     text-transform: uppercase;
-    font-size: 0.875rem;
+    font-size: 1.2rem;
     color: #fff;
 }
 .navbar-brand {
     padding: 0px 15px;
 }
 .navbar-brand>img {
-    max-width: 80%;
+    max-width: 28%;
+    margin-left: -130px;
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
     background-color:transparent;
@@ -887,7 +888,7 @@ button.btn-md {
     color: #444;
     letter-spacing: 1px;
     margin: 0;
-    font-size: 0.8125rem;
+    font-size:1rem;
     border-radius: 0px;
     margin-top: 0px;
     background-color: transparent;
@@ -1045,7 +1046,7 @@ button.btn-md:hover {
 }
 .main_counter_area .single_counter h4{
     color:#797979;
-    font-size:0.8125rem;
+    font-size:1.1rem;
     text-transform: lowercase;
 }
 
@@ -1129,7 +1130,7 @@ button.btn-md:hover {
 }
 
 .single_pricing a{
-    margin-top:30px;
+    margin-top:113px;
 }
 
 
@@ -1262,7 +1263,7 @@ div#team_name {
 }
 
 p#team_list{
-	font-size:13px;
+	font-size:15px;
 }
 
 
@@ -1414,7 +1415,7 @@ p#team_list{
                         Trail Section 
 ======================================================================*/
 .main_trial_area{
-    background: url(../images/trailbg.jpg) no-repeat top center;
+    background: url(../images/sea.jpg) no-repeat top center;
     overflow: hidden;
     background-size: cover;
     color:#fff;
@@ -1436,7 +1437,7 @@ p#team_list{
                         footer section
 ===================================================================*/
 .footer{
-    background: #000000;
+    background: #389561;
 }
 .main_footer{
     overflow: hidden;
@@ -1469,11 +1470,11 @@ p#team_list{
 }
 .copyright_text p i{
     padding:0px 10px;
-    color:#ff0000;
+    color:#fff;
 }
 .copyright_text p a{
     padding:0px 10px;
-    color:#e74c3c;
+    color:#fff;
 }
 
 

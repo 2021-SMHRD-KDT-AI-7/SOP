@@ -1,3 +1,4 @@
+<%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -8,15 +9,18 @@
 <link rel="stylesheet" href="join_.css">
 </head>
 <body>
+<%
+	MemberDTO info = (MemberDTO) session.getAttribute("info");
+%>
 
 <div class="main-signup">
 		<!--웹페이지 상단-->
 		<header>
 			<!--NAVER LOGO-->
 			<div class="logo">
-				<a href="http://localhost:8081/GitTest/Resources/main.jsp"
-					target="_blank" title="SOP 홈페이지">
-					<img src="assets/images/logo1.png" class="image"></a>
+				<a href="http://localhost:8081/GitTest/Resources/index.html"
+					target="_blank" title="SOP 홈페이지"><img src="sop.JPG"
+					class="image"></a>
 			</div>
 		</header>
 
@@ -28,11 +32,12 @@
 				<!--아이디,비번,비번재확인-->
 
 				<h3>아이디</h3>
-				<span class="signup-input"> <input id="mb_id" type="text" name="mb_id"></input>
+				<span class="signup-input"> <input id="mb_id" type="text" name="mb_id" value=<%=info.getMb_id() %> readonly></input>
+				<a></a>
 				</span>
 
 				<h3>비밀번호</h3>
-				<span class="signup-input"> <input id="mb_pwd" type="password" name="mb_pwd"></input>
+				<span class="signup-input"> <input id="mb_pwd" type="hidden" name="mb_pwd"></input>
 					<span class="pw-lock"></span>
 				</span>
 

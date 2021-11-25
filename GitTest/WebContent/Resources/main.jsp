@@ -64,8 +64,8 @@
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
-										<a class="navbar-brand" href="#home"> 
-										<img src="assets/images/logo1.png" />
+										<a class="navbar-brand" href="#home"> <img
+											src="assets/images/logo1.png" />
 										</a>
 									</div>
 
@@ -80,14 +80,14 @@
 											<li><a href="#home">HOME</a></li>
 											<li><a href="join.jsp">회원가입</a></li>
 											<li><a href="#contact">로그인</a></li>
-											<li><a href="#service">데일리미션</a></li>
 											<li><a href="#portfolio">차트</a></li>
+											<li><a href="#service">데일리미션</a></li>
 											<li><a href="#study">환경 기사</a></li>
-											<li><a href="#pricing">캠페인</a></li>
-											<li><a href="#team">팀</a></li>
 											<li><a href="#clogo">사례</a></li>
-											<li><a href="#counter">조회수</a></li>
+											<li><a href="#pricing">캠페인</a></li>
 											<li><a href="#trial">게시판</a></li>
+											<li><a href="#counter">조회수</a></li>
+											<li><a href="#team">팀</a></li>
 										</ul>
 
 									</div>
@@ -115,10 +115,7 @@
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
 											<h1>SOP</h1>
 											<h1>Save Ozon Party</h1>
-											<div class="home_btn">
-												<a href="" class="btn btn-lg m_t_10">GET STARTED NOW</a> <a
-													href="" class="btn btn-default">LEARN MORE</a>
-											</div>
+
 
 										</div>
 									</div>
@@ -158,13 +155,15 @@
 												<div class="col-sm-11">
 													<div class="form-group">
 														<input type="text" class="form-control" name="id"
-															placeholder="아이디를 입력하세요" required>
+															placeholder="아이디를 입력하세요" required
+															style="font-family: 'Malgun gothic'">
 													</div>
 												</div>
 												<div class="col-sm-11">
 													<div class="form-group">
 														<input type="password" class="form-control" name="pwd"
-															placeholder="비밀번호를 입력하세요" required="">
+															placeholder="비밀번호를 입력하세요" required=""
+															style="font-family: 'Malgun gothic'">
 													</div>
 												</div>
 												<div class="col-sm-11">
@@ -200,158 +199,6 @@
 			</div>
 	</div>
 	</section>
-
-
-
-
-	<!--End of feature Section -->
-	<hr />
-
-
-	<!-- History section 
-      <section id="history" class="history sections">
-         <div class="container">
-            <div class="row">
-               <div class="main_history">
-                  <div class="col-sm-6">
-                     <div class="single_history_img">
-                        <img src="sopsop.jpg" alt="" />
-                     </div>
-                  </div>
-
-                  <div class="col-sm-6">
-                     <div class="single_history_content">
-                        <div class="head_title">
-                           <h2>OUR HISTORY</h2>
-                        </div>
-                        <p>It is a long established fact that a reader will be
-                           distracted by the readable content of a page when looking at
-                           its layout. The point of using Lorem Ipsum is that it has a
-                           more-or-less normal distribution of letters, as opposed to
-                           using 'Content here, content here', making it look like
-                           readable English. Many desktop publishing packages and web page
-                           editors now use Lorem Ipsum as their default model text, and a
-                           search for 'lorem ipsum'</p>
-
-                        <a href="" class="btn btn-lg">BROWSE OUR WORK</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            
-         </div>
-      </section>
-         <!--End of container -->
-
-
-	<!--End of history -->
-
-
-	<!-- 데일리 미션 (진주) 시작 -->
-	<section id="service" class="service">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="main_service">
-					<div class="no-padding">
-
-						<div class="single_service single_service_text text-right">
-							<div class="head_title" style="margin-right: 500px;">
-								<h2>DAILY MISSION</h2>
-							</div>
-
-							<div class="row" style="margin-right: 500px;">
-								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-									<div class="row">
-
-										<div
-											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
-											<article class="single_service_right_text">
-												<h4>난방온도 2℃ 낮추기</h4>
-												<p>
-													동절기 적정 실내온도(겨울철 18~20℃)를 고려하여, 보일러 온도 설정시 2℃ 낮추기<br>
-													겨울에는 내복, 수면양말, 무릎담요 같은 보온용품 적극 활용하기
-												</p>
-											</article>
-										</div>
-										<div class="col-sm-1 col-xs-1">
-											<figure class="single_service_icon">
-												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
-											</figure>
-											<!-- End of figure -->
-										</div>
-									</div>
-								</div>
-								<!-- End of col-sm-12 -->
-
-								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-									<div class="row">
-
-										<div
-											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
-											<article class="single_service_right_text">
-												<h4>전기밥솥 보온기능 사용 줄이기</h4>
-												<p>
-													전기밥솥은 취사때만 사용하고 밥을 먹을 만큼만 짓기. 남은 밥은 먹을 만큼씩 나눠 냉동하기<br>
-													1일 평균 보온시간 약0시간(2018년 가구에너지 상설표본조사 결과)
-												</p>
-											</article>
-										</div>
-										<div class="col-sm-1 col-xs-1">
-											<figure class="single_service_icon">
-												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
-											</figure>
-											<!-- End of figure -->
-										</div>
-									</div>
-								</div>
-								<!-- End of col-sm-12 -->
-
-								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
-									<div class="row">
-
-										<div
-											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1 margin-bottom-20">
-											<!-- <article class="single_service_right_text">
-                                    <h4>PHOTOGRAPHY</h4>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and
-                                       typesetting industry. Lorem Ip sum has been the industry's
-                                       standard dummy text ever.</p>
-                                 </article> -->
-										</div>
-										<div class="col-sm-1 col-xs-1">
-											<!-- <figure class="single_service_icon">
-                                    <i class="fa fa-heart"></i>
-                                 </figure> -->
-											<!-- End of figure -->
-										</div>
-									</div>
-								</div>
-								<!-- End of col-sm-12 -->
-
-							</div>
-						</div>
-					</div>
-					<!-- End of col-sm-6 -->
-
-					<!-- <div class="col-md-6 col-sm-12 no-padding">
-                  <figure class="single_service single_service_img">
-                     <div class="overlay-img"></div>
-                     <img src="assets/images/servicerightimg.jpg" alt="" />
-                  </figure>
-                  End of figure
-               </div> -->
-					<!-- End of col-sm-6 -->
-
-				</div>
-			</div>
-			<!-- End of row -->
-		</div>
-		<!-- End of Container-fluid -->
-	</section>
-	<!-- 데일리 미션 끝! (진주) -->
-
-
-
 
 	<!-- 차트 시각화 (진주)  -->
 
@@ -455,7 +302,111 @@
 	<!-- End off Work Section -->
 	<!-- 차트 파트 끝!!  -->
 
+	<!-- 데일리 미션 (진주) 시작 -->
+	<section id="service" class="service">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="main_service">
+					<div class="no-padding">
 
+						<div class="single_service single_service_text text-right">
+							<div class="head_title" style="margin-right: 500px;">
+								<h2>데일리 미션</h2>
+							</div>
+
+							<div class="row" style="margin-right: 500px;">
+								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+									<div class="row">
+
+										<div
+											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
+											<article class="single_service_right_text">
+												<h4>난방온도 2℃ 낮추기</h4>
+												<p>
+													동절기 적정 실내온도(겨울철 18~20℃)를 고려하여, 보일러 온도 설정시 2℃ 낮추기<br>
+													겨울에는 내복, 수면양말, 무릎담요 같은 보온용품 적극 활용하기
+												</p>
+											</article>
+										</div>
+										<div class="col-sm-1 col-xs-1">
+											<figure class="single_service_icon">
+												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
+											</figure>
+											<!-- End of figure -->
+										</div>
+									</div>
+								</div>
+								<!-- End of col-sm-12 -->
+
+								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+									<div class="row">
+
+										<div
+											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
+											<article class="single_service_right_text">
+												<h4>전기밥솥 보온기능 사용 줄이기</h4>
+												<p>
+													전기밥솥은 취사때만 사용하고 밥을 먹을 만큼만 짓기. 남은 밥은 먹을 만큼씩 나눠 냉동하기<br>
+													1일 평균 보온시간 약0시간(2018년 가구에너지 상설표본조사 결과)
+												</p>
+											</article>
+										</div>
+										<div class="col-sm-1 col-xs-1">
+											<figure class="single_service_icon">
+												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
+											</figure>
+											<!-- End of figure -->
+										</div>
+									</div>
+								</div>
+								<!-- End of col-sm-12 -->
+
+								<div class="col-md-12 col-sm-10 col-xs-10 margin-bottom-60">
+									<div class="row">
+
+										<div
+											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1 margin-bottom-20">
+											<!-- <article class="single_service_right_text">
+                                    <h4>PHOTOGRAPHY</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and
+                                       typesetting industry. Lorem Ip sum has been the industry's
+                                       standard dummy text ever.</p>
+                                 </article> -->
+										</div>
+										<div class="col-sm-1 col-xs-1">
+											<!-- <figure class="single_service_icon">
+                                    <i class="fa fa-heart"></i>
+                                 </figure> -->
+											<!-- End of figure -->
+										</div>
+									</div>
+								</div>
+								<!-- End of col-sm-12 -->
+
+							</div>
+						</div>
+					</div>
+					<!-- End of col-sm-6 -->
+
+					<!-- <div class="col-md-6 col-sm-12 no-padding">
+                  <figure class="single_service single_service_img">
+                     <div class="overlay-img"></div>
+                     <img src="assets/images/servicerightimg.jpg" alt="" />
+                  </figure>
+                  End of figure
+               </div> -->
+					<!-- End of col-sm-6 -->
+
+				</div>
+			</div>
+			<!-- End of row -->
+		</div>
+		<!-- End of Container-fluid -->
+	</section>
+	<!-- 데일리 미션 끝! (진주) -->
+
+	<!--End of feature Section -->
+	<hr />
 
 	<!-- Study Section -->
 	<section id="study" class="study text-center wow fadeIn"
@@ -524,7 +475,8 @@
 										</div>
 									</div>
 									<!--  전체 기사 보기로 이동 -->
-									<a href="News.jsp" class="btn_article_daily btn_lg_article_daily" >전체 기사</a>
+									<a href="News.jsp"
+										class="btn_article_daily btn_lg_article_daily">전체 기사</a>
 								</div>
 							</div>
 						</div>
@@ -533,7 +485,7 @@
 						<div class="single_study_right_img">
 							<div class="col-sm-6">
 								<div class="single_study_img">
-									<img src="assets/images/study.jpg" alt="" />
+									<img src="assets/images/공장수정.jpg" alt="" />
 								</div>
 							</div>
 						</div>
@@ -546,177 +498,6 @@
 	</section>
 	<!-- End off Study Section -->
 
-
-
-	<!-- Pricing Section -->
-	<section id="pricing" class="pricing">
-		<div class="container">
-			<div class="row">
-				<div class="main_pricing_area sections">
-					<div class="head_title text-center">
-						<h2>환경보호 캠페인!</h2>
-						<div class="subtitle">
-							<a href="campaign.jsp" class="btn btn-lg"> 캠페인 참여하기 </a>
-						</div>
-						<div class="separator"></div>
-					</div>
-					<!-- End off Head_title -->
-
-					<div class="col-md-4 col-sm-6">
-						<div class="single_pricing">
-							<div class="pricing_head">
-								<h3>STARTER</h3>
-								<div class="pricing_price">
-									<div class="p_r text-center">$19</div>
-									<div class="m_t text-center">per month</div>
-								</div>
-							</div>
-
-							<div class="pricing_body">
-								<ul>
-									<li>Competition Analysis Methods</li>
-									<li>All Ranked URLs</li>
-									<li>International Support System</li>
-									<li>Social Media Tracking</li>
-								</ul>
-								<a href="" class="btn btn-md">CHOOSE PLAN</a>
-							</div>
-						</div>
-					</div>
-					<!-- End off col-md-4 -->
-					<div class="col-md-4 col-sm-6">
-						<div class="single_pricing pricing_business">
-							<div class="pricing_head ">
-								<h3>PREMIUM</h3>
-								<div class="pricing_price">
-									<div class="p_r text-center">$39</div>
-									<div class="m_t text-center">per month</div>
-								</div>
-							</div>
-
-							<div class="pricing_body">
-								<ul>
-									<li>Competition Analysis Methods</li>
-									<li>All Ranked URLs</li>
-									<li>International Support System</li>
-									<li>Social Media Tracking</li>
-								</ul>
-								<a href="" class="btn btn-md">CHOOSE PLAN</a>
-							</div>
-						</div>
-					</div>
-					<!-- End off col-md-4 -->
-					<div class="col-md-4 col-sm-6">
-						<div class="single_pricing">
-							<div class="pricing_head">
-								<h3>BUSINESS</h3>
-								<div class="pricing_price">
-									<div class="p_r text-center">$99</div>
-									<div class="m_t text-center">per month</div>
-								</div>
-							</div>
-
-							<div class="pricing_body">
-								<ul>
-									<li>Competition Analysis Methods</li>
-									<li>All Ranked URLs</li>
-									<li>International Support System</li>
-									<li>Social Media Tracking</li>
-								</ul>
-								<a href="" class="btn btn-md">CHOOSE PLAN</a>
-							</div>
-						</div>
-					</div>
-					<!-- End off col-md-4 -->
-				</div>
-			</div>
-			<!-- End off row -->
-		</div>
-		<!-- End off container -->
-	</section>
-	<!-- End off Pricing Section -->
-
-	<!-- Team Section -->
-	<section id="team" class="team">
-		<div class="main_team_area">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="head_title textwhite text-center margin-top-80">
-							<h2>OUR TEAM</h2>
-							<div class="subtitle" id="team_name">깐부</div>
-							<div class="separator"></div>
-						</div>
-						<!-- End off Head_title -->
-
-						<div class="main_team">
-							<ul>
-								<li>
-									<div class="single_team_img">
-										<img src="image/kkj.png" alt="" />
-									</div>
-									<div class="single_team_text">
-										<h4>김국중</h4>
-										<p id="team_list">
-											프로젝트 총괄,<br> 프론트, 백앤드, DB
-										</p>
-									</div>
-								</li>
-								<li>
-									<div class="single_team_img">
-										<img src="image/kjn.png" alt="" />
-									</div>
-									<div class="single_team_text">
-										<h4>김지나</h4>
-										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
-										</p>
-									</div>
-								</li>
-								<li>
-									<div class="single_team_img">
-										<img src="image/pjy.png" alt="" />
-									</div>
-									<div class="single_team_text">
-										<h4>박준영</h4>
-										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
-										</p>
-									</div>
-								</li>
-								<li>
-									<div class="single_team_img">
-										<img src="image/pjj.png" alt="" />
-									</div>
-									<div class="single_team_text">
-										<h4>박진주</h4>
-										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
-										</p>
-									</div>
-								</li>
-								<li>
-									<div class="single_team_img">
-										<img src="image/lhw.png" alt="" />
-									</div>
-									<div class="single_team_text">
-										<h4>이혜원</h4>
-										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
-										</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-
-					</div>
-					<!-- End of main team contant -->
-				</div>
-			</div>
-			<!-- End of container -->
-		</div>
-	</section>
-	<!-- End off Team Section -->
 
 	<!-- Client Logo Section -->
 	<section id="clogo" class="clogo">
@@ -777,7 +558,8 @@
 
 				<div class="left">
 					<div class="div_title">
-						<a target="_blank" href="https://www.bbc.com/korean/international-51470772"><img
+						<a target="_blank"
+							href="https://www.bbc.com/korean/international-51470772"><img
 							width="100%" height="400px"
 							src="https://ichef.bbci.co.uk/news/800/cpsprodpb/7210/production/_110900292_origin_.jpg"
 							alt="" /></a>
@@ -795,7 +577,8 @@
 
 				<div class="right">
 					<div class="div_title">
-						<a target="_blank" href="http://www.hdhy.co.kr/news/articleView.html?idxno=15429"><img
+						<a target="_blank"
+							href="http://www.hdhy.co.kr/news/articleView.html?idxno=15429"><img
 							width="100%" height="400px"
 							src="http://www.hdhy.co.kr/news/photo/202109/15429_20071_322.jpg"
 							alt="" /></a>
@@ -817,6 +600,150 @@
 		<div class="divider"></div>
 	</section>
 	<!-- End off clogo Section -->
+
+	<!-- History section 
+      <section id="history" class="history sections">
+         <div class="container">
+            <div class="row">
+               <div class="main_history">
+                  <div class="col-sm-6">
+                     <div class="single_history_img">
+                        <img src="sopsop.jpg" alt="" />
+                     </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                     <div class="single_history_content">
+                        <div class="head_title">
+                           <h2>OUR HISTORY</h2>
+                        </div>
+                        <p>It is a long established fact that a reader will be
+                           distracted by the readable content of a page when looking at
+                           its layout. The point of using Lorem Ipsum is that it has a
+                           more-or-less normal distribution of letters, as opposed to
+                           using 'Content here, content here', making it look like
+                           readable English. Many desktop publishing packages and web page
+                           editors now use Lorem Ipsum as their default model text, and a
+                           search for 'lorem ipsum'</p>
+
+                        <a href="" class="btn btn-lg">BROWSE OUR WORK</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            
+         </div>
+      </section>
+         <!--End of container -->
+
+
+	<!--End of history -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Pricing Section -->
+	<section id="pricing" class="pricing">
+		<div class="container">
+			<div class="row">
+				<div class="main_pricing_area sections">
+					<div class="head_title text-center">
+						<h2>환경보호 캠페인!</h2>
+						<div class="subtitle">
+							<a href="campaign.jsp" class="btn btn-lg"> 캠페인 참여하기 </a>
+						</div>
+						<div class="separator"></div>
+					</div>
+					<!-- End off Head_title -->
+
+					<div class="col-md-4 col-sm-6">
+						<div class="single_pricing">
+							<div class="pricing_head">
+								<h3>어스 앤 런</h3>
+								<div class="pricing_price">
+									<div class="p_r text-center">free</div>
+
+								</div>
+							</div>
+
+							<div class="pricing_body">
+								<ul>
+									<li> 무심코 지나쳤던 플라스틱 쓰레기, 
+									<br>더 돌아다니지 않게 함께 주워볼까요?
+									<br> 공원, 하천, 아파트 단지 어디든 상관없어요!
+									</li>
+
+								</ul>
+								<a href="" class="btn btn-md">JOIN US</a>
+							</div>
+						</div>
+					</div>
+					<!-- End off col-md-4 -->
+					<div class="col-md-4 col-sm-6">
+						<div class="single_pricing pricing_business">
+							<div class="pricing_head ">
+								<h3>채소 한끼,최소 한끼</h3>
+								<div class="pricing_price">
+									<div class="p_r text-center">free</div>
+								</div>
+							</div>
+
+							<div class="pricing_body">
+								<ul>
+									<li> 오늘 내가 고기 대신 선택한 '채소한 끼'로 
+									<br>점점 심각해져 가는 기후위기를 막을 수 있다면, 
+									<br>어떨까요?</li>
+
+								</ul>
+								<a href="" class="btn btn-md">JOIN US</a>
+							</div>
+						</div>
+					</div>
+					<!-- End off col-md-4 -->
+					<div class="col-md-4 col-sm-6">
+						<div class="single_pricing">
+							<div class="pricing_head">
+								<h3>분바스틱</h3>
+								<div class="pricing_price">
+									<div class="p_r text-center">free</div>
+
+								</div>
+							</div>
+
+							<div class="pricing_body">
+								<ul>
+									<li>페트병의 라벨과 뚜껑링을
+									<br>쉽게 뜯어 분리배출을
+									<br>시작해 볼까요?</li>
+
+								</ul>
+								<a href="" class="btn btn-md">JOIN US</a>
+							</div>
+						</div>
+					</div>
+					<!-- End off col-md-4 -->
+				</div>
+			</div>
+			<!-- End off row -->
+		</div>
+		<!-- End off container -->
+	</section>
+	<!-- End off Pricing Section -->
+
+
+
+
 
 
 	<!-- Blog Section-->
@@ -924,6 +851,26 @@
    </section> -->
 	<!-- End off Blog Section -->
 
+	<section id="trial" class="trial text-center wow fadeIn"
+		data-wow-duration="2s" data-wow-dealy="1.5s">
+		<div class="main_trial_area">
+			<div class="video_overlay sections">
+				<div class="container">
+					<div class="row">
+						<div class="main_trial">
+							<div class="col-sm-12">
+								<h2>게시판</h2>
+								<h4>사람들의 소리를 들어보세요</h4>
+								<a href="" class="btn btn-lg">소리 듣기</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
 	<!-- Counter Section -->
 	<section id="counter" class="counter">
 		<div class="video_overlay">
@@ -936,8 +883,7 @@
 								<div class="single_counter border_right">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											<i class="../images/f_icon.png"></i>
-											<!-- <img src=""> -->
+
 											<h2 class="statistic-counter">3891</h2>
 											<h4 class="">즐겨찾기</h4>
 										</div>
@@ -947,7 +893,7 @@
 								<div class="single_counter">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											<i class="icon icon-business-3"></i>
+
 											<h2 class="statistic-counter">281</h2>
 											<h4 class="">24시간 포스팅 수</h4>
 										</div>
@@ -957,7 +903,7 @@
 								<div class="single_counter">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											<i class="icon icon-people-32"></i>
+
 											<h2 class="statistic-counter">618</h2>
 											<h4 class="">전체 포스팅 수</h4>
 										</div>
@@ -968,7 +914,7 @@
 								<div class="single_counter">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											<i class="icon icon-cup"></i>
+
 											<h2 class="statistic-counter">178</h2>
 											<h4 class="">특징 수</h4>
 
@@ -985,25 +931,93 @@
 	</section>
 	<!-- End of counter section -->
 
-
-	<section id="trial" class="trial text-center wow fadeIn"
-		data-wow-duration="2s" data-wow-dealy="1.5s">
-		<div class="main_trial_area">
-			<div class="video_overlay sections">
-				<div class="container">
-					<div class="row">
-						<div class="main_trial">
-							<div class="col-sm-12">
-								<h2>게시판</h2>
-								<h4>사람들의 소리를 들어보세요</h4>
-								<a href="" class="btn btn-lg">Comminuty Board</a>
-							</div>
+	<!-- Team Section -->
+	<section id="team" class="team">
+		<div class="main_team_area">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="head_title textwhite text-center margin-top-80">
+							<h2>OUR TEAM</h2>
+							<div class="subtitle" id="team_name">깐부</div>
+							<div class="separator"></div>
 						</div>
+						<!-- End off Head_title -->
+
+						<div class="main_team">
+							<ul>
+								<li>
+									<div class="single_team_img">
+										<img src="image/kkj.png" alt="" />
+									</div>
+									<div class="single_team_text">
+										<h4>김국중</h4>
+										<br>
+										<p id="team_list">
+											<br>프로젝트 총괄,<br> 프론트, 백앤드, DB
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="single_team_img">
+										<img src="image/kjn.png" alt="" />
+									</div>
+									<div class="single_team_text">
+										<h4>김지나</h4>
+										<br>
+										<p id="team_list">
+											<br>데이터 전처리 및<br> 분석, 프론트, 백앤드. DB
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="single_team_img">
+										<img src="image/pjy.png" alt="" />
+									</div>
+									<div class="single_team_text">
+										<h4>박준영</h4>
+										<br>
+										<p id="team_list">
+											<br>데이터 전처리 및<br> 분석, 프론트, 백앤드. DB
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="single_team_img">
+										<img src="image/pjj.png" alt="" />
+									</div>
+									<div class="single_team_text">
+										<h4>박진주</h4>
+										<br>
+										<p id="team_list">
+											<br>데이터 전처리 및<br> 분석, 프론트, 백앤드. DB
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="single_team_img">
+										<img src="image/lhw.png" alt="" />
+									</div>
+									<div class="single_team_text">
+										<h4>이혜원</h4>
+										
+										<p id="team_list">
+										<br>데이터 전처리 및<br> 분석, 프론트, 백앤드. DB
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+
 					</div>
+					<!-- End of main team contant -->
 				</div>
 			</div>
+			<!-- End of container -->
 		</div>
 	</section>
+	<!-- End off Team Section -->
+
 
 	<!--Footer section-->
 	<section class="footer">
@@ -1027,8 +1041,7 @@
 								<div class="copyright_text">
 									<p class=" wow fadeInRight" data-wow-duration="1s">
 										Made with <i class="fa fa-heart"></i> by <a
-											href="http://bootstrapthemes.co">Bootstrap Themes</a>2016.
-										All Rights Reserved
+											href="http://bootstrapthemes.co">깐부 김국종 김지나 박준영 박진주 이혜원</a>
 									</p>
 								</div>
 							</div>

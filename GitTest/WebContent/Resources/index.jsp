@@ -251,6 +251,7 @@
 											</div>
 
 											<div class="col-sm-12">
+												<a href="mypage.jsp" class="btn btn-lg"> 마이페이지 </a>
 												<input type="submit" value="로그아웃" class="btn btn-lg">
 											</div>
 										</div>
