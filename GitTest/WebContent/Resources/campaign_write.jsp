@@ -69,8 +69,8 @@
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
-										<a class="navbar-brand" href="index.jsp"> <img
-											src="assets/images/sopsop.jpg" />
+										<a class="navbar-brand" href="main.jsp"> 
+										<img src="assets/images/logo1.png" />
 										</a>
 									</div>
 

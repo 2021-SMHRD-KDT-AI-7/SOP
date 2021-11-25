@@ -57,11 +57,12 @@ public class CommentDAO {
 				rs = psmt.executeQuery();
 				
 				while(rs.next()) {
+					int comment_seq = rs.getInt("comment_seq");
 					int article_seq = rs.getInt("article_seq");
 					String comment_content = rs.getString("comment_content");
 					String mb_id = rs.getString("mb_id");
 					
-					CommentDTO dto = new CommentDTO(article_seq, comment_content, mb_id);
+					CommentDTO dto = new CommentDTO(comment_seq, article_seq, comment_content, mb_id);
 					cmt_list.add(dto);
 				}
 				
@@ -78,7 +79,7 @@ public class CommentDAO {
 		public int deleteOne(String comment_seq) {
 			getConn();
 			try {
-				String sql="delete from t_comment where comment_seq=?";
+				String sql="delete from T_COMMENT where comment_seq=?";
 				
 				psmt=conn.prepareStatement(sql);
 				

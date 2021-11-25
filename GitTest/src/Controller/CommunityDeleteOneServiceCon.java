@@ -19,6 +19,7 @@ public class CommunityDeleteOneServiceCon extends HttpServlet {
 		System.out.println("게시판의 고유한 값:"+article_seq);
 		
 		CommunityDAO dao=new CommunityDAO();
+		
 		int cnt=dao.deleteOne(article_seq);
 		
 		if(cnt>0) {

@@ -50,17 +50,24 @@
     </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
    <%
-	  /* HttpSession session = request.getSession(); */
+	  /* HttpSession session = request.getSession();  */
 		
 	  MemberDTO info=(MemberDTO)session.getAttribute("info"); 
-	   
+	  
+	  String mb_id = info.getMb_id();
+	  
+	  System.out.println("===댓글===");
+	  System.out.println(mb_id);
+	  
       String article_seq = request.getParameter("article_seq");
-      String comment_seq = request.getParameter("comment_seq");
+      
+      System.out.println(article_seq);
       
       CommunityDAO dao = new CommunityDAO();
       CommunityDTO dto = dao.viewOneBoard(article_seq);
       
       CommentDAO cmt_dao = new CommentDAO();
+     
       ArrayList<CommentDTO> cmt_list = new ArrayList<>();
       
       if(info != null){
@@ -90,8 +97,8 @@
                                     class="icon-bar"></span> <span class="icon-bar"></span> <span
                                     class="icon-bar"></span>
                               </button>
-                              <a class="navbar-brand" href="index.html"> <img
-                                 src="assets/images/sopsop.jpg" />
+                              <a class="navbar-brand" href="main.jsp"> 
+                              <img src="assets/images/logo1.png" />
                               </a>
                            </div>
 
@@ -138,6 +145,7 @@
                                        <tr>
                                           <td colspan="2">내용</td>
                                        </tr>
+                                       
                                        <!-- 댓글 다는 곳 -->
                                        <tr>
                                           <td colspan="2"><%=dto.getArticle_content() %> 
@@ -146,18 +154,28 @@
                                        <tr>
                                              <td colspan="2"><input type="text" size="50"><input id="write_com" type="button" value="댓글작성"> </td>
                                        </tr>
+                              
+                              
+                              <!-- 댓글 보이는 곳 -->
                               <tr>
                                  <td colspan="2">
-                                    <%
+                                 
+                                 <!-- 댓글 reload -->
+                                    <%	
                                     	for (int i=0; i<cmt_list.size(); i++){ %>
 											
-                                    		<tr id="comments-<%=i%>" style="list-style:none; padding:0">
+                                    		<tr id="comments-<%=cmt_list.get(i).getComment_seq()%>" style="list-style:none; padding:0">
 											<td><%=cmt_list.get(i).getComment_content()%></td>
-											<td></td>
+											
+											<!-- 댓글 삭제 -->
+											<% 
+											if(cmt_list.get(i).getMb_id().equals(mb_id)){ %>
+											<td><input id="delete_com" type="button" value="댓글삭제" onclick="del(<%=cmt_list.get(i).getComment_seq()%>)"></td>
+												
+											<%}%>
 											</tr>
-                                    	<%}
-                                    %>
-                                       
+                                    	<%}%>
+													
                                     
                                  </td>
                               </tr>
@@ -247,12 +265,19 @@
    <script> 
       //type=text 인 input 태그에 작성한 댓글을 ul(id=comments) 태그에 추가(li태그 사이에)
        var num = 1;
+      
       $('#write_com').on('click',function(){
     	  /* alert("!") */
     	  var seq = <%=article_seq%>;
     	  var number = <%=cmt_list.size()-1%>;
           var com = $('input[type=text]').val()    //댓글
-          $('#comments-' + number).after('<tr id="comments-'+(number+1)+'" style="list-style:none; padding:0"><td class="com'+num+'">'+com+'</td><td><input type="button" value="댓글삭제" onclick="del('+num+')"></td></tr>');
+          /* $('#comments-' + number).after('<tr id="comments-'+(number+1)+'" style="list-style:none; padding:0"><td class="com'+num+'">'+com+'</td><td><input type="button" value="댓글삭제" onclick="del('+num+')"></td></tr>'); */
+         
+          /*
+          <input id="delete_com" type="button" value="댓글삭제" onclick="del('+num+')">
+          <input type="button" value="댓글삭제" onclick="del('+num+')">
+          */
+          
           num++;
           location.reload();
           // $('imput[type=text]').val('');
@@ -261,8 +286,24 @@
          
       }); 
       
-      function del(num){
-         $('.com'+num).remove();
+      
+      function del(id){
+    	  $.ajax({
+              type : "post",
+              data : {
+                 "comment_seq" : id,
+              },
+              url : "../CommentDeleteServiceCon",
+              dataType : "text",
+              success : function(data){
+            	  $('tr#comments-comment_seq').remove();
+				  alert("댓글 삭제 성공");
+            	  location.reload();
+              },
+              error : function(){
+                 alert("실패!");
+              }
+           }); 
       }
       
       
@@ -276,7 +317,7 @@
               url : "../CommentService",
               dataType : "text",
               success : function(data){
-                 alert(data);
+                 alert("댓글 등록 성공");
               },
               error : function(){
                  alert("실패!");
@@ -284,118 +325,9 @@
            }); 
       }
        
-      //댓글등록
-   /*    function WriteCmt(){
-         var form =document.getElementById("writeCommentForm");
-         
-         var board=form.comment_board.value
-         var id = form.comment_id.value
-         var content=form.comment_content.value;
-         
-         if(!content){
-            alert("내용을 입력하세요");
-            return false;
-         }else{
-            var param="comment_board"+ board +"&comment_id"+id+"&comment_content="+content;
-            
-            httpRequest=getXMLHttpRequest();
-            httpRequest.onreadystatechange=checkFun;
-            httpRequest.open("POST","CommentWriteAction.co",true);
-            httpRequest.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=euc-kr');
-            httpRequest.send(param);
-         }
-         
-         function checkFunc(){
-            if)httpRequest.readyState==4{
-               //결과값을 가져온다
-               var resultText=httpRequest.responseText;
-               if(resultText==1){
-                  document.location.reload();//상세보기 창 새로고침
-               }
-            }
-         }
-      } */
    
    </script>
-	<script src="jquery-3.6.0.min.js"></script>
 	
 	
-	
-	<!-- 댓글 스크립트  -->
-	<script> 
-		//type=text 인 input 태그에 작성한 댓글을 ul(id=comments) 태그에 추가(li태그 사이에)
-		 var num = 1;
-		$('#write_com').on('click',function(){
-			
-			// db 보내는 준비
-			var com = $('input[type=text]').val()
-			$('#comments').append('<li class="com'+num+'">'+com+'<input type="button" value="댓글삭제" onclick="del('+num+')"></li>');
-			num++;
-			$('imput[type=text]').val('');
-			/* 
-=======
-			
-			$.ajax({
-				type : "post",
-				data : {
-					"article_seq" : $('#article_seq').jsp()
-				},
-				url : "CommentService",
-				dataType : "text",
-				success : function(data){
-					alert(data);
-				},
-				error : function(){
-					alert("실패!");
-				}
-			}); */
-			
-		}); 
-			});
-
-			// 실제 댓글 달리는 기능
-			var com = $('input[type=text]').val()
-			$('#comments').append('<li class="com'+num+'">'+com+'<input type="button" value="댓글삭제" onclick="del('+num+')"></li>');
-			num++;
-			$('imput[type=text]').val('');
- 
-		
-		function del(num){
-			$('.com'+num).remove();
-		}
-		 
-		//댓글등록
-	/* 	function WriteCmt(){
-			var form =document.getElementById("writeCommentForm");
-			
-			var board=form.comment_board.value
-			var id = form.comment_id.value
-			var content=form.comment_content.value;
-			
-			if(!content){
-				alert("내용을 입력하세요");
-				return false;
-			}else{
-				var param="comment_board"+ board +"&comment_id"+id+"&comment_content="+content;
-				
-				httpRequest=getXMLHttpRequest();
-				httpRequest.onreadystatechange=checkFun;
-				httpRequest.open("POST","CommentWriteAction.co",true);
-				httpRequest.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=euc-kr');
-				httpRequest.send(param);
-			}
-			
-			function checkFunc(){
-				if)httpRequest.readyState==4{
-					//결과값을 가져온다
-					var resultText=httpRequest.responseText;
-					if(resultText==1){
-						document.location.reload();//상세보기 창 새로고침
-					}
-				}
-			}
-		} */
-	
-	</script>
 </body>
 </html>

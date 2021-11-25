@@ -64,8 +64,8 @@
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
-										<a class="navbar-brand" href="#home"> 
-										<img src="assets/images/logo1.png" />
+										<a class="navbar-brand" href="#home"> <img
+											src="assets/images/logo1.png" />
 										</a>
 									</div>
 
@@ -115,7 +115,7 @@
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
 											<h1>SOP</h1>
 											<h1>Save Ozon Party</h1>
-											
+
 
 										</div>
 									</div>
@@ -156,14 +156,14 @@
 													<div class="form-group">
 														<input type="text" class="form-control" name="id"
 															placeholder="아이디를 입력하세요" required
-															style="font-family : 'Malgun gothic'">
+															style="font-family: 'Malgun gothic'">
 													</div>
 												</div>
 												<div class="col-sm-11">
 													<div class="form-group">
 														<input type="password" class="form-control" name="pwd"
 															placeholder="비밀번호를 입력하세요" required=""
-															style = "font-family : 'Malgun gothic'">
+															style="font-family: 'Malgun gothic'">
 													</div>
 												</div>
 												<div class="col-sm-11">
@@ -311,7 +311,7 @@
 
 						<div class="single_service single_service_text text-right">
 							<div class="head_title" style="margin-right: 500px;">
-								<h2>DAILY MISSION</h2>
+								<h2>데일리 미션</h2>
 							</div>
 
 							<div class="row" style="margin-right: 500px;">
@@ -321,10 +321,13 @@
 										<div
 											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
 											<article class="single_service_right_text">
-												<h4>난방온도 2℃ 낮추기</h4>
+												<%
+													DailyMissionDAO dm_dao = new DailyMissionDAO();
+												int day = dm_dao.getDayOfweek() * 2;
+												%>
+												<h4><%=dm_dao.dm_title(day)%></h4>
 												<p>
-													동절기 적정 실내온도(겨울철 18~20℃)를 고려하여, 보일러 온도 설정시 2℃ 낮추기<br>
-													겨울에는 내복, 수면양말, 무릎담요 같은 보온용품 적극 활용하기
+													<%=dm_dao.dm_value(day)%>
 												</p>
 											</article>
 										</div>
@@ -344,10 +347,9 @@
 										<div
 											class="col-sm-10 col-sm-offset-1 col-xs-9 col-xs-offset-1">
 											<article class="single_service_right_text">
-												<h4>전기밥솥 보온기능 사용 줄이기</h4>
+												<h4><%=dm_dao.dm_title(day + 1)%></h4>
 												<p>
-													전기밥솥은 취사때만 사용하고 밥을 먹을 만큼만 짓기. 남은 밥은 먹을 만큼씩 나눠 냉동하기<br>
-													1일 평균 보온시간 약0시간(2018년 가구에너지 상설표본조사 결과)
+													<%=dm_dao.dm_value(day + 1)%>
 												</p>
 											</article>
 										</div>
@@ -407,6 +409,11 @@
 
 	<!--End of feature Section -->
 	<hr />
+
+
+
+
+
 
 	<!-- Study Section -->
 	<section id="study" class="study text-center wow fadeIn"
@@ -642,17 +649,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 	<!-- Pricing Section -->
 	<section id="pricing" class="pricing">
 		<div class="container">
@@ -670,21 +666,22 @@
 					<div class="col-md-4 col-sm-6">
 						<div class="single_pricing">
 							<div class="pricing_head">
-								<h3>STARTER</h3>
+								<h3>어스 앤 런</h3>
 								<div class="pricing_price">
-									<div class="p_r text-center">$19</div>
-									<div class="m_t text-center">per month</div>
+									<div class="p_r text-center">free</div>
+
 								</div>
 							</div>
 
 							<div class="pricing_body">
 								<ul>
-									<li>Competition Analysis Methods</li>
-									<li>All Ranked URLs</li>
-									<li>International Support System</li>
-									<li>Social Media Tracking</li>
+									<li> 무심코 지나쳤던 플라스틱 쓰레기, 
+									<br>더 돌아다니지 않게 함께 주워볼까요?
+									<br> 공원, 하천, 아파트 단지 어디든 상관없어요!
+									</li>
+
 								</ul>
-								<a href="" class="btn btn-md">CHOOSE PLAN</a>
+								<a href="" class="btn btn-md">JOIN US</a>
 							</div>
 						</div>
 					</div>
@@ -692,21 +689,20 @@
 					<div class="col-md-4 col-sm-6">
 						<div class="single_pricing pricing_business">
 							<div class="pricing_head ">
-								<h3>PREMIUM</h3>
+								<h3>채소 한끼,최소 한끼</h3>
 								<div class="pricing_price">
-									<div class="p_r text-center">$39</div>
-									<div class="m_t text-center">per month</div>
+									<div class="p_r text-center">free</div>
 								</div>
 							</div>
 
 							<div class="pricing_body">
 								<ul>
-									<li>Competition Analysis Methods</li>
-									<li>All Ranked URLs</li>
-									<li>International Support System</li>
-									<li>Social Media Tracking</li>
+									<li> 오늘 내가 고기 대신 선택한 '채소한 끼'로 
+									<br>점점 심각해져 가는 기후위기를 막을 수 있다면, 
+									<br>어떨까요?</li>
+
 								</ul>
-								<a href="" class="btn btn-md">CHOOSE PLAN</a>
+								<a href="" class="btn btn-md">JOIN US</a>
 							</div>
 						</div>
 					</div>
@@ -714,21 +710,21 @@
 					<div class="col-md-4 col-sm-6">
 						<div class="single_pricing">
 							<div class="pricing_head">
-								<h3>BUSINESS</h3>
+								<h3>분바스틱</h3>
 								<div class="pricing_price">
-									<div class="p_r text-center">$99</div>
-									<div class="m_t text-center">per month</div>
+									<div class="p_r text-center">free</div>
+
 								</div>
 							</div>
 
 							<div class="pricing_body">
 								<ul>
-									<li>Competition Analysis Methods</li>
-									<li>All Ranked URLs</li>
-									<li>International Support System</li>
-									<li>Social Media Tracking</li>
+									<li>페트병의 라벨과 뚜껑링을
+									<br>쉽게 뜯어 분리배출을
+									<br>시작해 볼까요?</li>
+
 								</ul>
-								<a href="" class="btn btn-md">CHOOSE PLAN</a>
+								<a href="" class="btn btn-md">JOIN US</a>
 							</div>
 						</div>
 					</div>
@@ -861,7 +857,7 @@
 							<div class="col-sm-12">
 								<h2>게시판</h2>
 								<h4>사람들의 소리를 들어보세요</h4>
-								<a href="" class="btn btn-lg">Comminuty Board</a>
+								<a href="" class="btn btn-lg">소리 듣기</a>
 							</div>
 						</div>
 					</div>
@@ -883,8 +879,7 @@
 								<div class="single_counter border_right">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											<i class="../images/f_icon.png"></i>
-											<!-- <img src=""> -->
+
 											<h2 class="statistic-counter">3891</h2>
 											<h4 class="">즐겨찾기</h4>
 										</div>
@@ -894,7 +889,7 @@
 								<div class="single_counter">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											<i class="icon icon-business-3"></i>
+
 											<h2 class="statistic-counter">281</h2>
 											<h4 class="">24시간 포스팅 수</h4>
 										</div>
@@ -904,7 +899,7 @@
 								<div class="single_counter">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											<i class="icon icon-people-32"></i>
+
 											<h2 class="statistic-counter">618</h2>
 											<h4 class="">전체 포스팅 수</h4>
 										</div>
@@ -915,7 +910,7 @@
 								<div class="single_counter">
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
-											<i class="icon icon-cup"></i>
+
 											<h2 class="statistic-counter">178</h2>
 											<h4 class="">특징 수</h4>
 
@@ -953,8 +948,9 @@
 									</div>
 									<div class="single_team_text">
 										<h4>김국중</h4>
+										<br>
 										<p id="team_list">
-											프로젝트 총괄,<br> 프론트, 백앤드, DB
+											<br>프로젝트 총괄,<br> 프론트, 백앤드, DB
 										</p>
 									</div>
 								</li>
@@ -964,8 +960,9 @@
 									</div>
 									<div class="single_team_text">
 										<h4>김지나</h4>
+										<br>
 										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+											<br>데이터 전처리 및<br> 분석, 프론트, 백앤드. DB
 										</p>
 									</div>
 								</li>
@@ -975,8 +972,9 @@
 									</div>
 									<div class="single_team_text">
 										<h4>박준영</h4>
+										<br>
 										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+											<br>데이터 전처리 및<br> 분석, 프론트, 백앤드. DB
 										</p>
 									</div>
 								</li>
@@ -986,8 +984,9 @@
 									</div>
 									<div class="single_team_text">
 										<h4>박진주</h4>
+										<br>
 										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+											<br>데이터 전처리 및<br> 분석, 프론트, 백앤드. DB
 										</p>
 									</div>
 								</li>
@@ -997,8 +996,9 @@
 									</div>
 									<div class="single_team_text">
 										<h4>이혜원</h4>
+										
 										<p id="team_list">
-											데이터 전처리 및 분석,<br> 프론트, 백앤드. DB
+										<br>데이터 전처리 및<br> 분석, 프론트, 백앤드. DB
 										</p>
 									</div>
 								</li>
@@ -1036,8 +1036,13 @@
 							<div class="col-sm-6 col-xs-12">
 								<div class="copyright_text">
 									<p class=" wow fadeInRight" data-wow-duration="1s">
+<<<<<<< HEAD
 										Made with <i class="fa fa-heart"></i> by 
 										<a href="http://bootstrapthemes.co">깐부  김국중 김지나 박준영 박진주 이혜원</a>
+=======
+										Made with <i class="fa fa-heart"></i> by <a
+											href="http://bootstrapthemes.co">깐부 김국종 김지나 박준영 박진주 이혜원</a>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 									</p>
 								</div>
 							</div>
