@@ -653,7 +653,7 @@
 										</div>
 									</div>
 									<!--  전체 기사 보기로 이동 -->
-									<a href="DailyNews.jsp" class="btn_article_daily btn_lg_article_daily" >전체 기사</a>
+									<a href="News.jsp" class="btn_article_daily btn_lg_article_daily" >전체 기사</a>
 								</div>
 							</div>
 						</div>
