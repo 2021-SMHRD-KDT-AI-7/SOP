@@ -723,7 +723,7 @@
 
 }
    	.main_menu_bg{
-    margin-top: 20px;
+    margin-top: -20px;
     background-color :transparent;
 }
 .main_menu_bg .navbar-default{
