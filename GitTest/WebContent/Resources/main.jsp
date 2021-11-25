@@ -65,7 +65,11 @@
 												class="icon-bar"></span>
 										</button>
 										<a class="navbar-brand" href="#home"> 
+<<<<<<< HEAD
 										<img src="assets/images/logo.png" />
+=======
+										<img src="assets/images/logo1.png" />
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 										</a>
 									</div>
 

@@ -7,15 +7,8 @@ public class MemberDTO {
 	private String mb_name;
 	private String mb_nickname;
 	private String mb_birthdate;
-	
-	public MemberDTO (String mb_id,String mb_pwd) {
-		this.mb_id = mb_id;
-		this.mb_pwd = mb_pwd;
-	}
-
-
 	private String mb_addr;
-	private String mb_point;
+	private int mb_point;
 	private String mb_email;
 	private String mb_phone;
 	private String mb_gender;
@@ -24,10 +17,14 @@ public class MemberDTO {
 	private String mb_joindate;
 	private String admin_yn;
 	
+	public MemberDTO (String mb_id,String mb_pwd) {
+		this.mb_id = mb_id;
+		this.mb_pwd = mb_pwd;
+	}
 	
 	public MemberDTO(String mb_id, String mb_pwd, String mb_name, String mb_nickname, String mb_birthdate,
-			String mb_addr, String mb_point, String mb_email, String mb_phone, String mb_gender, String mb_path,
-			String mb_grade, String mb_joindate, String admin_yn) {
+			String mb_addr, int mb_point, String mb_email, String mb_phone, String mb_gender, String mb_path,
+			String mb_grade, String mb_joindate) {
 		this.mb_id = mb_id;
 		this.mb_pwd = mb_pwd;
 		this.mb_name = mb_name;
@@ -41,12 +38,10 @@ public class MemberDTO {
 		this.mb_path = mb_path;
 		this.mb_grade = mb_grade;
 		this.mb_joindate = mb_joindate;
-		this.admin_yn = admin_yn;
 	}
 	
 	
-
-
+	
 	public MemberDTO(String mb_id, String mb_pwd, String mb_nickname) {
 		this.mb_id = mb_id;
 		this.mb_pwd = mb_pwd;
@@ -121,12 +116,12 @@ public class MemberDTO {
 	}
 
 
-	public String getMb_point() {
+	public int getMb_point() {
 		return mb_point;
 	}
 
 
-	public void setMb_point(String mb_point) {
+	public void setMb_point(int mb_point) {
 		this.mb_point = mb_point;
 	}
 
