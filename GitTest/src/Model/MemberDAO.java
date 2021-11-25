@@ -101,9 +101,20 @@ public class MemberDAO {
 			if (rs.next()) {
 				String mb_id = rs.getString("mb_id");
 				String mb_pwd = rs.getString("mb_pwd");
-				String mb_nickname = rs.getNString("mb_nickname");
+				String mb_name = rs.getString("mb_name");
+				String mb_nickname = rs.getString("mb_nickname");
+				String mb_birthdate = rs.getString("mb_birthdate");
+				String mb_addr = rs.getString("mb_addr");
+				int mb_point = rs.getInt("mb_point");
+				String mb_email = rs.getString("mb_email");
+				String mb_phone = rs.getString("mb_phone");
+				String mb_gender = rs.getString("mb_gender");
+				String mb_path = rs.getString("mb_path");
+				String mb_grade = rs.getString("mb_grade");
+				String mb_joindate = rs.getString("mb_joindate");
 				
-				dto = new MemberDTO(mb_id, mb_pwd, mb_nickname);
+				
+				dto = new MemberDTO(mb_id, mb_pwd, mb_name, mb_nickname, mb_birthdate, mb_addr, mb_point, mb_email, mb_phone, mb_gender, mb_path, mb_grade, mb_joindate);
 			}
 
 		} catch (Exception e) {

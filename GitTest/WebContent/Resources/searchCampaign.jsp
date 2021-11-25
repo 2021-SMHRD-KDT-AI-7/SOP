@@ -43,10 +43,13 @@
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
 	<%
-		request.setCharacterEncoding("euc-kr");
+	request.setCharacterEncoding("euc-kr");
 	CampaignDAO dao = new CampaignDAO();
 	MemberDTO info = (MemberDTO) session.getAttribute("info");
-	String get_id = info.getMb_id();
+	String get_id = "";
+	if(info != null){
+	get_id = info.getMb_id();
+	}
 	ArrayList<CampaignDTO> list = dao.getSearch(request.getParameter("searchText"));
 
 
@@ -161,11 +164,13 @@
 													<div class="row">
 														<form method="post" name="search"
 															action="searchCampaign.jsp">
-															<table class="pull-right">
+															<table class="pull-right" style="width : 800px !important; margin-left : 200px;">
 																<tr>
 																	<td><input type="text" class="form-control"
-																		placeholder="검색어 입력" name="searchText" maxlength="100"></td>
-																	<td><button type="submit" class="btn btn-success">검색</button></td>
+																		placeholder="검색어 입력" name="searchText" maxlength="100"
+																		tabindex="0" style = "width : 40%; margin-left : 350px;"></td>
+																	<td><button type="submit" class="btn btn-success"
+																	style = "margin-top : 0px;">검색</button></td>
 																</tr>
 
 															</table>

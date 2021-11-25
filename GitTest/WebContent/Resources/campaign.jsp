@@ -42,9 +42,9 @@
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
 	<%
-		CampaignDAO dao = new CampaignDAO();
+	CampaignDAO dao = new CampaignDAO();
 	MemberDTO info = (MemberDTO) session.getAttribute("info");
-	String get_id = null;
+	String get_id = "";
 	ArrayList<CampaignDTO> c_list = dao.viewBoard(get_id);
 	if(info != null){
 		get_id = info.getMb_id();
@@ -74,8 +74,12 @@
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
-										<a class="navbar-brand" href="index.html"> <img
-											src="assets/images/sopsop.jpg" />
+										<%if(info != null){ %>
+										<a class="navbar-brand" href="index.jsp"> <img src="assets/images/sopsop.jpg" />
+										<%}else{ %>
+										<a class="navbar-brand" href="main.jsp"> <img src="assets/images/sopsop.jpg" />
+										<%} %>
+											
 										</a>
 									</div>
 
@@ -144,12 +148,12 @@
 												<div>
 														<div class="row">
 															<form method="post" name="search" action="searchCampaign.jsp">
-																<table class="pull-right">
+																<table class="pull-right" style="width : 800px !important; margin-left : 200px;">
 																	<tr>
 																		<td><input type="text" class="form-control"
 																			placeholder="검색어 입력" name="searchText"
-																			maxlength="100"></td>
-																		<td><button type="submit" class="btn btn-success">검색</button></td>
+																			maxlength="100" tabindex="0" style = "width : 40%; margin-left : 350px;"></td>
+																		<td><button type="submit" class="btn btn-success" style = "margin-top : 0px;">검색</button></td>
 																	</tr>
 
 																</table>
@@ -157,10 +161,11 @@
 														</div>
 												</div>
 
-												<a href="index.html"><button id="writer">홈으로가기</button></a>
 												<%if(info != null){ %>
+												<a href="index.jsp"><button id="writer">홈으로가기</button></a>
 												<a href="campaign_write.jsp"><button id="writer">작성하러가기</button></a>
 												<%}else{ %>
+												<a href="main.jsp"><button id="writer">홈으로가기</button></a>
 												<a onclick="alert('로그인을 해주세요');"><button id="writer">작성하러가기</button></a>
 												<%} %>
 											</div>

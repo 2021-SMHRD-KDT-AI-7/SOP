@@ -237,8 +237,9 @@
 													<div class="form-group">
 														<ul>
 															<fieldset>
-																<p><%=info.getMb_nickname()%>
-																	¥‘
+																<p><%=info.getMb_nickname()%>¥‘<br>
+																<%= info.getMb_point()%> ¡°¿‘¥œ¥Ÿ!<br>
+																<%= info.getMb_grade() %> 
 																</p>
 															</fieldset>
 
