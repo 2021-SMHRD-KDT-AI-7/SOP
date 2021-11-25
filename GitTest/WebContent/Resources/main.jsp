@@ -413,7 +413,7 @@
 		data-wow-duration="2s" data-wow-dealy="1.5s">
 		<div class="container">
 			<div class="row">
-				<div class="main_study_area sections">
+				<div class="main_study_area sections" style="height:1050px;">
 					<div class="head_title text-center">
 						<h2>데일리 환경 기사</h2>
 						<div class="subtitle">환경과 관련된 뉴스 기사를 만나보세요!</div>
@@ -1037,7 +1037,7 @@
 								<div class="copyright_text">
 									<p class=" wow fadeInRight" data-wow-duration="1s">
 										Made with <i class="fa fa-heart"></i> by 
-										<a href="http://bootstrapthemes.co">깐부  김국종 김지나 박준영 박진주 이혜원</a>
+										<a href="http://bootstrapthemes.co">깐부  김국중 김지나 박준영 박진주 이혜원</a>
 									</p>
 								</div>
 							</div>

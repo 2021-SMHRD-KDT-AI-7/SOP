@@ -48,6 +48,22 @@
 	<%
 		request.setCharacterEncoding("euc-kr");
 	MemberDTO info = (MemberDTO) session.getAttribute("info");
+
+	int point = info.getMb_point();
+	String grade = "";
+	if (point >= 500) {
+		grade = "챌린저";
+	} else if (point >= 300) {
+		grade = "다이아";
+	} else if (point >= 180) {
+		grade = "플래티넘";
+	} else if (point >= 80) {
+		grade = "골드";
+	} else if (point >= 30) {
+		grade = "실버";
+	} else {
+		grade = "브론즈";
+	}
 	%>
 
 	<div class='preloader'>
@@ -71,8 +87,8 @@
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
-										<a class="navbar-brand" href="#home"> 
-										<img src="assets/images/sopsop.jpg" />
+										<a class="navbar-brand" href="#home"> <img
+											src="assets/images/sopsop.jpg" />
 										</a>
 									</div>
 
@@ -100,6 +116,7 @@
 												} else {
 											%>
 											<li><a href="../LogoutCon">로그아웃</a></li>
+											<li><a href="#contact">내 정보</a></li>
 											<%
 												}
 											%>
@@ -238,8 +255,9 @@
 														<ul>
 															<fieldset>
 																<p><%=info.getMb_nickname()%>님<br>
-																<%= info.getMb_point()%> 점입니다!<br>
-																<%= info.getMb_grade() %> 
+																	<%=info.getMb_point()%>
+																	점입니다!<br>
+																	<%=grade%>등급입니다!!
 																</p>
 															</fieldset>
 
@@ -251,8 +269,8 @@
 											</div>
 
 											<div class="col-sm-12">
-												<a href="mypage.jsp" class="btn btn-lg"> 마이페이지 </a>
-												<input type="submit" value="로그아웃" class="btn btn-lg">
+												<a href="mypage.jsp" class="btn btn-lg"> 마이페이지 </a> <input
+													type="submit" value="로그아웃" class="btn btn-lg">
 											</div>
 										</div>
 									</form>
@@ -655,7 +673,8 @@
 										</div>
 									</div>
 									<!--  전체 기사 보기로 이동 -->
-									<a href="News.jsp" class="btn_article_daily btn_lg_article_daily" >전체 기사</a>
+									<a href="News.jsp"
+										class="btn_article_daily btn_lg_article_daily">전체 기사</a>
 								</div>
 							</div>
 						</div>
@@ -854,7 +873,7 @@
 	<section id="clogo" class="clogo">
 		<div class="container">
 			<div class="row">
-			
+
 				<div class="main_clogo sections_weather text-center">
 					<div class="head_title text-center">
 						<h2>국내 이상기후 사례</h2>

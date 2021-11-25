@@ -16,7 +16,6 @@ import Model.MemberDAO;
 public class JoinServiceCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		System.out.println("[JoinServiceCon]");
 
 		// 1. post 방식 인코딩
 		request.setCharacterEncoding("EUC-KR");
