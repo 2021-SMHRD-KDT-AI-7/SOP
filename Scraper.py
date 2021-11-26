@@ -16,13 +16,19 @@ soup = BeautifulSoup(html, 'html.parser')
 
 # 기사 제목
 article_title = soup.select('h4.article-title')
+article_content = soup.select('p.article-prologue>a')
 
-data = {}
+titleData = {}
 
-for title in article_title:   
-    name = title.find_all('a')[0].text
-    url = 'http:'+title.find('a')['href']
-    data[name] = url
+for title1 in article_title:   
+    name = title1.find_all('a')[0].text
+    url = 'http:'+title1.find('a')['href']
+    titleData[name] = url
+    
+for title2 in article_content:   
+    name = title2.find_all('a')[0].text
+    url = 'http:'+title2.find('a')['href']
+    contentData[name] = url
     
 with open(os.path.join(BASE_DIR, 'news.json'), 'w+',encoding='utf-8') as json_file:
     json.dump(data, json_file, ensure_ascii = False, indent='\t')
