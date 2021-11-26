@@ -237,20 +237,16 @@ public class CommunityDAO {
    }
    
  //글 포인트 update 메소드
-   public int articleUp(String mb_id) {
+   public int articleUp(String mb_id, int mb_point) {
       getConn();
+      
+      mb_point += 10;
       
       try {
          
          String sql="update t_member set mb_point=? where mb_id=?";
          
          psmt=conn.prepareStatement(sql);
-         
-         
-         MemberDTO dto = new MemberDTO(mb_id);
-         
-         
-         int mb_point = dto.getMb_point()+10;
          
          psmt.setInt(1, mb_point);
          psmt.setString(2, mb_id);
