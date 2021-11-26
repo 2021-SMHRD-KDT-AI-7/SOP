@@ -18,15 +18,11 @@
 		<header>
 			<!--NAVER LOGO-->
 			<div class="logo">
-<<<<<<< HEAD
-				<a href="http://localhost:8081/GitTest/Resources/index.html"
-					target="_blank" title="SOP 权其捞瘤">
-					<img src="logo1.png" class="image"></a>
-=======
+
 				<a href="http://localhost:8081/GitTest/Resources/index.jsp"
-					target="_blank" title="SOP 权其捞瘤"><img src="sop.JPG"
-					class="image"></a>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
+					target="_blank" title="SOP 权其捞瘤">
+					<img src="assets/images/logo1.png"  class="image"></a>
+
 			</div>
 		</header>
 
