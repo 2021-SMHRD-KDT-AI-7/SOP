@@ -5,20 +5,21 @@ public class NewsDTO {
 	private int news_seq;
 	private String news_title;
 	private String news_content;
-	private String mb_id;
 	private String reg_date;
 	private String news_url;
-	
-	
-	public NewsDTO(int news_seq, String news_title, String news_content, String mb_id, String reg_date,
-			String news_url) {
+	private String img_url;
+
+	public NewsDTO(int news_seq, String news_title, String news_content, String reg_date, String news_url,
+			String img_url) {
+		super();
 		this.news_seq = news_seq;
 		this.news_title = news_title;
 		this.news_content = news_content;
-		this.mb_id = mb_id;
 		this.reg_date = reg_date;
 		this.news_url = news_url;
+		this.img_url = img_url;
 	}
+	
 	public int getNews_seq() {
 		return news_seq;
 	}
@@ -37,12 +38,6 @@ public class NewsDTO {
 	public void setNews_content(String news_content) {
 		this.news_content = news_content;
 	}
-	public String getMb_id() {
-		return mb_id;
-	}
-	public void setMb_id(String mb_id) {
-		this.mb_id = mb_id;
-	}
 	public String getReg_date() {
 		return reg_date;
 	}
@@ -55,5 +50,15 @@ public class NewsDTO {
 	public void setNews_url(String news_url) {
 		this.news_url = news_url;
 	}
+	public String getImg_url() {
+		return img_url;
+	}
+	public void setImg_url(String img_url) {
+		this.img_url = img_url;
+	}
+	
+
+	
+	
 	
 }
