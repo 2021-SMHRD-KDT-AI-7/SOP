@@ -53,7 +53,6 @@ public class NewsDAO {
 					rs=psmt.executeQuery();
 					
 					if(rs.next()) {
-						System.out.println(rs.getInt(1));
 						return rs.getInt(1);
 					}			
 				} catch(Exception e) {

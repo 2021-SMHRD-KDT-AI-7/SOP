@@ -135,33 +135,63 @@
  -->
 <%
    // len(현재 페이지의 기사 인덱스 구하기)
-   int len = pageNumber;
-   for(int i = 1; i < pageNumber; i++){
-      len += 4;
-   }
-   for(int i =len; i< len+5; i++){
-%>
-      <div class="list ">
-         <div class="article-area">
-            <span class="article-photo"> 
-            <a href="<%=news_list.get(i-1).getNews_url()%>">
-               <img src="<%=news_list.get(i-1).getImg_url() %>"
-                  alt=""
-                  title=""></a>
-            </span> <strong class="category"> </strong>
-            <h4 class="article-title">
-               <a
-                  href="<%=news_list.get(i-1).getNews_url()%>"><%=news_list.get(i-1).getNews_title()%></a>
-            </h4>
-            <p class="article-prologue">
-               <a
-                  href="<%=news_list.get(i-1).getNews_url()%>"><%=news_list.get(i-1).getNews_content() %></a> <br>
-               <span class="date"><%=news_list.get(i-1).getReg_date()%></span>
-            </p>
-         </div>
-      </div>
-<%} %>
-      
+	int len = pageNumber;
+	int page_count = dao.getCount();
+	int n = (int)((dao.getCount() / 5) + 1);
+
+	 for(int i = 1; i < pageNumber; i++){ // 콘텐츠 시작 인덱스 구하기
+	      len += 4;
+	 }
+
+	if((page_count / (len*5)) != 0){ // 테이블의 총 행의 개수 / 최대 페이지 수 != 최대 페이지 수 +1 -->  현재 마지막 페이지가 아니면 실행
+		for(int i =len; i< len+5; i++){
+			%>
+			      <div class="list ">
+			         <div class="article-area">
+			            <span class="article-photo"> 
+			            <a href="<%=news_list.get(i-1).getNews_url()%>">
+			               <img src="<%=news_list.get(i-1).getImg_url() %>"
+			                  alt=""
+			                  title=""></a>
+			            </span> <strong class="category"> </strong>
+			            <h4 class="article-title">
+			               <a
+			                  href="<%=news_list.get(i-1).getNews_url()%>"><%=news_list.get(i-1).getNews_title()%></a>
+			            </h4>
+			            <p class="article-prologue">
+			               <a
+			                  href="<%=news_list.get(i-1).getNews_url()%>"><%=news_list.get(i-1).getNews_content() %></a> <br>
+			               <span class="date"><%=news_list.get(i-1).getReg_date()%></span>
+		            </p>
+		         </div>
+		      </div>
+		<%} 
+	}else{  // 테이블의 총 행의 개수 / 최대 페이지 수 == 최대 페이지 수 --> 참이면 현재 최대 페이지에 있음.
+		for(int i = len; i <= page_count; i++){
+			%>
+		      <div class="list ">
+		         <div class="article-area">
+		            <span class="article-photo"> 
+		            <a href="<%=news_list.get(i-1).getNews_url()%>">
+		               <img src="<%=news_list.get(i-1).getImg_url() %>"
+		                  alt=""
+		                  title=""></a>
+		            </span> <strong class="category"> </strong>
+		            <h4 class="article-title">
+		               <a
+		                  href="<%=news_list.get(i-1).getNews_url()%>"><%=news_list.get(i-1).getNews_title()%></a>
+		            </h4>
+		            <p class="article-prologue">
+		               <a
+		                  href="<%=news_list.get(i-1).getNews_url()%>"><%=news_list.get(i-1).getNews_content() %></a> <br>
+		               <span class="date"><%=news_list.get(i-1).getReg_date()%></span>
+			            </p>
+			         </div>
+			      </div>
+			<%}
+	}
+	%>
+
    </div>
    <div>
       <div id="search_form">
@@ -204,7 +234,6 @@
                }
             %>
             <% // 페이징 숫자 표시
-               int n = (int)(dao.getCount() / 4 + 1);
                for (int i = 1; i <= n; i++) {
             %>
                <a class="selected" href="News.jsp?pageNumber=<%=i%>"><%=i%>
@@ -213,11 +242,11 @@
                }
             %>
             <%
-               //if (dao.nextPage(pageNumber + 1)) {//다음페이지가 존재하는ㄱ ㅏ
+               if (page_count / (pageNumber*5) != 0) {// 마지막 페이지가 아니면 참
             %>
             <a class="next" href="News.jsp?pageNumber=<%=pageNumber + 1%>">다음</a>
             <%
-               
+               }
             %>
 </div>
          </div>
@@ -244,8 +273,7 @@
                         <div class="copyright_text">
                            <p class=" wow fadeInRight" data-wow-duration="1s">
                               Made with <i class="fa fa-heart"></i> by <a
-                                 href="http://bootstrapthemes.co">Bootstrap Themes</a>2016.
-                              All Rights Reserved
+                                 href="http://bootstrapthemes.co">깐부 김국중 김지나 박준영 박진주 이혜원</a>
                            </p>
                         </div>
                      </div>
