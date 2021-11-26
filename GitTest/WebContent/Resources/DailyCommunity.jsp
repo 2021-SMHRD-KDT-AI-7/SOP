@@ -51,11 +51,10 @@ p.c_2 {
 </style>
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
-	<% 
-	CommunityDAO dao = new CommunityDAO();
+	<%
+		CommunityDAO dao = new CommunityDAO();
 	ArrayList<CommunityDTO> b_list = dao.viewBoard();
 	MemberDTO info = (MemberDTO) session.getAttribute("info");
-	
 	%>
 	<div class='preloader'>
 		<div class='loaded'>&nbsp;</div>
@@ -118,7 +117,7 @@ p.c_2 {
 
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms"
 											style="margin-bottom: 300px;">
-
+											<p> 데일리 미션 인증 게시판</p>
 
 											<div id='c_up'
 												style="width: 200px; float: left; margin-left: -55px;">
@@ -152,7 +151,7 @@ p.c_2 {
 												</form>
 											</div>
 											<div id="board2">
-												<table id="list">
+												<table id="list" style = "margin-top:110px !important;">
 													<tr>
 														<td>번호</td>
 														<td>제목</td>

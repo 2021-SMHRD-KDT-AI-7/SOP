@@ -25,9 +25,6 @@ public class WriterCampaignServiceCon extends HttpServlet {
 		
 		String saveDirectory = "C:/Users/smhrd/git/SOP/GitTest/WebContent/Resources/image";
 		
-		System.out.println(saveDirectory);
-		
-		
 		int maxSize = 1024 * 1024 * 10;
 		String encoding = "euc-kr";
 		

@@ -1,3 +1,4 @@
+<%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -40,7 +41,11 @@
 
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
-<body data-spy="scroll" data-target=".navbar-collapse">
+<body data-spy="scroll" data-target=".navbar-collapse" style="color:black;">
+
+<%
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
+%>
 
    <div class='preloader'>
       <div class='loaded'>&nbsp;</div>
@@ -63,9 +68,11 @@
                                     class="icon-bar"></span> <span class="icon-bar"></span> <span
                                     class="icon-bar"></span>
                               </button>
-                              <a class="navbar-brand" href="#home"> 
-                              <img src="assets/images/logo1.png" />
-                              </a>
+                              <%if(info != null){ %>
+									<a class="navbar-brand" href="index.jsp"> <img src="assets/images/logo1.png" /></a>
+								<%}else{%>
+									<a class="navbar-brand" href="main.jsp"> <img src="assets/images/logo1.png" /></a>
+								<%} %>
                            </div>
 
                            <!-- Collect the nav links, forms, and other content for toggling -->
@@ -74,11 +81,6 @@
 
                            <div class="collapse navbar-collapse"
                               id="bs-example-navbar-collapse-1">
-
-                              <ul class="nav navbar-nav navbar-right">
-                                 <li><a href="index.html">HOME</a></li>
-                              </ul>
-
 
                            </div>
 
@@ -132,6 +134,7 @@
 															<option value="15">전라북도</option>
 															<option value="16">전라남도</option>
 															<option value="17">제주도</option>
+															<option value="18">미션인증</option>
 														</select>
 													</div>
                                        <div class="form-group">
@@ -142,6 +145,7 @@
                                           <input type="text" class="form-control" id="title"
                                              placeholder="제목 입력(4-100)" name="article_title" maxlength="100"
                                              required="required" pattern=".{4,100}">
+                                           <input type="hidden" class="class" name="mb_id" id="id" value=<%= info.getMb_id() %>>
                                        </div>
                                        <div class="form-group">
                                           <label for="content">내용</label>
@@ -151,17 +155,13 @@
                                              name="article_content" placeholder="내용 작성" wrap="off"></textarea>
                                        </div>
                                        <div class="form-group">
-                                          <label for="writer">작성자</label> <input type="text"
-                                             class="form-control" id="writer"
-                                             placeholder="작성자(2자-10자)" name="mb_id">
-                                       </div>
-                                       <div class="form-group">
                                           <label for="writer">파일등록</label>
                                           <input name = "article_file1" type="file" style="float: right;">
                                           <input name = "article_file2" type="file" style="float: right;">                                          
                                           <input name = "article_file3" type="file" style="float: right;">                                          
                                        </div>
                                        <button type="submit" class="btn btn-default">등록</button>
+                                       
                                     </form>
                                  </div>
 

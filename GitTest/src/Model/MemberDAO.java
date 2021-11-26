@@ -116,6 +116,9 @@ public class MemberDAO {
 				dto = new MemberDTO(mb_id, mb_pwd, mb_name, mb_nickname, mb_birthdate, mb_addr, mb_point, mb_email,
 						mb_phone, mb_gender, mb_path, mb_grade, mb_joindate);
 			}
+			else {
+				dto = null;
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -239,5 +242,35 @@ public class MemberDAO {
 
 		return cnt;
 	}
+	
+	// 포인트 가져오는 메소드
+	public int point(String mb_id) {
+		
+		getConn();
+		int mb_point = 0;
+		
+		try {
+
+			String sql = "select mb_point from t_member where mb_id =?";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, mb_id);
+
+			rs = psmt.executeQuery();
+			
+			if(rs.next()) {
+				mb_point = rs.getInt("mb_point");
+			} 
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {// 무조건 실행
+			DBclose();
+		}
+		
+		return mb_point; 
+	}
+
 
 }
