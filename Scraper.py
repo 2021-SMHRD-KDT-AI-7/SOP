@@ -25,15 +25,15 @@ data = {}
 for title1 in article_title:   
     name = title1.find_all('a')[0].text #db title 컬럼명
     url = 'http:'+title1.find('a')['href'] # db url 컬럼명
-    Data[name] = url
+    data[name] = url
     
 for title2 in article_content:   
     name = title2.find_all('a')[0].text
     url = 'http:'+title2.find('a')['href']
-    Data[name] = url
+    data[name] = url
     
 with open(os.path.join(BASE_DIR, 'news.json'), 'w+',encoding='utf-8') as json_file:
-    json.dump(Data, json_file, ensure_ascii = False, indent='\t')
+    json.dump(data, json_file, ensure_ascii = False, indent='\t')
 
 
 print('뉴스기사 스크래핑 끝')
