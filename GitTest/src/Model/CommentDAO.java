@@ -94,6 +94,34 @@ public class CommentDAO {
 			}return cnt;
 		}
 		
+		//댓글 포인트 update 메소드
+		   public int commentUp(String mb_id, int mb_point) {
+		      getConn();
+		      
+		      mb_point += 1;
+		      
+		      try {
+		         
+		         String sql="update t_member set mb_point=? where mb_id=?";
+		         
+		         psmt=conn.prepareStatement(sql);
+		         
+		         psmt.setInt(1, mb_point);
+		         psmt.setString(2, mb_id);
+		         
+		         System.out.println(mb_point);
+		         System.out.println(mb_id);
+		         
+		         cnt=psmt.executeUpdate();
+		         
+		      } catch (Exception e) {
+		         e.printStackTrace();
+		      }finally {
+		         dbClose();
+		      }return 0;
+		      
+		   }
+		   
 		
 		
 	

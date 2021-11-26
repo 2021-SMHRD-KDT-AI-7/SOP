@@ -28,11 +28,12 @@
 				<!--아이디,비번,비번재확인-->
 
 				<h3>아이디</h3>
-				<span class="signup-input"> <input id="mb_id" type="text" name="mb_id"></input>
+				<span class="signup-input">
+				 <input id="mb_id" type="text" name="mb_id" style="border:none"; ></input>
 				</span>
 
 				<h3>비밀번호</h3>
-				<span class="signup-input"> <input id="mb_pwd" type="password" name="mb_pwd"></input>
+				<span class="signup-input"> <input id="mb_pwd" type="password" name="mb_pwd" style="border:none";></input>
 					<span class="pw-lock"></span>
 				</span>
 
@@ -43,7 +44,7 @@
 			<div style="margin-top: 35px;">
 				<!--이름,닉네임,주소,생년월일,성별,이메일-->
 				<h3>이름</h3>
-				<span class="signup-input"> <input id="mb_name" type="text" name="mb_name"></input>
+				<span class="signup-input"> <input id="mb_name" type="text" name="mb_name" ></input>
 				</span>
 
 				<h3>닉네임</h3>

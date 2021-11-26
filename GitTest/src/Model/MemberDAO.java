@@ -242,5 +242,35 @@ public class MemberDAO {
 
 		return cnt;
 	}
+	
+	// 포인트 가져오는 메소드
+	public int point(String mb_id) {
+		
+		getConn();
+		int mb_point = 0;
+		
+		try {
+
+			String sql = "select mb_point from t_member where mb_id =?";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, mb_id);
+
+			rs = psmt.executeQuery();
+			
+			if(rs.next()) {
+				mb_point = rs.getInt("mb_point");
+			} 
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {// 무조건 실행
+			DBclose();
+		}
+		
+		return mb_point; 
+	}
+
 
 }

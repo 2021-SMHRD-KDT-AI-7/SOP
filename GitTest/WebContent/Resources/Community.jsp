@@ -51,10 +51,11 @@ p.c_2 {
 </style>
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
-	<%
-		CommunityDAO dao = new CommunityDAO();
+	<% 
+	CommunityDAO dao = new CommunityDAO();
 	ArrayList<CommunityDTO> b_list = dao.viewBoard();
 	MemberDTO info = (MemberDTO) session.getAttribute("info");
+	
 	%>
 	<div class='preloader'>
 		<div class='loaded'>&nbsp;</div>

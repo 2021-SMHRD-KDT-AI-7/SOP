@@ -283,7 +283,9 @@
           // $('imput[type=text]').val('');
           /* alert(com) */
           insert_com(seq, com);
-         
+          // 댓글 세션 업데이트
+          request.getSession().removeAttribute("info");
+    	  request.getSession().setAttribute("info", info);
       }); 
       
       
