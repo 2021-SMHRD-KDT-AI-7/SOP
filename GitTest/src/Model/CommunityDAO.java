@@ -266,7 +266,7 @@ public class CommunityDAO {
    
  //페이징 메소드
  	public int getCount() {
- 			 
+ 			 // 작성자 : 준영
  			 getConn();
  				try {
  					String sql = "select count(*) from t_community";

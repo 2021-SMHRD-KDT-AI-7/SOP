@@ -21,4 +21,7 @@ update t_member set mb_point = 999 where mb_id = 'admin'
 where mb_id='junyoung7798'
 
 select count(*) from t_community
+select count(*) from t_campaign where cam_accept='Y'
+select * from t_campaign
+select * from t_member
 
