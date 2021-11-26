@@ -175,7 +175,7 @@ public class CommunityDAO {
 				}return cnt;
 			}
 			
-		// 댓글 업로드 메소드
+			// 댓글 업로드 메소드
 		
 			 public int cmt_upload(CommentDTO dto) {
 				 System.out.println("============");
@@ -200,5 +200,36 @@ public class CommunityDAO {
 						dbClose();
 					}return cnt;
 			 }
+			 
+			//글 포인트 update 메소드
+			    public int articleUp(String mb_id) {
+			       getConn();
+			       
+			       try {
+			          
+			          String sql="update t_member set mb_point=? where mb_id=?";
+			          
+			          psmt=conn.prepareStatement(sql);
+			          
+			          
+			          MemberDTO dto = new MemberDTO(mb_id);
+			          
+			          int mb_point = dto.getMb_point()+10;
+			          
+			          psmt.setInt(1, mb_point);
+			          psmt.setString(2, mb_id);
+			          
+			          System.out.println(mb_point);
+			          System.out.println(mb_id);
+			          
+			          cnt=psmt.executeUpdate();
+			          
+			       } catch (Exception e) {
+			          e.printStackTrace();
+			       }finally {
+			          dbClose();
+			       }return 0;
+			       
+			    }
 			 
 }
