@@ -20,20 +20,20 @@ article_content = soup.select('p.article-prologue')
 
 titleData = {}
 contentData = {}
+data = {}
 
 for title1 in article_title:   
-    name = title1.find_all('a')[0].text
-    url = 'http:'+title1.find('a')['href']
-    titleData[name] = url
+    name = title1.find_all('a')[0].text #db title 컬럼명
+    url = 'http:'+title1.find('a')['href'] # db url 컬럼명
+    Data[name] = url
     
 for title2 in article_content:   
     name = title2.find_all('a')[0].text
     url = 'http:'+title2.find('a')['href']
-    contentData[name] = url
+    Data[name] = url
     
 with open(os.path.join(BASE_DIR, 'news.json'), 'w+',encoding='utf-8') as json_file:
-    json.dump(titleData, json_file, ensure_ascii = False, indent='\t')
-with open(os.path.join(BASE_DIR, 'news1.json'), 'w+',encoding='utf-8') as json_file:
-    json.dump(contentData, json_file, ensure_ascii = False, indent='\t')
+    json.dump(Data, json_file, ensure_ascii = False, indent='\t')
+
 
 print('뉴스기사 스크래핑 끝')
