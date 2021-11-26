@@ -236,7 +236,7 @@ p.c_2 {
 													}
 												%>
 												<a href="Community.jsp"><button id="writer">뒤로가기</button></a>
-												<a href="Communitywrite.jsp"><button id="writer">작성하러가기</button></a>
+												<a href="CommunityWrite.jsp"><button id="writer">작성하러가기</button></a>
 											</div>
 
 										</div>

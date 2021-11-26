@@ -205,7 +205,7 @@ p.c_2 {
 												</div>
 												<%if(info != null){ %>
 												<a href="index.jsp"><button id="writer">홈으로가기</button></a>
-												<a href="Communitywrite.jsp"><button id="writer">작성하러가기</button></a>
+												<a href="CommunityWrite.jsp"><button id="writer">작성하러가기</button></a>
 												<%}else{ %>
 												<a href="main.jsp"><button id="writer">홈으로가기</button></a>
 												<a onclick="alert('로그인을 해주세요');"><button id="writer">작성하러가기</button></a>
