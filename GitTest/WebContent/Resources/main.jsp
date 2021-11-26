@@ -857,7 +857,7 @@
 							<div class="col-sm-12">
 								<h2>게시판</h2>
 								<h4>사람들의 소리를 들어보세요</h4>
-								<a href="" class="btn btn-lg">소리 듣기</a>
+								<a href="Community.jsp" class="btn btn-lg">소리 듣기</a>
 							</div>
 						</div>
 					</div>

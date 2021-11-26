@@ -26,9 +26,12 @@ public class LoginCon extends HttpServlet {
 		if(info != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("info", info);
+			response.sendRedirect("./Resources/index.jsp");
+		}
+		else {
+			response.sendRedirect("./Resources/main.jsp");
 		}
 		
-		response.sendRedirect("./Resources/index.jsp");
 	
 	}
 

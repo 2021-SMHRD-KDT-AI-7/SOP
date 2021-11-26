@@ -86,7 +86,7 @@
 										<%
 											if (info != null) {
 										%>
-										<a class="navbar-brand" href="main.jsp"> 
+										<a class="navbar-brand" href="index.jsp"> 
 										<img src="assets/images/logo1.png" />
 										</a>
 										<%
