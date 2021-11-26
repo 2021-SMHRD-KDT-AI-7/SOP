@@ -116,6 +116,9 @@ public class MemberDAO {
 				dto = new MemberDTO(mb_id, mb_pwd, mb_name, mb_nickname, mb_birthdate, mb_addr, mb_point, mb_email,
 						mb_phone, mb_gender, mb_path, mb_grade, mb_joindate);
 			}
+			else {
+				dto = null;
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -239,5 +242,7 @@ public class MemberDAO {
 
 		return cnt;
 	}
+	
+
 
 }

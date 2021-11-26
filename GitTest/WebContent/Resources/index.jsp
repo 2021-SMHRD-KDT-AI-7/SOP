@@ -47,23 +47,25 @@
 
 	<%
 		request.setCharacterEncoding("euc-kr");
-	MemberDTO info = (MemberDTO) session.getAttribute("info");
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
 
-	int point = info.getMb_point();
-	String grade = "";
-	if (point >= 500) {
-		grade = "챌린저";
-	} else if (point >= 300) {
-		grade = "다이아";
-	} else if (point >= 180) {
-		grade = "플래티넘";
-	} else if (point >= 80) {
-		grade = "골드";
-	} else if (point >= 30) {
-		grade = "실버";
-	} else {
-		grade = "브론즈";
-	}
+	
+		int point = info.getMb_point();
+		String grade = "";
+		if (point >= 500) {
+			grade = "챌린저";
+		} else if (point >= 300) {
+			grade = "다이아";
+		} else if (point >= 180) {
+			grade = "플래티넘";
+		} else if (point >= 80) {
+			grade = "골드";
+		} else if (point >= 30) {
+			grade = "실버";
+		} else {
+			grade = "브론즈";
+		}
+	
 	%>
 
 	<div class='preloader'>

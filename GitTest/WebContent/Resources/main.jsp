@@ -860,9 +860,15 @@
 					<div class="row">
 						<div class="main_trial">
 							<div class="col-sm-12">
+<<<<<<< HEAD
 								<h2>ê²Œì‹œíŒ</h2>
 								<h4>ì‚¬ëžŒë“¤ì˜ ì†Œë¦¬ë¥¼ ë“¤ì–´ë³´ì„¸ìš”</h4>
 								<a href="" class="btn btn-lg">ì†Œë¦¬ ë“£ê¸°</a>
+=======
+								<h2>°Ô½ÃÆÇ</h2>
+								<h4>»ç¶÷µéÀÇ ¼Ò¸®¸¦ µé¾îº¸¼¼¿ä</h4>
+								<a href="Community.jsp" class="btn btn-lg">¼Ò¸® µè±â</a>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 							</div>
 						</div>
 					</div>
