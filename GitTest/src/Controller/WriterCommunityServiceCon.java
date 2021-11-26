@@ -20,7 +20,6 @@ public class WriterCommunityServiceCon extends HttpServlet {
 	private static final String String = null;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("[WriterCommunityServiceCon]");
 		
 		request.setCharacterEncoding("euc-kr");
 		
@@ -29,9 +28,6 @@ public class WriterCommunityServiceCon extends HttpServlet {
 
 		String saveDirectory = "C:/Users/smhrd/git/SOP/GitTest/WebContent/Resources/image";
 
-
-
-		
 		
 		int maxSize = 1024 * 1024 * 10;
 		String encoding = "euc-kr";

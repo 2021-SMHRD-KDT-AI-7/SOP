@@ -1,3 +1,4 @@
+<%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -40,7 +41,11 @@
 
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
-<body data-spy="scroll" data-target=".navbar-collapse">
+<body data-spy="scroll" data-target=".navbar-collapse" style="color:black;">
+
+<%
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
+%>
 
    <div class='preloader'>
       <div class='loaded'>&nbsp;</div>
@@ -132,6 +137,7 @@
 															<option value="15">전라북도</option>
 															<option value="16">전라남도</option>
 															<option value="17">제주도</option>
+															<option value="18">미션인증</option>
 														</select>
 													</div>
                                        <div class="form-group">
@@ -142,6 +148,7 @@
                                           <input type="text" class="form-control" id="title"
                                              placeholder="제목 입력(4-100)" name="article_title" maxlength="100"
                                              required="required" pattern=".{4,100}">
+                                           <input type="hidden" class="class" name="mb_id" id="id" value=<%= info.getMb_id() %>>
                                        </div>
                                        <div class="form-group">
                                           <label for="content">내용</label>
@@ -149,11 +156,6 @@
                                           <!--  textearea 안에 있는 모든 글자는 그대로 나타난다. 공백문자, tag, enter -->
                                           <textarea class="form-control" rows="20" id="content"
                                              name="article_content" placeholder="내용 작성" wrap="off"></textarea>
-                                       </div>
-                                       <div class="form-group">
-                                          <label for="writer">작성자</label> <input type="text"
-                                             class="form-control" id="writer"
-                                             placeholder="작성자(2자-10자)" name="mb_id">
                                        </div>
                                        <div class="form-group">
                                           <label for="writer">파일등록</label>
