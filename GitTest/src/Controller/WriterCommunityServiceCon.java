@@ -15,6 +15,7 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import Model.CommunityDAO;
 import Model.CommunityDTO;
+import Model.MemberDAO;
 import Model.MemberDTO;
 
 @WebServlet("/WriterCommunityServiceCon")
@@ -29,7 +30,9 @@ public class WriterCommunityServiceCon extends HttpServlet {
       HttpSession session = request.getSession();
       MemberDTO info=(MemberDTO)session.getAttribute("info"); 
       
+      System.out.println(info);
       String s_mb_id = info.getMb_id();
+      String s_mb_pwd = info.getMb_pwd();
       int mb_point = info.getMb_point();
       
       
@@ -65,15 +68,26 @@ public class WriterCommunityServiceCon extends HttpServlet {
       CommunityDAO dao=new CommunityDAO();
       int cnt=dao.upload(dto);
       
+      
       if(cnt>0) {
+    	  
+    	  //포인트있는 db table 현재 로그인한 사용자의 포인트 만 가지고옴
+    	  //세션을 재생성 (info) -> (원래아이디, 새로운 포인트값)
+    	  
+    	  MemberDAO m_dao = new MemberDAO();
+    	  int new_point = m_dao.point(s_mb_id);
+    	  
+    	  HttpSession session2 = request.getSession();
+    	  session2.setAttribute(s_mb_id, s_mb_pwd);
+    	  session2.setAttribute("info", info);
+    	  mb_point = new_point;
+    	            
     	  dao.articleUp(s_mb_id, mb_point);
-    	  // 세션 업데이트 
-    	  request.getSession().removeAttribute("info");
-    	  request.getSession().setAttribute("info", info);
-         System.out.println("파일업로드 성공");
+    	 System.out.println("파일업로드 성공");
       }else {
          System.out.println("파일업로드 실패");
       }
+      
       response.sendRedirect("./Resources/Community.jsp");//게시판 메인으로 보내기
       
    }

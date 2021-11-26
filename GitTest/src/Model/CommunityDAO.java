@@ -260,7 +260,7 @@ public class CommunityDAO {
          e.printStackTrace();
       }finally {
          dbClose();
-      }return 0;
+      } return mb_point;
       
    }
    
