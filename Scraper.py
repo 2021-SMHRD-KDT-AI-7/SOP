@@ -15,7 +15,7 @@ html = req.content
 soup = BeautifulSoup(html, 'html.parser')
 
 # 기사 제목
-article_title = soup.select('h4.article-title')
+article_title = soup.select('h4.article-title>a')
 article_content = soup.select('p.article-prologue>a')
 
 titleData = {}
