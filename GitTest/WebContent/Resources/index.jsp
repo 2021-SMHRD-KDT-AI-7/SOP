@@ -87,10 +87,9 @@
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
-										<a class="navbar-brand" href="#home"> <img
-											src="assets/images/sopsop.jpg" />
 										<a class="navbar-brand" href="#home"> 
 										<img src="assets/images/logo1.png" />
+									
 										</a>
 									</div>
 
@@ -156,7 +155,7 @@
 									<div class="single_home_slider">
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
 											<h1>SOP</h1>
-											<h1>Save Ozon Party</h1>
+											<h1>Save Ozone Party</h1>
 
 
 										</div>
@@ -181,7 +180,7 @@
 						<div class="contact_contant sections">
 							<div class="head_title text-center">
 								<h2>SOP</h2>
-								<div class="subtitle">Safe Ozon Party</div>
+								<div class="subtitle">Save Ozone Party</div>
 								<div class="separator"></div>
 							</div>
 							<!-- End off Head_title -->
@@ -969,8 +968,7 @@
 	<!-- End of counter section -->
 <!-- 조회수 끝 -->
 
-<!-- 팀원 소개 -->
-<!-- Team Section -->
+	<!-- Team Section -->
 	<section id="team" class="team">
 		<div class="main_team_area">
 			<div class="container">
@@ -987,7 +985,7 @@
 							<ul>
 								<li>
 									<div class="single_team_img">
-										<img src="image/kkj.png" alt="" />
+										<img src="assets/images/kkj.jpg" alt="" />
 									</div>
 									<div class="single_team_text">
 										<h4>김국중</h4>
@@ -999,7 +997,7 @@
 								</li>
 								<li>
 									<div class="single_team_img">
-										<img src="image/kjn.png" alt="" />
+										<img src="assets/images/kjn.jpg" alt="" />
 									</div>
 									<div class="single_team_text">
 										<h4>김지나</h4>
@@ -1011,7 +1009,7 @@
 								</li>
 								<li>
 									<div class="single_team_img">
-										<img src="image/pjy.png" alt="" />
+										<img src="assets/images/pjy.jpg" alt="" />
 									</div>
 									<div class="single_team_text">
 										<h4>박준영</h4>
@@ -1023,7 +1021,7 @@
 								</li>
 								<li>
 									<div class="single_team_img">
-										<img src="image/pjj.png" alt="" />
+										<img src="assets/images/pjj.jpg" alt="" />
 									</div>
 									<div class="single_team_text">
 										<h4>박진주</h4>
@@ -1035,7 +1033,7 @@
 								</li>
 								<li>
 									<div class="single_team_img">
-										<img src="image/lhw.png" alt="" />
+										<img src="assets/images/lhw.jpg" alt="" />
 									</div>
 									<div class="single_team_text">
 										<h4>이혜원</h4>
@@ -1056,7 +1054,6 @@
 		</div>
 	</section>
 	<!-- End off Team Section -->
-<!-- 팀원 소개 끝-->
 
 
 
@@ -1086,7 +1083,7 @@
 								<div class="copyright_text">
 									<p class=" wow fadeInRight" data-wow-duration="1s">
 										Made with <i class="fa fa-heart"></i> by <a
-											href="http://bootstrapthemes.co">깐부 김국종 김지나 박준영 박진주 이혜원</a>
+											href="http://bootstrapthemes.co">깐부 김국중 김지나 박준영 박진주 이혜원</a>
 									</p>
 								</div>
 							</div>

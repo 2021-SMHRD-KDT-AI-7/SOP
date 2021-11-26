@@ -1,6 +1,6 @@
 <%@page import="Model.DailyMissionDAO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -37,7 +37,7 @@
 
 <!--Theme Responsive css-->
 <link rel="stylesheet" href="assets/css/responsive.css" />
-<!--  ½Ç½Ã°£ ±â»ç ¿ÜºÎ ÆäÀÌÁö css link(2021-11-22 ¹ÚÁØ¿µ) -->
+<!--  ì‹¤ì‹œê°„ ê¸°ì‚¬ ì™¸ë¶€ íŽ˜ì´ì§€ css link(2021-11-22 ë°•ì¤€ì˜) -->
 <link rel="stylesheet" type="text/css" href="assets/css/news.css">
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
@@ -78,16 +78,16 @@
 
 										<ul class="nav navbar-nav navbar-right">
 											<li><a href="#home">HOME</a></li>
-											<li><a href="join.jsp">È¸¿ø°¡ÀÔ</a></li>
-											<li><a href="#contact">·Î±×ÀÎ</a></li>
-											<li><a href="#portfolio">Â÷Æ®</a></li>
-											<li><a href="#service">µ¥ÀÏ¸®¹Ì¼Ç</a></li>
-											<li><a href="#study">È¯°æ ±â»ç</a></li>
-											<li><a href="#clogo">»ç·Ê</a></li>
-											<li><a href="#pricing">Ä·ÆäÀÎ</a></li>
-											<li><a href="#trial">°Ô½ÃÆÇ</a></li>
-											<li><a href="#counter">Á¶È¸¼ö</a></li>
-											<li><a href="#team">ÆÀ</a></li>
+											<li><a href="join.jsp">íšŒì›ê°€ìž…</a></li>
+											<li><a href="#contact">ë¡œê·¸ì¸</a></li>
+											<li><a href="#portfolio">ì°¨íŠ¸</a></li>
+											<li><a href="#service">ë°ì¼ë¦¬ë¯¸ì…˜</a></li>
+											<li><a href="#study">í™˜ê²½ ê¸°ì‚¬</a></li>
+											<li><a href="#clogo">ì‚¬ë¡€</a></li>
+											<li><a href="#pricing">ìº íŽ˜ì¸</a></li>
+											<li><a href="#trial">ê²Œì‹œíŒ</a></li>
+											<li><a href="#counter">ì¡°íšŒìˆ˜</a></li>
+											<li><a href="#team">íŒ€</a></li>
 										</ul>
 
 									</div>
@@ -114,7 +114,7 @@
 									<div class="single_home_slider">
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms">
 											<h1>SOP</h1>
-											<h1>Save Ozon Party</h1>
+											<h1>Save Ozone Party</h1>
 
 
 										</div>
@@ -138,7 +138,7 @@
 						<div class="contact_contant sections">
 							<div class="head_title text-center">
 								<h2>SOP</h2>
-								<div class="subtitle">Safe Ozon Party</div>
+								<div class="subtitle">Save Ozone Party</div>
 								<div class="separator"></div>
 							</div>
 							<!-- End off Head_title -->
@@ -155,14 +155,14 @@
 												<div class="col-sm-11">
 													<div class="form-group">
 														<input type="text" class="form-control" name="id"
-															placeholder="¾ÆÀÌµð¸¦ ÀÔ·ÂÇÏ¼¼¿ä" required
+															placeholder="ì•„ì´ë””ë¥¼ ìž…ë ¥í•˜ì„¸ìš”" required
 															style="font-family: 'Malgun gothic'">
 													</div>
 												</div>
 												<div class="col-sm-11">
 													<div class="form-group">
 														<input type="password" class="form-control" name="pwd"
-															placeholder="ºñ¹Ð¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä" required=""
+															placeholder="ë¹„ë°€ë²ˆí˜¸ë¥¼ ìž…ë ¥í•˜ì„¸ìš”" required=""
 															style="font-family: 'Malgun gothic'">
 													</div>
 												</div>
@@ -170,10 +170,10 @@
 													<div class="form-group">
 														<ul>
 															<fieldset>
-																<a target="_blank" href="searchpw.jsp" class="find_text">ºñ¹Ð¹øÈ£
-																	Ã£±â |</a> <a target="_blank" href="searchid.jsp"
-																	class="find_text">¾ÆÀÌµð Ã£±â |</a> <a target="_blank"
-																	href="join.jsp" class="find_text">È¸¿ø°¡ÀÔ</a>
+																<a target="_blank" href="searchpw.jsp" class="find_text">ë¹„ë°€ë²ˆí˜¸
+																	ì°¾ê¸° |</a> <a target="_blank" href="searchid.jsp"
+																	class="find_text">ì•„ì´ë”” ì°¾ê¸° |</a> <a target="_blank"
+																	href="join.jsp" class="find_text">íšŒì›ê°€ìž…</a>
 
 															</fieldset>
 
@@ -185,7 +185,7 @@
 											</div>
 
 											<div class="col-sm-11">
-												<input type="submit" value="·Î±×ÀÎ" class="btn btn-lg">
+												<input type="submit" value="ë¡œê·¸ì¸" class="btn btn-lg">
 											</div>
 										</div>
 									</form>
@@ -200,7 +200,7 @@
 	</div>
 	</section>
 
-	<!-- Â÷Æ® ½Ã°¢È­ (ÁøÁÖ)  -->
+	<!-- ì°¨íŠ¸ ì‹œê°í™” (ì§„ì£¼)  -->
 
 	<section id="portfolio" class="portfolio sections">
 		<div class="container-fluid">
@@ -208,8 +208,8 @@
 				<div class="main_portfolio">
 					<div class="col-sm-12">
 						<div class="head_title text-center">
-							<h2>Â÷Æ®</h2>
-							<div class="subtitle">¿©·¯ °¡ÁöÀÇ Â÷Æ®¸¦ ¸¸³ªº¸¼¼¿ä!</div>
+							<h2>ì°¨íŠ¸</h2>
+							<div class="subtitle">ì—¬ëŸ¬ ê°€ì§€ì˜ ì°¨íŠ¸ë¥¼ ë§Œë‚˜ë³´ì„¸ìš”!</div>
 							<div class="separator"></div>
 						</div>
 					</div>
@@ -217,22 +217,22 @@
 						<div id="filters" class="toolbar mb2 mt2">
 							<!-- <button class="btn-md fil-cat filter active" data-filter="all">ALL</button>/ -->
 							<button class="btn-md fil-cat filter active" id="temp"
-								data-rel="temp" data-filter=".temp">¿Âµµ</button>
+								data-rel="temp" data-filter=".temp">ì˜¨ë„</button>
 							/
 							<button class="btn-md fil-cat filter" data-rel="tropical"
-								data-filter=".tropical">¿­´ë¾ß</button>
+								data-filter=".tropical">ì—´ëŒ€ì•¼</button>
 							/
 							<button class="btn-md fil-cat filter" data-rel="season"
-								data-filter=".season">°èÀýÀÏ¼ö</button>
+								data-filter=".season">ê³„ì ˆì¼ìˆ˜</button>
 							/
 							<button class="btn-md fil-cat filter" data-rel="gas"
-								data-filter=".gas">¿Â½Ç°¡½º</button>
+								data-filter=".gas">ì˜¨ì‹¤ê°€ìŠ¤</button>
 							/
 							<button class="btn-md fil-cat filter" data-rel="ozone"
-								data-filter=".ozone">¿ÀÁ¸Ãþ</button>
+								data-filter=".ozone">ì˜¤ì¡´ì¸µ</button>
 							/
 							<button class="btn-md fil-cat filter" data-rel="sea"
-								data-filter=".sea">ÇØ¼ö¸é ½Ã¹Ä·¹ÀÌÅÍ</button>
+								data-filter=".sea">í•´ìˆ˜ë©´ ì‹œë®¬ë ˆì´í„°</button>
 						</div>
 
 					</div>
@@ -240,54 +240,54 @@
 					<div style="clear: both;"></div>
 					<div id="portfoliowork">
 
-						<!-- ¿Âµµ ÆÄÆ®  -->
+						<!-- ì˜¨ë„ íŒŒíŠ¸  -->
 						<div
 							class="single_portfolio tile scale-anm temp grid-item-width2 video"
 							style="margin-left: 500px; display: inline-block;">
 							<iframe src="assets/chart_module/Temperature.html"
 								style="display: inline-block; width: 900px; height: 500px;"></iframe>
 						</div>
-						<!--  ¿Âµµ ³¡    -->
+						<!--  ì˜¨ë„ ë    -->
 
-						<!-- ¿­´ë¾ß ½ÃÀÛ -->
+						<!-- ì—´ëŒ€ì•¼ ì‹œìž‘ -->
 						<div class="single_portfolio tile scale-anm tropical photo"
 							style="margin-left: 500px; display: inline-block;">
 							<iframe src="assets/chart_module/Tropical.html"
 								style="display: inline-block; width: 900px; height: 500px;"></iframe>
 						</div>
-						<!-- ¿­´ë¾ß ³¡ -->
+						<!-- ì—´ëŒ€ì•¼ ë -->
 
-						<!-- °èÀýÀÏ¼ö(season) ½ÃÀÛ -->
+						<!-- ê³„ì ˆì¼ìˆ˜(season) ì‹œìž‘ -->
 						<div class="single_portfolio tile scale-anm season video"
 							style="margin-left: 500px; display: inline-block;">
 							<iframe src="assets/chart_module/SeasonSeoul.html"
 								style="display: inline-block; width: 900px; height: 500px;"></iframe>
 						</div>
-						<!-- °èÀýÀÏ¼ö ³¡ -->
+						<!-- ê³„ì ˆì¼ìˆ˜ ë -->
 
-						<!-- ¿Â½Ç°¡½º ½ÃÀÛ -->
+						<!-- ì˜¨ì‹¤ê°€ìŠ¤ ì‹œìž‘ -->
 						<div class="single_portfolio tile scale-anm gas photo"
 							style="margin-left: 500px; display: inline-block;">
 							<iframe src="assets/chart_module/greenhouseGAS.html"
 								style="display: inline-block; width: 900px; height: 500px;"></iframe>
 						</div>
-						<!-- ¿Â½Ç°¡½º ³¡ -->
+						<!-- ì˜¨ì‹¤ê°€ìŠ¤ ë -->
 
-						<!-- ¿ÀÁ¸Ãþ ³ª»ç ¿µ»ó ½ÃÀÛ -->
+						<!-- ì˜¤ì¡´ì¸µ ë‚˜ì‚¬ ì˜ìƒ ì‹œìž‘ -->
 						<div class="single_portfolio tile scale-anm ozone"
 							style="margin-left: 500px; display: inline-block;">
 							<video src="assets/video/ozone_Nasa.mp4" controls
 								style="display: inline-block; width: 900px; height: 500px;"></video>
 						</div>
-						<!-- ¿ÀÁ¸Ãþ ³ª»ç ³¡ -->
+						<!-- ì˜¤ì¡´ì¸µ ë‚˜ì‚¬ ë -->
 
-						<!-- ÇØ¼ö¸é »ó½Â ½Ã¹Ä·¹ÀÌÅÍ ½ÃÀÛ -->
+						<!-- í•´ìˆ˜ë©´ ìƒìŠ¹ ì‹œë®¬ë ˆì´í„° ì‹œìž‘ -->
 						<div class="single_portfolio tile scale-anm sea"
 							style="margin-left: 420px; display: inline-block;">
 							<iframe src="assets/chart_module/Sea.html"
 								style="display: inline-block; width: 1100px; height: 800px;"></iframe>
 						</div>
-						<!-- ÇØ¼ö¸é »ó½Â ½Ã¹Ä·¹ÀÌÅÍ ³¡ -->
+						<!-- í•´ìˆ˜ë©´ ìƒìŠ¹ ì‹œë®¬ë ˆì´í„° ë -->
 
 
 
@@ -300,9 +300,9 @@
 		<!-- End off container -->
 	</section>
 	<!-- End off Work Section -->
-	<!-- Â÷Æ® ÆÄÆ® ³¡!!  -->
+	<!-- ì°¨íŠ¸ íŒŒíŠ¸ ë!!  -->
 
-	<!-- µ¥ÀÏ¸® ¹Ì¼Ç (ÁøÁÖ) ½ÃÀÛ -->
+	<!-- ë°ì¼ë¦¬ ë¯¸ì…˜ (ì§„ì£¼) ì‹œìž‘ -->
 	<section id="service" class="service">
 		<div class="container-fluid">
 			<div class="row">
@@ -311,7 +311,7 @@
 
 						<div class="single_service single_service_text text-right">
 							<div class="head_title" style="margin-right: 500px;">
-								<h2>µ¥ÀÏ¸® ¹Ì¼Ç</h2>
+								<h2>ë°ì¼ë¦¬ ë¯¸ì…˜</h2>
 							</div>
 
 							<div class="row" style="margin-right: 500px;">
@@ -405,7 +405,7 @@
 		</div>
 		<!-- End of Container-fluid -->
 	</section>
-	<!-- µ¥ÀÏ¸® ¹Ì¼Ç ³¡! (ÁøÁÖ) -->
+	<!-- ë°ì¼ë¦¬ ë¯¸ì…˜ ë! (ì§„ì£¼) -->
 
 	<!--End of feature Section -->
 	<hr />
@@ -420,10 +420,10 @@
 		data-wow-duration="2s" data-wow-dealy="1.5s">
 		<div class="container">
 			<div class="row">
-				<div class="main_study_area sections" style="height:1050px;">
+				<div class="main_study_area sections" style="height: 1050px;">
 					<div class="head_title text-center">
-						<h2>µ¥ÀÏ¸® È¯°æ ±â»ç</h2>
-						<div class="subtitle">È¯°æ°ú °ü·ÃµÈ ´º½º ±â»ç¸¦ ¸¸³ªº¸¼¼¿ä!</div>
+						<h2>ë°ì¼ë¦¬ í™˜ê²½ ê¸°ì‚¬</h2>
+						<div class="subtitle">í™˜ê²½ê³¼ ê´€ë ¨ëœ ë‰´ìŠ¤ ê¸°ì‚¬ë¥¼ ë§Œë‚˜ë³´ì„¸ìš”!</div>
 						<div class="separator"></div>
 					</div>
 					<div class="single_study_content">
@@ -436,19 +436,19 @@
 										<div class="item">
 
 											<h4 class="external_news_title">
-												[´Üµ¶] ¡®»ç¿ëÈÄÇÙ¿¬·á Ã³¸®±â¼ú ¿¬±¸»ç¾÷¡¯ Á¾°á ¾Æ´Ñ Àç°³·Î µ¹¾Æ¼­³ª <img
+												[ë‹¨ë…] â€˜ì‚¬ìš©í›„í•µì—°ë£Œ ì²˜ë¦¬ê¸°ìˆ  ì—°êµ¬ì‚¬ì—…â€™ ì¢…ê²° ì•„ë‹Œ ìž¬ê°œë¡œ ëŒì•„ì„œë‚˜ <img
 													class="external_news_img"
 													src="//flexible.img.hani.co.kr/flexible/normal/212/127/imgdb/child/2021/1118/53_16372061609671_20211118501522.jpg"
-													alt="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯"
-													title="ÆÐµù ÀÔ¾î¾ß°Ú³×¡¦21ÀÏ~22ÀÏ Àü±¹ ºñ¡¤´« ¿Â µÚ ¿µÇÏ±Ç ¡®°­ÃßÀ§¡¯">
+													alt="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™"
+													title="íŒ¨ë”© ìž…ì–´ì•¼ê² ë„¤â€¦21ì¼~22ì¼ ì „êµ­ ë¹„Â·ëˆˆ ì˜¨ ë’¤ ì˜í•˜ê¶Œ â€˜ê°•ì¶”ìœ„â€™">
 											</h4>
 											<div class="separator3"></div>
-											<p class="external_news_content">Á¤ºÎ°¡ 8000¾ï¿øÀ» ÅõÀÔÇÏ°í Áö³­ÇØ
-												Áß´Ü½ÃÅ² »ç¿ëÈÄÇÙ¿¬·á ÆÄÀÌ·ÎÇÁ·Î¼¼½Ì°ú ¼Òµã³Ã°¢°í¼Ó·Î(SFR) ±¹Ã¥ ¿¬±¸°³¹ß»ç¾÷ÀÇ Àç°³...</p>
+											<p class="external_news_content">ì •ë¶€ê°€ 8000ì–µì›ì„ íˆ¬ìž…í•˜ê³  ì§€ë‚œí•´
+												ì¤‘ë‹¨ì‹œí‚¨ ì‚¬ìš©í›„í•µì—°ë£Œ íŒŒì´ë¡œí”„ë¡œì„¸ì‹±ê³¼ ì†Œë“ëƒ‰ê°ê³ ì†ë¡œ(SFR) êµ­ì±… ì—°êµ¬ê°œë°œì‚¬ì—…ì˜ ìž¬ê°œ...</p>
 
 											<a target="_blank"
 												href="https://www.hani.co.kr/arti/society/environment/1019805.html"
-												class="btn btn-lg">±â»ç ´õº¸±â</a>
+												class="btn btn-lg">ê¸°ì‚¬ ë”ë³´ê¸°</a>
 
 										</div>
 
@@ -481,9 +481,9 @@
 											<a href="" class="btn btn-lg">read more</a>
 										</div>
 									</div>
-									<!--  ÀüÃ¼ ±â»ç º¸±â·Î ÀÌµ¿ -->
+									<!--  ì „ì²´ ê¸°ì‚¬ ë³´ê¸°ë¡œ ì´ë™ -->
 									<a href="News.jsp"
-										class="btn_article_daily btn_lg_article_daily">ÀüÃ¼ ±â»ç</a>
+										class="btn_article_daily btn_lg_article_daily">ì „ì²´ ê¸°ì‚¬</a>
 								</div>
 							</div>
 						</div>
@@ -492,7 +492,7 @@
 						<div class="single_study_right_img">
 							<div class="col-sm-6">
 								<div class="single_study_img">
-									<img src="assets/images/°øÀå¼öÁ¤.jpg" alt="" />
+									<img src="assets/images/ê³µìž¥ìˆ˜ì •.jpg" alt="" />
 								</div>
 							</div>
 						</div>
@@ -512,10 +512,10 @@
 			<div class="row">
 				<div class="main_clogo sections_weather text-center">
 					<div class="head_title text-center">
-						<h2>±¹³» ÀÌ»ó±âÈÄ »ç·Ê</h2>
+						<h2>êµ­ë‚´ ì´ìƒê¸°í›„ ì‚¬ë¡€</h2>
 						<div class="subtitle"></div>
-						<div class="external_news_content">±¹³»ÀÇ Ãæ°ÝÀûÀÎ ÀÌ»ó±âÈÄ·Î ÀÎÇÑ ¿©·¯ »ç·Ê¸¦
-							È®ÀÎÇÏ¼¼¿ä.</div>
+						<div class="external_news_content">êµ­ë‚´ì˜ ì¶©ê²©ì ì¸ ì´ìƒê¸°í›„ë¡œ ì¸í•œ ì—¬ëŸ¬ ì‚¬ë¡€ë¥¼
+							í™•ì¸í•˜ì„¸ìš”.</div>
 					</div>
 					<!-- End off Head_title -->
 
@@ -533,14 +533,14 @@
 							alt="" /></a>
 					</div>
 					<br>
-					<figure class="txt_pig">&lt;»ç°ú Àç¹è ¸øÇÏ°í °­¿øµµ¿¡¼­ ±Ö Àç¹èÇÏ´Â 21¼¼±â¸»
-						ÇÑ±¹&gt;
+					<figure class="txt_pig">&lt;ì‚¬ê³¼ ìž¬ë°° ëª»í•˜ê³  ê°•ì›ë„ì—ì„œ ê·¤ ìž¬ë°°í•˜ëŠ” 21ì„¸ê¸°ë§
+						í•œêµ­&gt;
 					</figure>
-					<p class="txt_line">¿¬°£ 10.1ÀÏÀÎ Æø¿°ÀÏ¼ö°¡ 3¹è ÀÌ»óÀÎ 35.5ÀÏÀÌ µÈ´Ù. »ç°ú Àç¹èÁö´Â
-						»ç¶óÁö¸ç, °­¿øµµ¿¡¼­ °¨±Ö Àç¹è°¡ °¡´ÉÇØÁø´Ù. ¸ð±â³ª Áøµå±â¿Í °°Àº ÇØÃæ ¹ß»ýÀÌ ´Ã¾î³ª °¨¿°º´µµ ±ÞÁõÇÑ´Ù. º¢²ÉÀÇ
-						°³È­½Ã±â´Â Áö±Ýº¸´Ù 11.2ÀÏ »¡¶óÁö°í ¼Ò³ª¹«½£Àº 15% »ç¶óÁø´Ù. ÀÌ´Â ¿Â½Ç°¡½º ¹èÃâÀÌ ÇöÀç Ãß¼¼´ë·Î ÀÌ¾îÁö¸é
-						21¼¼±â Áß¹Ý ÀÌÈÄºÎÅÍ ÇÑ¹Ýµµ°¡ ¸ñ°ÝÇÏ°Ô µÉ ¸ð½ÀÀÌ´Ù. È¯°æºÎ¿Í ±â»óÃ»Àº 28ÀÏ ³í¹® 1900¿©ÆíÀ» ºÐ¼®ÇØ °øµ¿À¸·Î
-						'ÇÑ±¹ ±âÈÄº¯È­ Æò°¡º¸°í¼­ 2020'¸¦ ³»°í ÇÑ¹Ýµµ ±âÈÄº¯È­ µ¿Çâ°ú Àü¸ÁÀ» Á¤¸®Çß´Ù.</p>
+					<p class="txt_line">ì—°ê°„ 10.1ì¼ì¸ í­ì—¼ì¼ìˆ˜ê°€ 3ë°° ì´ìƒì¸ 35.5ì¼ì´ ëœë‹¤. ì‚¬ê³¼ ìž¬ë°°ì§€ëŠ”
+						ì‚¬ë¼ì§€ë©°, ê°•ì›ë„ì—ì„œ ê°ê·¤ ìž¬ë°°ê°€ ê°€ëŠ¥í•´ì§„ë‹¤. ëª¨ê¸°ë‚˜ ì§„ë“œê¸°ì™€ ê°™ì€ í•´ì¶© ë°œìƒì´ ëŠ˜ì–´ë‚˜ ê°ì—¼ë³‘ë„ ê¸‰ì¦í•œë‹¤. ë²šê½ƒì˜
+						ê°œí™”ì‹œê¸°ëŠ” ì§€ê¸ˆë³´ë‹¤ 11.2ì¼ ë¹¨ë¼ì§€ê³  ì†Œë‚˜ë¬´ìˆ²ì€ 15% ì‚¬ë¼ì§„ë‹¤. ì´ëŠ” ì˜¨ì‹¤ê°€ìŠ¤ ë°°ì¶œì´ í˜„ìž¬ ì¶”ì„¸ëŒ€ë¡œ ì´ì–´ì§€ë©´
+						21ì„¸ê¸° ì¤‘ë°˜ ì´í›„ë¶€í„° í•œë°˜ë„ê°€ ëª©ê²©í•˜ê²Œ ë  ëª¨ìŠµì´ë‹¤. í™˜ê²½ë¶€ì™€ ê¸°ìƒì²­ì€ 28ì¼ ë…¼ë¬¸ 1900ì—¬íŽ¸ì„ ë¶„ì„í•´ ê³µë™ìœ¼ë¡œ
+						'í•œêµ­ ê¸°í›„ë³€í™” í‰ê°€ë³´ê³ ì„œ 2020'ë¥¼ ë‚´ê³  í•œë°˜ë„ ê¸°í›„ë³€í™” ë™í–¥ê³¼ ì „ë§ì„ ì •ë¦¬í–ˆë‹¤.</p>
 				</div>
 
 				<div class="right">
@@ -552,15 +552,15 @@
 							alt="" /></a>
 					</div>
 					<br>
-					<figure class="txt_pig">&lt;Æø¿°-ÅÂÇ³-Æø¿ì ¡®Æ®¸®ÇÃ ÀÌ»ó±âÈÄ¡¯¡¦ÀÌÁ¨ ¿©¸§Ã¶¸¶´Ù
-						¿Â´Ù&gt;
+					<figure class="txt_pig">&lt;í­ì—¼-íƒœí’-í­ìš° â€˜íŠ¸ë¦¬í”Œ ì´ìƒê¸°í›„â€™â€¦ì´ì   ì—¬ë¦„ì² ë§ˆë‹¤
+						ì˜¨ë‹¤&gt;
 					</figure>
-					<p class="txt_line">¼ö¸¸ ³â ÀüÀÇ ºùÇÏ±â°¡ 46¾ï ³â Áö±¸ ¿ª»ç»ó °¡Àå Ãß¿ü´ø ½Ã±â¿¡ ¼ÓÇÑ´Ù°í
-						ÇÑ´Ù. ÀÎ·ù°¡ Áö±¸ÀÇ Áö¹èÀÚ°¡ µÈ Áö±ÝÀº ±×¶§º¸´Ù ÈÎ¾À µû¶æÇÏÁö¸¸, ±×·¡µµ Ãß¿î ½Ã±â¿¡ ¼ÓÇÏ´Â °Ç ¸¶Âù°¡Áö´Ù.
-						2021³â 6¿ùºÎÅÍ ·¯½Ã¾Æ ¸ð½ºÅ©¹Ù¿¡¼­ ¼·¾¾ 30µµ°¡ ÈÇÂ½ ³Ñ´Â °í¿ÂÀÌ, Ä³³ª´Ù ¼­ºÎ ºê¸®Æ¼½ÃÄÃ·³ºñ¾Æ¿¡¼­ ¼·¾¾ 50µµ¿¡
-						°¡±î¿î Æø¿°ÀÌ ÀÌ¾îÁ®¼­ ¸¶Ä¡ Áö±¸¿¡ ºÒ³­ °ÍÃ³·³ ¼öÀºÁÖ°¡ Ä¡¼Ú´Âµ¥, ÀÌ°Ç ¾î¶»°Ô µÈ ÀÏÀÌ³Ä°í ¹Ý¹®ÇÏ´Â ºÐÀÌ ÀÖÀ»
-						°ÍÀÌ´Ù. ÇÑ¿©¸§¿¡µµ ¿¡¾îÄÁÀ» ÄÑÁö ¾Ê°í Áö³¾ ¼ö ÀÖ´Â Áö¿ª¿¡ ºÒÆøÅºÀÌ ÅÍÁ³À¸´Ï ÀÌ·± ¹°À½ÀÌ ³ª¿Ã ¸¸µµ ÇÏ´Ù. ±×·¯³ª
-						±â»ó°üÃø ÀÚ·á´Â °ÅÁþ¸»ÇÏÁö ¾Ê´Â´Ù.</p>
+					<p class="txt_line">ìˆ˜ë§Œ ë…„ ì „ì˜ ë¹™í•˜ê¸°ê°€ 46ì–µ ë…„ ì§€êµ¬ ì—­ì‚¬ìƒ ê°€ìž¥ ì¶”ì› ë˜ ì‹œê¸°ì— ì†í•œë‹¤ê³ 
+						í•œë‹¤. ì¸ë¥˜ê°€ ì§€êµ¬ì˜ ì§€ë°°ìžê°€ ëœ ì§€ê¸ˆì€ ê·¸ë•Œë³´ë‹¤ í›¨ì”¬ ë”°ëœ»í•˜ì§€ë§Œ, ê·¸ëž˜ë„ ì¶”ìš´ ì‹œê¸°ì— ì†í•˜ëŠ” ê±´ ë§ˆì°¬ê°€ì§€ë‹¤.
+						2021ë…„ 6ì›”ë¶€í„° ëŸ¬ì‹œì•„ ëª¨ìŠ¤í¬ë°”ì—ì„œ ì„­ì”¨ 30ë„ê°€ í›Œì© ë„˜ëŠ” ê³ ì˜¨ì´, ìºë‚˜ë‹¤ ì„œë¶€ ë¸Œë¦¬í‹°ì‹œì»¬ëŸ¼ë¹„ì•„ì—ì„œ ì„­ì”¨ 50ë„ì—
+						ê°€ê¹Œìš´ í­ì—¼ì´ ì´ì–´ì ¸ì„œ ë§ˆì¹˜ ì§€êµ¬ì— ë¶ˆë‚œ ê²ƒì²˜ëŸ¼ ìˆ˜ì€ì£¼ê°€ ì¹˜ì†ŸëŠ”ë°, ì´ê±´ ì–´ë–»ê²Œ ëœ ì¼ì´ëƒê³  ë°˜ë¬¸í•˜ëŠ” ë¶„ì´ ìžˆì„
+						ê²ƒì´ë‹¤. í•œì—¬ë¦„ì—ë„ ì—ì–´ì»¨ì„ ì¼œì§€ ì•Šê³  ì§€ë‚¼ ìˆ˜ ìžˆëŠ” ì§€ì—­ì— ë¶ˆí­íƒ„ì´ í„°ì¡Œìœ¼ë‹ˆ ì´ëŸ° ë¬¼ìŒì´ ë‚˜ì˜¬ ë§Œë„ í•˜ë‹¤. ê·¸ëŸ¬ë‚˜
+						ê¸°ìƒê´€ì¸¡ ìžë£ŒëŠ” ê±°ì§“ë§í•˜ì§€ ì•ŠëŠ”ë‹¤.</p>
 				</div>
 
 				<div class="left">
@@ -572,14 +572,14 @@
 							alt="" /></a>
 					</div>
 					<br>
-					<figure class="txt_pig">&lt;±âÈÄº¯È­: ´õ¿öÁö´Â ÇÑ±¹, °Ü¿ïÀÌ »ç¶óÁø´Ù?&gt;
+					<figure class="txt_pig">&lt;ê¸°í›„ë³€í™”: ë”ì›Œì§€ëŠ” í•œêµ­, ê²¨ìš¸ì´ ì‚¬ë¼ì§„ë‹¤?&gt;
 					</figure>
-					<p class="txt_line">±¹¸³°ø¿ø°ø´ÜÀº Áö¸®»ê±¹¸³°ø¿ø ±¸·æ°è°î ÀÏ´ë¿¡ »ç´Â ºÏ¹æ»ê°³±¸¸®ÀÇ »ê¶õÀ» Áö³­´Þ
-						23ÀÏ Ã³À½ °üÃøÇß´Ù°í ¹àÇû´Ù. Áö³­ÇØ 2¿ù 19ÀÏº¸´Ù 27ÀÏ ºü¸¥ ½Ã±â´Ù. ÇØ´ç Á¶»ç°¡ ½ÃÀÛµÈ 2010³â ÀÌÈÄ 1¿ù¿¡
-						»ê¶õÀÌ °üÃøµÈ °ÍÀº ÀÌ¹øÀÌ Ã³À½ÀÌ´Ù. °ø¿ø°ø´Ü ¿¬±¸ÁøÀº À¯³­È÷ µû¶æÇß´ø °Ü¿ï ³¯¾¾ ¶§¹®¿¡ »ê¶õÀÏÀÌ ¾Õ´ç°ÜÁø °ÍÀ¸·Î º¸°í
-						ÀÖ´Ù. 1¿ù Áß ³· ±â¿ÂÀÌ 23µµ±îÁö ¿Ã¶ú´ø Á¦ÁÖ¿¡¼­´Â Á¦ÁÖµµ·Õ´¨ÀÇ »ê¶õ½Ã±â°¡ ÇÑ ´Þ ¾Õ´ç°ÜÁ³´Ù. Á¦ÁÖ ¹é¼­Çâµµ ¿¹³â¿¡
-						ºñÇØ ÇÑ ´Þ ¸ÕÀú °³È­Çß´Ù. ¸Å³â °ü±¤°´ÀÌ ¸ô·Áµå´Â È­Ãµ »êÃµ¾îÃàÁ¦´Â °³¸·À» µÎ Â÷·Ê ¿¬±âÇÏ±âµµ Çß´Ù. Æ÷±ÙÇÑ ³¯¾¾¿¡
-						ºñ±îÁö ¸¹ÀÌ ³»·Á ¾óÀ½ÀÌ Á¦´ë·Î ¾óÁö ¾Ê¾Æ¼­´Ù.</p>
+					<p class="txt_line">êµ­ë¦½ê³µì›ê³µë‹¨ì€ ì§€ë¦¬ì‚°êµ­ë¦½ê³µì› êµ¬ë£¡ê³„ê³¡ ì¼ëŒ€ì— ì‚¬ëŠ” ë¶ë°©ì‚°ê°œêµ¬ë¦¬ì˜ ì‚°ëž€ì„ ì§€ë‚œë‹¬
+						23ì¼ ì²˜ìŒ ê´€ì¸¡í–ˆë‹¤ê³  ë°í˜”ë‹¤. ì§€ë‚œí•´ 2ì›” 19ì¼ë³´ë‹¤ 27ì¼ ë¹ ë¥¸ ì‹œê¸°ë‹¤. í•´ë‹¹ ì¡°ì‚¬ê°€ ì‹œìž‘ëœ 2010ë…„ ì´í›„ 1ì›”ì—
+						ì‚°ëž€ì´ ê´€ì¸¡ëœ ê²ƒì€ ì´ë²ˆì´ ì²˜ìŒì´ë‹¤. ê³µì›ê³µë‹¨ ì—°êµ¬ì§„ì€ ìœ ë‚œížˆ ë”°ëœ»í–ˆë˜ ê²¨ìš¸ ë‚ ì”¨ ë•Œë¬¸ì— ì‚°ëž€ì¼ì´ ì•žë‹¹ê²¨ì§„ ê²ƒìœ¼ë¡œ ë³´ê³ 
+						ìžˆë‹¤. 1ì›” ì¤‘ ë‚® ê¸°ì˜¨ì´ 23ë„ê¹Œì§€ ì˜¬ëžë˜ ì œì£¼ì—ì„œëŠ” ì œì£¼ë„ë¡±ë‡½ì˜ ì‚°ëž€ì‹œê¸°ê°€ í•œ ë‹¬ ì•žë‹¹ê²¨ì¡Œë‹¤. ì œì£¼ ë°±ì„œí–¥ë„ ì˜ˆë…„ì—
+						ë¹„í•´ í•œ ë‹¬ ë¨¼ì € ê°œí™”í–ˆë‹¤. ë§¤ë…„ ê´€ê´‘ê°ì´ ëª°ë ¤ë“œëŠ” í™”ì²œ ì‚°ì²œì–´ì¶•ì œëŠ” ê°œë§‰ì„ ë‘ ì°¨ë¡€ ì—°ê¸°í•˜ê¸°ë„ í–ˆë‹¤. í¬ê·¼í•œ ë‚ ì”¨ì—
+						ë¹„ê¹Œì§€ ë§Žì´ ë‚´ë ¤ ì–¼ìŒì´ ì œëŒ€ë¡œ ì–¼ì§€ ì•Šì•„ì„œë‹¤.</p>
 				</div>
 
 				<div class="right">
@@ -591,15 +591,15 @@
 							alt="" /></a>
 					</div>
 					<br>
-					<figure class="txt_pig">&lt;ÆÞÆÞ ²ú´Â Áö±¸, ÇÑ¹Ýµµ ¾îÀåÁöµµ°¡ ¹Ù²ï´Ù - 2021
-						¾îÁ¾ º¯È­ º¸°í¼­&gt;
+					<figure class="txt_pig">&lt;íŽ„íŽ„ ë“ëŠ” ì§€êµ¬, í•œë°˜ë„ ì–´ìž¥ì§€ë„ê°€ ë°”ë€ë‹¤ - 2021
+						ì–´ì¢… ë³€í™” ë³´ê³ ì„œ&gt;
 					</figure>
-					<p class="txt_line">Áö³­ 7¿ù, ±âÈÄº¯È­·Î °íÅë¹Þ´Â ÇØ¾ç»ý¹°µéÀÇ ½ÇÅÂ°¡ °ø°³µÅ Àü ¼¼°è¿¡ Å«
-						Ãæ°ÝÀ» Áá´Ù. ¹Ì±¹ È¯°æº¸È£´ÜÃ¼ ÄÃ·³ºñ¾Æ ¸®¹öÅ°ÆÛ(Columbia Riverkeeper)´Â ÄÃ·³ºñ¾Æ°­ÀÇ ¿¬¾îµéÀÌ
-						Æø¿°À¸·Î ±ÞµîÇÑ ¼ö¿Â¿¡ ÇÇºÎ »ìÁ¡ÀÌ ¹þ°ÜÁø Ã¤ À¯¿µÇÏ°í ÀÖ´Â ¸ð½ÀÀ» ¿µ»óÀ¸·Î °ø°³Çß´Ù. È¸À¯¼º ¾î·ùÀÎ ¿¬¾î´Â ¹Ù´Ù¿¡
-						»ìÁö¸¸ »ê¶õÇÏ±â À§ÇØ °­À» °Å½½·¯ ¿À¸¥´Ù. ¿©¸§Ã¶ ¾ËÀ» ³º±â À§ÇØ À¯¿µÇÏ´ø ¿¬¾î´Â 20µµ ÀÌ³»ÀÇ ¼ö¿ÂÀ» À¯ÁöÇØ ¿À´ø
-						ÄÃ·³ºñ¾Æ°­ÀÌ Æø¿°À¸·Î 21µµ±îÁö ³ô¾ÆÁöÀÚ ½É°¢ÇÑ È­»óÀ» ÀÔ°Ô µÈ °ÍÀ¸·Î ÆÄ¾ÇµÆ´Ù. 7¿ù ÃÊºÎÅÍ ¿¬¾î ¿µ»óÀ» ÃÔ¿µÇØ ¿Â
-						ÄÃ·³ºñ¾Æ ¸®¹öÅ°ÆÛ È¸¿ø ºê·¿ ¹ê´øÈ£¸®¹úÀº ¡°¾ÕÀ¸·Î °­¹°ÀÌ ´õ ¶ß°Å¿öÁø´Ù¸é ´õ ¸¹Àº ¿¬¾î°¡ Á×À» ¼ö ÀÖ´Ù¡±°í °æ°íÇß´Ù.</p>
+					<p class="txt_line">ì§€ë‚œ 7ì›”, ê¸°í›„ë³€í™”ë¡œ ê³ í†µë°›ëŠ” í•´ì–‘ìƒë¬¼ë“¤ì˜ ì‹¤íƒœê°€ ê³µê°œë¼ ì „ ì„¸ê³„ì— í°
+						ì¶©ê²©ì„ ì¤¬ë‹¤. ë¯¸êµ­ í™˜ê²½ë³´í˜¸ë‹¨ì²´ ì»¬ëŸ¼ë¹„ì•„ ë¦¬ë²„í‚¤í¼(Columbia Riverkeeper)ëŠ” ì»¬ëŸ¼ë¹„ì•„ê°•ì˜ ì—°ì–´ë“¤ì´
+						í­ì—¼ìœ¼ë¡œ ê¸‰ë“±í•œ ìˆ˜ì˜¨ì— í”¼ë¶€ ì‚´ì ì´ ë²—ê²¨ì§„ ì±„ ìœ ì˜í•˜ê³  ìžˆëŠ” ëª¨ìŠµì„ ì˜ìƒìœ¼ë¡œ ê³µê°œí–ˆë‹¤. íšŒìœ ì„± ì–´ë¥˜ì¸ ì—°ì–´ëŠ” ë°”ë‹¤ì—
+						ì‚´ì§€ë§Œ ì‚°ëž€í•˜ê¸° ìœ„í•´ ê°•ì„ ê±°ìŠ¬ëŸ¬ ì˜¤ë¥¸ë‹¤. ì—¬ë¦„ì²  ì•Œì„ ë‚³ê¸° ìœ„í•´ ìœ ì˜í•˜ë˜ ì—°ì–´ëŠ” 20ë„ ì´ë‚´ì˜ ìˆ˜ì˜¨ì„ ìœ ì§€í•´ ì˜¤ë˜
+						ì»¬ëŸ¼ë¹„ì•„ê°•ì´ í­ì—¼ìœ¼ë¡œ 21ë„ê¹Œì§€ ë†’ì•„ì§€ìž ì‹¬ê°í•œ í™”ìƒì„ ìž…ê²Œ ëœ ê²ƒìœ¼ë¡œ íŒŒì•…ëë‹¤. 7ì›” ì´ˆë¶€í„° ì—°ì–´ ì˜ìƒì„ ì´¬ì˜í•´ ì˜¨
+						ì»¬ëŸ¼ë¹„ì•„ ë¦¬ë²„í‚¤í¼ íšŒì› ë¸Œë › ë°´ë˜í˜¸ë¦¬ë²Œì€ â€œì•žìœ¼ë¡œ ê°•ë¬¼ì´ ë” ëœ¨ê±°ì›Œì§„ë‹¤ë©´ ë” ë§Žì€ ì—°ì–´ê°€ ì£½ì„ ìˆ˜ ìžˆë‹¤â€ê³  ê²½ê³ í–ˆë‹¤.</p>
 				</div>
 
 			</div>
@@ -655,9 +655,9 @@
 			<div class="row">
 				<div class="main_pricing_area sections">
 					<div class="head_title text-center">
-						<h2>È¯°æº¸È£ Ä·ÆäÀÎ!</h2>
+						<h2>í™˜ê²½ë³´í˜¸ ìº íŽ˜ì¸!</h2>
 						<div class="subtitle">
-							<a href="campaign.jsp" class="btn btn-lg"> Ä·ÆäÀÎ Âü¿©ÇÏ±â </a>
+							<a href="campaign.jsp" class="btn btn-lg"> ìº íŽ˜ì¸ ì°¸ì—¬í•˜ê¸° </a>
 						</div>
 						<div class="separator"></div>
 					</div>
@@ -666,22 +666,25 @@
 					<div class="col-md-4 col-sm-6">
 						<div class="single_pricing">
 							<div class="pricing_head">
-								<h3>¾î½º ¾Ø ·±</h3>
+								<!-- <img src="assets/images/aa.jpg" alt="" /> -->
+								<h3>ì“°ë‹´ í•œê°•</h3>
 								<div class="pricing_price">
-									<div class="p_r text-center">free</div>
+									<div class="p_r text-center">
+										November <br> 08 <br> ~
+									</div>
 
 								</div>
 							</div>
 
 							<div class="pricing_body">
 								<ul>
-									<li> ¹«½ÉÄÚ Áö³ªÃÆ´ø ÇÃ¶ó½ºÆ½ ¾²·¹±â, 
-									<br>´õ µ¹¾Æ´Ù´ÏÁö ¾Ê°Ô ÇÔ²² ÁÖ¿öº¼±î¿ä?
-									<br> °ø¿ø, ÇÏÃµ, ¾ÆÆÄÆ® ´ÜÁö ¾îµðµç »ó°ü¾ø¾î¿ä!
+									<li>ë¬´ì‹¬ì½” ì§€ë‚˜ì³¤ë˜ í”Œë¼ìŠ¤í‹± ì“°ë ˆê¸°, <br> ë” ëŒì•„ë‹¤ë‹ˆì§€ ì•Šê²Œ í•¨ê»˜ ì£¼ì›Œë³¼ê¹Œìš”? <br>
+										ê³µì›, í•˜ì²œ, ì•„íŒŒíŠ¸ ë‹¨ì§€ ì–´ë””ë“  ìƒê´€ì—†ì–´ìš”!
 									</li>
 
 								</ul>
-								<a href="" class="btn btn-md">JOIN US</a>
+								<a href=" https://www.pmi.com/markets/korea/ko/news/details/%EC%93%B0%EB%A0%88%EA%B8%B0-%EB%AC%B4%EB%8B%A8%ED%88%AC%EA%B8%B0-%EA%B8%89%EC%A6%9D%ED%95%9C-%ED%95%9C%EA%B0%95%EC%97%90%EC%84%9C-%ED%99%98%EA%B2%BD%ED%9A%8C%EB%B3%B5-%EC%BA%A0%ED%8E%98%EC%9D%B8-%ED%95%9C%EA%B5%AD%ED%95%84%EB%A6%BD%EB%AA%A8%EB%A6%AC%EC%8A%A4-%ED%99%98%EA%B2%BD%EC%9E%AC%EB%8B%A8%EA%B3%BC-5%EC%A3%BC%EA%B0%84-%EC%93%B0%EB%8B%B4%ED%95%9C%EA%B0%95-%EC%A7%84%ED%96%89"
+									class="btn btn-md"> JOIN US</a>
 							</div>
 						</div>
 					</div>
@@ -689,20 +692,22 @@
 					<div class="col-md-4 col-sm-6">
 						<div class="single_pricing pricing_business">
 							<div class="pricing_head ">
-								<h3>Ã¤¼Ò ÇÑ³¢,ÃÖ¼Ò ÇÑ³¢</h3>
+								<h3>ë´‰ê·¸ê¹…</h3>
 								<div class="pricing_price">
-									<div class="p_r text-center">free</div>
+									<div class="p_r text-center">
+										October <br> 06 <br> ~
+									</div>
 								</div>
 							</div>
 
 							<div class="pricing_body">
 								<ul>
-									<li> ¿À´Ã ³»°¡ °í±â ´ë½Å ¼±ÅÃÇÑ 'Ã¤¼ÒÇÑ ³¢'·Î 
-									<br>Á¡Á¡ ½É°¢ÇØÁ® °¡´Â ±âÈÄÀ§±â¸¦ ¸·À» ¼ö ÀÖ´Ù¸é, 
-									<br>¾î¶³±î¿ä?</li>
+									<li>ì œì£¼ë„ í•´ì•ˆì— ë²„ë ¤ì ¸ìžˆëŠ” ì“°ë ˆê¸°ë“¤ì„ ì¤ê³  <br>ê¹¨ë—í•œ ë°”ë‹¤ë¥¼ ì„ ë¬¼ í•´ ë³¼ê¹Œìš”?
+									</li>
 
 								</ul>
-								<a href="" class="btn btn-md">JOIN US</a>
+								<a href="https://www.apgroup.com/int/ko/news/2021-10-06-a.html"
+									class="btn btn-md">JOIN US</a>
 							</div>
 						</div>
 					</div>
@@ -710,21 +715,21 @@
 					<div class="col-md-4 col-sm-6">
 						<div class="single_pricing">
 							<div class="pricing_head">
-								<h3>ºÐ¹Ù½ºÆ½</h3>
+								<h3>ë¶„ë°”ìŠ¤í‹±</h3>
 								<div class="pricing_price">
-									<div class="p_r text-center">free</div>
+									<div class="p_r text-center"><br>continue ~</div>
 
 								</div>
 							</div>
 
 							<div class="pricing_body">
 								<ul>
-									<li>ÆäÆ®º´ÀÇ ¶óº§°ú ¶Ñ²±¸µÀ»
-									<br>½±°Ô ¶â¾î ºÐ¸®¹èÃâÀ»
-									<br>½ÃÀÛÇØ º¼±î¿ä?</li>
+									<li>íŽ˜íŠ¸ë³‘ì˜ ë¼ë²¨ê³¼ ëšœê»‘ë§ì„ <br>ì‰½ê²Œ ëœ¯ì–´ ë¶„ë¦¬ë°°ì¶œì„ <br>ì‹œìž‘í•´ ë³¼ê¹Œìš”?
+									</li>
 
 								</ul>
-								<a href="" class="btn btn-md">JOIN US</a>
+								<a href="https://www.terracycle.com/ko-KR/brigades/boon-ba-stick"
+									class="btn btn-md">JOIN US</a>
 							</div>
 						</div>
 					</div>
@@ -855,9 +860,9 @@
 					<div class="row">
 						<div class="main_trial">
 							<div class="col-sm-12">
-								<h2>°Ô½ÃÆÇ</h2>
-								<h4>»ç¶÷µéÀÇ ¼Ò¸®¸¦ µé¾îº¸¼¼¿ä</h4>
-								<a href="" class="btn btn-lg">¼Ò¸® µè±â</a>
+								<h2>ê²Œì‹œíŒ</h2>
+								<h4>ì‚¬ëžŒë“¤ì˜ ì†Œë¦¬ë¥¼ ë“¤ì–´ë³´ì„¸ìš”</h4>
+								<a href="" class="btn btn-lg">ì†Œë¦¬ ë“£ê¸°</a>
 							</div>
 						</div>
 					</div>
@@ -881,7 +886,7 @@
 										<div class="single_counter_item">
 
 											<h2 class="statistic-counter">3891</h2>
-											<h4 class="">Áñ°ÜÃ£±â</h4>
+											<h4 class="">ì¦ê²¨ì°¾ê¸°</h4>
 										</div>
 									</div>
 								</div>
@@ -891,7 +896,7 @@
 										<div class="single_counter_item">
 
 											<h2 class="statistic-counter">281</h2>
-											<h4 class="">24½Ã°£ Æ÷½ºÆÃ ¼ö</h4>
+											<h4 class="">24ì‹œê°„ í¬ìŠ¤íŒ… ìˆ˜</h4>
 										</div>
 									</div>
 								</div>
@@ -901,7 +906,7 @@
 										<div class="single_counter_item">
 
 											<h2 class="statistic-counter">618</h2>
-											<h4 class="">ÀüÃ¼ Æ÷½ºÆÃ ¼ö</h4>
+											<h4 class="">ì „ì²´ í¬ìŠ¤íŒ… ìˆ˜</h4>
 										</div>
 
 									</div>
@@ -912,7 +917,7 @@
 										<div class="single_counter_item">
 
 											<h2 class="statistic-counter">178</h2>
-											<h4 class="">Æ¯Â¡ ¼ö</h4>
+											<h4 class="">íŠ¹ì§• ìˆ˜</h4>
 
 										</div>
 									</div>
@@ -935,7 +940,7 @@
 					<div class="col-sm-12">
 						<div class="head_title textwhite text-center margin-top-80">
 							<h2>OUR TEAM</h2>
-							<div class="subtitle" id="team_name">±ñºÎ</div>
+							<div class="subtitle" id="team_name">ê¹ë¶€</div>
 							<div class="separator"></div>
 						</div>
 						<!-- End off Head_title -->
@@ -944,61 +949,61 @@
 							<ul>
 								<li>
 									<div class="single_team_img">
-										<img src="image/kkj.png" alt="" />
+										<img src="assets/images/kkj.jpg" alt="" />
 									</div>
 									<div class="single_team_text">
-										<h4>±è±¹Áß</h4>
+										<h4>ê¹€êµ­ì¤‘</h4>
 										<br>
 										<p id="team_list">
-											<br>ÇÁ·ÎÁ§Æ® ÃÑ°ý,<br> ÇÁ·ÐÆ®, ¹é¾Øµå, DB
+											<br>í”„ë¡œì íŠ¸ ì´ê´„,<br> í”„ë¡ íŠ¸, ë°±ì•¤ë“œ, DB
 										</p>
 									</div>
 								</li>
 								<li>
 									<div class="single_team_img">
-										<img src="image/kjn.png" alt="" />
+										<img src="assets/images/kjn.jpg" alt="" />
 									</div>
 									<div class="single_team_text">
-										<h4>±èÁö³ª</h4>
+										<h4>ê¹€ì§€ë‚˜</h4>
 										<br>
 										<p id="team_list">
-											<br>µ¥ÀÌÅÍ ÀüÃ³¸® ¹×<br> ºÐ¼®, ÇÁ·ÐÆ®, ¹é¾Øµå. DB
+											<br>ë°ì´í„° ì „ì²˜ë¦¬ ë°<br> ë¶„ì„, í”„ë¡ íŠ¸, ë°±ì•¤ë“œ. DB
 										</p>
 									</div>
 								</li>
 								<li>
 									<div class="single_team_img">
-										<img src="image/pjy.png" alt="" />
+										<img src="assets/images/pjy.jpg" alt="" />
 									</div>
 									<div class="single_team_text">
-										<h4>¹ÚÁØ¿µ</h4>
+										<h4>ë°•ì¤€ì˜</h4>
 										<br>
 										<p id="team_list">
-											<br>µ¥ÀÌÅÍ ÀüÃ³¸® ¹×<br> ºÐ¼®, ÇÁ·ÐÆ®, ¹é¾Øµå. DB
+											<br>ë°ì´í„° ì „ì²˜ë¦¬ ë°<br> ë¶„ì„, í”„ë¡ íŠ¸, ë°±ì•¤ë“œ. DB
 										</p>
 									</div>
 								</li>
 								<li>
 									<div class="single_team_img">
-										<img src="image/pjj.png" alt="" />
+										<img src="assets/images/pjj.jpg" alt="" />
 									</div>
 									<div class="single_team_text">
-										<h4>¹ÚÁøÁÖ</h4>
+										<h4>ë°•ì§„ì£¼</h4>
 										<br>
 										<p id="team_list">
-											<br>µ¥ÀÌÅÍ ÀüÃ³¸® ¹×<br> ºÐ¼®, ÇÁ·ÐÆ®, ¹é¾Øµå. DB
+											<br>ë°ì´í„° ì „ì²˜ë¦¬ ë°<br> ë¶„ì„, í”„ë¡ íŠ¸, ë°±ì•¤ë“œ. DB
 										</p>
 									</div>
 								</li>
 								<li>
 									<div class="single_team_img">
-										<img src="image/lhw.png" alt="" />
+										<img src="assets/images/lhw.jpg" alt="" />
 									</div>
 									<div class="single_team_text">
-										<h4>ÀÌÇý¿ø</h4>
-										
+										<h4>ì´í˜œì›</h4>
+
 										<p id="team_list">
-										<br>µ¥ÀÌÅÍ ÀüÃ³¸® ¹×<br> ºÐ¼®, ÇÁ·ÐÆ®, ¹é¾Øµå. DB
+											<br>ë°ì´í„° ì „ì²˜ë¦¬ ë°<br> ë¶„ì„, í”„ë¡ íŠ¸, ë°±ì•¤ë“œ. DB
 										</p>
 									</div>
 								</li>
@@ -1036,8 +1041,8 @@
 							<div class="col-sm-6 col-xs-12">
 								<div class="copyright_text">
 									<p class=" wow fadeInRight" data-wow-duration="1s">
-										Made with <i class="fa fa-heart"></i> by 
-										<a href="http://bootstrapthemes.co">±ñºÎ  ±è±¹Áß ±èÁö³ª ¹ÚÁØ¿µ ¹ÚÁøÁÖ ÀÌÇý¿ø</a>
+										Made with <i class="fa fa-heart"></i> by <a
+											href="http://bootstrapthemes.co">ê¹ë¶€ ê¹€êµ­ì¤‘ ê¹€ì§€ë‚˜ ë°•ì¤€ì˜ ë°•ì§„ì£¼ ì´í˜œì›</a>
 									</p>
 								</div>
 							</div>

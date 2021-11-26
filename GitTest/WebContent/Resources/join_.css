@@ -278,12 +278,14 @@ h3{
     font-family: Dotum,'µ¸¿ò',Helvetica,sans-serif;
 }
 .signup-input{
-    display:flex;
+    display:block;
+    height:20px;
     /* margin: 0px 10px 8px 10px; */
-    padding: 10px;
-    border: solid 1px #dadada;
+    padding: 10px 2px;
+    border: 2px solid #dadada;
     background: #fff;
     cursor: pointer;
+    outline:none;
 }
 .signup-input-c{
     display:flex;
@@ -302,6 +304,8 @@ h3{
     outline:none;
     width:100%;
 }
+
+
 .signup-at{
     color: rgb(150, 150, 150);
     font-size: 15px;
