@@ -30,8 +30,6 @@ public class WriterCommunityServiceCon extends HttpServlet {
 		String saveDirectory = "C:/Users/smhrd/git/SOP/GitTest/WebContent/Resources/image";
 
 
-
-		
 		
 		int maxSize = 1024 * 1024 * 10;
 		String encoding = "euc-kr";

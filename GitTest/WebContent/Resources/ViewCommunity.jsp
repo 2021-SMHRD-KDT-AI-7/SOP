@@ -50,15 +50,15 @@
     </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
    <%
-	  /* HttpSession session = request.getSession();  */
-		
-	  MemberDTO info=(MemberDTO)session.getAttribute("info"); 
-	  
-	  String mb_id = info.getMb_id();
-	  
-	  System.out.println("===댓글===");
-	  System.out.println(mb_id);
-	  
+     /* HttpSession session = request.getSession();  */
+      
+     MemberDTO info=(MemberDTO)session.getAttribute("info"); 
+     
+     String mb_id = info.getMb_id();
+     
+     System.out.println("===댓글===");
+     System.out.println(mb_id);
+     
       String article_seq = request.getParameter("article_seq");
       
       System.out.println(article_seq);
@@ -71,7 +71,7 @@
       ArrayList<CommentDTO> cmt_list = new ArrayList<>();
       
       if(info != null){
-			cmt_list = cmt_dao.getComment(article_seq);
+         cmt_list = cmt_dao.getComment(article_seq);
       }
    %>
 
@@ -161,21 +161,21 @@
                                  <td colspan="2">
                                  
                                  <!-- 댓글 reload -->
-                                    <%	
-                                    	for (int i=0; i<cmt_list.size(); i++){ %>
-											
-                                    		<tr id="comments-<%=cmt_list.get(i).getComment_seq()%>" style="list-style:none; padding:0">
-											<td><%=cmt_list.get(i).getComment_content()%></td>
-											
-											<!-- 댓글 삭제 -->
-											<% 
-											if(cmt_list.get(i).getMb_id().equals(mb_id)){ %>
-											<td><input id="delete_com" type="button" value="댓글삭제" onclick="del(<%=cmt_list.get(i).getComment_seq()%>)"></td>
-												
-											<%}%>
-											</tr>
-                                    	<%}%>
-													
+                                    <%   
+                                       for (int i=0; i<cmt_list.size(); i++){ %>
+                                 
+                                          <tr id="comments-<%=cmt_list.get(i).getComment_seq()%>" style="list-style:none; padding:0">
+                                 <td><%=cmt_list.get(i).getComment_content()%></td>
+                                 
+                                 <!-- 댓글 삭제 -->
+                                 <% 
+                                 if(cmt_list.get(i).getMb_id().equals(mb_id)){ %>
+                                 <td><input id="delete_com" type="button" value="댓글삭제" onclick="del(<%=cmt_list.get(i).getComment_seq()%>)"></td>
+                                    
+                                 <%}%>
+                                 </tr>
+                                       <%}%>
+                                       
                                     
                                  </td>
                               </tr>
@@ -267,9 +267,9 @@
        var num = 1;
       
       $('#write_com').on('click',function(){
-    	  /* alert("!") */
-    	  var seq = <%=article_seq%>;
-    	  var number = <%=cmt_list.size()-1%>;
+         /* alert("!") */
+         var seq = <%=article_seq%>;
+         var number = <%=cmt_list.size()-1%>;
           var com = $('input[type=text]').val()    //댓글
           /* $('#comments-' + number).after('<tr id="comments-'+(number+1)+'" style="list-style:none; padding:0"><td class="com'+num+'">'+com+'</td><td><input type="button" value="댓글삭제" onclick="del('+num+')"></td></tr>'); */
          
@@ -288,7 +288,7 @@
       
       
       function del(id){
-    	  $.ajax({
+         $.ajax({
               type : "post",
               data : {
                  "comment_seq" : id,
@@ -296,9 +296,9 @@
               url : "../CommentDeleteServiceCon",
               dataType : "text",
               success : function(data){
-            	  $('tr#comments-comment_seq').remove();
-				  alert("댓글 삭제 성공");
-            	  location.reload();
+                 $('tr#comments-comment_seq').remove();
+              alert("댓글 삭제 성공");
+                 location.reload();
               },
               error : function(){
                  alert("실패!");
@@ -308,7 +308,7 @@
       
       
       function insert_com(seq, com){
-    	  $.ajax({
+         $.ajax({
               type : "post",
               data : {
                  "article_seq" : seq,
@@ -327,7 +327,7 @@
        
    
    </script>
-	
-	
+   
+   
 </body>
 </html>
