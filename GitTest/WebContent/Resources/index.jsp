@@ -87,13 +87,10 @@
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
-<<<<<<< HEAD
 										<a class="navbar-brand" href="#home"> <img
 											src="assets/images/sopsop.jpg" />
-=======
 										<a class="navbar-brand" href="#home"> 
 										<img src="assets/images/logo1.png" />
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 										</a>
 									</div>
 
@@ -257,11 +254,7 @@
 																<p><%=info.getMb_nickname()%>님<br>
 																	<%=info.getMb_point()%>
 																	점입니다!<br>
-<<<<<<< HEAD
 																	<%=grade%>등급입니다!!
-=======
-																	<%=info.getMb_grade()%>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 																</p>
 															</fieldset>
 
