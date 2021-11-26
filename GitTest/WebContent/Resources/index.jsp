@@ -53,6 +53,7 @@
 		MemberDTO info = (MemberDTO)session.getAttribute("info");
 		NewsDAO dao = new NewsDAO();
 		ArrayList<NewsDTO> news_list = dao.getNews();
+		int news = dao.getCount();
 		
 	int point = info.getMb_point();
 	String grade = "";
@@ -628,8 +629,8 @@
 								<div class="single_study_text">
 									<div class="study_slider">
 
-									<% // 현재 1번째 ~ 3번째 행의 데이터를 가져옴. --> 마지막 인덱스의 1,2,3 번째를 가져와야함
-									for(int i =0; i< 2; /*news_list.size();*/ i++){
+										<% // 현재 1번째 ~ 3번째 행의 데이터를 가져옴. --> 마지막 인덱스의 1,2,3 번째를 가져온다.
+									for(int i =news-3; i < news;  i++){
 									%>
 										<div class="item">
 											<h4 class="external_news_title"> <%=news_list.get(i).getNews_title()%> 

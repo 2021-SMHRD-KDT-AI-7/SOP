@@ -98,8 +98,9 @@ public class NewsDAO {
 				}return news_list;
 		 } 
 	
-	// 페이지 처리 메소드
+	// 페이지 처리 메소드(안쓰는중)
 		 public boolean nextPage(int pageNumber) {//페이지 처리를 위한 함수
+			 getConn();
 				String SQL="SELECT * from t_news where news_seq < ?";
 				try {
 					PreparedStatement psmt=conn.prepareStatement(SQL);
@@ -110,6 +111,8 @@ public class NewsDAO {
 					}			
 				} catch(Exception e) {
 					e.printStackTrace();
+				}finally {
+					dbClose();
 				}
 				return false;
 			}	 
