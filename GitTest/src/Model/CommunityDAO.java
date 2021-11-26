@@ -264,6 +264,25 @@ public class CommunityDAO {
       
    }
    
- 
+ //페이징 메소드
+ 	public int getCount() {
+ 			 
+ 			 getConn();
+ 				try {
+ 					String sql = "select count(*) from t_community";
+ 					
+ 					PreparedStatement psmt=conn.prepareStatement(sql);
+ 					rs=psmt.executeQuery();
+ 					
+ 					if(rs.next()) {
+ 						return rs.getInt(1);
+ 					}			
+ 				} catch(Exception e) {
+ 					e.printStackTrace();
+ 				}finally {
+ 					dbClose();
+ 				}
+ 				return -1;
+ 			}
 
 }

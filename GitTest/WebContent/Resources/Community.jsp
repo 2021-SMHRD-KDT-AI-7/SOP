@@ -48,14 +48,22 @@
 p.c_2 {
 	font-size: 13px;
 }
+.paging{
+	text-align: center;
+}
 </style>
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
-	<% 
-	CommunityDAO dao = new CommunityDAO();
-	ArrayList<CommunityDTO> b_list = dao.viewBoard();
-	MemberDTO info = (MemberDTO) session.getAttribute("info");
-	
+	<%
+		CommunityDAO dao = new CommunityDAO();
+		ArrayList<CommunityDTO> b_list = dao.viewBoard();
+		MemberDTO info = (MemberDTO) session.getAttribute("info");
+		
+		// 페이징을 위한 변수 및 조건문 선언
+		int pageNumber = 1; //기본적으로 1페이지
+		int page_count = dao.getCount(); // 행의 총 개수를 담는 변수
+		if (request.getParameter("pageNumber") != null)
+			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
 	%>
 	<div class='preloader'>
 		<div class='loaded'>&nbsp;</div>
@@ -162,25 +170,50 @@ p.c_2 {
 
 														<td>삭제</td>
 													</tr>
-
+													<!-- 게시글 20개씩 인덱싱 -->
 													<%
-														for (int i = 0; i < b_list.size(); i++) {
+													int len = pageNumber;
+														
+													for(int i = 1; i < pageNumber; i++){ // 콘텐츠 시작 인덱스 구하기
+														len += 19;
+													}
+													if((page_count / (pageNumber*20)) != 0){ // 테이블의 총 행의 개수 / 최대 페이지 수 != 최대 페이지 수 -->  현재 마지막 페이지가 아니면 실행
+													for (int i = len; i < len+20; i++) {
 													%>
 													<tr>
-														<td><%=i + 1%></td>
+														<td><%=(page_count-i)+1 %></td>
 														<td><a
-															href="ViewCommunity.jsp?article_seq=<%=b_list.get(i).getArticle_seq()%>"><%=b_list.get(i).getArticle_title()%>
+															href="ViewCommunity.jsp?article_seq=<%=b_list.get(i-1).getArticle_seq()%>"><%=b_list.get(i-1).getArticle_title()%>
 														</a></td>
-														<td><%=b_list.get(i).getMb_id()%></td>
-														<td><%=b_list.get(i).getReg_date()%></td>
+														<td><%=b_list.get(i-1).getMb_id()%></td>
+														<td><%=b_list.get(i-1).getReg_date()%></td>
 														<td>조회수는 나중에 만들기</td>
 														<td><a
-															href="../CommunityDeleteOneServiceCon?article_seq=<%=b_list.get(i).getArticle_seq()%>">삭제</a></td>
+															href="../CommunityDeleteOneServiceCon?article_seq=<%=b_list.get(i-1).getArticle_seq()%>">삭제</a></td>
 													</tr>
 													<%
 														}
+													}else{  // 테이블의 총 행의 개수 / 최대 페이지 수 == 최대 페이지 수 --> 참이면 현재 최대 페이지에 있음.
+														for(int i = len; i <= page_count; i++){
 													%>
+													<tr>
+														<td><%=(page_count-i)+1 %></td>
+														<td><a
+															href="ViewCommunity.jsp?article_seq=<%=b_list.get(i-1).getArticle_seq()%>"><%=b_list.get(i-1).getArticle_title()%>
+														</a></td>
+														<td><%=b_list.get(i-1).getMb_id()%></td>
+														<td><%=b_list.get(i-1).getReg_date()%></td>
+														<td>조회수는 나중에 만들기</td>
+														<td><a
+															href="../CommunityDeleteOneServiceCon?article_seq=<%=b_list.get(i-1).getArticle_seq()%>">삭제</a></td>
+													</tr>
+													<%
+														}
+													}%>
+													<!--  인덱싱 끝(준영) -->
 												</table>
+												
+												<!-- 검색 기능 -->
 												<div>
 													<div class="row">
 														<form method="post" name="search"
@@ -194,11 +227,44 @@ p.c_2 {
 																	<td><button type="submit" class="btn btn-success"
 																			style="margin-top: 0px;">검색</button></td>
 																</tr>
-
 															</table>
 														</form>
 													</div>
 												</div>
+												<!-- 검색 기능 끝 -->
+												
+												<!-- 페이징 시작(준영) -->
+												<div >
+													<div class="paging">
+														<%
+															if (pageNumber != 1) {//이전페이지로
+														%>
+														<a 
+															href="Community.jsp?pageNumber=<%=pageNumber - 1%>">이전</a>
+														<%
+															}
+														%>
+														<%
+															// 페이징 숫자 표시
+														for (int i = 1; i <= (page_count/20+1); i++) {
+														%>
+														<a href="Community.jsp?pageNumber=<%=i%>">l<%=i%>l
+														</a>
+														<%
+															}
+														%>
+														<%
+															if (page_count / (pageNumber * 20) != 0) {// 마지막 페이지가 아니면 참
+														%>
+														<a 
+															href="Community.jsp?pageNumber=<%=pageNumber + 1%>">다음</a>
+														<%
+															}
+														%>
+													</div>
+												</div>
+												<!-- 페이징 끝(준영) -->
+												
 												<%if(info != null){ %>
 												<a href="index.jsp"><button id="writer">홈으로가기</button></a>
 												<a href="CommunityWrite.jsp"><button id="writer">작성하러가기</button></a>

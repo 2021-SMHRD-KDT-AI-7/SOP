@@ -137,13 +137,13 @@
    // len(현재 페이지의 기사 인덱스 구하기)
 	int len = pageNumber;
 	int page_count = dao.getCount();
-	int n = (int)((dao.getCount() / 5) + 1);
+	//int n = (int)((dao.getCount() / 5) + 1); // 소스 수정으로 사용안함.
 
 	 for(int i = 1; i < pageNumber; i++){ // 콘텐츠 시작 인덱스 구하기
 	      len += 4;
 	 }
 
-	if((page_count / (len*5)) != 0){ // 테이블의 총 행의 개수 / 최대 페이지 수 != 최대 페이지 수 +1 -->  현재 마지막 페이지가 아니면 실행
+	if((page_count / (pageNumber*5)) != 0){ // 테이블의 총 행의 개수 / 최대 페이지 수 != 최대 페이지 수 -->  현재 마지막 페이지가 아니면 실행
 		for(int i =len; i< len+5; i++){
 			%>
 			      <div class="list ">
@@ -224,8 +224,8 @@
    </div>
     -->
     
-   <div class="paginate">
-   <div class=container style="text-align: center">
+<div class="paginate">
+	<div class=container style="text-align: center">
             <%
                if (pageNumber != 1) {//이전페이지로
             %>
@@ -234,7 +234,7 @@
                }
             %>
             <% // 페이징 숫자 표시
-               for (int i = 1; i <= n; i++) {
+               for (int i = 1; i <= (page_count/5+1); i++) {
             %>
                <a class="selected" href="News.jsp?pageNumber=<%=i%>"><%=i%>
                </a>
@@ -248,8 +248,8 @@
             <%
                }
             %>
+	</div>
 </div>
-         </div>
 
    <!--Footer section-->
    <section class="footer">
