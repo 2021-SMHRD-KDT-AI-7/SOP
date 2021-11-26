@@ -28,6 +28,10 @@ public class WriterCommunityServiceCon extends HttpServlet {
 
 		String saveDirectory = "C:/Users/smhrd/git/SOP/GitTest/WebContent/Resources/image";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 		
 		int maxSize = 1024 * 1024 * 10;
 		String encoding = "euc-kr";
