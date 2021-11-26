@@ -47,25 +47,23 @@
 
 	<%
 		request.setCharacterEncoding("euc-kr");
-	MemberDTO info = (MemberDTO)session.getAttribute("info");
+	MemberDTO info = (MemberDTO) session.getAttribute("info");
 
-	
-		int point = info.getMb_point();
-		String grade = "";
-		if (point >= 500) {
-			grade = "챌린저";
-		} else if (point >= 300) {
-			grade = "다이아";
-		} else if (point >= 180) {
-			grade = "플래티넘";
-		} else if (point >= 80) {
-			grade = "골드";
-		} else if (point >= 30) {
-			grade = "실버";
-		} else {
-			grade = "브론즈";
-		}
-	
+	int point = info.getMb_point();
+	String grade = "";
+	if (point >= 500) {
+		grade = "챌린저";
+	} else if (point >= 300) {
+		grade = "다이아";
+	} else if (point >= 180) {
+		grade = "플래티넘";
+	} else if (point >= 80) {
+		grade = "골드";
+	} else if (point >= 30) {
+		grade = "실버";
+	} else {
+		grade = "브론즈";
+	}
 	%>
 
 	<div class='preloader'>
@@ -89,9 +87,9 @@
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
-										<a class="navbar-brand" href="#home"> 
-										<img src="assets/images/logo1.png" />
-									
+										<a class="navbar-brand" href="#home"> <img
+											src="assets/images/logo1.png" />
+
 										</a>
 									</div>
 
@@ -800,6 +798,7 @@
 	<!-- End off clogo Section -->
 
 
+
 	<!-- Pricing Section -->
 	<section id="pricing" class="pricing">
 		<div class="container">
@@ -817,21 +816,26 @@
 					<div class="col-md-4 col-sm-6">
 						<div class="single_pricing">
 							<div class="pricing_head">
-								<h3>어스 앤 런</h3>
+								<!-- <img src="assets/images/aa.jpg" alt="" /> -->
+								<h3>쓰담 한강</h3>
 								<div class="pricing_price">
-									<div class="p_r text-center">free</div>
+									<div class="p_r text-center">
+										November <br> 08 <br> ~
+									</div>
 
 								</div>
 							</div>
 
 							<div class="pricing_body">
 								<ul>
-									<li>무심코 지나쳤던 플라스틱 쓰레기, <br>더 돌아다니지 않게 함께 주워볼까요? <br>
+									<li>무심코 지나쳤던 플라스틱 쓰레기, <br> 더 돌아다니지 않게 함께 주워볼까요? <br>
 										공원, 하천, 아파트 단지 어디든 상관없어요!
 									</li>
 
 								</ul>
-								<a href="" class="btn btn-md">JOIN US</a>
+								<a
+									href=" https://www.pmi.com/markets/korea/ko/news/details/%EC%93%B0%EB%A0%88%EA%B8%B0-%EB%AC%B4%EB%8B%A8%ED%88%AC%EA%B8%B0-%EA%B8%89%EC%A6%9D%ED%95%9C-%ED%95%9C%EA%B0%95%EC%97%90%EC%84%9C-%ED%99%98%EA%B2%BD%ED%9A%8C%EB%B3%B5-%EC%BA%A0%ED%8E%98%EC%9D%B8-%ED%95%9C%EA%B5%AD%ED%95%84%EB%A6%BD%EB%AA%A8%EB%A6%AC%EC%8A%A4-%ED%99%98%EA%B2%BD%EC%9E%AC%EB%8B%A8%EA%B3%BC-5%EC%A3%BC%EA%B0%84-%EC%93%B0%EB%8B%B4%ED%95%9C%EA%B0%95-%EC%A7%84%ED%96%89"
+									class="btn btn-md"> JOIN US</a>
 							</div>
 						</div>
 					</div>
@@ -839,20 +843,22 @@
 					<div class="col-md-4 col-sm-6">
 						<div class="single_pricing pricing_business">
 							<div class="pricing_head ">
-								<h3>채소 한끼,최소 한끼</h3>
+								<h3>봉그깅</h3>
 								<div class="pricing_price">
-									<div class="p_r text-center">free</div>
+									<div class="p_r text-center">
+										October <br> 06 <br> ~
+									</div>
 								</div>
 							</div>
 
 							<div class="pricing_body">
 								<ul>
-									<li>오늘 내가 고기 대신 선택한 '채소한 끼'로 <br>점점 심각해져 가는 기후위기를 막을
-										수 있다면, <br>어떨까요?
+									<li>제주도 해안에 버려져있는 쓰레기들을 줍고 <br>깨끗한 바다를 선물 해 볼까요?
 									</li>
 
 								</ul>
-								<a href="" class="btn btn-md">JOIN US</a>
+								<a href="https://www.apgroup.com/int/ko/news/2021-10-06-a.html"
+									class="btn btn-md">JOIN US</a>
 							</div>
 						</div>
 					</div>
@@ -862,7 +868,9 @@
 							<div class="pricing_head">
 								<h3>분바스틱</h3>
 								<div class="pricing_price">
-									<div class="p_r text-center">free</div>
+									<div class="p_r text-center">
+										<br>continue ~
+									</div>
 
 								</div>
 							</div>
@@ -873,7 +881,9 @@
 									</li>
 
 								</ul>
-								<a href="" class="btn btn-md">JOIN US</a>
+								<a
+									href="https://www.terracycle.com/ko-KR/brigades/boon-ba-stick"
+									class="btn btn-md">JOIN US</a>
 							</div>
 						</div>
 					</div>
@@ -886,7 +896,9 @@
 	</section>
 	<!-- End off Pricing Section -->
 
-<!--  게시판 ! -->
+
+
+	<!--  게시판 ! -->
 	<section id="trial" class="trial text-center wow fadeIn"
 		data-wow-duration="2s" data-wow-dealy="1.5s">
 		<div class="main_trial_area">
@@ -905,10 +917,10 @@
 			</div>
 		</div>
 	</section>
-<!--  게시판 끝! -->
+	<!--  게시판 끝! -->
 
 
-<!-- 조회수 -->
+	<!-- 조회수 -->
 	<!-- Counter Section -->
 	<section id="counter" class="counter">
 		<div class="video_overlay">
@@ -968,7 +980,7 @@
 		<!-- End off container -->
 	</section>
 	<!-- End of counter section -->
-<!-- 조회수 끝 -->
+	<!-- 조회수 끝 -->
 
 	<!-- Team Section -->
 	<section id="team" class="team">
@@ -1039,9 +1051,9 @@
 									</div>
 									<div class="single_team_text">
 										<h4>이혜원</h4>
-										
+
 										<p id="team_list">
-										<br>데이터 전처리 및<br> 분석, 프론트, 백앤드. DB
+											<br>데이터 전처리 및<br> 분석, 프론트, 백앤드. DB
 										</p>
 									</div>
 								</li>
@@ -1060,10 +1072,10 @@
 
 
 
-	
 
 
-<!--Footer section-->
+
+	<!--Footer section-->
 	<section class="footer">
 		<div class="container">
 			<div class="row">
