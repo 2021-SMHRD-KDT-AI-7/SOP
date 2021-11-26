@@ -11,7 +11,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Bino html5 free Template</title>
+<title></title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -420,7 +420,7 @@
 		data-wow-duration="2s" data-wow-dealy="1.5s">
 		<div class="container">
 			<div class="row">
-				<div class="main_study_area sections">
+				<div class="main_study_area sections" style="height:1050px;">
 					<div class="head_title text-center">
 						<h2>데일리 환경 기사</h2>
 						<div class="subtitle">환경과 관련된 뉴스 기사를 만나보세요!</div>
@@ -1036,6 +1036,8 @@
 							<div class="col-sm-6 col-xs-12">
 								<div class="copyright_text">
 									<p class=" wow fadeInRight" data-wow-duration="1s">
+										Made with <i class="fa fa-heart"></i> by 
+										<a href="http://bootstrapthemes.co">깐부  김국중 김지나 박준영 박진주 이혜원</a>
 										Made with <i class="fa fa-heart"></i> by <a
 											href="http://bootstrapthemes.co">깐부 김국종 김지나 박준영 박진주 이혜원</a>
 									</p>

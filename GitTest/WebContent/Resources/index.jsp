@@ -48,6 +48,22 @@
 	<%
 		request.setCharacterEncoding("euc-kr");
 	MemberDTO info = (MemberDTO) session.getAttribute("info");
+
+	int point = info.getMb_point();
+	String grade = "";
+	if (point >= 500) {
+		grade = "챌린저";
+	} else if (point >= 300) {
+		grade = "다이아";
+	} else if (point >= 180) {
+		grade = "플래티넘";
+	} else if (point >= 80) {
+		grade = "골드";
+	} else if (point >= 30) {
+		grade = "실버";
+	} else {
+		grade = "브론즈";
+	}
 	%>
 
 	<div class='preloader'>
@@ -71,6 +87,8 @@
 												class="icon-bar"></span> <span class="icon-bar"></span> <span
 												class="icon-bar"></span>
 										</button>
+										<a class="navbar-brand" href="#home"> <img
+											src="assets/images/sopsop.jpg" />
 										<a class="navbar-brand" href="#home"> 
 										<img src="assets/images/logo1.png" />
 										</a>
@@ -100,6 +118,7 @@
 												} else {
 											%>
 											<li><a href="../LogoutCon">로그아웃</a></li>
+											<li><a href="#contact">내 정보</a></li>
 											<%
 												}
 											%>
@@ -235,7 +254,7 @@
 																<p><%=info.getMb_nickname()%>님<br>
 																	<%=info.getMb_point()%>
 																	점입니다!<br>
-																	<%=info.getMb_grade()%>
+																	<%=grade%>등급입니다!!
 																</p>
 															</fieldset>
 

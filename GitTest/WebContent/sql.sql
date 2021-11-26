@@ -17,4 +17,6 @@ select count(*) from t_news
 insert into t_news(news_seq,news_title,news_content,mb_id) values(t_news_seq.nextval,'제목','내용','junyoung7798')
 
 update t_news  set news_url= 'https://www.hani.co.kr/arti/society/environment/1019808.html'
+update t_member set mb_point = 999 where mb_id = 'admin'
 where mb_id='junyoung7798'
+
