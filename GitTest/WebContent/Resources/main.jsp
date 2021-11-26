@@ -683,7 +683,7 @@
 									</li>
 
 								</ul>
-								<a href=" https://www.pmi.com/markets/korea/ko/news/details/%EC%93%B0%EB%A0%88%EA%B8%B0-%EB%AC%B4%EB%8B%A8%ED%88%AC%EA%B8%B0-%EA%B8%89%EC%A6%9D%ED%95%9C-%ED%95%9C%EA%B0%95%EC%97%90%EC%84%9C-%ED%99%98%EA%B2%BD%ED%9A%8C%EB%B3%B5-%EC%BA%A0%ED%8E%98%EC%9D%B8-%ED%95%9C%EA%B5%AD%ED%95%84%EB%A6%BD%EB%AA%A8%EB%A6%AC%EC%8A%A4-%ED%99%98%EA%B2%BD%EC%9E%AC%EB%8B%A8%EA%B3%BC-5%EC%A3%BC%EA%B0%84-%EC%93%B0%EB%8B%B4%ED%95%9C%EA%B0%95-%EC%A7%84%ED%96%89"
+								<a target="_blank" href=" https://www.pmi.com/markets/korea/ko/news/details/%EC%93%B0%EB%A0%88%EA%B8%B0-%EB%AC%B4%EB%8B%A8%ED%88%AC%EA%B8%B0-%EA%B8%89%EC%A6%9D%ED%95%9C-%ED%95%9C%EA%B0%95%EC%97%90%EC%84%9C-%ED%99%98%EA%B2%BD%ED%9A%8C%EB%B3%B5-%EC%BA%A0%ED%8E%98%EC%9D%B8-%ED%95%9C%EA%B5%AD%ED%95%84%EB%A6%BD%EB%AA%A8%EB%A6%AC%EC%8A%A4-%ED%99%98%EA%B2%BD%EC%9E%AC%EB%8B%A8%EA%B3%BC-5%EC%A3%BC%EA%B0%84-%EC%93%B0%EB%8B%B4%ED%95%9C%EA%B0%95-%EC%A7%84%ED%96%89"
 									class="btn btn-md"> JOIN US</a>
 							</div>
 						</div>
@@ -706,7 +706,7 @@
 									</li>
 
 								</ul>
-								<a href="https://www.apgroup.com/int/ko/news/2021-10-06-a.html"
+								<a target="_blank" href="https://www.apgroup.com/int/ko/news/2021-10-06-a.html"
 									class="btn btn-md">JOIN US</a>
 							</div>
 						</div>
@@ -728,7 +728,7 @@
 									</li>
 
 								</ul>
-								<a href="https://www.terracycle.com/ko-KR/brigades/boon-ba-stick"
+								<a target="_blank" href="https://www.terracycle.com/ko-KR/brigades/boon-ba-stick"
 									class="btn btn-md">JOIN US</a>
 							</div>
 						</div>
