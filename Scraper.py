@@ -19,6 +19,7 @@ article_title = soup.select('h4.article-title')
 article_content = soup.select('p.article-prologue')
 
 titleData = {}
+contentData = {}
 
 for title1 in article_title:   
     name = title1.find_all('a')[0].text
