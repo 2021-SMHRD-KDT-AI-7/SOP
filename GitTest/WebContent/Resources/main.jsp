@@ -1038,8 +1038,6 @@
 									<p class=" wow fadeInRight" data-wow-duration="1s">
 										Made with <i class="fa fa-heart"></i> by 
 										<a href="http://bootstrapthemes.co">깐부  김국중 김지나 박준영 박진주 이혜원</a>
-										Made with <i class="fa fa-heart"></i> by <a
-											href="http://bootstrapthemes.co">깐부 김국종 김지나 박준영 박진주 이혜원</a>
 									</p>
 								</div>
 							</div>
