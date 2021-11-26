@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 public class NewsDAO {
 
@@ -31,7 +32,7 @@ public class NewsDAO {
 	}
 	
 	//DB종료 메소드
-		 public void dbClose() {
+	 public void dbClose() {
 			 try {
 					if(rs!=null) rs.close();
 					if(psmt!=null) psmt.close();
@@ -41,8 +42,8 @@ public class NewsDAO {
 				}
 		 }
 		 
-	//행 개수 세는 메소드
-		 public int getCount() {
+	//페이징 메소드
+	 public int getCount() {
 			 
 			 getConn();
 				try {
@@ -63,7 +64,53 @@ public class NewsDAO {
 				return -1;
 			}
 		 
+	// 뉴스 DB 연동 메소드
+		 public ArrayList<NewsDTO> getNews(){
+			 ArrayList<NewsDTO> news_list = new ArrayList<NewsDTO>();
+			 getConn();
+			 
+			 String sql = null;
+			 
+			 try {
+				 sql = "select * from t_news";
+				 
+				 psmt = conn.prepareStatement(sql);
+				 rs = psmt.executeQuery();
+				 
+				 while(rs.next()) {
+					 	int news_seq1 = rs.getInt("news_seq");
+						String news_title= rs.getString("news_title");
+						String news_content= rs.getString("news_content");
+						String reg_date= rs.getString("reg_date");
+						String news_url=rs.getString("news_url");
+						String img_url = rs.getString("img_url");
+						
+				
+				dto= new NewsDTO(news_seq1, news_title, news_content, reg_date, news_url,img_url);
+				
+				news_list.add(dto);
+				 }
+				 
+			 }catch(Exception e){
+					e.printStackTrace();
+				}finally {
+					dbClose();
+				}return news_list;
+		 } 
 	
-		 
-	
+	// 페이지 처리 메소드
+		 public boolean nextPage(int pageNumber) {//페이지 처리를 위한 함수
+				String SQL="SELECT * from t_news where news_seq < ?";
+				try {
+					PreparedStatement psmt=conn.prepareStatement(SQL);
+					psmt.setInt(1, dto.getNews_seq()-(pageNumber-1)*10);
+					rs=psmt.executeQuery();
+					if(rs.next()) {
+						return true;//다음 페이지로 넘어갈 수 있음
+					}			
+				} catch(Exception e) {
+					e.printStackTrace();
+				}
+				return false;
+			}	 
 }

@@ -1,3 +1,6 @@
+<%@page import="Model.NewsDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Model.NewsDAO"%>
 <%@page import="Model.DailyMissionDAO"%>
 <%@page import="Controller.DailyMission"%>
 <%@page import="Model.MemberDTO"%>
@@ -48,7 +51,9 @@
 	<%
 		request.setCharacterEncoding("euc-kr");
 		MemberDTO info = (MemberDTO)session.getAttribute("info");
-
+		NewsDAO dao = new NewsDAO();
+		ArrayList<NewsDTO> news_list = dao.getNews();
+		
 	int point = info.getMb_point();
 	String grade = "";
 	if (point >= 500) {
@@ -605,14 +610,14 @@
 
 
 
-	<!-- Study Section -->
+	<!-- 데일리 뉴스 외부페이지(준영) -->
 	<section id="study" class="study text-center wow fadeIn"
 		data-wow-duration="2s" data-wow-dealy="1.5s">
 		<div class="container">
 			<div class="row">
-				<div class="main_study_area sections">
+				<div class="main_study_area sections" style="height: 1050px;">
 					<div class="head_title text-center">
-						<h2>실시간 환경 기사</h2>
+						<h2>데일리 환경 기사</h2>
 						<div class="subtitle">환경과 관련된 뉴스 기사를 만나보세요!</div>
 						<div class="separator"></div>
 					</div>
@@ -623,57 +628,25 @@
 								<div class="single_study_text">
 									<div class="study_slider">
 
+									<% // 현재 1번째 ~ 3번째 행의 데이터를 가져옴. --> 마지막 인덱스의 1,2,3 번째를 가져와야함
+									for(int i =0; i< 2; /*news_list.size();*/ i++){
+									%>
 										<div class="item">
-
-											<h4 class="external_news_title">
-												[단독] ‘사용후핵연료 처리기술 연구사업’ 종결 아닌 재개로 돌아서나 <img
-													class="external_news_img"
-													src="//flexible.img.hani.co.kr/flexible/normal/212/127/imgdb/child/2021/1118/53_16372061609671_20211118501522.jpg"
-													alt="패딩 입어야겠네…21일~22일 전국 비·눈 온 뒤 영하권 ‘강추위’"
-													title="패딩 입어야겠네…21일~22일 전국 비·눈 온 뒤 영하권 ‘강추위’">
+											<h4 class="external_news_title"> <%=news_list.get(i).getNews_title()%> 
+											<img class="external_news_img" src="<%=news_list.get(i).getImg_url() %>" alt="" title="">
 											</h4>
 											<div class="separator3"></div>
-											<p class="external_news_content">정부가 8000억원을 투입하고 지난해
-												중단시킨 사용후핵연료 파이로프로세싱과 소듐냉각고속로(SFR) 국책 연구개발사업의 재개...</p>
-
+											<p class="external_news_content"><%=news_list.get(i).getNews_content() %></p>
+											
 											<a target="_blank"
-												href="https://www.hani.co.kr/arti/society/environment/1019805.html"
+												href=""
 												class="btn btn-lg">기사 더보기</a>
 
 										</div>
-
-										<div class="item">
-											<div class="s_study_icon">
-												<i class="fa fa-lightbulb-o"></i>
-											</div>
-											<h4>aCCUMULATE CREATIVE IDEAS</h4>
-											<div class="separator3"></div>
-											<p>Lorem Ipsum is simply dummy text of the printing and
-												typesetting let. Lorem Ipsum has been the industry. Lorem
-												Ipsum is simply dummy text of the printing and typesetting
-												let. Lorem Ipsum has been the industry Printing and
-												typelorem Ipsum has been the setting let.</p>
-
-											<a href="" class="btn btn-lg">read more</a>
-										</div>
-										<div class="item">
-											<div class="s_study_icon">
-												<i class="fa fa-lightbulb-o"></i>
-											</div>
-											<h4>aCCUMULATE CREATIVE IDEAS</h4>
-											<div class="separator3"></div>
-											<p>Lorem Ipsum is simply dummy text of the printing and
-												typesetting let. Lorem Ipsum has been the industry. Lorem
-												Ipsum is simply dummy text of the printing and typesetting
-												let. Lorem Ipsum has been the industry Printing and
-												typelorem Ipsum has been the setting let.</p>
-
-											<a href="" class="btn btn-lg">read more</a>
-										</div>
+									<%} %>
 									</div>
 									<!--  전체 기사 보기로 이동 -->
-									<a href="News.jsp"
-										class="btn_article_daily btn_lg_article_daily">전체 기사</a>
+									<a href="News.jsp" class="btn_article_daily btn_lg_article_daily" >전체 기사</a>
 								</div>
 							</div>
 						</div>
