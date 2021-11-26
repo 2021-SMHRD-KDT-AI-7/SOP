@@ -32,6 +32,8 @@ for title2 in article_content:
     contentData[name] = url
     
 with open(os.path.join(BASE_DIR, 'news.json'), 'w+',encoding='utf-8') as json_file:
-    json.dump(data, json_file, ensure_ascii = False, indent='\t')
+    json.dump(titleData, json_file, ensure_ascii = False, indent='\t')
+with open(os.path.join(BASE_DIR, 'news.json'), 'w+',encoding='utf-8') as json_file:
+    json.dump(contentData, json_file, ensure_ascii = False, indent='\t')
 
 print('뉴스기사 스크래핑 끝')
