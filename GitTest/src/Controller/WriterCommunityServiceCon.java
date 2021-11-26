@@ -67,6 +67,7 @@ public class WriterCommunityServiceCon extends HttpServlet {
       
       if(cnt>0) {
     	  dao.articleUp(s_mb_id, mb_point);
+    	  // 세션 업데이트 
     	  request.getSession().removeAttribute("info");
     	  request.getSession().setAttribute("info", info);
          System.out.println("파일업로드 성공");

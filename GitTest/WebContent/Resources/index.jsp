@@ -47,7 +47,7 @@
 
 	<%
 		request.setCharacterEncoding("euc-kr");
-	MemberDTO info = (MemberDTO)session.getAttribute("info");
+		MemberDTO info = (MemberDTO)session.getAttribute("info");
 
 	
 		int point = info.getMb_point();
