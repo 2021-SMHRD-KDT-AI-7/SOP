@@ -123,7 +123,7 @@
 														<input type="text" class="form-control" id="cam_title"
 															placeholder="제목 입력" name="cam_title" maxlength="100"
 															required="required" value=<%= dto.getCam_title() %>>
-														<input type="hidden" class="class" name="cam_seq" id="id" value=<%= dto.getCam_seq() %>>
+														<input type="hidden" class="class" name="cam_seq" id="cam_seq" value=<%= dto.getCam_seq() %>>
 													</div>
 													<div class="form-group">
 														<label for="content">내용</label>
