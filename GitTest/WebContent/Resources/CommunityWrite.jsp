@@ -68,9 +68,11 @@
                                     class="icon-bar"></span> <span class="icon-bar"></span> <span
                                     class="icon-bar"></span>
                               </button>
-                              <a class="navbar-brand" href="#home"> 
-                              <img src="assets/images/logo1.png" />
-                              </a>
+                              <%if(info != null){ %>
+									<a class="navbar-brand" href="index.jsp"> <img src="assets/images/logo1.png" /></a>
+								<%}else{%>
+									<a class="navbar-brand" href="main.jsp"> <img src="assets/images/logo1.png" /></a>
+								<%} %>
                            </div>
 
                            <!-- Collect the nav links, forms, and other content for toggling -->
@@ -79,11 +81,6 @@
 
                            <div class="collapse navbar-collapse"
                               id="bs-example-navbar-collapse-1">
-
-                              <ul class="nav navbar-nav navbar-right">
-                                 <li><a href="index.html">HOME</a></li>
-                              </ul>
-
 
                            </div>
 

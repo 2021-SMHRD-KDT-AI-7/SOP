@@ -360,6 +360,7 @@
 											<!-- End of figure -->
 										</div>
 									</div>
+										<a href="campaign.jsp" class="btn btn-lg" style="margin-top:50px; margin-right:300px;">미션 인증하러 가기</a>
 								</div>
 								<!-- End of col-sm-12 -->
 
@@ -850,14 +851,14 @@
 	<section id="trial" class="trial text-center wow fadeIn"
 		data-wow-duration="2s" data-wow-dealy="1.5s">
 		<div class="main_trial_area">
-			<div class="video_overlay sections">
+			<div class="video_overlay sections" style="padding-top:150px; padding-bottom:150px;">
 				<div class="container">
 					<div class="row">
 						<div class="main_trial">
 							<div class="col-sm-12">
 								<h2>게시판</h2>
 								<h4>사람들의 소리를 들어보세요</h4>
-								<a href="Community.jsp" class="btn btn-lg">소리 듣기</a>
+								<a href="Community.jsp" class="btn btn-lg" style="font-size:1.5rem;">소리 듣기</a>
 							</div>
 						</div>
 					</div>

@@ -80,15 +80,10 @@ p.c_2 {
 												class="icon-bar"></span>
 										</button>
 										<%if(info != null){ %>
-										<a class="navbar-brand" href="index.jsp"> <img
-											src="assets/images/logo1.png" />
-										</a>
-										<%}else{ %>
-										<a class="navbar-brand" href="main.jsp"> <img
-											src="assets/images/logo1.png" />
-										</a>
+											<a class="navbar-brand" href="index.jsp"> <img src="assets/images/logo1.png" /></a>
+										<%}else{%>
+											<a class="navbar-brand" href="main.jsp"> <img src="assets/images/logo1.png" /></a>
 										<%} %>
-
 									</div>
 
 									<!-- Collect the nav links, forms, and other content for toggling -->

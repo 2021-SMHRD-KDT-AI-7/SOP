@@ -1,4 +1,3 @@
-<%@page import="java.io.PrintWriter"%>
 <%@page import="Model.MemberDTO"%>
 <%@page import="Model.CommunityDTO"%>
 <%@page import="java.util.ArrayList"%>
@@ -56,20 +55,6 @@ p.c_2 {
 		CommunityDAO dao = new CommunityDAO();
 	ArrayList<CommunityDTO> b_list = dao.viewBoard();
 	MemberDTO info = (MemberDTO) session.getAttribute("info");
-	request.setCharacterEncoding("euc-kr");
-	String get_id = "";
-	if (info != null) {
-		get_id = info.getMb_id();
-	}
-	ArrayList<CommunityDTO> list = dao.getSearch(request.getParameter("searchText"));
-
-	if (list.size() == 0) {
-		PrintWriter script = response.getWriter();
-		script.println("<script>");
-		script.println("alert('검색결과가 없습니다')");
-		script.println("history.back()");
-		script.println("</script>");
-	}
 	%>
 	<div class='preloader'>
 		<div class='loaded'>&nbsp;</div>
@@ -132,7 +117,7 @@ p.c_2 {
 
 										<div class="main_home wow fadeInUp" data-wow-duration="700ms"
 											style="margin-bottom: 300px;">
-
+											<p> 데일리 미션 인증 게시판</p>
 
 											<div id='c_up'
 												style="width: 200px; float: left; margin-left: -55px;">
@@ -166,7 +151,7 @@ p.c_2 {
 												</form>
 											</div>
 											<div id="board2">
-												<table id="list">
+												<table id="list" style = "margin-top:110px !important;">
 													<tr>
 														<td>번호</td>
 														<td>제목</td>
@@ -178,18 +163,18 @@ p.c_2 {
 													</tr>
 
 													<%
-														for (int i = 0; i < list.size(); i++) {
+														for (int i = 0; i < b_list.size(); i++) {
 													%>
 													<tr>
 														<td><%=i + 1%></td>
 														<td><a
-															href="ViewCommunity.jsp?article_seq=<%=list.get(i).getArticle_seq()%>"><%=list.get(i).getArticle_title()%>
+															href="ViewCommunity.jsp?article_seq=<%=b_list.get(i).getArticle_seq()%>"><%=b_list.get(i).getArticle_title()%>
 														</a></td>
-														<td><%=list.get(i).getMb_id()%></td>
-														<td><%=list.get(i).getReg_date()%></td>
+														<td><%=b_list.get(i).getMb_id()%></td>
+														<td><%=b_list.get(i).getReg_date()%></td>
 														<td>조회수는 나중에 만들기</td>
 														<td><a
-															href="../CommunityDeleteOneServiceCon?article_seq=<%=list.get(i).getArticle_seq()%>">삭제</a></td>
+															href="../CommunityDeleteOneServiceCon?article_seq=<%=b_list.get(i).getArticle_seq()%>">삭제</a></td>
 													</tr>
 													<%
 														}
@@ -213,19 +198,13 @@ p.c_2 {
 														</form>
 													</div>
 												</div>
-												<%
-													if (info != null) {
-												%>
+												<%if(info != null){ %>
 												<a href="index.jsp"><button id="writer">홈으로가기</button></a>
-												<%
-													} else {
-												%>
-												<a href="main.jsp"><button id="writer">홈으로가기</button></a>
-												<%
-													}
-												%>
-												<a href="Community.jsp"><button id="writer">뒤로가기</button></a>
 												<a href="CommunityWrite.jsp"><button id="writer">작성하러가기</button></a>
+												<%}else{ %>
+												<a href="main.jsp"><button id="writer">홈으로가기</button></a>
+												<a onclick="alert('로그인을 해주세요');"><button id="writer">작성하러가기</button></a>
+												<%} %>
 											</div>
 
 										</div>
