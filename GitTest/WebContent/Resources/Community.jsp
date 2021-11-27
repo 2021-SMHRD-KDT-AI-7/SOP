@@ -58,11 +58,12 @@ p.c_2 {
 	CommunityDAO dao = new CommunityDAO();
 	MemberDTO info = (MemberDTO) session.getAttribute("info");
 	String get_id="";
-	ArrayList<CommunityDTO> b_list = dao.viewBoard(get_id);
+	//String get_nick = info.getMb_nickname();
+	ArrayList<CommunityDTO> b_list;
 	if(info!=null){
 		get_id=info.getMb_id();
-		b_list=dao.viewBoard(get_id);
 	}
+		b_list=dao.viewBoard(get_id);
 	//String article_seq=request.getParameter("article_cnt");
 	// 조회수 count
 		
@@ -191,8 +192,8 @@ p.c_2 {
 														<td><a
 															href="ViewCommunity.jsp?article_seq=<%=b_list.get(i-1).getArticle_seq()%>"><%=b_list.get(i-1).getArticle_title()%>
 														</a></td>
-														<td><%=b_list.get(i).getMb_id()%></td>
-														<td><%=b_list.get(i).getReg_date()%></td>
+														<td><%=b_list.get(i-1).getMb_id()%></td>
+														<td><%=b_list.get(i-1).getReg_date()%></td>
 														<!-- 조회수  -->
 														<td><%=b_list.get(i-1).getArticle_cnt()%></td>
 														
@@ -211,6 +212,7 @@ p.c_2 {
 														</a></td>
 														<td><%=b_list.get(i-1).getMb_id()%></td>
 														<td><%=b_list.get(i-1).getReg_date()%></td>
+														<td><%=b_list.get(i-1).getArticle_cnt()%></td>
 														<!-- <td>조회수는 나중에 만들기</td> -->
 														<td><a
 															href="../CommunityDeleteOneServiceCon?article_seq=<%=b_list.get(i-1).getArticle_seq()%>">삭제</a></td>

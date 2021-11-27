@@ -62,16 +62,19 @@
 
  
      MemberDTO info=(MemberDTO)session.getAttribute("info");
+     
+     // 현재 로그인 한 아이디
      String i_mb_id = "";
-     ArrayList<CommunityDTO> dto_list=dao.viewBoard(i_mb_id);
+     ArrayList<CommunityDTO> dto_list;
      if(info != null){ 
     	 i_mb_id=info.getMb_id();
-    	 dto_list=dao.viewBoard(i_mb_id);
      }
+  	  dto_list=dao.viewBoard(i_mb_id);
      
-  
-      
-      
+  	  // 현 글에 대한 작성자 아이디 
+      String wrt_id = dao.getID(article_seq);
+  		System.out.println("View 넘어온 작성자 아이디 : "+wrt_id);
+  	  	System.out.println("View info 아이디 : "+i_mb_id);
       CommentDAO cmt_dao = new CommentDAO();
      
       ArrayList<CommentDTO> cmt_list = new ArrayList<>();
@@ -176,7 +179,7 @@
                                  
                                  <!-- 댓글 삭제 -->
                                  <% 
-                                 if(cmt_list.get(i).getMb_id().equals(i_mb_id)){ %>
+                                 if(cmt_list.get(i).getMb_id().equals(i_mb_id) || wrt_id.equals(i_mb_id)){ %>
                                  <td><input id="delete_com" type="button" value="댓글삭제" onclick="del(<%=cmt_list.get(i).getComment_seq()%>)"></td>
                                     
                                  <%}%>
@@ -190,11 +193,13 @@
                                           <td colspan="2"><a href="Community.jsp"><button>뒤로가기</button></a>
                                            <%if(info != null){ %>
 	                                           <%if(info.getMb_id().equals("admin") || info.getMb_id().equals(dto.getMb_id())){ %>
-	                                           <a href="CommunityUpdateBoard.jsp?article_seq=<%=dto.getArticle_seq()%>"><button>수정하기</button></a></td>
+	                                           <a href="CommunityUpdateBoard.jsp?article_seq=<%=dto.getArticle_seq()%>"><button>수정하기</button></a>
+	                                           <a href="../CommunityDeleteOneServiceCon?article_seq=<%=dto.getArticle_seq()%>"><button>삭제하기</button></a>
 	                                           <%}else{ %>
-	                                               <a onclick = "alert('권한이 없습니다!');"><button>수정하기</button></a></td>
+	                                               <a onclick = "alert('권한이 없습니다!');"><button>수정하기</button></a>
 												<%} %>
 											<%} %>
+											</td>
                                        </tr>
                                     </table>
                                  </div> 

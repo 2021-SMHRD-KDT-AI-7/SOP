@@ -265,6 +265,31 @@ public class CommunityDAO {
       
    }
    
+   // 현재 글 DB에서 작성자 id 꺼내오기
+   public String getID(String article_seq) {
+	      getConn();
+	      String mb_id=null;
+	      try {
+	         String sql="select mb_id from T_COMMUNITY where article_seq=?";
+	         
+	         psmt=conn.prepareStatement(sql);
+	         
+	         psmt.setString(1, article_seq);
+	         
+	         rs = psmt.executeQuery();
+
+	         while (rs.next()) {
+	        	mb_id = rs.getString("mb_id");
+	        	System.out.println("DAO 작성자 아이디 : "+mb_id);
+	         }
+	         
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      }finally {
+	         dbClose();
+	      } return mb_id;
+	      
+	   }
 
  //페이징 메소드
  	public int getCount() {
