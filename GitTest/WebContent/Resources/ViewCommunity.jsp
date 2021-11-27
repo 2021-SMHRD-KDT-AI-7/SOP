@@ -51,19 +51,20 @@
 <body data-spy="scroll" data-target=".navbar-collapse">
    <%
      /* HttpSession session = request.getSession();  */
-      
+     
+     CommunityDAO dao = new CommunityDAO();
      MemberDTO info=(MemberDTO)session.getAttribute("info"); 
+     String i_mb_id = "";
+     ArrayList<CommunityDTO> dto_list=dao.viewBoard(i_mb_id);
+     if(info != null){ 
+    	 i_mb_id=info.getMb_id();
+    	 dto_list=dao.viewBoard(i_mb_id);
+     }
      
-     String mb_id = info.getMb_id();
-     
-     System.out.println("===댓글===");
-     System.out.println(mb_id);
-     
+      
       String article_seq = request.getParameter("article_seq");
+      System.out.println("게시물 순번"+article_seq);
       
-      System.out.println(article_seq);
-      
-      CommunityDAO dao = new CommunityDAO();
       CommunityDTO dto = dao.viewOneBoard(article_seq);
       
       CommentDAO cmt_dao = new CommentDAO();
@@ -73,6 +74,7 @@
       if(info != null){
          cmt_list = cmt_dao.getComment(article_seq);
       }
+     
    %>
 
    <div class='preloader'>
@@ -169,7 +171,7 @@
                                  
                                  <!-- 댓글 삭제 -->
                                  <% 
-                                 if(cmt_list.get(i).getMb_id().equals(mb_id)){ %>
+                                 if(cmt_list.get(i).getMb_id().equals(i_mb_id)){ %>
                                  <td><input id="delete_com" type="button" value="댓글삭제" onclick="del(<%=cmt_list.get(i).getComment_seq()%>)"></td>
                                     
                                  <%}%>
@@ -181,8 +183,13 @@
                               </tr>
                               <tr>
                                           <td colspan="2"><a href="Community.jsp"><button>뒤로가기</button></a>
-                                                      <a href="CommunityUpdateBoard.jsp?article_seq=<%=dto.getArticle_seq()%>"><button>수정하기</button></a></td>
-                                               
+                                           <%if(info != null){ %>
+	                                           <%if(info.getMb_id().equals("admin") || info.getMb_id().equals(dto.getMb_id())){ %>
+	                                           <a href="CommunityUpdateBoard.jsp?article_seq=<%=dto.getArticle_seq()%>"><button>수정하기</button></a></td>
+	                                           <%}else{ %>
+	                                               <a onclick = "alert('권한이 없습니다!');"><button>수정하기</button></a></td>
+												<%} %>
+											<%} %>
                                        </tr>
                                     </table>
                                  </div> 
@@ -285,7 +292,7 @@
           insert_com(seq, com);
           // 댓글 세션 업데이트
           request.getSession().removeAttribute("info");
-    	  request.getSession().setAttribute("info", info);
+         request.getSession().setAttribute("info", info);
       }); 
       
       

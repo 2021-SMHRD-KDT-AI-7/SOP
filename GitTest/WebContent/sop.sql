@@ -34,3 +34,4 @@ insert into T_COMMENT values (0,34,'wow',sysdate,'jina')
 select * from user_sequences
 
 
+select * from T_COMMUNITY

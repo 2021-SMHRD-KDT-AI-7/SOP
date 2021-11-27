@@ -53,9 +53,16 @@ p.c_2 {
 <body data-spy="scroll" data-target=".navbar-collapse">
 	<% 
 	CommunityDAO dao = new CommunityDAO();
-	ArrayList<CommunityDTO> b_list = dao.viewBoard();
 	MemberDTO info = (MemberDTO) session.getAttribute("info");
-	
+	String get_id="";
+	ArrayList<CommunityDTO> b_list = dao.viewBoard(get_id);
+	if(info!=null){
+		get_id=info.getMb_id();
+		b_list=dao.viewBoard(get_id);
+	}
+	//String article_seq=request.getParameter("article_cnt");
+	// 조회수 count
+   
 	%>
 	<div class='preloader'>
 		<div class='loaded'>&nbsp;</div>
@@ -139,7 +146,7 @@ p.c_2 {
 																class='c_2_f' href="#">세종특별자치시</a><br> <a
 																class='c_2_f' href="#">경기도</a><br> <a class='c_2_f'
 																href="#">강원도</a><br> <a class='c_2_f' href="#">충청북도</a><br>
-															<a class='c_2_f' href="#">충청남도</a><br> <a
+															  <a class='c_2_f' href="#">충청남도</a><br> <a
 																class='c_2_f' href="#">경상북도</a><br> <a
 																class='c_2_f' href="#">경상남도</a><br> <a
 																class='c_2_f' href="#">전라북도</a><br> <a
@@ -173,7 +180,8 @@ p.c_2 {
 														</a></td>
 														<td><%=b_list.get(i).getMb_id()%></td>
 														<td><%=b_list.get(i).getReg_date()%></td>
-														<td>조회수는 나중에 만들기</td>
+														<!-- 조회수  -->
+														<td><%=b_list.get(i).getArticle_cnt()%></td>
 														<td><a
 															href="../CommunityDeleteOneServiceCon?article_seq=<%=b_list.get(i).getArticle_seq()%>">삭제</a></td>
 													</tr>

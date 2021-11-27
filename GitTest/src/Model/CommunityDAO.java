@@ -71,7 +71,7 @@ public class CommunityDAO {
    }
 
    // 게시글 보여주는 메소드
-   public ArrayList<CommunityDTO> viewBoard() {
+   public ArrayList<CommunityDTO> viewBoard(String get_id) {
 
       ArrayList<CommunityDTO> b_list = new ArrayList<>();
       getConn();
@@ -264,6 +264,6 @@ public class CommunityDAO {
       
    }
    
- 
+
 
 }
