@@ -10,6 +10,13 @@ public class CommunityDTO {
 	private String mb_id;
 	private String article_file1;
 	private String article_file2;
+	public CommunityDTO(int article_seq, String article_title, String mb_id, Date reg_date) {
+		
+		this.article_seq = article_seq;
+		this.article_title = article_title;
+		this.mb_id = mb_id;
+		this.reg_date = reg_date;
+	}
 	private String article_file3;
 	private Date reg_date;
 	private int article_cnt;
@@ -22,12 +29,13 @@ public class CommunityDTO {
 		this.article_content = article_content;
 		this.article_file1 = article_file1;
 	}
-	public CommunityDTO(int article_seq, String article_title, String mb_id, Date reg_date) {
+	public CommunityDTO(int article_seq, String article_title, String mb_id, Date reg_date, int article_cnt) {
 		
 		this.article_seq = article_seq;
 		this.article_title = article_title;
 		this.mb_id = mb_id;
 		this.reg_date = reg_date;
+		this.article_cnt=article_cnt;
 	}
 	public CommunityDTO(int article_seq,String article_title, String article_content, String mb_id, String article_file1) {
 		this.article_seq = article_seq;

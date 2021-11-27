@@ -54,10 +54,18 @@ p.c_2 {
 </style>
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
-	<%
-		CommunityDAO dao = new CommunityDAO();
-		ArrayList<CommunityDTO> b_list = dao.viewBoard();
-		MemberDTO info = (MemberDTO) session.getAttribute("info");
+	<% 
+	CommunityDAO dao = new CommunityDAO();
+	MemberDTO info = (MemberDTO) session.getAttribute("info");
+	String get_id="";
+	//String get_nick = info.getMb_nickname();
+	ArrayList<CommunityDTO> b_list;
+	if(info!=null){
+		get_id=info.getMb_id();
+	}
+		b_list=dao.viewBoard(get_id);
+	//String article_seq=request.getParameter("article_cnt");
+	// 조회수 count
 		
 		// 페이징을 위한 변수 및 조건문 선언
 		int pageNumber = 1; //기본적으로 1페이지
@@ -148,7 +156,7 @@ p.c_2 {
 																class='c_2_f' href="#">세종특별자치시</a><br> <a
 																class='c_2_f' href="#">경기도</a><br> <a class='c_2_f'
 																href="#">강원도</a><br> <a class='c_2_f' href="#">충청북도</a><br>
-															<a class='c_2_f' href="#">충청남도</a><br> <a
+															  <a class='c_2_f' href="#">충청남도</a><br> <a
 																class='c_2_f' href="#">경상북도</a><br> <a
 																class='c_2_f' href="#">경상남도</a><br> <a
 																class='c_2_f' href="#">전라북도</a><br> <a
@@ -187,8 +195,10 @@ p.c_2 {
 														</a></td>
 														<td><%=b_list.get(i-1).getMb_id()%></td>
 														<td><%=b_list.get(i-1).getReg_date()%></td>
-														<td>조회수는 나중에 만들기</td>
-														<td><a
+														<!-- 조회수  -->
+														<td><%=b_list.get(i-1).getArticle_cnt()%></td>
+														
+													<td><a
 															href="../CommunityDeleteOneServiceCon?article_seq=<%=b_list.get(i-1).getArticle_seq()%>">삭제</a></td>
 													</tr>
 													<%
@@ -203,7 +213,8 @@ p.c_2 {
 														</a></td>
 														<td><%=b_list.get(i-1).getMb_id()%></td>
 														<td><%=b_list.get(i-1).getReg_date()%></td>
-														<td>조회수는 나중에 만들기</td>
+														<td><%=b_list.get(i-1).getArticle_cnt()%></td>
+														<!-- <td>조회수는 나중에 만들기</td> -->
 														<td><a
 															href="../CommunityDeleteOneServiceCon?article_seq=<%=b_list.get(i-1).getArticle_seq()%>">삭제</a></td>
 													</tr>
@@ -324,6 +335,13 @@ p.c_2 {
 	</div>
 
 	<!-- START SCROLL TO TOP  -->
+
+	<script>
+	//페이지 로드될때 새로고침
+	$(document).on("pageload",function(){
+	  window.location.reload(true);
+	});
+	</script>
 
 	<div class="scrollup">
 		<a href="#"><i class="fa fa-chevron-up"></i></a>
