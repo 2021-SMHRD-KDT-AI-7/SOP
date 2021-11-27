@@ -195,8 +195,6 @@ p.c_2 {
 														<td><%=b_list.get(i).getReg_date()%></td>
 														<!-- 조회수  -->
 														<td><%=b_list.get(i-1).getArticle_cnt()%></td>
-														<%-- <td><%=b_list.get(i-1).getMb_id()%></td>
-														<td><%=b_list.get(i-1).getReg_date()%></td> --%>
 														
 													<td><a
 															href="../CommunityDeleteOneServiceCon?article_seq=<%=b_list.get(i-1).getArticle_seq()%>">삭제</a></td>
@@ -213,7 +211,7 @@ p.c_2 {
 														</a></td>
 														<td><%=b_list.get(i-1).getMb_id()%></td>
 														<td><%=b_list.get(i-1).getReg_date()%></td>
-														<td>조회수는 나중에 만들기</td>
+														<!-- <td>조회수는 나중에 만들기</td> -->
 														<td><a
 															href="../CommunityDeleteOneServiceCon?article_seq=<%=b_list.get(i-1).getArticle_seq()%>">삭제</a></td>
 													</tr>
