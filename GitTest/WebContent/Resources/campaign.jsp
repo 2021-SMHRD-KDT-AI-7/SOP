@@ -45,14 +45,16 @@
 		CampaignDAO dao = new CampaignDAO();
 		MemberDTO info = (MemberDTO) session.getAttribute("info");
 		String get_id = "";
-		ArrayList<CampaignDTO> c_list = dao.viewBoard(get_id);
-		if(info != null){
+		ArrayList<CampaignDTO> c_list;
+		if(info == null){
+			get_id = "";
+		}else{
 			get_id = info.getMb_id();
-			c_list = dao.viewBoard(get_id);
 		}
+		c_list = dao.viewBoard(get_id);
 		// 페이징을 위한 변수 및 조건문 선언
 		int pageNumber = 1; //기본적으로 1페이지
-		int page_count = dao.getCount(); // 행의 총 개수를 담는 변수
+		int page_count = dao.getCount(get_id); // 행의 총 개수를 담는 변수
 		if (request.getParameter("pageNumber") != null)
 			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
 	%>
@@ -197,7 +199,7 @@
 														%>
 														<%
 															// 페이징 숫자 표시
-														for (int i = 1; i <= (page_count/20+1); i++) {
+														for (int i = 1; i <= (page_count/5+1); i++) {
 														%>
 														<a href="campaign.jsp?pageNumber=<%=i%>">l<%=i%>l
 														</a>
@@ -205,7 +207,7 @@
 															}
 														%>
 														<%
-															if (page_count / (pageNumber * 20) != 0) {// 마지막 페이지가 아니면 참
+															if (page_count / (pageNumber * 5) != 0) {// 마지막 페이지가 아니면 참
 														%>
 														<a 
 															href="campaign.jsp?pageNumber=<%=pageNumber + 1%>">다음</a>
