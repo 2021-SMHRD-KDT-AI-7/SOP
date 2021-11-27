@@ -87,8 +87,9 @@ public class CommunityDAO {
             String article_title = rs.getString("article_title");
             String mb_id = rs.getString("mb_id");
             Date reg_date = rs.getDate("reg_date");
+            int article_cnt=rs.getInt("article_cnt");
 
-            dto = new CommunityDTO(article_seq, article_title, mb_id, reg_date);
+            dto = new CommunityDTO(article_seq, article_title, mb_id, reg_date,article_cnt);
             b_list.add(dto);
          }
 
@@ -265,5 +266,53 @@ public class CommunityDAO {
    }
    
 
-
+ //페이징 메소드
+ 	public int getCount() {
+ 			 // 작성자 : 준영
+ 			 getConn();
+ 				try {
+ 					String sql = "select count(*) from t_community";
+ 					
+ 					PreparedStatement psmt=conn.prepareStatement(sql);
+ 					rs=psmt.executeQuery();
+ 					
+ 					if(rs.next()) {
+ 						return rs.getInt(1);
+ 					}			
+ 				} catch(Exception e) {
+ 					e.printStackTrace();
+ 				}finally {
+ 					dbClose();
+ 				}
+ 				return -1;
+ 			}
+ // 게시판 조회수
+    public void count(String article_seq) {
+    	getConn();
+       int article_cnt = 0;
+       try {
+          String sql = "select article_cnt from t_community where article_seq = ?";
+          
+          psmt = conn.prepareStatement(sql);
+          
+          psmt.setString(1, article_seq);
+          rs = psmt.executeQuery();
+          
+          if(rs.next()) {
+             article_cnt = rs.getInt(1);
+             article_cnt++;
+          }
+          
+          String sql1 = "update t_community set article_cnt = ? where article_seq = ?";
+          psmt = conn.prepareStatement(sql1);
+          psmt.setInt(1, article_cnt);
+          psmt.setString(2, article_seq);
+          psmt.executeUpdate();
+          
+       } catch (Exception e) {
+          e.printStackTrace();
+       } finally {
+    	   dbClose();
+       }
+    }
 }

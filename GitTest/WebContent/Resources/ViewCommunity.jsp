@@ -51,9 +51,17 @@
 <body data-spy="scroll" data-target=".navbar-collapse">
    <%
      /* HttpSession session = request.getSession();  */
-     
+
+     String article_seq = request.getParameter("article_seq");
+    	System.out.println("article_seq"+article_seq);
+    	
      CommunityDAO dao = new CommunityDAO();
-     MemberDTO info=(MemberDTO)session.getAttribute("info"); 
+     CommunityDTO dto = dao.viewOneBoard(article_seq);
+      //조회수
+      dao.count(article_seq);
+
+ 
+     MemberDTO info=(MemberDTO)session.getAttribute("info");
      String i_mb_id = "";
      ArrayList<CommunityDTO> dto_list=dao.viewBoard(i_mb_id);
      if(info != null){ 
@@ -61,11 +69,8 @@
     	 dto_list=dao.viewBoard(i_mb_id);
      }
      
+  
       
-      String article_seq = request.getParameter("article_seq");
-      System.out.println("게시물 순번"+article_seq);
-      
-      CommunityDTO dto = dao.viewOneBoard(article_seq);
       
       CommentDAO cmt_dao = new CommentDAO();
      
@@ -74,7 +79,7 @@
       if(info != null){
          cmt_list = cmt_dao.getComment(article_seq);
       }
-     
+   
    %>
 
    <div class='preloader'>
