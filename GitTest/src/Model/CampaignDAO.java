@@ -215,11 +215,16 @@ public class CampaignDAO {
 	}
 
 	//페이징 메소드
-	public int getCount() {
+	public int getCount(String get_id) {
+		String sql;
 				 
 				 getConn();
 					try {
-						String sql = "select count(*) from t_campaign where cam_accept='Y'";
+						if(get_id.equals("admin")) {
+							sql = "select count(*) from t_campaign";
+						}else {
+							sql = "select count(*) from t_campaign where cam_accept='Y'";
+						}
 						
 						PreparedStatement psmt=conn.prepareStatement(sql);
 						rs=psmt.executeQuery();

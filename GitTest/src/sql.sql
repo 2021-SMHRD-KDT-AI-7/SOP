@@ -18,9 +18,14 @@ ALTER SEQUENCE T_CAMPAIGN_SEQ INCREMENT BY -30;
 alter table t_campaign add cam_start date
 alter table t_campaign add cam_finish date
 
-update t_campaign set cam_accept = 'N'; 
+update t_campaign set cam_accept = 'Y' where cam_title like '%Å×½ºÆ®%'; 
 
 select * from t_campaign where cam_title like '%Ä·%' and cam_accept = 'Y' order by reg_date desc;
 
 delete from T_COMMENT where comment_seq=136;
 
+alter table t_member drop column mb_grade;
+
+alter table t_member add mb_grade varchar2(50);
+
+select * from t_campaign order by reg_date desc
