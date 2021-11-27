@@ -256,7 +256,7 @@
 													<div class="form-group">
 														<ul>
 															<fieldset>
-																<p><%=info.getMb_nickname()%>님<br>
+																<p><%=info.getMb_id()%>님<br>
 																	<%=info.getMb_point()%>
 																	점입니다!<br>
 																	<%=grade%>등급입니다!!
@@ -556,6 +556,7 @@
 											<!-- End of figure -->
 										</div>
 									</div>
+									<a href="campaign.jsp" class="btn btn-lg" style="margin-top:50px; margin-right:300px;">미션 인증하러 가기</a>
 								</div>
 								<!-- End of col-sm-12 -->
 

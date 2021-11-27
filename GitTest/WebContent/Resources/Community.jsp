@@ -137,6 +137,7 @@ p.c_2 {
 														</legend>
 
 														<p class="c_2" style="line-height: 3rem;">
+															
 															<a class='c_2_f' href="#">서울특별시</a><br> <a
 																class='c_2_f' href="#">인천광역시</a><br> <a
 																class='c_2_f' href="#">대전광역시</a><br> <a
