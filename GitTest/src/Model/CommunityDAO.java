@@ -279,7 +279,7 @@ public class CommunityDAO {
 	         rs = psmt.executeQuery();
 
 	         while (rs.next()) {
-	        	mb_id = rs.getString("mb_id");
+	        	mb_id = rs.getString("mb_id"); 
 	        	System.out.println("DAO 작성자 아이디 : "+mb_id);
 	         }
 	         
