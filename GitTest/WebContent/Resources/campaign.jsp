@@ -42,15 +42,19 @@
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
 	<%
-	CampaignDAO dao = new CampaignDAO();
-	MemberDTO info = (MemberDTO) session.getAttribute("info");
-	String get_id = "";
-	ArrayList<CampaignDTO> c_list = dao.viewBoard(get_id);
-	if(info != null){
-		get_id = info.getMb_id();
-		c_list = dao.viewBoard(get_id);
-	}
-	
+		CampaignDAO dao = new CampaignDAO();
+		MemberDTO info = (MemberDTO) session.getAttribute("info");
+		String get_id = "";
+		ArrayList<CampaignDTO> c_list = dao.viewBoard(get_id);
+		if(info != null){
+			get_id = info.getMb_id();
+			c_list = dao.viewBoard(get_id);
+		}
+		// 페이징을 위한 변수 및 조건문 선언
+		int pageNumber = 1; //기본적으로 1페이지
+		int page_count = dao.getCount(); // 행의 총 개수를 담는 변수
+		if (request.getParameter("pageNumber") != null)
+			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
 	%>
 
 	<div class='preloader'>
@@ -123,25 +127,46 @@
 														<td>캠페인 종료시간</td>
 													</tr>
 													
-														<%
-															for (int i = 0; i < c_list.size(); i++) {
-														%>
-														<tr>
-															<td><%=i + 1%></td>
-															<td><a
-																href="viewCampaign.jsp?cam_seq=<%=c_list.get(i).getCam_seq()%>">
-																	<%=c_list.get(i).getCam_title()%>
-															</a></td>
-															<td><%=c_list.get(i).getMb_id()%></td>
-															<td><%=c_list.get(i).getCam_start()%></td>
-															<td><%=c_list.get(i).getCam_finish()%></td>
-														</tr>
-														<%
-															}
-														%>
-												
+													<!-- 게시글 5개씩 인덱싱 -->
+													<%
+														int len = pageNumber;
 
-
+													for (int i = 1; i < pageNumber; i++) { // 콘텐츠 시작 인덱스 구하기
+														len += 4;
+													}
+													if ((page_count / (pageNumber * 5)) != 0) { // 테이블의 총 행의 개수 / 최대 페이지 수 != 최대 페이지 수 -->  현재 마지막 페이지가 아니면 실행
+														for (int i = len; i < len+5; i++) {
+													%>
+													<tr>
+														<td><%=(page_count-i) + 1%></td>
+														<td><a
+															href="viewCampaign.jsp?cam_seq=<%=c_list.get(i-1).getCam_seq()%>">
+																<%=c_list.get(i-1).getCam_title()%>
+														</a></td>
+														<td><%=c_list.get(i-1).getMb_id()%></td>
+														<td><%=c_list.get(i-1).getCam_start()%></td>
+														<td><%=c_list.get(i-1).getCam_finish()%></td>
+													</tr>
+													<%
+														}
+													} else {
+													for (int i = len; i <= page_count; i++) {
+													%>
+													<tr>
+														<td><%=(page_count-i)+1%></td>
+														<td><a
+															href="viewCampaign.jsp?cam_seq=<%=c_list.get(i-1).getCam_seq()%>">
+																<%=c_list.get(i-1).getCam_title()%>
+														</a></td>
+														<td><%=c_list.get(i-1).getMb_id()%></td>
+														<td><%=c_list.get(i-1).getCam_start()%></td>
+														<td><%=c_list.get(i-1).getCam_finish()%></td>
+													</tr>
+													<%
+														}
+													}%>
+													<!--  인덱싱 끝(준영) -->
+													
 												</table>
 												<div>
 														<div class="row">
@@ -158,7 +183,39 @@
 															</form>
 														</div>
 												</div>
-
+												
+												<!-- 페이징 시작(준영) -->
+												<div >
+													<div class="paging">
+														<%
+															if (pageNumber != 1) {//이전페이지로
+														%>
+														<a 
+															href="campaign.jsp?pageNumber=<%=pageNumber - 1%>">이전</a>
+														<%
+															}
+														%>
+														<%
+															// 페이징 숫자 표시
+														for (int i = 1; i <= (page_count/20+1); i++) {
+														%>
+														<a href="campaign.jsp?pageNumber=<%=i%>">l<%=i%>l
+														</a>
+														<%
+															}
+														%>
+														<%
+															if (page_count / (pageNumber * 20) != 0) {// 마지막 페이지가 아니면 참
+														%>
+														<a 
+															href="campaign.jsp?pageNumber=<%=pageNumber + 1%>">다음</a>
+														<%
+															}
+														%>
+													</div>
+												</div>
+												<!-- 페이징 끝(준영) -->
+												
 												<%if(info != null){ %>
 												<a href="index.jsp"><button id="writer">홈으로가기</button></a>
 												<a href="campaign_write.jsp"><button id="writer">작성하러가기</button></a>
