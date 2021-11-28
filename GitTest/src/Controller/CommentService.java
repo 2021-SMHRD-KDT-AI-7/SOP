@@ -28,10 +28,12 @@ public class CommentService extends HttpServlet {
 	MemberDTO info=(MemberDTO)session.getAttribute("info");
 		System.out.println("세션 확인:"+info);
 	int article_seq=Integer.parseInt(request.getParameter("article_seq"));
+		
 	String comment = request.getParameter("comment");
 	String mb_id = info.getMb_id();
 	int mb_point = info.getMb_point();
 		System.out.println(mb_id);
+		
 	CommentDTO dto = new CommentDTO(article_seq, comment, mb_id);
 	
 	CommentDAO cmt_dao = new CommentDAO();

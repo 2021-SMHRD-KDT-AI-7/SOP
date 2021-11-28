@@ -1,3 +1,5 @@
+<%@page import="Model.CommunityDAO"%>
+<%@page import="Model.MemberDAO"%>
 <%@page import="Model.NewsDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.NewsDAO"%>
@@ -52,9 +54,13 @@
 		request.setCharacterEncoding("euc-kr");
 		MemberDTO info = (MemberDTO)session.getAttribute("info");
 		NewsDAO dao = new NewsDAO();
+		CommunityDAO c_dao = new CommunityDAO();
+		MemberDAO m_dao = new MemberDAO();
 		ArrayList<NewsDTO> news_list = dao.getNews();
 		int news = dao.getCount();
 		
+		
+    	  
 	int point = info.getMb_point();
 	String grade = "";
 	if (point >= 500) {
@@ -256,8 +262,8 @@
 													<div class="form-group">
 														<ul>
 															<fieldset>
-																<p><%=info.getMb_nickname()%>님<br>
-																	<%=info.getMb_point()%>
+																<p><%=info.getMb_id()%>님<br>
+																	<%=m_dao.point(info.getMb_id())%>
 																	점입니다!<br>
 																	<%=grade%>등급입니다!!
 																</p>
@@ -556,6 +562,7 @@
 											<!-- End of figure -->
 										</div>
 									</div>
+									<a href="SelectCommunity.jsp?num=18" class="btn btn-lg" style="margin-top:50px; margin-right:300px;">미션 인증하러 가기</a>
 								</div>
 								<!-- End of col-sm-12 -->
 

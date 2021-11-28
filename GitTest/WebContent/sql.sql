@@ -24,4 +24,5 @@ select count(*) from t_community
 select count(*) from t_campaign where cam_accept='Y'
 select * from t_campaign
 select * from t_member
+select * from t_community
 

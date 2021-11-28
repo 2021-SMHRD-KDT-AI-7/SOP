@@ -48,7 +48,7 @@
    if (request.getParameter("pageNumber") != null)
       pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
    %>
-   <header id="main_menu" class="header navbar-fixed-top">
+   <header id="" class="">
       <div class="main_menu_bg">
          <div class="container">
             <div class="row">
@@ -78,14 +78,14 @@
 
                         <div class="collapse navbar-collapse"
                            id="bs-example-navbar-collapse-1">
-							
+							<!-- 
 								<% String site ="";
 								if(info != null){
 										site = "index.jsp";	
 								}else{
 										site = "main.jsp";
 								} %>
-                           <ul class="nav navbar-nav navbar-right">
+                           <ul class="">
                               <li><a href="http://localhost:8081/GitTest/Resources/<%=site%>#home">HOME</a></li>
                               <li><a href="http://localhost:8081/GitTest/Resources/<%=site%>#history">ABOUT US</a></li>
                               <li><a href="http://localhost:8081/GitTest/Resources/<%=site%>#portfolio">PORTFOLIO</a></li>
@@ -94,7 +94,7 @@
                               <li><a href="http://localhost:8081/GitTest/Resources/<%=site%>#blog">BLOG</a></li>
                               <li><a href="http://localhost:8081/GitTest/Resources/<%=site%>#contact">CONTACT</a></li>
                            </ul>
-
+ -->
 
                         </div>
 
@@ -260,12 +260,14 @@
                   <div class="row">
                      <div class="col-sm-6 col-xs-12">
                         <div class="flowus">
+                        <!-- SNS 링크 안쓰므로 주석처리(준영)
                            <a href=""><i class="fa fa-facebook"></i></a> <a href=""><i
                               class="fa fa-twitter"></i></a> <a href=""><i
                               class="fa fa-google-plus"></i></a> <a href=""><i
                               class="fa fa-instagram"></i></a> <a href=""><i
                               class="fa fa-youtube"></i></a> <a href=""><i
                               class="fa fa-dribbble"></i></a>
+                               -->
                         </div>
                      </div>
 

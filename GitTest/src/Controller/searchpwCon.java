@@ -53,7 +53,7 @@ public class searchpwCon extends HttpServlet {
 		
 		//response.sendRedirect("./Resources/index.jsp");
 
-		response.sendRedirect("./Resources/index.html");
+		response.sendRedirect("./Resources/main.jsp");
 
 	}
 

@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.servlet.http.HttpSession;
+
 public class CampaignDAO {
 
 	PreparedStatement psmt = null;
@@ -71,18 +73,18 @@ public class CampaignDAO {
 	public ArrayList<CampaignDTO> viewBoard(String get_id) {
 		ArrayList<CampaignDTO> c_list = new ArrayList<CampaignDTO>();
 		getConn();
-		
+
 		String sql = null;
 
 		try {
-			if(get_id.equals("admin")) {
+			if (get_id.equals("admin")) {
 				sql = "select * from t_campaign order by reg_date desc";
+				psmt = conn.prepareStatement(sql);
+			} else {
+				sql = "select * from t_campaign where cam_accept = 'Y' or mb_id = ? order by reg_date desc";
+				psmt = conn.prepareStatement(sql);
+				psmt.setString(1, get_id);
 			}
-			else {
-				sql = "select * from t_campaign where cam_accept = 'Y' order by reg_date desc";
-			}
-
-			psmt = conn.prepareStatement(sql);
 
 			rs = psmt.executeQuery();
 
@@ -138,7 +140,6 @@ public class CampaignDAO {
 		return dto;
 	}
 
-	
 	// 관리자 기능
 	public int accept(CampaignDTO cam_accept) {
 		getConn();
@@ -157,46 +158,46 @@ public class CampaignDAO {
 		}
 		return cnt;
 	}
-	
-	public int update(CampaignDTO dto){
+
+	public int update(CampaignDTO dto) {
 		getConn();
 
 		try {
-			
-			String sql="update t_campaign set cam_title=?, cam_content=?, cam_file1=?, cam_start=?, cam_finish=? where cam_seq=?";
-			
-			psmt=conn.prepareStatement(sql);
-			
+
+			String sql = "update t_campaign set cam_title=?, cam_content=?, cam_file1=?, cam_start=?, cam_finish=? where cam_seq=?";
+
+			psmt = conn.prepareStatement(sql);
+
 			psmt.setString(1, dto.getCam_title());
 			psmt.setString(2, dto.getCam_content());
 			psmt.setString(3, dto.getCam_file1());
 			psmt.setString(4, dto.getCam_start());
 			psmt.setString(5, dto.getCam_finish());
 			psmt.setInt(6, dto.getCam_seq());
-			
-			
-			cnt=psmt.executeUpdate();
-			
+
+			cnt = psmt.executeUpdate();
+
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			dbClose();
-		}return cnt;
+		}
+		return cnt;
 	}
-	
-	public ArrayList<CampaignDTO> getSearch(String searchText){
+
+	public ArrayList<CampaignDTO> getSearch(String searchText) {
 		getConn();
 		ArrayList<CampaignDTO> list = new ArrayList<CampaignDTO>();
-		
+
 		try {
 			String sql = "select * from t_campaign where cam_title like ? and cam_accept = 'Y' order by reg_date desc";
-			
+
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, "%" + searchText + "%");
-			
+
 			rs = psmt.executeQuery();
-			
-			while(rs.next()) {
+
+			while (rs.next()) {
 				int cam_seq = rs.getInt("cam_seq");
 				String cam_title = rs.getString("cam_title");
 				String mb_id = rs.getString("mb_id");
@@ -214,24 +215,45 @@ public class CampaignDAO {
 		return list;
 	}
 
-	//페이징 메소드
-	public int getCount() {
-				 
-				 getConn();
-					try {
-						String sql = "select count(*) from t_campaign where cam_accept='Y'";
-						
-						PreparedStatement psmt=conn.prepareStatement(sql);
-						rs=psmt.executeQuery();
-						
-						if(rs.next()) {
-							return rs.getInt(1);
-						}			
-					} catch(Exception e) {
-						e.printStackTrace();
-					}finally {
-						dbClose();
-					}
-					return -1;
-				}	
+	// 페이징 메소드
+	public int getCount(String get_id) {
+		String sql;
+
+		getConn();
+		try {
+			if (get_id.equals("admin")) {
+				sql = "select count(*) from t_campaign";
+			} else {
+				sql = "select count(*) from t_campaign where cam_accept='Y'";
+			}
+
+			PreparedStatement psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				return rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			dbClose();
+		}
+		return -1;
+	}
+	
+	public int deleteOne(int cam_seq) {
+	      getConn();
+	      try {
+	         String sql = "delete from t_campaign where cam_seq=?";
+
+	         psmt = conn.prepareStatement(sql);
+	         psmt.setInt(1, cam_seq);
+	         cnt = psmt.executeUpdate();
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      } finally {
+	         dbClose();
+	      }
+	      return cnt;
+	   }
 }

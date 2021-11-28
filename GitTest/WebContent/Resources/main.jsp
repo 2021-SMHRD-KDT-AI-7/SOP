@@ -44,7 +44,7 @@
 <link rel="stylesheet" type="text/css" href="assets/css/news.css">
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
-<body data-spy="scroll" data-target=".navbar-collapse">
+<body data-spy="scroll" data-target=".navbar-collapse" style="overflow-x: hidden ">
 <%
 	NewsDAO dao = new NewsDAO();
 	ArrayList<NewsDTO> news_list = dao.getNews();
@@ -367,7 +367,7 @@
 											<!-- End of figure -->
 										</div>
 									</div>
-										<a href="campaign.jsp" class="btn btn-lg" style="margin-top:50px; margin-right:300px;">미션 인증하러 가기</a>
+										<a href="SelectCommunity.jsp?num=18" class="btn btn-lg" style="margin-top:50px; margin-right:300px;">미션 인증하러 가기</a>
 								</div>
 								<!-- End of col-sm-12 -->
 
@@ -446,13 +446,13 @@
 									%>
 										<div class="item">
 											<h4 class="external_news_title"> <%=news_list.get(i).getNews_title()%> 
-											<img class="external_news_img" src="<%=news_list.get(i).getImg_url() %>" alt="" title="">
 											</h4>
+											<img class="external_news_img" src="<%=news_list.get(i).getImg_url() %>" alt="" title="">
 											<div class="separator3"></div>
 											<p class="external_news_content"><%=news_list.get(i).getNews_content() %></p>
 											
 											<a target="_blank"
-												href=""
+												href="<%=news_list.get(i).getNews_url() %>"
 												class="btn btn-lg">기사 더보기</a>
 
 										</div>
@@ -468,7 +468,7 @@
 						<div class="single_study_right_img">
 							<div class="col-sm-6">
 								<div class="single_study_img">
-									<img src="assets/images/공장수정.jpg" alt="" />
+									<img width="" height="675" src="assets/images/gong.jpg" alt="" />
 								</div>
 							</div>
 						</div>
@@ -862,7 +862,7 @@
 										<div class="single_counter_item">
 
 											<h2 class="statistic-counter">3891</h2>
-											<h4 class="">방문자 수</h4>
+											<h4 class="">즐겨찾기</h4>
 										</div>
 									</div>
 								</div>
@@ -872,7 +872,7 @@
 										<div class="single_counter_item">
 
 											<h2 class="statistic-counter">281</h2>
-											<h4 class="">미션 인증 수</h4>
+											<h4 class="">24시간 포스팅 수</h4>
 										</div>
 									</div>
 								</div>
@@ -882,7 +882,7 @@
 										<div class="single_counter_item">
 
 											<h2 class="statistic-counter">618</h2>
-											<h4 class="">전체 게시물 수</h4>
+											<h4 class="">전체 포스팅 수</h4>
 										</div>
 
 									</div>
@@ -892,8 +892,8 @@
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
 
-											<h2 class="statistic-counter">12</h2>
-											<h4 class="">캠페인 수</h4>
+											<h2 class="statistic-counter">178</h2>
+											<h4 class="">특징 수</h4>
 
 										</div>
 									</div>

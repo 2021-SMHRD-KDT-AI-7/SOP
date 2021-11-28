@@ -133,18 +133,20 @@
 														
 														<%if(info != null ){ %>
 															<%if(info.getMb_id().equals("admin")){ %>
-																<a href="../AcceptCampaignServiceCon?cam_seq=<%=cam_seq%>"><button>수락하기</button></a></td>
+																<a href="../AcceptCampaignServiceCon?cam_seq=<%=cam_seq%>"><button>수락하기</button></a>
+																<a href="../DeleteCampaignOneServiceCon?cam_seq=<%=cam_seq%>"><button>삭제하기</button></a>
 															<%}else{ %>
 																	<%if(info.getMb_id().equals(dto.getMb_id())){ %>
-																		<a href="UpdateCampaign.jsp?cam_seq=<%=dto.getCam_seq()%>"><button>수정하기</button></a></td>
+																		<a href="UpdateCampaign.jsp?cam_seq=<%=dto.getCam_seq()%>"><button>수정하기</button></a>
+																		<a href="../DeleteCampaignOneServiceCon?cam_seq=<%=cam_seq%>"><button>삭제하기</button></a>
 																	<%}else{ %>
-																		<a onclick = "alert('권한이 없습니다!');"><button>수정하기</button></a></td>
+																		<a onclick = "alert('권한이 없습니다!');"><button>수정하기</button></a>
 																	<%} %>
 															<%} %>
 														<%}else{ %>
-																<a onclick = "alert('권한이 없습니다!');"><button>수정하기</button></a></td>
+																<a onclick = "alert('권한이 없습니다!');"><button>수정하기</button></a>
 														<%} %>
-														
+														</td>
 														
 													</tr>
 												</table>

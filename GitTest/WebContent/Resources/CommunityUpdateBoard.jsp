@@ -125,7 +125,8 @@
                                           <!-- placeholder 속성 입력한 데이터가 없는 경우 배경으로 나타난다.실제적으로 입력을 100자까지로 지정 -->
                                           <!-- required 속성을 설정하면 필수입력 사항이된다. -->
                                           <!-- pattern 속성을 이용한 정규표현식으로 데이터의 유효성 검사를 할 수 있다. -->
-														<select id="location">
+														<select name="location_num" id="location">
+															<option value="0">전체게시판</option>
 															<option value="1">서울특별시</option>
 															<option value="2">인천광역시</option>
 															<option value="3">대전광역시</option>
@@ -143,6 +144,7 @@
 															<option value="15">전라북도</option>
 															<option value="16">전라남도</option>
 															<option value="17">제주도</option>
+															<option value="18">데일리미션</option>
 														</select>
 													</div>
                                        <div class="form-group">
@@ -151,8 +153,8 @@
                                           <!-- required 속성을 설정하면 필수입력 사항이된다. -->
                                           <!-- pattern 속성을 이용한 정규표현식으로 데이터의 유효성 검사를 할 수 있다. -->
                                           <input type="text" class="form-control" id="title"
-                                             placeholder="제목 입력(4-100)" name="article_title" maxlength="100"
-                                             required="required" pattern=".{4,100}" value=<%=dto.getArticle_title() %>>
+                                             placeholder="제목 입력(3-100)" name="article_title" maxlength="100"
+                                             required="required" pattern=".{3,100}" value=<%=dto.getArticle_title() %>>
                                        </div>
                                        <div class="form-group">
                                           <label for="content">내용</label>
