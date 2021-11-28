@@ -154,8 +154,8 @@
 
     display: block;
 
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     padding: 5px;
 
     cursor: pointer;
@@ -175,6 +175,7 @@
 {
     opacity: 1;
 }
+/* 슬릭 버튼 수정(준영)*/
 .slick-dots li button:before
 {
     font-family: 'slick';
@@ -185,11 +186,14 @@
     top: 0;
     left: 0;
 
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
+    margin-top:20px;
 
-    content: '•';
+    content: ' ' ;
     text-align: center;
+    background-color:#398561;
+    border-radius:50%;
 
     opacity: .25;
     color: black;

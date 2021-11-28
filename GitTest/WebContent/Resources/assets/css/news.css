@@ -50,7 +50,7 @@
 #header-logo .header-ect .top_login {position:absolute; right:40px; bottom:17px;}
 #login-box  { position:absolute; right:0; top:65px;}
 
-#search_form { z-index: 1009;}
+#search_form { z-index: 1009; margin-top: 50px; margin-bottom: 5px; text-align: center;}
 #search_form .open_search{ position:absolute; right:7px; bottom:17px; cursor:pointer;}
 
 #header .navi { overflow:hidden; /* position: relative;*/ width: 100%; z-index: 2000; }
@@ -659,8 +659,8 @@
      /* ------------input text----------- */
      /* 寃���李쎌�� ��移� 議곗�� */
         .text{
-            margin-left: 45%;
-            width: 200px;
+            margin-left: 0%;
+            width: 180px;
         }
          .button{
             margin-top: 20px;
@@ -669,8 +669,9 @@
  /* ------------blind----------- */
      /* �ㅼ��媛� 湲곗�� ���댁� ���댄�� ��移� */
          .blind{
-    	margin-top: 135px;	
-    	margin-bottom: 50px;
+    	margin-top: 30px;	
+    	margin-bottom: 30px;
+    	margin-left:5px;
     	color: black;
    	}
    	
@@ -685,6 +686,7 @@
         .external_news_title{
         	font-size: 20px;
         	font-weight: 400;
+        	height: 70px;
         }
         .external_news_content{
         	font-size: 14px;
