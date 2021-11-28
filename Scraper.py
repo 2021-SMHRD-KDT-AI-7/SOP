@@ -55,8 +55,6 @@ for i in range(1):
     list.append(img_url[i])
 #####
 
-os.environ["ORACLE_HOME"] = /u01/oracle/product/12.1.0.2/
-
 ############ DB Connection ############
 ############ Query insert ############
 
