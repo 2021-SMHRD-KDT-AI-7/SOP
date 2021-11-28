@@ -37,7 +37,7 @@ public class WriterCommunityServiceCon extends HttpServlet {
       
       String article_file1 = null;
       
-      String saveDirectory = "C:/Users/smhrd/git/SOP/GitTest/WebContent/Resources/image";
+      String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/image";
       //String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/assets/images";
 
       
@@ -71,15 +71,14 @@ public class WriterCommunityServiceCon extends HttpServlet {
     	  //포인트있는 db table 현재 로그인한 사용자의 포인트 만 가지고옴
     	  //세션을 재생성 (info) -> (원래아이디, 새로운 포인트값)
     	  
-    	  MemberDAO m_dao = new MemberDAO();
-    	  int new_point = m_dao.point(s_mb_id);
-    	  
-    	  HttpSession session2 = request.getSession();
-    	  session2.setAttribute(s_mb_id, s_mb_pwd);
-    	  session2.setAttribute("info", info);
-    	  mb_point = new_point;
-    	            
-    	  dao.articleUp(s_mb_id, mb_point);
+			/*
+			 * MemberDAO m_dao = new MemberDAO(); int new_point = m_dao.point(s_mb_id);
+			 * 
+			 * HttpSession session2 = request.getSession(); session2.setAttribute(s_mb_id,
+			 * s_mb_pwd); session2.setAttribute("info", info); mb_point = new_point;
+			 * 
+			 * dao.articleUp(s_mb_id, mb_point);
+			 */
     	 System.out.println("파일업로드 성공");
       }else {
          System.out.println("파일업로드 실패");
