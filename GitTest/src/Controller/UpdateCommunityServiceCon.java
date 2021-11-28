@@ -27,7 +27,8 @@ public class UpdateCommunityServiceCon extends HttpServlet {
 				request.setCharacterEncoding("euc-kr");
 				
 				//2.수정할 값 받아오기
-				String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/image";
+				String saveDirectory = "C:/Users/smhrd/git/SOP/GitTest/WebContent/Resources/image";
+				// String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/image";
 				int maxSize = 1024 * 1024 * 10;
 				String encoding = "euc-kr";
 				
@@ -39,11 +40,7 @@ public class UpdateCommunityServiceCon extends HttpServlet {
 				String article_title = multi.getParameter("article_title");
 				String article_content = multi.getParameter("article_content");
 				int article_seq = Integer.parseInt(multi.getParameter("article_seq"));
-				
-				System.out.println("article_title:"+article_title);
-				System.out.println("article_content:"+article_content);
-				System.out.println("article_seq:"+article_seq);
-				
+				int location_num = Integer.parseInt(multi.getParameter("location_num"));
 				
 				
 				String c_article_file1 = null;
@@ -55,7 +52,7 @@ public class UpdateCommunityServiceCon extends HttpServlet {
 				}
 				
 				//change 가방에 수정된 값으로 다시 넣어주기
-				CommunityDTO change=new CommunityDTO(article_seq, article_title,article_content,c_article_file1);
+				CommunityDTO change=new CommunityDTO(article_seq, article_title,article_content,c_article_file1, location_num);
 				
 				CommunityDAO dao=new CommunityDAO();
 				int cnt=dao.update(change);

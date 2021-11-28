@@ -30,7 +30,6 @@ public class WriterCommunityServiceCon extends HttpServlet {
       HttpSession session = request.getSession();
       MemberDTO info=(MemberDTO)session.getAttribute("info"); 
       
-      System.out.println(info);
       String s_mb_id = info.getMb_id();
       String s_mb_pwd = info.getMb_pwd();
       int mb_point = info.getMb_point();
@@ -50,6 +49,8 @@ public class WriterCommunityServiceCon extends HttpServlet {
       String article_title = multi.getParameter("article_title");
       String article_content = multi.getParameter("article_content");
       String mb_id = multi.getParameter("mb_id");
+      int location_num = Integer.parseInt(multi.getParameter("location_num"));
+      
       
       
       
@@ -59,12 +60,8 @@ public class WriterCommunityServiceCon extends HttpServlet {
          article_file1="null";
       }
    
-      System.out.println("article_title : " + article_title);
-      System.out.println("article_content : " + article_content);
-      System.out.println("mb_id : " + mb_id);
-      System.out.println("article_file1 : " + article_file1);
       
-      CommunityDTO dto=new CommunityDTO(article_title, article_content, mb_id, article_file1);
+      CommunityDTO dto=new CommunityDTO(article_title, article_content, mb_id, article_file1, location_num);
       CommunityDAO dao=new CommunityDAO();
       int cnt=dao.upload(dto);
       

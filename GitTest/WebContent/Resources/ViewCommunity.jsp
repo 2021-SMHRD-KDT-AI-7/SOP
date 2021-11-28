@@ -174,7 +174,7 @@
                                     <%   
                                        for (int i=0; i<cmt_list.size(); i++){ %>
                                  
-                                          <tr id="comments-<%=cmt_list.get(i).getComment_seq()%>" style="list-style:none; padding:0">
+                                 <tr id="comments-<%=cmt_list.get(i).getComment_seq()%>" style="list-style:none; padding:0">
                                  <td><%=cmt_list.get(i).getComment_content()%></td>
                                  
                                  <!-- 댓글 삭제 -->
@@ -287,21 +287,15 @@
          /* alert("!") */
          var seq = <%=article_seq%>;
          var number = <%=cmt_list.size()-1%>;
-          var com = $('input[type=text]').val()    //댓글
-          /* $('#comments-' + number).after('<tr id="comments-'+(number+1)+'" style="list-style:none; padding:0"><td class="com'+num+'">'+com+'</td><td><input type="button" value="댓글삭제" onclick="del('+num+')"></td></tr>'); */
+         var com = $('input[type=text]').val()    //댓글
          
-          /*
-          <input id="delete_com" type="button" value="댓글삭제" onclick="del('+num+')">
-          <input type="button" value="댓글삭제" onclick="del('+num+')">
-          */
-          
           num++;
           location.reload();
-          // $('imput[type=text]').val('');
-          /* alert(com) */
+          
           insert_com(seq, com);
+          
           // 댓글 세션 업데이트
-          request.getSession().removeAttribute("info");
+         request.getSession().removeAttribute("info");
          request.getSession().setAttribute("info", info);
       }); 
       

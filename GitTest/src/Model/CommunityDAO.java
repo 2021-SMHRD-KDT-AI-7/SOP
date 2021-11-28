@@ -51,7 +51,7 @@ public class CommunityDAO {
    public int upload(CommunityDTO dto) {
       getConn();
       try {
-         String sql = "insert into t_community (article_title,article_content,mb_id,article_file1,reg_date)values(?,?,?,?,sysdate)";
+         String sql = "insert into t_community (article_title,article_content,mb_id,article_file1,reg_date,location_num)values(?,?,?,?,sysdate,?)";
 
          psmt = conn.prepareStatement(sql);
 
@@ -59,6 +59,7 @@ public class CommunityDAO {
          psmt.setString(2, dto.getArticle_content());
          psmt.setString(3, dto.getMb_id());
          psmt.setString(4, dto.getArticle_file1());
+         psmt.setInt(5, dto.getLocation_num());
 
          cnt = psmt.executeUpdate();
 
@@ -157,14 +158,15 @@ public class CommunityDAO {
 
       try {
 
-         String sql = "update t_community set article_title=?,article_content=?,article_file1=? where article_seq=?";
+         String sql = "update t_community set article_title=?,article_content=?,article_file1=?, location_num=? where article_seq=?";
 
          psmt = conn.prepareStatement(sql);
 
          psmt.setString(1, change.getArticle_title());
          psmt.setString(2, change.getArticle_content());
          psmt.setString(3, change.getArticle_file1());
-         psmt.setInt(4, change.getArticle_seq());
+         psmt.setInt(4, change.getLocation_num());
+         psmt.setInt(5, change.getArticle_seq());
 
          System.out.println(change.getArticle_title());
          System.out.println(change.getArticle_content());
@@ -311,6 +313,27 @@ public class CommunityDAO {
  				}
  				return -1;
  			}
+ 	
+ 	public int getSelectCount(String num) {
+		 // 작성자 : 준영
+		 getConn();
+			try {
+				String sql = "select count(*) from t_community where location_num = ?";
+				
+				PreparedStatement psmt=conn.prepareStatement(sql);
+				psmt.setString(1, num);
+				rs=psmt.executeQuery();
+				
+				if(rs.next()) {
+					return rs.getInt(1);
+				}			
+			} catch(Exception e) {
+				e.printStackTrace();
+			}finally {
+				dbClose();
+			}
+			return -1;
+		}
  // 게시판 조회수
     public void count(String article_seq) {
     	getConn();
@@ -340,4 +363,34 @@ public class CommunityDAO {
     	   dbClose();
        }
     }
+    
+    public ArrayList<CommunityDTO> selectLocation(String num) {
+        getConn();
+        ArrayList<CommunityDTO> list = new ArrayList<CommunityDTO>();
+
+        try {
+           String sql = "select * from t_community where location_num = ? order by reg_date desc";
+
+           psmt = conn.prepareStatement(sql);
+           psmt.setString(1, num);
+
+           rs = psmt.executeQuery();
+
+           while (rs.next()) {
+              int article_seq = rs.getInt("article_seq");
+              String article_title = rs.getString("article_title");
+              String mb_id = rs.getString("mb_id");
+              Date reg_date = rs.getDate("reg_date");
+
+              dto = new CommunityDTO(article_seq, article_title, mb_id, reg_date);
+              list.add(dto);
+           }
+           System.out.println(list);
+        } catch (Exception e) {
+           e.printStackTrace();
+        } finally {
+           dbClose();
+        }
+        return list;
+     }
 }

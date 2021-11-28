@@ -48,7 +48,8 @@
 p.c_2 {
 	font-size: 13px;
 }
-.paging{
+
+.paging {
 	text-align: center;
 }
 </style>
@@ -63,15 +64,16 @@ p.c_2 {
 	if(info!=null){
 		get_id=info.getMb_id();
 	}
-		b_list=dao.viewBoard(get_id);
+	b_list=dao.selectLocation(request.getParameter("num"));
+	
 	//String article_seq=request.getParameter("article_cnt");
 	// 조회수 count
 		
 		// 페이징을 위한 변수 및 조건문 선언
-		int pageNumber = 1; //기본적으로 1페이지
-		int page_count = dao.getCount(); // 행의 총 개수를 담는 변수
-		if (request.getParameter("pageNumber") != null)
-			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
+	int pageNumber = 1; //기본적으로 1페이지
+	int page_count = dao.getSelectCount(request.getParameter("num")); // 행의 총 개수를 담는 변수
+	if (request.getParameter("pageNumber") != null)
+		pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
 	%>
 	<div class='preloader'>
 		<div class='loaded'>&nbsp;</div>
@@ -97,9 +99,11 @@ p.c_2 {
 												class="icon-bar"></span>
 										</button>
 										<%if(info != null){ %>
-											<a class="navbar-brand" href="index.jsp"> <img src="assets/images/logo1.png" /></a>
+										<a class="navbar-brand" href="index.jsp"> <img
+											src="assets/images/logo1.png" /></a>
 										<%}else{%>
-											<a class="navbar-brand" href="main.jsp"> <img src="assets/images/logo1.png" /></a>
+										<a class="navbar-brand" href="main.jsp"> <img
+											src="assets/images/logo1.png" /></a>
 										<%} %>
 									</div>
 
@@ -145,25 +149,26 @@ p.c_2 {
 														</legend>
 
 														<p class="c_2" style="line-height: 3rem;">
-															
+
 															<a class='c_2_f' href="SelectCommunity.jsp?num=0">전체게시판</a><br>
-															<a class='c_2_f' href="SelectCommunity.jsp?num=1">서울특별시</a><br> <a
-																class='c_2_f' href="SelectCommunity.jsp?num=2">인천광역시</a><br> <a
-																class='c_2_f' href="SelectCommunity.jsp?num=3">대전광역시</a><br> <a
-																class='c_2_f' href="SelectCommunity.jsp?num=4">대구광역시</a><br> <a
-																class='c_2_f' href="SelectCommunity.jsp?num=5">울산광역시</a><br> <a
-																class='c_2_f' href="SelectCommunity.jsp?num=6">부산광역시</a><br> <a
-																class='c_2_f' href="SelectCommunity.jsp?num=7">광주광역시</a><br> <a
-																class='c_2_f' href="SelectCommunity.jsp?num=8">세종특별자치시</a><br> <a
-																class='c_2_f' href="SelectCommunity.jsp?num=9">경기도</a><br> <a class='c_2_f'
-																href="SelectCommunity.jsp?num=10">강원도</a><br> <a class='c_2_f' href="SelectCommunity.jsp?num=11">충청북도</a><br>
-															  <a class='c_2_f' href="SelectCommunity.jsp?num=12">충청남도</a><br> <a
-																class='c_2_f' href="SelectCommunity.jsp?num=13">경상북도</a><br> <a
-																class='c_2_f' href="SelectCommunity.jsp?num=14">경상남도</a><br> <a
-																class='c_2_f' href="SelectCommunity.jsp?num=15">전라북도</a><br> <a
-																class='c_2_f' href="SelectCommunity.jsp?num=16">전라남도</a><br> <a
-																class='c_2_f' href="SelectCommunity.jsp?num=17">제주도</a><br> <a class='c_2_f'
-																href="SelectCommunity.jsp?num=18">데일리미션인증</a>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=1">서울특별시</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=2">인천광역시</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=3">대전광역시</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=4">대구광역시</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=5">울산광역시</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=6">부산광역시</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=7">광주광역시</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=8">세종특별자치시</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=9">경기도</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=10">강원도</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=11">충청북도</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=12">충청남도</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=13">경상북도</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=14">경상남도</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=15">전라북도</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=16">전라남도</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=17">제주도</a><br>
+															<a class='c_2_f' href="SelectCommunity.jsp?num=18">데일리미션인증</a>
 														</p>
 
 													</fieldset>
@@ -198,8 +203,8 @@ p.c_2 {
 														<td><%=b_list.get(i-1).getReg_date()%></td>
 														<!-- 조회수  -->
 														<td><%=b_list.get(i-1).getArticle_cnt()%></td>
-														
-													<td><a
+
+														<td><a
 															href="../CommunityDeleteOneServiceCon?article_seq=<%=b_list.get(i-1).getArticle_seq()%>">삭제</a></td>
 													</tr>
 													<%
@@ -224,7 +229,7 @@ p.c_2 {
 													}%>
 													<!--  인덱싱 끝(준영) -->
 												</table>
-												
+
 												<!-- 검색 기능 -->
 												<div>
 													<div class="row">
@@ -244,15 +249,14 @@ p.c_2 {
 													</div>
 												</div>
 												<!-- 검색 기능 끝 -->
-												
+
 												<!-- 페이징 시작(준영) -->
-												<div >
+												<div>
 													<div class="paging">
 														<%
 															if (pageNumber != 1) {//이전페이지로
 														%>
-														<a 
-															href="Community.jsp?pageNumber=<%=pageNumber - 1%>">이전</a>
+														<a href="Community.jsp?pageNumber=<%=pageNumber - 1%>">이전</a>
 														<%
 															}
 														%>
@@ -268,21 +272,20 @@ p.c_2 {
 														<%
 															if (page_count / (pageNumber * 20) != 0) {// 마지막 페이지가 아니면 참
 														%>
-														<a 
-															href="Community.jsp?pageNumber=<%=pageNumber + 1%>">다음</a>
+														<a href="Community.jsp?pageNumber=<%=pageNumber + 1%>">다음</a>
 														<%
 															}
 														%>
 													</div>
 												</div>
 												<!-- 페이징 끝(준영) -->
-												
+
 												<%if(info != null){ %>
-												<a href="index.jsp"><button id="writer">홈으로가기</button></a>
-												<a href="CommunityWrite.jsp"><button id="writer">작성하러가기</button></a>
+												<a href="index.jsp"><button id="writer">홈으로가기</button></a> <a
+													href="CommunityWrite.jsp"><button id="writer">작성하러가기</button></a>
 												<%}else{ %>
-												<a href="main.jsp"><button id="writer">홈으로가기</button></a>
-												<a onclick="alert('로그인을 해주세요');"><button id="writer">작성하러가기</button></a>
+												<a href="main.jsp"><button id="writer">홈으로가기</button></a> <a
+													onclick="alert('로그인을 해주세요');"><button id="writer">작성하러가기</button></a>
 												<%} %>
 											</div>
 

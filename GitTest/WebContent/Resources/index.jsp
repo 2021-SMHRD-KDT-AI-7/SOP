@@ -556,7 +556,7 @@
 											<!-- End of figure -->
 										</div>
 									</div>
-									<a href="campaign.jsp" class="btn btn-lg" style="margin-top:50px; margin-right:300px;">미션 인증하러 가기</a>
+									<a href="SelectCommunity.jsp?num=18" class="btn btn-lg" style="margin-top:50px; margin-right:300px;">미션 인증하러 가기</a>
 								</div>
 								<!-- End of col-sm-12 -->
 
