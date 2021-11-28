@@ -2,6 +2,7 @@ select * from T_MEMBER
 
 select * from t_campaign
 select * from t_community
+select * from t_location
 
 select * from T_COMMENT
 
@@ -29,3 +30,9 @@ alter table t_member drop column mb_grade;
 alter table t_member add mb_grade varchar2(50);
 
 select * from t_campaign order by reg_date desc
+
+select * from t_campaign where cam_accept = 'Y' or mb_id = 'test' order by reg_date desc
+
+select * from t_campaign where cam_accept = 'Y' order by reg_date desc
+
+
