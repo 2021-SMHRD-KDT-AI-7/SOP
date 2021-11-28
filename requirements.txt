@@ -8,3 +8,4 @@ ruamel.yaml==0.16.10
 ruamel.yaml.clib==0.2.0
 soupsieve==2.0
 urllib3==1.25.8
+cx-Oracle==8.3.0
