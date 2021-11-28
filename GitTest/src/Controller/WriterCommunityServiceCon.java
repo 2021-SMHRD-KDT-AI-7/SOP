@@ -39,7 +39,7 @@ public class WriterCommunityServiceCon extends HttpServlet {
       String article_file1 = null;
       
 
-      String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/assets/images";
+      String saveDirectory = "C:/Users/smhrd/Desktop/SOP/SOP/GitTest/WebContent/Resources/image";
 
       
       int maxSize = 1024 * 1024 * 10;
