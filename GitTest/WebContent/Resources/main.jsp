@@ -44,7 +44,7 @@
 <link rel="stylesheet" type="text/css" href="assets/css/news.css">
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
-<body data-spy="scroll" data-target=".navbar-collapse">
+<body data-spy="scroll" data-target=".navbar-collapse" style="overflow-x: hidden ">
 <%
 	NewsDAO dao = new NewsDAO();
 	ArrayList<NewsDTO> news_list = dao.getNews();
