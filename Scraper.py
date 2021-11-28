@@ -36,7 +36,7 @@ for i in range(len(article_content)):
     content.append(article_content[i].text)
 date=[]
 for i in range(len(upload_date)):
-    date.append(upload_date[i].text
+    date.append(upload_date[i].text)
 tag=[]
 for i in a_tag:
     tag.append("https://www.hani.co.kr"+i['href'])
@@ -48,8 +48,8 @@ for i in img:
 ############ 인덱스마다 하나의 리스트에 담기 ############
 for i in range(1):
     list=[]
-    list.append(title[i].text)
-    list.append(content[i].text)
+    list.append(title[i])
+    list.append(content[i])
     list.append(date[i])
     list.append(tag[i])
     list.append(img_url[i])
