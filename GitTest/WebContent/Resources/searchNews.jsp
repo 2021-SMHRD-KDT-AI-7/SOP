@@ -40,9 +40,10 @@
 </head>
 <body>
 <%
+   request.setCharacterEncoding("euc-kr");
    MemberDTO info = (MemberDTO)session.getAttribute("info");
    NewsDAO dao = new NewsDAO();
-   ArrayList<NewsDTO> news_list = dao.getNews();
+   ArrayList<NewsDTO> news_list = dao.getSearch(request.getParameter("searchText"));
    //현재 페이지가 몇번째 페이지 인가
    int pageNumber = 1;//기본적으로 1페이지
    if (request.getParameter("pageNumber") != null)
@@ -136,7 +137,7 @@
 <%
    // len(현재 페이지의 기사 인덱스 구하기)
 	int len = pageNumber;
-	int page_count = dao.getCount();
+	int page_count = dao.getSearchCount(request.getParameter("searchText"));
 	//int n = (int)((dao.getCount() / 5) + 1); // 소스 수정으로 사용안함.
 
 	 for(int i = 1; i < pageNumber; i++){ // 콘텐츠 시작 인덱스 구하기
@@ -198,7 +199,7 @@
 
          <form name="frmsearch" method="post"
             action="searchNews.jsp" title="검색">
-            <input type="text" name="searchText" value="" title="검색어" class="text"><input
+            <input type="text" name="keyword" value="" title="검색어" class="text"><input
                type="image"
                src="//img.hani.co.kr/section-image/15/hani/images/icon/icon_top_search.png"
                class="button" title="검색">
