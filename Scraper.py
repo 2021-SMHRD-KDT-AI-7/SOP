@@ -59,8 +59,9 @@ for i in range(1):
 ############ Query insert ############
 
 #conn=cx_Oracle.connect("campus_c_c_1111","smhrd3","project-db-stu.ddns.net:1524/xe")
-conn=cx_Oracle.connect("campus_c_c_1111/smhrd3@project-db-stu.ddns.net:1524/xe")
-cur=conn.cursor()
+dsn = cx_Oracle.makedsn("project-db-stu.ddns.net",1524, sid="xe")
+connection=cx_Oracle.connect(user="campus_c_c_1111",password="smhrd3",dsn=dsn,encoding="UTF-8")
+cur=connection.cursor()
 sql="insert into t_news(news_title,news_content,reg_date, news_url, img_url) values(:1,:2,:3,:4,:5)"
 cur.execute(sql,list)
 print(cur.rowcount)
