@@ -1,3 +1,5 @@
+<%@page import="Model.CommunityDAO"%>
+<%@page import="Model.MemberDAO"%>
 <%@page import="Model.NewsDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.NewsDAO"%>
@@ -52,9 +54,13 @@
 		request.setCharacterEncoding("euc-kr");
 		MemberDTO info = (MemberDTO)session.getAttribute("info");
 		NewsDAO dao = new NewsDAO();
+		CommunityDAO c_dao = new CommunityDAO();
+		MemberDAO m_dao = new MemberDAO();
 		ArrayList<NewsDTO> news_list = dao.getNews();
 		int news = dao.getCount();
 		
+		
+    	  
 	int point = info.getMb_point();
 	String grade = "";
 	if (point >= 500) {
@@ -257,7 +263,7 @@
 														<ul>
 															<fieldset>
 																<p><%=info.getMb_id()%>님<br>
-																	<%=info.getMb_point()%>
+																	<%=m_dao.point(info.getMb_id())%>
 																	점입니다!<br>
 																	<%=grade%>등급입니다!!
 																</p>

@@ -47,7 +47,7 @@ public class CommunityDAO {
       }
    }
 
-   // 파일 업로드 메소드
+   // 게시글 업로드 메소드
    public int upload(CommunityDTO dto) {
       getConn();
       try {
@@ -62,6 +62,9 @@ public class CommunityDAO {
          psmt.setInt(5, dto.getLocation_num());
 
          cnt = psmt.executeUpdate();
+         
+         // 포인트 up!
+         pointUp(dto.getMb_id(), dto.getLocation_num());
 
       } catch (Exception e) {
          e.printStackTrace();
@@ -239,32 +242,45 @@ public class CommunityDAO {
       return list;
    }
    
- //글 포인트 update 메소드
-   public int articleUp(String mb_id, int mb_point) {
-      getConn();
-      
-      mb_point += 10;
-      
-      try {
-         
-         String sql="update t_member set mb_point=? where mb_id=?";
-         
-         psmt=conn.prepareStatement(sql);
-         
-         psmt.setInt(1, mb_point);
-         psmt.setString(2, mb_id);
-         
-         System.out.println(mb_point);
-         System.out.println(mb_id);
-         
-         cnt=psmt.executeUpdate();
-         
-      } catch (Exception e) {
-         e.printStackTrace();
-      }finally {
-         dbClose();
-      } return mb_point;
-      
+   
+   // 글 포인트 추가 포인트 
+   public void pointUp(String mb_id, int location_num) {
+	   
+	   getConn();
+	   MemberDAO m_dao = new MemberDAO();
+
+	   int mb_point;
+	   
+	   // 일반글 10점, 데일리미션 15점
+	   switch(location_num) {
+		   case 18 :
+			   mb_point = m_dao.point(mb_id) + 15;
+		   break;
+		   
+		   default :
+			   mb_point = m_dao.point(mb_id) + 10;
+			   break;
+	   }
+	   
+	   try {
+	         String sql="update t_member set mb_point=? where mb_id=?";
+	         
+	         psmt=conn.prepareStatement(sql);
+	         
+	         psmt.setInt(1, mb_point);
+	         psmt.setString(2, mb_id);
+	         
+	         System.out.println(mb_point);
+	         System.out.println(mb_id);
+	         
+	         cnt=psmt.executeUpdate();
+	         
+	      } catch (Exception e) {
+	         e.printStackTrace();
+	      }finally {
+	         dbClose();
+	      } 
+	   
    }
    
    // 현재 글 DB에서 작성자 id 꺼내오기
@@ -334,6 +350,7 @@ public class CommunityDAO {
 			}
 			return -1;
 		}
+ 	
  // 게시판 조회수
     public void count(String article_seq) {
     	getConn();
