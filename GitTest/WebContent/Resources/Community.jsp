@@ -146,7 +146,7 @@ p.c_2 {
 
 														<p class="c_2" style="line-height: 3rem;">
 															
-															<a class='c_2_f' href="SelectCommunity.jsp?num=0">전체게시판</a><br>
+															<a class='c_2_f' href="Community.jsp">전체게시판</a><br>
 															<a class='c_2_f' href="SelectCommunity.jsp?num=1">서울특별시</a><br> <a
 																class='c_2_f' href="SelectCommunity.jsp?num=2">인천광역시</a><br> <a
 																class='c_2_f' href="SelectCommunity.jsp?num=3">대전광역시</a><br> <a
@@ -258,7 +258,7 @@ p.c_2 {
 														%>
 														<%
 															// 페이징 숫자 표시
-														for (int i = 1; i <= (page_count/20+1); i++) {
+														for (int i = 1; i <= (--page_count/20+1); i++) {
 														%>
 														<a href="Community.jsp?pageNumber=<%=i%>">l<%=i%>l
 														</a>

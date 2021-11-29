@@ -82,6 +82,9 @@
       if(info != null){
          cmt_list = cmt_dao.getComment(article_seq);
       }
+      
+      String img = dto.getArticle_file1();
+      System.out.println(img);
    
    %>
 
@@ -159,7 +162,10 @@
                                        <!-- 댓글 다는 곳 -->
                                        <tr>
                                           <td colspan="2"><%=dto.getArticle_content() %> 
-                                          <img src="./image/<%=dto.getArticle_file1()%>"></td>
+                                          <%if(img != null){ %>
+                                          <img src="./image/<%=img%>">
+                                          <%} %>
+                                          </td>
                                        </tr>
                                        <tr>
                                              <td colspan="2"><input type="text" size="50"><input id="write_com" type="button" value="댓글작성"> </td>

@@ -35,4 +35,12 @@ select * from t_campaign where cam_accept = 'Y' or mb_id = 'test' order by reg_d
 
 select * from t_campaign where cam_accept = 'Y' order by reg_date desc
 
+select * from t_news
+
+delete from t_community
+delete from t_comment
+
+select * from t_comment
+
+insert into t_community (article_title,article_content,mb_id,article_file1,reg_date,location_num)values('테스트','테스트','test','null',sysdate,18)
 

@@ -28,28 +28,28 @@ public class searchpwCon extends HttpServlet {
 		MemberDAO dao = new MemberDAO();
 		MemberDTO info = dao.searchpw(id, birthdate, phone);
 		
+		response.setContentType("text/html; charset=UTF-8");
+		
+		PrintWriter writer = response.getWriter(); 
+		String PageUrl = "./Resources/main.jsp";
+		// writer.println("<script>alert(name+'님의 id 는 '+info.getMb_id()+'입니다');location.href='"+PageUrl+"';</script>"); 
 		
 		
 		if(info != null) {
-			System.out.println("비밀번호 는 "+info.getMb_pwd()+"입니다");
+			writer.println("<script>alert('PW는 '+ '"+info.getMb_pwd()+"' +' 입니다');location.href='"+PageUrl+"';</script>"); 
+			writer.close();
 //			HttpSession session = request.getSession();
 //			session.setAttribute("info", info);
+		}else {
+			writer.println("<script>alert('해당정보가 없습니다');location.href='"+PageUrl+"';</script>"); 
+			writer.close();
+			
+			
 		}
 		
-		System.out.println("mb_id : " + id);
-		System.out.println("mb_birthdate : " + birthdate);
-		System.out.println("mb_phone : " +phone );
 
 
 
-		
-		response.setContentType("text/html; charset=UTF-8");
-
-		PrintWriter writer = response.getWriter(); 
-		String PageUrl = "./Resources/index.jsp";
-		// writer.println("<script>alert(name+'님의 id 는 '+info.getMb_id()+'입니다');location.href='"+PageUrl+"';</script>"); 
-		writer.println("<script>alert('PW는 '+ '"+info.getMb_pwd()+"' +' 입니다');location.href='"+PageUrl+"';</script>"); 
-		writer.close();
 		
 		//response.sendRedirect("./Resources/index.jsp");
 

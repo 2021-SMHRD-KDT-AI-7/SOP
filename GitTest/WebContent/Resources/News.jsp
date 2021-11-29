@@ -197,8 +197,8 @@
       <div id="search_form">
 
          <form name="frmsearch" method="post"
-            action="//search.hani.co.kr/Search" title="검색">
-            <input type="text" name="keyword" value="" title="검색어" class="text"><input
+            action="searchNews.jsp" title="검색">
+            <input type="text" name="searchText" value="" title="검색어" class="text"><input
                type="image"
                src="//img.hani.co.kr/section-image/15/hani/images/icon/icon_top_search.png"
                class="button" title="검색">
@@ -234,7 +234,7 @@
                }
             %>
             <% // 페이징 숫자 표시
-               for (int i = 1; i <= (page_count/5+1); i++) {
+               for (int i = 1; i <= (--page_count/5+1); i++) {
             %>
                <a class="selected" href="News.jsp?pageNumber=<%=i%>"><%=i%>
                </a>
@@ -242,7 +242,7 @@
                }
             %>
             <%
-               if (page_count / (pageNumber*5) != 0) {// 마지막 페이지가 아니면 참
+               if (page_count / (pageNumber * 5) != 0) {// 마지막 페이지가 아니면 참
             %>
             <a class="next" href="News.jsp?pageNumber=<%=pageNumber + 1%>">다음</a>
             <%

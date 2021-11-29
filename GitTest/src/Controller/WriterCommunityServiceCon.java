@@ -38,10 +38,15 @@ public class WriterCommunityServiceCon extends HttpServlet {
       String article_file1 = null;
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       String saveDirectory = "C:/Users/smhrd/Desktop/SOP/SOP/GitTest/WebContent/Resources/image";
 =======
       String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/image";
+=======
+      String saveDirectory = "C:/Users/smhrd/git/SOP/GitTest/WebContent/Resources/image";
+      //String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/image";
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
       //String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/assets/images";
 >>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 
@@ -64,6 +69,7 @@ public class WriterCommunityServiceCon extends HttpServlet {
       } else {
          article_file1="null";
       }
+      System.out.println(article_file1);
    
       
       CommunityDTO dto=new CommunityDTO(article_title, article_content, mb_id, article_file1, location_num);

@@ -56,7 +56,7 @@ public class MemberDAO {
 		try {
 
 			// sql문 작성(변하는 값을 넣어 줄때는 ? 를 사용한다)
-			String sql = "insert into t_member values(?,?,?,?,?,?,0,?,?,?,0,0,sysdate,'N')";
+			String sql = "insert into t_member values(?,?,?,?,?,?,0,?,?,?,0,sysdate,'N',0)";
 
 			psmt = conn.prepareStatement(sql);
 
