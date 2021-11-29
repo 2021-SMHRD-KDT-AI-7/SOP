@@ -197,8 +197,8 @@
       <div id="search_form">
 
          <form name="frmsearch" method="post"
-            action="//search.hani.co.kr/Search" title="검색">
-            <input type="text" name="keyword" value="" title="검색어" class="text"><input
+            action="searchNews.jsp" title="검색">
+            <input type="text" name="searchText" value="" title="검색어" class="text"><input
                type="image"
                src="//img.hani.co.kr/section-image/15/hani/images/icon/icon_top_search.png"
                class="button" title="검색">

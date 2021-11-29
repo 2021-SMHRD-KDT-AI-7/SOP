@@ -35,4 +35,6 @@ select * from t_campaign where cam_accept = 'Y' or mb_id = 'test' order by reg_d
 
 select * from t_campaign where cam_accept = 'Y' order by reg_date desc
 
+select * from t_news
+
 
