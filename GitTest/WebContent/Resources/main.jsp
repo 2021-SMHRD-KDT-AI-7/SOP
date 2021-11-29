@@ -85,7 +85,7 @@
 
 										<ul class="nav navbar-nav navbar-right">
 											<li><a href="#home">HOME</a></li>
-											<li><a href="join.j sp">회원가입</a></li>
+											<li><a href="join.jsp">회원가입</a></li>
 											<li><a href="#contact">로그인</a></li>
 											<li><a href="#portfolio">차트</a></li>
 											<li><a href="#service">데일리미션</a></li>
@@ -340,7 +340,7 @@
 										</div>
 										<div class="col-sm-1 col-xs-1">
 											<figure class="single_service_icon">
-												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
+												<a href="SelectCommunity.jsp?num=18"><i class="fa fa-heart"></i></a>
 											</figure>
 											<!-- End of figure -->
 										</div>
@@ -362,7 +362,7 @@
 										</div>
 										<div class="col-sm-1 col-xs-1">
 											<figure class="single_service_icon">
-												<a href="Community.jsp"><i class="fa fa-heart"></i></a>
+												<a href="SelectCommunity.jsp?num=18"><i class="fa fa-heart"></i></a>
 											</figure>
 											<!-- End of figure -->
 										</div>

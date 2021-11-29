@@ -37,4 +37,10 @@ select * from t_campaign where cam_accept = 'Y' order by reg_date desc
 
 select * from t_news
 
+delete from t_community
+delete from t_comment
+
+select * from t_comment
+
+
 

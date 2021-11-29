@@ -37,7 +37,8 @@ public class WriterCommunityServiceCon extends HttpServlet {
       
       String article_file1 = null;
       
-      String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/image";
+      String saveDirectory = "C:/Users/smhrd/git/SOP/GitTest/WebContent/Resources/image";
+      //String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/image";
       //String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/assets/images";
 
       
@@ -59,6 +60,7 @@ public class WriterCommunityServiceCon extends HttpServlet {
       } else {
          article_file1="null";
       }
+      System.out.println(article_file1);
    
       
       CommunityDTO dto=new CommunityDTO(article_title, article_content, mb_id, article_file1, location_num);
