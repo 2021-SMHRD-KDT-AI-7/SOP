@@ -29,3 +29,5 @@ select * from t_news
 select * from t_news where news_title like '%ÀÌ¹ר%' order by reg_date desc
 
 delete from t_news where news_seq=65
+
+delete from t_member where mb_id='jypark7798'
