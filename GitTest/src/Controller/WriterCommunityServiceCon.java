@@ -27,28 +27,15 @@ public class WriterCommunityServiceCon extends HttpServlet {
       
       request.setCharacterEncoding("euc-kr");
       
-      HttpSession session = request.getSession();
-      MemberDTO info=(MemberDTO)session.getAttribute("info"); 
-      
-      String s_mb_id = info.getMb_id();
-      String s_mb_pwd = info.getMb_pwd();
-      int mb_point = info.getMb_point();
-      
       
       String article_file1 = null;
       
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       String saveDirectory = "C:/Users/smhrd/Desktop/SOP/SOP/GitTest/WebContent/Resources/image";
-=======
-      String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/image";
-=======
-      String saveDirectory = "C:/Users/smhrd/git/SOP/GitTest/WebContent/Resources/image";
       //String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/image";
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
+      //String saveDirectory = "C:/Users/smhrd/git/SOP/GitTest/WebContent/Resources/image";
+      //String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/image";
       //String saveDirectory = "C:/Users/smhrd/git/SOP2/GitTest/WebContent/Resources/assets/images";
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-AI-7/SOP.git
 
       
       int maxSize = 1024 * 1024 * 10;

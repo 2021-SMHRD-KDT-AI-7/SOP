@@ -157,7 +157,6 @@
 									<form action="../LoginCon" id="formid" method="post">
 										<div
 											class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">
-
 											<div class="row">
 												<div class="col-sm-11">
 													<div class="form-group">
