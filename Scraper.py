@@ -7,6 +7,9 @@ from inspect import getsourcefile
 from os.path import abspath
 import cx_Oracle
 
+LOCATION = r"SOP\instantclient_21_3"
+os.environ["PATH"] = LOCATION + ";" + os.environ["PATH"]
+
 req = requests.get('https://www.hani.co.kr/arti/society/environment/home01.html')
 req.encoding= None
 html = req.content
