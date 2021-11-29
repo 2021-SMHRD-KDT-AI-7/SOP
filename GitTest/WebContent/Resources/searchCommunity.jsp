@@ -54,7 +54,6 @@ p.c_2 {
 <body data-spy="scroll" data-target=".navbar-collapse">
 	<%
 		CommunityDAO dao = new CommunityDAO();
-	ArrayList<CommunityDTO> b_list = dao.viewBoard();
 	MemberDTO info = (MemberDTO) session.getAttribute("info");
 	request.setCharacterEncoding("euc-kr");
 	String get_id = "";
