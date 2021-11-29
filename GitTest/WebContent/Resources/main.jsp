@@ -862,7 +862,7 @@
 										<div class="single_counter_item">
 
 											<h2 class="statistic-counter">3891</h2>
-											<h4 class="">즐겨찾기</h4>
+											<h4 class="">방문자수</h4>
 										</div>
 									</div>
 								</div>
@@ -872,7 +872,7 @@
 										<div class="single_counter_item">
 
 											<h2 class="statistic-counter">281</h2>
-											<h4 class="">24시간 포스팅 수</h4>
+											<h4 class="">미션 인증 수</h4>
 										</div>
 									</div>
 								</div>
@@ -882,7 +882,7 @@
 										<div class="single_counter_item">
 
 											<h2 class="statistic-counter">618</h2>
-											<h4 class="">전체 포스팅 수</h4>
+											<h4 class="">전체 게시물 수</h4>
 										</div>
 
 									</div>
@@ -892,8 +892,8 @@
 									<div class="col-sm-3 col-xs-12">
 										<div class="single_counter_item">
 
-											<h2 class="statistic-counter">178</h2>
-											<h4 class="">특징 수</h4>
+											<h2 class="statistic-counter">12</h2>
+											<h4 class="">캠페인 수</h4>
 
 										</div>
 									</div>
