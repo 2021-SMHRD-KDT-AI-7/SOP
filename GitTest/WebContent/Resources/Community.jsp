@@ -146,7 +146,7 @@ p.c_2 {
 
 														<p class="c_2" style="line-height: 3rem;">
 															
-															<a class='c_2_f' href="SelectCommunity.jsp?num=0">전체게시판</a><br>
+															<a class='c_2_f' href="Community.jsp">전체게시판</a><br>
 															<a class='c_2_f' href="SelectCommunity.jsp?num=1">서울특별시</a><br> <a
 																class='c_2_f' href="SelectCommunity.jsp?num=2">인천광역시</a><br> <a
 																class='c_2_f' href="SelectCommunity.jsp?num=3">대전광역시</a><br> <a
