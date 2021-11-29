@@ -641,13 +641,13 @@
 									%>
 										<div class="item">
 											<h4 class="external_news_title"> <%=news_list.get(i).getNews_title()%> 
-											<img class="external_news_img" src="<%=news_list.get(i).getImg_url() %>" alt="" title="">
 											</h4>
+											<img class="external_news_img" src="<%=news_list.get(i).getImg_url() %>" alt="" title="">
 											<div class="separator3"></div>
 											<p class="external_news_content"><%=news_list.get(i).getNews_content() %></p>
 											
 											<a target="_blank"
-												href=""
+												href="<%=news_list.get(i).getNews_url() %>"
 												class="btn btn-lg">기사 더보기</a>
 
 										</div>
@@ -663,7 +663,7 @@
 						<div class="single_study_right_img">
 							<div class="col-sm-6">
 								<div class="single_study_img">
-									<img src="assets/images/공장수정.jpg" alt="" />
+									<img width="" height="675" src="assets/images/gong.jpg" alt="" />
 								</div>
 							</div>
 						</div>

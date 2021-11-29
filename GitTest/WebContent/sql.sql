@@ -28,3 +28,4 @@ select * from t_community
 select * from t_news
 select * from t_news where news_title like '%ÀÌ¹ר%' order by reg_date desc
 
+delete from t_news where news_seq=65
