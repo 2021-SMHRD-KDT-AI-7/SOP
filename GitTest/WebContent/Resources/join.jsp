@@ -44,17 +44,17 @@
 			<div style="margin-top: 35px;">
 				<!--이름,닉네임,주소,생년월일,성별,이메일-->
 				<h3>이름</h3>
-				<span class="signup-input"> <input id="mb_name" type="text" name="mb_name" ></input>
+				<span class="signup-input"> <input id="mb_name" type="text" name="mb_name" style="border:none"; ></input>
 				</span>
 
 				<h3>닉네임</h3>
-				<span class="signup-input"> <input id="mb_nickname" type="text" name="mb_nickname"></input>
+				<span class="signup-input"> <input id="mb_nickname" type="text" name="mb_nickname" style="border:none";></input>
 				</span>
 				
 
 				<h3>생년월일</h3>
 				<span style="display: flex;"> <span class="signup-input-birth"> 
-				<input id="mb_birthdate" type="text" name="mb_year" placeholder="년(4자)"></input>
+				<input id="mb_birthdate" type="text" name="mb_year" placeholder="년(4자)" style="border:none";></input>
 				</span> <span class="signup-input-birth" style="margin-left: 10px;">
 						<select id="mb_birthdate" class="selectbox" name="mb_month" onchange="">
 							<option value="month">월</option>
@@ -72,19 +72,19 @@
 							<option value="12">12</option>
 					</select>
 				</span> <span class="signup-input-birth" style="margin-left: 10px;">
-						<input name = "mb_day" id="mb_birthdate" type="text" placeholder="일"></input>
+						<input name = "mb_day" id="mb_birthdate" type="text" placeholder="일" style="border:none";></input>
 				</span>
 				</span>
 				
 				<h3>주소</h3>
-				<span class="signup-input"> <input id="mb_addr" name="mb_addr"type="text"></input>
+				<span class="signup-input"> <input id="mb_addr" name="mb_addr"type="text" style="border:none";></input>
 				</span>
 				
 				<span class="choice">
 					<h3>본인 확인 이메일</h3> 
 				</span> 
 				<span class="signup-input">
-				 <input id="mb_email" type="text" name="mb_email" placeholder="이메일 입력"></input>
+				 <input id="mb_email" type="text" name="mb_email"  style="border:none";></input>
 				</span>
 
 			</div>
@@ -94,8 +94,8 @@
 				<h3>휴대전화</h3>
 				<div style="display: flex;">
 					<span class="signup-input"
-						style="width: 100%; margin: 10px 0px 0px 0px"> 
-						<input id="mb_phone" type="text" name="mb_phone" placeholder="전화번호 입력"></input>
+						style="width: 100%; margin: 10px 0px 0px 0px" ;> 
+						<input id="mb_phone" type="text" name="mb_phone" style="border:none";></input>
 					</span> 
 				</div>
 
@@ -103,7 +103,7 @@
 
 			<h3>성별</h3>
 			<span class="signup-input"> 
-			<select id="mb_gender" class="selectbox" name="mb_gender" >
+			<select id="mb_gender" class="selectbox" name="mb_gender" style="border:none";>
 					<option value="gender">성별</option>
 					<option value="M">남자</option>
 					<option value="F">여자</option>
@@ -113,7 +113,7 @@
 			<div>
 				<!--가입하기-->
 				<div class="signup-btn-wrap">
-					<input type ="submit" value ="회원가입">
+					<input type ="submit" value ="회원가입" style="background=">
 					<!-- <button id="signup-btn">가입하기</button>  -->
 				</div>
 			</div>
