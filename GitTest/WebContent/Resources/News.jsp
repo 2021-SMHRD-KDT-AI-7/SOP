@@ -234,7 +234,7 @@
                }
             %>
             <% // 페이징 숫자 표시
-               for (int i = 1; i <= (page_count/5+1); i++) {
+               for (int i = 1; i <= (--page_count/5+1); i++) {
             %>
                <a class="selected" href="News.jsp?pageNumber=<%=i%>"><%=i%>
                </a>
@@ -242,7 +242,7 @@
                }
             %>
             <%
-               if (page_count / (pageNumber*5) != 0) {// 마지막 페이지가 아니면 참
+               if (page_count / (pageNumber * 5) != 0) {// 마지막 페이지가 아니면 참
             %>
             <a class="next" href="News.jsp?pageNumber=<%=pageNumber + 1%>">다음</a>
             <%

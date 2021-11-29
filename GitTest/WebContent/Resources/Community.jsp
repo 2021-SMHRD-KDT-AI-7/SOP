@@ -258,7 +258,7 @@ p.c_2 {
 														%>
 														<%
 															// 페이징 숫자 표시
-														for (int i = 1; i <= (page_count/20+1); i++) {
+														for (int i = 1; i <= (--page_count/20+1); i++) {
 														%>
 														<a href="Community.jsp?pageNumber=<%=i%>">l<%=i%>l
 														</a>
