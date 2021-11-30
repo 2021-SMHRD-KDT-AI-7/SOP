@@ -30,9 +30,19 @@ jobs:
 #      uses: actions/setup-go@v2.1.2
 #      with:
 #       go-version: "1.13"
-    - name: pg driver
+#    - name: pg driver
+#      run: |
+#             go get github.com/lib/pq
+    - name: install oracle client
       run: |
-             go get github.com/lib/pq
+        sudo add-apt-repository universe
+        sudo apt update 
+        sudo apt install alien
+        sudo alien -i oracle-instantclient19.10-basic-19.10.0.0.0-1.x86_64.rpm
+        sudo sh -c "echo /usr/lib/oracle/19.10/client64/lib > /etc/ld.so.conf.d/oracle-instantclient.conf"
+        sudo ldconfig
+        export LD_LIBRARY_PATH=/usr/lib/oracle/19.10/client64/lib:$LD_LIBRARY_PATH
+
     - name: Run Scraper with python
       run: |
         python "Scraper.py"
