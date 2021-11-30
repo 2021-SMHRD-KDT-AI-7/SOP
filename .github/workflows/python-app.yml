@@ -1,0 +1,41 @@
+# This workflow will upload a Python Package using Twine when a release is created
+# For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Upload Python Package
+
+on : [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v1
+      with:
+          python-version: '3.x'
+          architecture: 'x64'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build
+        pip install cx_Oracle==8.3.0
+        python -m pip install cx_Oracle --upgrade
+    - name: install oracle client
+      run: |
+        sudo add-apt-repository universe
+        sudo apt update 
+        sudo apt install alien
+        sudo alien -i oracle-instantclient19.10-basic-19.10.0.0.0-1.x86_64.rpm
+        sudo sh -c "echo /usr/lib/oracle/19.10/client64/lib > /etc/ld.so.conf.d/oracle-instantclient.conf"
+        sudo ldconfig
+        export LD_LIBRARY_PATH=/usr/lib/oracle/19.10/client64/lib:$LD_LIBRARY_PATH
+    - name: Run Scraper with python
+      run: |
+        python "Scraper.py"
