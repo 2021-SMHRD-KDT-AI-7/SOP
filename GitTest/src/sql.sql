@@ -42,5 +42,5 @@ delete from t_comment
 
 select * from t_comment
 
-insert into t_community (article_title,article_content,mb_id,article_file1,reg_date,location_num)values('테스트','테스트','test','null',sysdate,18)
+insert into t_community (article_title,article_content,mb_id,article_file1,reg_date,location_num,article_cnt)values('광주 뉴비 인사올립니다','테스트','haribo','null',sysdate,7,55)
 
