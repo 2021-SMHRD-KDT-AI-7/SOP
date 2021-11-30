@@ -398,8 +398,9 @@ public class CommunityDAO {
               String article_title = rs.getString("article_title");
               String mb_id = rs.getString("mb_id");
               Date reg_date = rs.getDate("reg_date");
+              int article_cnt = rs.getInt("article_cnt");
 
-              dto = new CommunityDTO(article_seq, article_title, mb_id, reg_date);
+              dto = new CommunityDTO(article_seq, article_title, mb_id, reg_date, article_cnt);
               list.add(dto);
            }
            System.out.println(list);
